@@ -1,0 +1,24 @@
+{
+	"status": 200,
+	"message": "OK",
+	"elapsed": 89,
+	"list": [{
+		"goodsCode":"BFA043161C",
+		"goodsName":"阿斯匹林",
+		"proManufactor": ["吉林药业有限公司", "湖北药业有限公司"],
+		"goodsSpecific":"100s",
+		"units":"瓶",
+		"quantity":"600"
+	},{
+		"goodsCode":"BFA043161C",
+		"goodsName":"阿斯匹林",
+		"proManufactor": ["吉林药业有限公司", "湖北药业有限公司"],
+		"goodsSpecific":"100s",
+		"units":"瓶",
+		"quantity":"500"
+	}],
+	"pageIndex": 1,
+	"pageSize": 10,
+	"totalRecords": 1000,
+	"totalPages": 100
+}

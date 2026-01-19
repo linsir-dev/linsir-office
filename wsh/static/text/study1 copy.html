@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>账单管理-账单明细</title>
+	<!-- <style>
+			#bg {
+				background:rgb(0 0 0 / 8%);
+			}
+		</style> -->
+	<style>
+		td {
+			text-align: center;
+		}
+
+		/* .tb {
+			text-align: center;
+		}
+		table {
+			text-align: center;
+		} */
+	</style>
+</head>
+
+<body>
+	<strong>账单信息</strong>
+	<hr /><br />
+	<div class="tb">
+		<table align="center" border="0" cellpadding="10" cellspacing="1">
+			<col width="500">
+			<col width="500">
+			<tr>
+				<td>
+					<label for="bg">单据流水号</label> <input type="text" value="THBH201708101111"
+						style="background-color:rgb(0 0 0 / 8%);" id="bg">
+				</td>
+				<td>
+					<label for="1">单据状态</label> <input type="text" value="已确认收货"
+						style="background-color:rgb(0 0 0 / 8%);" id="1">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="2">采购机构</label> <input type="text" value="福建省厦门市大学第一附属医院"
+						style="background-color:rgb(0 0 0 / 8%);" id="2">
+				</td>
+				<td>
+					<label for="3">邮政编码</label> <input type="text" value="473002"
+						style="background-color:rgb(0 0 0 / 8%);" id="3">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="4">收货联系人</label> <input type="text" value="小李" style="background-color:rgb(0 0 0 / 8%);"
+						id="4">
+				</td>
+				<td>
+					<label for="5">联系人手机</label> <input type="text" value="18822222222"
+						style="background-color:rgb(0 0 0 / 8%);" id="5">
+				</td>
+		</table>
+	</div>
+	<br />
+	<strong>账单明细</strong>
+	<hr /><br />
+	<table align="center" border="1" cellpadding="15" cellspacing="0" width="1472">
+		<tr>
+			<td>子帐单号码</td>
+			<td>供货方</td>
+			<td>供货方帐号</td>
+			<td>子帐单总价</td>
+			<td>退货抵扣</td>
+			<td>医保支付</td>
+			<td>医保差价</td>
+			<td>医保垫付</td>
+			<td>其他支付</td>
+		</tr>
+		<tr>
+			<td>ZDD20170112_250_001</td>
+			<td>武汉太福制药有限公司</td>
+			<td>420101010222225555</td>
+			<td>￥115,4000.00</td>
+			<td>￥2,015.00</td>
+			<td>￥103,468.00</td>
+			<td>￥+3,100.00</td>
+			<td>￥42,617.00</td>
+			<td>￥0.00</td>
+		</tr>
+		<tr bgcolor="#f2dede">
+			<td>ZDD20170112_110_003</td>
+			<td>天士力制药股份有限公司</td>
+			<td>4201010102222211111</td>
+			<td>￥100,4000.00</td>
+			<td>￥315.00</td>
+			<td>￥70,468.00</td>
+			<td>￥-100.00</td>
+			<td>￥2000.00</td>
+			<td>￥0.00</td>
+		</tr>
+	</table>
+	<br />
+	<strong>统计信息</strong>
+	<hr /><br />
+	<table align="center" border="0" cellpadding="10" cellspacing="1">
+		<col width="500">
+		<col width="500">
+		<tr>
+			<td>
+				<label for="6">订单总价</label> <input type="text" value="￥215,400.00"
+					style="background-color:rgb(0 0 0 / 8%);" id="6">
+			</td>
+			<td>
+				<label for="7">退货抵扣</label> <input type="text" value="￥-2315.00"
+					style="color:red; background-color:rgb(0 0 0 / 8%);" id="7">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="8">实际总价</label> <input type="text" value="￥213,085.00"
+					style="background-color:rgb(0 0 0 / 8%);" id="8">
+			</td>
+			<td>
+				<label for="9">医保支付</label> <input type="text" value="￥173,468.00"
+					style="background-color:rgb(0 0 0 / 8%);" id="9">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="10">医保差价</label> <input type="text" value="￥" style="background-color:rgb(0 0 0 / 8%);"
+					id="10">
+			</td>
+			<td>
+				<label for="11">医保垫付</label> <input type="text" value="￥" style="background-color:rgb(0 0 0 / 8%);"
+					id="11">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="12">其他支付1</label> <input type="text" value="￥0.00" style="background-color:rgb(0 0 0 / 8%);"
+					id="12">
+			</td>
+		</tr>
+	</table>
+
+</body>
+
+</html>

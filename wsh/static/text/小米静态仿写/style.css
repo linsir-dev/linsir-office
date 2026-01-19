@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: #f5f5f5;
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+ul {
+    list-style: none;
+}
+
+.clearfix:before,
+    .clearfix:after {
+        content: "";
+        display: block;
+    }
+      .clearfix:after {
+          clear: both;
+      }
+    .clearfix {
+        /* IE6,7专有 */
+        *zoom: 1;
+    }
+.w {
+    width: 1226px;
+    /* height: 3000px; */
+    margin: 0 auto;
+    /* background-color: pink; */
+}
+/* 头部开始 */
+.nav-hd {
+    background-color: #333333;
+    height: 40px;
+}
+.nav-hd .l li {
+    float: left;
+}
+.nav-hd a {
+    color: #b0b0b0;
+    font-size: 12px;
+    line-height: 40px;
+}
+.nav-hd a:hover {
+    color: #fff;
+}
+.nav-hd .shuxian {
+    line-height: 40px;
+    margin: 0 6.25px;
+    color: #424242;
+}
+.nav-hd .denglu {
+    float: left;
+    padding-left: 170px;
+}
+.nav-hd .denglu li {
+    float: left;
+}
+.nav-hd .shopping {
+    float: right;
+    background: #424242;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+}
+.nav-hd .shopping span {
+    font-size: 14px;
+    color: #b0b0b0;
+}
+.nav-hd .shopping:hover {
+    background: #fff;
+}
+/* 头部导航栏下部 */
+/* logo */
+.tonglan {
+    background-color: #fff;
+}
+.nav-bd {
+    height: 100px;
+}
+.nav-bd .logo {
+    float: left;
+    width: 62px;
+    height: 56px;
+    margin-top: 22px;
+}
+/* 导航 */
+.nav-bd .nav ul {
+    float: left;
+    padding: 12px 0 0px 30px;
+}
+.nav-bd .nav ul .no1 {
+    margin-left: 142px;
+}
+.nav-bd .nav ul li {
+    float: left;
+    height: 88px;
+}
+.nav-bd .nav ul li a {
+    float: left;
+    padding: 26px 10px 38px 10px;
+    font-size: 16px;
+    color: #333;
+}
+.nav-bd .nav ul li a:hover {
+    color: #ff6700;
+}
+/* 搜索框 */
+.nav-bd .sarch {
+    float: right;
+}
+.nav-bd .sarch .no1 {
+    width: 224px;
+    height: 48px;
+    margin-top: 25px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    border-right: 0;
+}
+.nav-bd .sarch button {
+    margin-top: 25px;
+    float: right;
+    width: 52px;
+    height: 50px;
+    padding: 0 6px;
+    border-left: 0;
+    border: 1px solid #e0e0e0;
+}
+.nav-bd .sarch button:hover {
+    background-color: #ff6700;
+}
+/* banner广告主体 */
+.banner {
+    position: relative;
+    height: 460px;
+    /* background: url(imgs/banner.jpg) no-repeat top center; */
+}
+.banner .subnav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 420px;
+    width: 234px;
+    padding: 20px 0;
+    background: rgba(105, 101, 101, .6);
+}
+.banner .subnav ul li {
+    padding-left: 30px;
+    /* width: 202px; */
+    /* height: 42px; */
+    line-height: 42px;
+}
+.banner .subnav ul li:hover {
+    background-color: #ff6700;
+}
+.banner .subnav ul li a {
+    color: #fff;
+}
+.banner .subnav ul li span {
+    float: right;
+    padding-right: 20px;
+    color: #fff;
+}
+.left {
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    left: 234px;
+    width: 41px;
+    height: 69px;
+    background: url(imgs/icon-slides.png) -86px 0;
+}
+.right {
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    right: 0;
+    width: 41px;
+    height: 69px;
+    background: url(imgs/icon-slides.png) -125px 0;
+}
+.left:hover {
+    background: rgba(105, 101, 101, .6);
+}
+.right:hover {
+    background: rgba(105, 101, 101, .6);
+}
+.yuan {
+    position: absolute;
+    top: 429px;
+    left: 796px;
+    right: 30px;
+    bottom: 20px;
+    float: right;
+    width: 400px;
+    height: 21px;
+    /* background: pink; */
+}
+.yuan ul li {
+    float: right;
+}
+.yuan ul li .yd {
+    width: 6px;
+    height: 6px;
+    background: #757575;
+    margin: 0 4px;
+    border: 2px solid #333333;
+    border-radius: 6px;
+}
+.yuan ul li .yd:hover {
+    background-color: #e0e0e0;
+}
+/* 底部广告 */
+.left-b {
+    float: left;
+    margin: 14px 0 28px 0px;
+}
+.right-b {
+    float: right;
+    margin: 14px 0 28px 0px;
+}
+.right-b ul {
+    float: right;
+}
+.right-b li {
+    float: left;
+    line-height: 0;
+    margin: 0px 0 0px 14px;
+}
+.right-b li a {
+    display: block;
+    width: 316px;
+    height: 170px;
+}
+.banner-b .left-b ul {
+    /* float: left; */
+    width: 234px;
+    height: 170px;
+    background-color: #333;
+}

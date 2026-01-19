@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>竞价管理-订单查询、打印、新增</title>
+<link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/sub.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../assets/css/UI-style.css">
+<link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<div class="container-fluid yx">
+	<ol class="breadcrumb">
+	    <li>竞价管理</li>
+	    <li class="active">竞价列表(医院)</li>
+	</ol>
+	<table class="table table-bordered" id="tableList">
+			
+	</table>
+
+    <!-- 分页 -->
+    <nav class="clearfix" aria-label="Page navigation">
+        <ul class="pagination fr">
+            <li class="disabled">
+                <a href="#" class="fa fa-caret-left"></a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" class="fa fa-caret-right"></a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+</body>
+<script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+<script src="../../assets/js/sub.js"></script>
+
+<script>
+
+$(function(){
+	$.ajax({
+		type: "get",
+		url: "../../apis/preq/bid-list-hospital.json",
+		dataType: "json",
+		success: function(data){
+			var htm = '<tr><th>采购需求编号</th><th>制单人</th><th>需求提交时间</th><th>报价截止时间</th><th>剩余时间</th><th>报价药品数量</th><th>报价供货商</th><th>操作</th></tr>';
+			$.each(data.list, function(idx, item){
+				var disab = 'disabled' || '';
+				var hide = '';
+
+				if(item.remainderTime == '报价结束'){
+					disab = '';
+					hide = "hide"
+				}
+
+				htm += '<tr><td>'+item.pReqNo+'</td><td>'+item.maker+'</td><td>'+item.reqSubmitTime+'</td><td>'+item.quotEndTime+'</td><td>'+item.remainderTime+'</td><td>'+item.quotDrugQuantity+'</td><td>'+item.quotSupplier+'</td><td><button class="btn yellow mar_r" '+disab+'>打印</button><button class="btn green mar_r" '+disab+'>查看</button><button class="btn red mar_r '+hide+'">催取报价单</button></td></tr>'
+			})
+
+			$('#tableList').html(htm)
+			$('#tableList :disabled').addClass('disabled').css('border-color','#dcdfe0')
+		},
+		error: function(XMLHTTPRequest, textStatus, errorThrown){
+			console.log("sorry error")
+		}
+	})
+});
+
+</script>
+<!--<script  type="text/javascript">
+
+  $(function(){
+	var starttime = new Date("2017/6/20");		
+	setInterval(function () {
+		var nowtime = new Date();
+		var time = starttime - nowtime;	
+		var day = parseInt(time / 1000 / 60 / 60 / 24);
+		var hour = parseInt(time / 1000 / 60 / 60 % 24);
+		var minute = parseInt(time / 1000 / 60 % 60);
+		var seconds = parseInt(time / 1000 % 60);
+		$('.timespan').html(day + "天" + hour + "小时" + minute + "分钟" + seconds + "秒");
+	  }, 1000);	
+})
+</script>-->
+
+</html>

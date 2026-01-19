@@ -1,0 +1,323 @@
+﻿<!doctype html>
+<html>
+ <head lang="en">
+     <title>规范</title>
+     <meta charset="utf-8"><!--编码格式-->
+ 	 <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--针对IE让IE支持最新渲染模式-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--针对响应式布局-->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <!--<link href="sytle/bootstrap.min.css" rel="stylesheet">引入bootstrap央样式表-->
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body >
+
+<div style="width:100%;"><img src="img/head.jpg" class="img-responsive" alt="Cinque Terre"></div>
+
+<div class="container">
+
+
+<div class="col-lg-12 text-center"><!--字号-->
+		<div class="txt2">字号</div>
+		<div class="txt1">txt1  24px  网站标题（部分视情况而定）</div>
+        <div class="txt2">txt2  22px  页面标题（部分视情况而定）</div>
+        <div class="txt3">txt3  16px  模块标题（部分视情况而定）</div>
+        <div class="txt4">txt4  14px  列表标题（部分视情况而定）</div>
+        <div class="txt5">txt5  12px  标注、注释说明文字（部分视情况而定）</div>
+</div>
+
+
+
+<div class="col-lg-12 text-center"><!--按钮-->
+	<div class="txt2">按钮样式</div>
+    <div class="btn default">默认按钮</div>
+    <div class="btn blue">主要按钮</div>
+    <div class="btn grey-silver">次要按钮</div>
+    <div class="btn disabled">禁用按钮</div>
+
+    <div class="btn green-seagreen">确认收货</div>
+    <div class="btn blue-soft">确认收货</div>
+    <div class="btn green-meadow">确认收货</div>
+    
+    <div class="btn red">确认收货</div>
+    <div class="btn green">确认收货</div>
+    <div class="btn yellow">确认收货</div>
+</div>
+
+<div class="row"><!--控件-->
+<div class="col-lg-3"></div>
+<div class="col-lg-6 text-center">
+	<div class="txt2">控件</div>
+    <div class="txt4">输入框组</div>
+    <form class="bs-example bs-example-form col-lg-12" role="form">
+		<div class="input-group">
+			<span class="bg-grey-silver border-grey-silver font-white fa fa-user input-group-addon">
+            </span>
+			<input type="text" class="border-grey-silver form-control" placeholder="输入提示文字">
+		</div>
+		<br>
+		<div class="input-group">
+			<span class="bg-grey-silver border-grey-silver font-white fa fa-lock input-group-addon">
+            </span>
+			<input type="text" class="border-grey-silver form-control" placeholder="输入提示文字">
+		</div>
+	</form>
+    <p>&nbsp;</p>
+	<div class="txt4">搜索框</div>
+    <form class="bs-example bs-example-form col-lg-12" role="form">
+		<div class="input-group">
+			<input type="text" class="border-grey-silver form-control" placeholder="输入提示文字">
+            <span class="input-group-btn">
+           		<div class="btn default">查找</div>
+            </span>
+		</div>
+	</form>
+    <p>&nbsp;</p>
+    <div class="txt4">分页</div>
+    <ul class="pagination">
+        <li class="disabled"><a href="#" class="fa fa-caret-left"></a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#" class="fa fa-caret-right"></a></li>
+    </ul>
+    <p>&nbsp;</p>
+    <section>
+                <div class="txt4">复选框</div>
+                <div class="checkbox">
+                    <label>
+                        <input name="form-field-checkbox" class="wmui" type="checkbox">
+                        <span class="lbl"> 选项一</span>
+                    </label>
+                    <label>
+                        <input name="form-field-checkbox" class="wmui" type="checkbox">
+                        <span class="lbl"> 选项二</span>
+                    </label>
+                    <label>
+                        <input name="form-field-checkbox" class="wmui" type="checkbox" disabled>
+                        <span class="lbl"> 选项三</span>
+                    </label>
+                    <label>
+                        <input name="form-field-checkbox" class="wmui" type="checkbox" checked disabled>
+                        <span class="lbl"> 选项三</span>
+                    </label>
+                </div>
+<p>&nbsp;</p>
+                <div class="txt4">单选框</div>
+                <div class="radio">
+                    <label>
+                        <input name="form-field-checkbox" class="wmui" type="radio" checked>
+                        <span class="lbl"> 男</span>
+                    </label>
+                    <label>
+                        <input name="form-field-checkbox" class="wmui" type="radio">
+                        <span class="lbl"> 女</span>
+                    </label>
+                    <label>
+                        <input name="form-field-checkbox" class="wmui" type="radio" disabled>
+                        <span class="lbl"> 保密</span>
+                    </label>
+                    <label>
+                        <input name="form-field-checkboxs" class="wmui" type="radio" checked disabled>
+                        <span class="lbl"> 保密</span>
+                    </label>
+                </div>
+            </section>
+
+</div><!--<div class="col-lg-6 text-center">-->
+<div class="col-lg-3"></div>
+</div><!--row控件-->
+
+    
+    <div class="row"><!-- 下拉菜单 -->
+        <div class="col-lg-12  text-center">
+            <div class="txt4">下拉菜单</div>
+            <div class="btn-group chosen-group">
+                <button type="button" class="btn btn-default">李小华</button>
+                <button type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">切换下拉菜单</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">周小华</a></li>
+                    <li><a href="#">大小华</a></li>
+                    <li><a href="#">九州通</a></li>
+                    <li><a href="#">好药师</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group chosen-group">
+                <button type="button" class="btn btn-default">为民企鹅（武汉）科技有限公司</button>
+                <button type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">切换下拉菜单</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">为民企鹅（武汉）科技有限公司武汉办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司黑龙江办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司福建办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group chosen-group">
+                <button type="button" class="btn btn-default">为民企鹅（武汉）科技有限公司</button>
+                <button type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">切换下拉菜单</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">为民企鹅（武汉）科技有限公司武汉办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司黑龙江办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司福建办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                </ul>
+            </div>
+        </div>
+    </div><!--row下拉菜单 -->
+    
+    <!-- 文本域 -->
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 text-center">
+            <div class="txt4">文本域</div>
+            <textarea class="form-control" id="form-field-8" placeholder="请输入..."></textarea>
+        </div>
+    </div>
+    <!-- ./文本域 -->
+
+
+<div class="row"><!--表单-->
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+	<div class="txt2 text-center">表单</div>
+    <div class="txt4"></div>
+    <form class="form-horizontal" role="form">
+	<div class="form-group">
+		<label for="firstname" class="col-sm-2 control-label">名字</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="firstname" 
+				   placeholder="请输入名字">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">姓</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="lastname" 
+				   placeholder="请输入姓">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<div class="checkbox">
+				<label>
+                        <input name="form-field-checkbox" class="wmui" type="checkbox">
+                        <span class="lbl">记住我</span>
+                </label>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-block default">登录</button>
+		</div>
+	</div>
+</form>
+</div><!--<div class="col-lg-6 text-center">-->
+<div class="col-lg-3"></div>
+</div><!--row表单-->
+
+<div class="row"><!--表单-->
+<table class="table table-striped table-border border-grey-silver ">
+	<div class="txt2 text-center">表格</div>
+	<thead class="table1">
+		<tr>
+			<th width="5%">合并</th>
+			<th width="5%">流水号</th>
+			<th width="15%">基本名称</th>
+            <th width="25%">生产厂家</th>
+            <th width="10%">通用剂型</th>
+            <th width="10%">通用规格包装</th>
+            <th width="15%">数量</th>
+            <th width="10%">操作</th>
+            <th width="5%">删除</th>
+		</tr>
+	</thead>
+	<tbody class="table1">
+		<tr>
+			<th width="5%"> 
+            	<label>
+                        <input name="form-field-checkbox" class="wmui" type="checkbox">
+                        <span class="lbl"></span>
+                </label>
+            </th>
+			<th  width="5%">BFA043161C</th>
+			<th width="15%">阿斯匹林</th>
+            <th width="25%">
+            	<div class="btn-group chosen-group">
+                <button type="button" class="btn btn-default">为民企鹅（武汉）科技有限公司</button>
+                <button type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">切换下拉菜单</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">为民企鹅（武汉）科技有限公司武汉办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司黑龙江办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司福建办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                    <li><a href="#">为民企鹅（武汉）科技有限公司乌鲁木齐办事处</a></li>
+                </ul>
+           		</div>
+            
+            </th>
+            <th  width="10%">25mg</th>
+            <th  width="10%">100s/瓶装</th>
+            <th width="15%">
+            <div class="">
+            	<span class="btn-font fa fa-minus"></span>
+                <span>600</span>
+                <span class="btn-font fa fa-plus"></span>
+            </div>
+            </th>
+            <th  width="10%"><a href="#">拆分采购</a></th>
+            <th width="5%">
+            <span class="btn-font fa fa-trash-o"></span>
+            </th>
+		</tr>
+		
+	</tbody>
+</table>
+</div><!--row表单-->
+
+</div><!--container-->
+</body>
+</html>

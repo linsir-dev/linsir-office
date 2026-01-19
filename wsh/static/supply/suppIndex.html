@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <title>供应商首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+    <script src="../assets/admin-resources/inculde-css.js"></script>
+</head>
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+<div class="page-container">
+    <div class="page-content-wrapper">
+        <!-- BEGIN CONTENT BODY -->
+        <div class="">
+            <!-- BEGIN PAGE HEAD-->
+            <div class="page-head">
+                <div class="page-title">
+                    <h1>控制面板</h1>
+                </div>
+            </div>
+            <ul class="page-breadcrumb breadcrumb">
+                <li>
+                    <a href="index.html">首页</a>
+                    <i class="fa fa-circle"></i>
+                </li>
+                <li>
+                    <span class="active">控制面板</span>
+                </li>
+            </ul>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat red">
+                        <div class="visual">
+                            <i class="fa fa-comments"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number">
+                                <span data-counter="counterup" data-value="18"></span> 个
+                            </div>
+                            <div class="desc">最近未报价订单</div>
+                        </div>
+                        <a class="more" href="javascript:;"> 详情
+                            <i class="m-icon-swapright m-icon-white"> </i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat blue">
+                        <div class="visual">
+                            <i class="fa fa-bar-chart-o"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number">
+                                <span data-counter="counterup" data-value="8"></span> 个
+                            </div>
+                            <div class="desc">未送货订单</div>
+                        </div>
+                        <a class="more" href="javascript:;"> 详情
+                            <i class="m-icon-swapright m-icon-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat green">
+                        <div class="visual">
+                            <i class="fa fa-shopping-cart"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number">
+                                <span data-counter="counterup" data-value="400"> </span> 个
+                            </div>
+                            <div class="desc">历史已报价订单</div>
+                        </div>
+                        <a class="more" href="javascript:;"> 详情
+                            <i class="m-icon-swapright m-icon-white"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat purple">
+                        <div class="visual">
+                            <i class="fa fa-globe"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number">
+                                <span data-counter="counterup" data-value="6"></span> 个
+                            </div>
+                            <div class="desc"> 未支付订单</div>
+                        </div>
+                        <a class="more" href="javascript:;"> 详情
+                            <i class="m-icon-swapright m-icon-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="icon-share font-blue"></i>
+                                <span class="caption-subject font-blue bold uppercase">最近活动</span>
+                            </div>
+                            <div class="actions">
+                                <div class="btn-group">
+                                    <a class="btn btn-sm blue btn-outline btn-circle" href="javascript:;"
+                                       data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> 过滤
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
+                                        <label>
+                                            <input type="checkbox" checked=""/> 报价信息</label>
+                                        <label>
+                                            <input type="checkbox"/> 订单信息</label>
+
+                                        <label>
+                                            <input type="checkbox" checked=""/> 支付信息</label>
+                                        <label>
+                                            <input type="checkbox"/> 物流信息</label>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
+                                <ul class="feeds">
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-default">
+                                                        <i class="fa fa-bell-o"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc"><a>你有新的报价单未处理 </a>
+                                                        <span class="label label-sm label-warning "> 报价
+                                                                    <i class="fa fa-share"></i>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date"> 刚刚</div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-danger">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc"><a>新的催单消息 </a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date"> 8 分钟</div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-default">
+                                                        <i class="fa fa-bell-o"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc"><a>你有新的报价单未处理 </a>
+                                                        <span class="label label-sm label-warning "> 报价
+                                                                    <i class="fa fa-share"></i>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date"> 20 分钟</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col1">
+                                            <div class="cont">
+                                                <div class="cont-col1">
+                                                    <div class="label label-sm label-default">
+                                                        <i class="fa fa-bell-o"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="cont-col2">
+                                                    <div class="desc"><a>你有新的报价单未处理 </a>
+                                                        <span class="label label-sm label-warning "> 报价
+                                                                    <i class="fa fa-share"></i>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col2">
+                                            <div class="date"> 28 分钟</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-danger">
+                                                            <i class="fa fa-bar-chart-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> xx医院xx药品已支付</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 30 分钟</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-danger">
+                                                            <i class="fa fa-bar-chart-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> xx药品已发货</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 43 分钟</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-danger">
+                                                            <i class="fa fa-bar-chart-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">xx药品已发货</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50 分钟</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-danger">
+                                                            <i class="fa fa-bar-chart-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> xx医院xx药品已支付</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 56 分钟</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-danger">
+                                                            <i class="fa fa-bar-chart-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 支付信息.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 58 分钟</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-danger">
+                                                            <i class="fa fa-bar-chart-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc">支付信息.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date">60 分钟</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scroller-footer">
+                                <div class="btn-arrow-link pull-right">
+                                    <a href="javascript:;">查看所有信息</a>
+                                    <i class="icon-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="portlet light tasks-widget bordered">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="icon-share font-green-haze hide"></i>
+                                <span class="caption-subject font-green bold uppercase">订单&送货</span>
+                                <span class="caption-helper"> </span>
+                            </div>
+                            <div class="actions">
+                                <div class="btn-group">
+                                    <a class="btn green btn-circle btn-sm" href="javascript:;" data-toggle="dropdown"
+                                       data-hover="dropdown" data-close-others="true"> 更多
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:;">订 单</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="javascript:;">需求</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="task-content">
+                                <div class="scroller" style="height: 312px;" data-always-visible="1"
+                                     data-rail-visible1="1">
+                                    <!-- START TASK LIST -->
+                                    <ul class="task-list">
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 大峡区订单 </span>
+                                                <span class="label label-sm label-success">待发货</span>
+                                                <span class="task-bell">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 完成 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 里美区订单 </span>
+                                                <span class="label label-sm label-success">待发货</span>
+                                                <span class="task-bell">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 完成 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 阿莫西林 </span>
+                                                <span class="label label-sm label-danger">待报价</span>
+                                                <span class="task-bell">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 完成 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 广元区订单 </span>
+                                                <span class="label label-sm label-success">待发货</span>
+                                                <span class="task-bell">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 完成 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 汉西区订单待报价 </span>
+                                                <span class="label label-sm label-danger">报价</span>
+                                                <span class="task-bell">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 完成 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> xx区订单待报价 </span>
+                                                <span class="label label-sm label-danger">报价</span>
+                                                <span class="task-bell">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 完成 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 江中健胃消食片</span>
+                                                <span class="label label-sm label-danger">待报价</span>
+                                                <span class="task-bell">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 完成 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 头孢克啶 </span>
+                                                <span class="label label-sm label-danger">待报价</span>
+                                                <span class="task-bell">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 完成 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp">克拉霉素 </span>
+                                                <span class="label label-sm label-danger">待报价</span>
+                                                <span class="task-bell">
+                                                            <i class="fa fa-bell-o"></i>
+                                                        </span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 完成 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> xx区订单待报价 </span>
+                                                <span class="label label-sm label-danger">报价</span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 提交 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 艾灸新的需求 </span>
+                                                <span class="label label-sm label-danger">需求</span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 提交 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 艾灸新的需求 </span>
+                                                <span class="label label-sm label-danger">需求</span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 提交 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="task-checkbox">
+                                                <input type="checkbox" class="liChild" value=""/></div>
+                                            <div class="task-title">
+                                                <span class="task-title-sp"> 艾灸新的需求 </span>
+                                                <span class="label label-sm label-danger">需求</span>
+                                            </div>
+                                            <div class="task-config">
+                                                <div class="task-config-btn btn-group">
+                                                    <a class="btn btn-sm default" href="javascript:;"
+                                                       data-toggle="dropdown" data-hover="dropdown"
+                                                       data-close-others="true">
+                                                        <i class="fa fa-cog"></i>
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-check"></i> 提交 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-pencil"></i> 编辑 </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">
+                                                                <i class="fa fa-trash-o"></i> 取消 </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- END START TASK LIST -->
+                                </div>
+                            </div>
+                            <div class="task-footer">
+                                <div class="btn-arrow-link pull-right">
+                                    <a href="javascript:;">查看所有的信息</a>
+                                    <i class="icon-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-green">
+                                <span class="caption-subject bold uppercase">供应统计</span>
+                                <span class="caption-helper">2017年XXX药品供应数量统计</span>
+                            </div>
+                            <div class="actions">
+                                <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                                    <i class="icon-cloud-upload"></i>
+                                </a>
+                                <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                                    <i class="icon-wrench"></i>
+                                </a>
+                                <a class="btn btn-circle btn-icon-only btn-default" href="#">
+                                    <i class="icon-trash"></i>
+                                </a>
+                                <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div id="dashboard_amchart_1" class="CSSAnimationChart"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-red">
+                                <span class="caption-subject bold uppercase">收入数据</span>
+                                <span class="caption-helper">2017年药品月收入情况(医保支付)</span>
+                            </div>
+                            <div class="actions">
+                                <a href="#" class="btn btn-circle green btn-outline btn-sm">
+                                    <i class="fa fa-pencil"></i> 导出 </a>
+                                <a href="#" class="btn btn-circle green btn-outline btn-sm">
+                                    <i class="fa fa-print"></i> 打印 </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div id="dashboard_amchart_3" class="CSSAnimationChart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- END CONTAINER -->
+        <div class="page-footer">
+            <div class="page-footer-inner"> 2014 &copy; Metronic by keenthemes.
+                <a href="http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes"
+                   title="Purchase Metronic just for 27$ and get lifetime updates for free" target="_blank">Purchase
+                    Metronic!</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/admin-resources/inculde-js.js?1"></script>
+</body>
+
+</html>

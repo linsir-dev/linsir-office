@@ -1,0 +1,593 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>订单管理-订单更改&下单</title>
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/sub.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/UI-style.css">
+    <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <div class="container-fluid yx">
+        <div class="demand_management_top clearfix">
+            <p class="fl">
+                <i>快速搜索：</i>
+                <input class="form-control form-control-inline" type="text">
+            </p>
+            <p class="fl">
+                <select class="form-control">
+				<option>按同厂牌筛选</option>
+				<option>按同名称筛选</option>
+			</select>
+            </p>
+        </div>
+
+        <table class="table table-bordered J_table">
+            <tr>
+                <th>药品流水号</th>
+                <th>基本名称</th>
+                <th>通用剂型</th>
+                <th>通用规格包装</th>
+                <th>生产厂家</th>
+                <th>订单数量</th>
+                <th>最小单位单价</th>
+                <th>单行总价</th>
+                <th>医保差价<br>(高于医保为负值)</th>
+                <th>是否在挂网目录</th>
+                <th>包装数量</th>
+                <th>整件数</th>
+                <th>零散数</th>
+                <th>药品规格</th>
+                <th>承诺配送时间</th>
+                <th>选择方式</th>
+            </tr>
+
+            <!--
+<tr bgcolor="yellow">
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        阿斯匹林
+    </td>
+    <td align="center">
+        25mg
+    </td>
+    <td align="center">
+        100s/瓶
+    </td>
+    <td align="center">
+        武汉太福制药有限公司
+    </td>
+    <td align="center">
+        600
+    </td>
+    <td align="center">
+        12.3
+    </td>
+    <td align="center">
+        ￥6426
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="bg_color_blue">in</span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+
+<tr bgcolor="yellow">
+    <td align="center">
+
+    </td>
+    <td align="center">
+    </td>
+    <td align="center">
+
+    </td>
+    <td align="center">
+        更改为<input type="radio" name="item1" />
+    </td>
+    <td align="center">
+        江苏制药有限公司
+    </td>
+    <td align="center">
+        600
+    </td>
+    <td align="center">
+        10
+    </td>
+    <td align="center">
+        ￥5982
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="bg_color_blue">in</span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+
+<tr bgcolor="yellow">
+    <td align="center">
+
+    </td>
+    <td align="center">
+
+    </td>
+    <td align="center">
+
+    </td>
+    <td align="center">
+        更改为<input type="radio" checked="checked" name="item1" />
+    </td>
+    <td align="center">
+        德瑞克药有限公司
+    </td>
+    <td align="center">
+        600
+    </td>
+    <td align="center">
+        11
+    </td>
+    <td align="center">
+        ￥6021
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="bg_color_blue">in</span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+
+<tr>
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        康泰克
+    </td>
+    <td align="center">
+        糖衣
+    </td>
+    <td align="center">
+        35s/盒
+    </td>
+    <td align="center">
+        天士力制药有限公司
+    </td>
+    <td align="center">
+        300
+    </td>
+    <td align="center">
+        32.3
+    </td>
+    <td align="center">
+        ￥6426
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="bg_color_blue">in</span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+<tr>
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        复方利血片
+    </td>
+    <td align="center">
+        薄膜衣
+    </td>
+    <td align="center">
+        10带/盒
+    </td>
+    <td align="center">
+        河南百年药业有限公司
+    </td>
+    <td align="center">
+        600
+    </td>
+    <td align="center">
+        52.3
+    </td>
+    <td align="center">
+        ￥6426
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="glyphicon glyphicon-remove"></span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+<tr>
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        黄体酮注射液
+    </td>
+    <td align="center">
+        25mg
+    </td>
+    <td align="center">
+        10支/盒
+    </td>
+    <td align="center">
+        天士力制药有限公司
+    </td>
+    <td align="center">
+        400
+    </td>
+    <td align="center">
+        12.3
+    </td>
+    <td align="center">
+        ￥6426
+    </td>
+    <td>￥500</td>
+    <td class="bg_color_red" align="center">
+        <span class="glyphicon glyphicon-remove"></span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+<tr>
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        维C银翘片
+    </td>
+    <td align="center">
+        糖衣
+    </td>
+    <td align="center">
+        100s/瓶
+    </td>
+    <td align="center">
+        河南制药有限公司
+    </td>
+    <td align="center">
+        600
+    </td>
+    <td align="center">
+        14.3
+    </td>
+    <td align="center">
+        ￥6426
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="bg_color_blue">in</span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+<tr bgcolor="yellow">
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        马来酸
+    </td>
+    <td align="center">
+        4mg
+    </td>
+    <td align="center">
+        200s/瓶
+    </td>
+    <td align="center">
+        江苏制药有限公司
+    </td>
+    <td align="center">
+        200
+    </td>
+    <td align="center">
+        11.3
+    </td>
+    <td align="center">
+        ￥4012
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="bg_color_blue">in</span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+
+<tr bgcolor="yellow">
+    <td align="center">
+
+    </td>
+    <td align="center">
+
+    </td>
+    <td align="center">
+
+    </td>
+    <td align="center">
+        更改为<input type="radio" checked="checked" name="item2" />
+
+    </td>
+    <td align="center">
+        天士力制药有限公司
+    </td>
+    <td align="center">
+        300
+    </td>
+    <td align="center">
+        32.3
+    </td>
+    <td align="center">
+        ￥5326
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="bg_color_blue">in</span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+<tr bgcolor="yellow">
+    <td align="center">
+
+    </td>
+    <td align="center">
+
+    </td>
+    <td align="center">
+
+    </td>
+    <td align="center">
+        更改为<input type="radio" name="item2" />
+    </td>
+    <td align="center">
+        河南百年药业有限公司
+    </td>
+    <td align="center">
+        600
+    </td>
+    <td align="center">
+        52.1
+    </td>
+    <td align="center">
+        ￥8426
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="glyphicon glyphicon-remove"></span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+<tr>
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        黄体酮注射液
+    </td>
+    <td align="center">
+        25mg
+    </td>
+    <td align="center">
+        10支/盒
+    </td>
+    <td align="center">
+        天士力制药有限公司
+    </td>
+    <td align="center">
+        400
+    </td>
+    <td align="center">
+        12.3
+    </td>
+    <td align="center">
+        ￥6426
+    </td>
+    <td>￥500</td>
+    <td class="bg_color_red" align="center">
+        <span class="glyphicon glyphicon-remove"></span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+
+<tr>
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        康泰克
+    </td>
+    <td align="center">
+        糖衣
+    </td>
+    <td align="center">
+        35s/盒
+    </td>
+    <td align="center">
+        天士力制药有限公司
+    </td>
+    <td align="center">
+        300
+    </td>
+    <td align="center">
+        32.3
+    </td>
+    <td align="center">
+        ￥6426
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="bg_color_blue">in</span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+<tr>
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        复方利血片
+    </td>
+    <td align="center">
+        薄膜衣
+    </td>
+    <td align="center">
+        10带/盒
+    </td>
+    <td align="center">
+        河南百年药业有限公司
+    </td>
+    <td align="center">
+        600
+    </td>
+    <td align="center">
+        52.3
+    </td>
+    <td align="center">
+        ￥6426
+    </td>
+    <td>￥500</td>
+    <td align="center">
+        <span class="glyphicon glyphicon-remove"></span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+<tr>
+    <td align="center">
+        043161
+    </td>
+    <td align="center">
+        黄体酮注射液
+    </td>
+    <td align="center">
+        25mg
+    </td>
+    <td align="center">
+        10支/盒
+    </td>
+    <td align="center">
+        天士力制药有限公司
+    </td>
+    <td align="center">
+        400
+    </td>
+    <td align="center">
+        12.3
+    </td>
+    <td align="center">
+        ￥6426
+    </td>
+    <td>￥500</td>
+    <td class="bg_color_red" align="center">
+        <span class="glyphicon glyphicon-remove"></span>
+    </td>
+    <td>300</td>
+    <td>3</td>
+    <td>130</td>
+    <td>25mg*100s</td>
+    <td>2小时</td>
+    <td>品牌最低价</td>
+</tr>
+-->
+
+        </table>
+        <a href="order-view.html" class="btn grey-silver">返回重新生成</a>
+        <a href="order-list.html" class="btn green">保存</a>
+        <button class="btn yellow">打印</button>
+        <a href="order-split.html" class="btn blue">生成订单</a>
+
+        <!-- 分页 -->
+        <nav class="clearfix" aria-label="Page navigation">
+            <ul class="pagination fr">
+                <li class="disabled">
+                    <a href="#" class="fa fa-caret-left"></a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" class="fa fa-caret-right"></a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+    <script src="../../assets/js/rq/vendor/require.js" data-main="../../assets/js/rq/common.js"></script>
+    <script src="../../assets/js/rq/boot/o_cg.js"></script>
+    <script src="../../assets/js/jquery.js"></script>
+    <script src="../../assets/js/sub.js"></script>
+</body>
+
+</html>

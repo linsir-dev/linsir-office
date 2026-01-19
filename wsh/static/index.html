@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022) -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="" name="description">
+<meta content="" name="author">    <title>
+        药械采购交易平台
+    </title>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="assets/css/wmqe-home.css">
+    <link rel="stylesheet" href="assets/css/wmqe-chat.css">
+    <style type="text/css">
+    .ewm{
+        position: relative;
+    }
+    .ewm_pic {
+        display:none;
+        position: absolute;
+        top:30px;
+        left:-110px;
+        z-index: 9
+    }
+    </style>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="col-md-12 wmqe-top-menu text-right">
+        <a class="ewm" style="cursor:pointer;">
+            APP下载
+            <span class="ewm_pic"><img src="assets/images/tmp/ewm.png"></span>
+        </a>
+        <a href="login.html" class="btn btn-link">采购机构登录</a>
+        <a href="login.html" class="btn btn-link">供应商登录</a>
+        <a href="login.html" class="btn btn-link">监管方登录</a>
+        <a href="logo/logo_list.html" class="btn btn-link">logo展示</a>
+        <a href="ui-html-spec/index.html" class="btn btn-link">UI规范</a>
+
+        <a href="bidding-platform-specification/index.html" class="btn btn-link">竞价平台规范</a>
+    </div>
+    <div class="col-md-3 wmqe-logo"></div>
+    <div class="message_menu">
+        <ul>
+           <!--  <li class="shop_cat"><i></i><a href="#">购物车</a> <span>0</span></li> -->
+            <li class="my_alert"><i></i><a href="#">到货提醒</a></li>
+            <li class="my_order"><i></i><a href="#">我的订单</a></li>
+        </ul>
+    </div>
+    <div class="col-md-12 wmqe-nav-menu navbar navbar-default ">
+        <form class="navbar-form navbar-right">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="关键字">
+            </div>
+            <input type="submit" value="搜索" class="btn btn-primary">
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">平台首页 <span class="sr-only">(current)</span></a></li>
+            <li><a href="">信息公开</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">采购指南<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="">采购指南1</a></li>
+                    <li><a href="">采购指南2</a></li>
+                    <li><a href="">采购指南3</a></li>
+                </ul>
+            </li>
+
+            <li><a href="">药械信息</a></li>
+            <li><a href="">政策法规</a></li>
+            <li><a href="">联系我们</a></li>
+        </ul>
+
+    </div>
+
+    <div class="col-md-12">
+    <div id="myCarousel" class="carousel slide wmqe-slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+               <a target="_blank" href="http://www.fzsdyyy.com/"> <img src="./assets/images/home/slide01.jpg" alt="省医保办主任莅临我中心指导工作"></a>
+            </div>
+            <div class="item">
+                <a target="_blank" href="http://www.fzsdyyy.com/"><img src="./assets/images/home/slide02.jpg" alt="省医保办主任莅临我中心指导工作"></a>
+            </div>
+            <div class="item">
+                <a target="_blank" href="http://www.fzsdyyy.com/"> <img src="./assets/images/home/slide03.jpg" alt="省医保办主任莅临我中心指导工作"></a>
+            </div>
+            <div class="item">
+                <a target="_blank" href="http://www.fzsdyyy.com/"> <img src="./assets/images/home/slide04.jpg" alt="省医保办主任莅临我中心指导工作"></a>
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">›
+        </a>
+    </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-12 wmqe-page-group">
+            <div class="col-md-4 wmqe-page-group-title text-center">
+                <span class="" href="">信息公开</span>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <tbody>
+                <tr>
+                    <td><span class="glyphicon glyphicon-bell"></span></td>
+                    <td>【药品】药品短缺情况登记表</td>
+                    <td>(2017-05-16)</td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-bell"></span></td>
+                    <td>【药品】批件转让所需材料及办理流程</td>
+                    <td>(2017-05-09)</td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-bell"></span></td>
+                    <td>
+                        【药品】关于报送“毒麻精放”药品信息的通知
+                    </td>
+                    <td>
+                        (2017-05-08)
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-bell"></span></td>
+                    <td>
+                        【药品】配送企业变更所需材料及办理流程
+                    </td>
+                    <td>
+                        (2017-05-08)
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-bell"></span></td>
+                    <td>
+                        【药品】代理企业变更所需材料及办理流程
+                    </td>
+                    <td>
+                        (2017-05-08)
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-bell"></span></td>
+                    <td>
+                        【药品】生产企业名称变更所需材料及办理流程
+                    </td>
+                    <td>
+                        (2017-05-08)
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="glyphicon glyphicon-bell"></span></td>
+                    <td>
+                        【药品】被授权人变更所需材料及办理流程
+                    </td>
+                    <td>
+                        (2017-05-08)
+                    </td>
+                </tr>
+                 </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="col-md-12 wmqe-page-group">
+            <div class="col-md-4 wmqe-page-group-title text-center">
+                <span class="" href="">医疗机构</span>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <tbody>
+                <tr>
+                    <td><a target="_blank" href="http://www.fzsdyyy.com/">福州市第一医院</a></td>
+                    <td><a target="_blank" href="http://www.xmfh.com.cn/">厦门大学附属第一医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.zzfh.com/">漳州市医院</a></td>
+                    <td><a target="_blank" href="http://www.qzdyyy.com/">泉州第一医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.ptrmyy.com/index.html">莆田人民医院</a></td>
+                    <td><a target="_blank" href="http://www.smdyyy.cn/">三明市第一医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.npyy.com.cn/">南平市第一医院</a></td>
+                    <td><a target="_blank" href="http://www.lydyyy.com.cn/">龙岩市第一医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.ndsyy.com/">宁德市医院</a></td>
+                    <td><a target="_blank" href="http://www.fjfk.com/">福建省福州肺科医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.fzcrb.com/">福建市传染病医院</a></td>
+                    <td><a target="_blank" href="http://www.fzsdsyy.com/">福建省福州神经精神病防治院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.fzetyy.com/">福建省福州儿童医院</a></td>
+                    <td><a target="_blank" href="http://www.xmdeyy.com/">厦门市第二医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.xmzsh.com/Pages/Home/Index.aspx">厦门中山医院</a></td>
+                    <td><a target="_blank" href="http://www.xmxy.net/">厦门市仙岳医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.xmfybj.cn/">厦门市妇幼保健院</a></td>
+                    <td><a target="_blank" href="http://www.xm120.com.cn/">厦门市医疗急救中心</a></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="col-md-6">
+        <div class="col-md-12 wmqe-page-group">
+            <div class="col-md-4 wmqe-page-group-title text-center">
+                <span class="" href="">供货机构</span>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <table class="table table-striped">
+                <tbody>
+                <tr>
+                    <td><a target="_blank" href="http://www.fzsdyyy.com/">福州市第一医院</a></td>
+                    <td><a target="_blank" href="http://www.xmfh.com.cn/">厦门大学附属第一医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.zzfh.com/">漳州市医院</a></td>
+                    <td><a target="_blank" href="http://www.qzdyyy.com/">泉州第一医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.ptrmyy.com/index.html">莆田人民医院</a></td>
+                    <td><a target="_blank" href="http://www.smdyyy.cn/">三明市第一医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.npyy.com.cn/">南平市第一医院</a></td>
+                    <td><a target="_blank" href="http://www.lydyyy.com.cn/">龙岩市第一医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.ndsyy.com/">宁德市医院</a></td>
+                    <td><a target="_blank" href="http://www.fjfk.com/">福建省福州肺科医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.fzcrb.com/">福建市传染病医院</a></td>
+                    <td><a target="_blank" href="http://www.fzsdsyy.com/">福建省福州神经精神病防治院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.fzetyy.com/">福建省福州儿童医院</a></td>
+                    <td><a target="_blank" href="http://www.xmdeyy.com/">厦门市第二医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.xmzsh.com/Pages/Home/Index.aspx">厦门中山医院</a></td>
+                    <td><a target="_blank" href="http://www.xmxy.net/">厦门市仙岳医院</a></td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="http://www.xmfybj.cn/">厦门市妇幼保健院</a></td>
+                    <td><a target="_blank" href="http://www.xm120.com.cn/">厦门市医疗急救中心</a></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-12 wmqe-page-group">
+            <div class="col-md-4 wmqe-page-group-title text-center">
+                <span class="" href="">医疗机构评论</span>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <ul class="content-reply-box mg10">
+                <li class="odd">
+                    <a class="user" href="#"><img class="img-responsive avatar_" src="./assets/images/home/team1.jpg" alt=""><span class="user-name">李波</span></a>
+                    <div class="reply-content-box">
+                        <span class="reply-time">03-08 15：00</span>
+                        <div class="reply-content pr">
+                            <span class="arrow">&nbsp;</span>
+                            配送太快了，给一个赞！！！
+                        </div>
+                    </div>
+                </li>
+                <li class="odd">
+                    <a class="user" href="#"><img class="img-responsive avatar_" src="./assets/images/home/team3.jpg" alt=""><span class="user-name">张三丰</span></a>
+                    <div class="reply-content-box">
+                        <span class="reply-time">03-08 15：20</span>
+                        <div class="reply-content pr">
+                            <span class="arrow">&nbsp;</span>
+                            配送太慢了，鄙视一下！！！
+                        </div>
+                    </div>
+                </li><li class="odd">
+                <a class="user" href="#"><img class="img-responsive avatar_" src="./assets/images/home/team5.jpg" alt=""><span class="user-name">李波</span></a>
+                <div class="reply-content-box">
+                    <span class="reply-time">03-08 15：00</span>
+                    <div class="reply-content pr">
+                        <span class="arrow">&nbsp;</span>
+                        配送太快了，给一个赞！！！
+                    </div>
+                </div>
+            </li>
+                <li class="odd">
+                    <a class="user" href="#"><img class="img-responsive avatar_" src="./assets/images/home/team7.jpg" alt=""><span class="user-name">张三丰</span></a>
+                    <div class="reply-content-box">
+                        <span class="reply-time">03-08 15：20</span>
+                        <div class="reply-content pr">
+                            <span class="arrow">&nbsp;</span>
+                            店已经收藏了很久，不过是第一次下手。应该说还不错。
+                        </div>
+                    </div>
+                </li>
+             </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-12 wmqe-page-group">
+            <div class="col-md-4 wmqe-page-group-title text-center">
+                <span class="" href="">供货机构评论</span>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <ul class="content-reply-box mg10">
+                <li class="even">
+                    <a class="user" href="#"><img class="img-responsive avatar_" src="./assets/images/home/team2.jpg" alt=""><span class="user-name">李刚</span></a>
+                    <div class="reply-content-box">
+                        <span class="reply-time">03-08 15：10</span>
+                        <div class="reply-content pr">
+                            <span class="arrow">&nbsp;</span>
+                            此处省略一百字...
+                        </div>
+                    </div>
+                </li>
+                <li class="even">
+                    <a class="user" href="#"><img class="img-responsive avatar_" src="./assets/images/home/team4.jpg" alt=""><span class="user-name">王武</span></a>
+                    <div class="reply-content-box">
+                        <span class="reply-time">03-08 15：30</span>
+                        <div class="reply-content pr">
+                            <span class="arrow">&nbsp;</span>
+                            此处省略一百字...
+                        </div>
+                    </div>
+                </li>
+                <li class="even">
+                    <a class="user" href="#"><img class="img-responsive avatar_" src="./assets/images/home/team6.jpg" alt=""><span class="user-name">张三</span></a>
+                    <div class="reply-content-box">
+                        <span class="reply-time">03-08 15：10</span>
+                        <div class="reply-content pr">
+                            <span class="arrow">&nbsp;</span>
+                            此处省略一百字...
+                        </div>
+                    </div>
+                </li>
+                <li class="even">
+                    <a class="user" href="#"><img class="img-responsive avatar_" src="./assets/images/home/team8.jpg" alt=""><span class="user-name">李四</span></a>
+                    <div class="reply-content-box">
+                        <span class="reply-time">03-08 15：30</span>
+                        <div class="reply-content pr">
+                            <span class="arrow">&nbsp;</span>
+                            此处省略一百字...
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="col-md-12 wmqe-page-group">
+            <div class="col-md-4 wmqe-page-group-title text-center">
+                <span class="" href="">最近采购</span>
+            </div>
+
+        </div>
+        <div class="col-md-12">
+            <table class="table table-condensed">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>订单号</th>
+                    <th>采购机构</th>
+                    <th>供货机构</th>
+                    <th>金额</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>11</td>
+                    <td>1234561</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>100000</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>1234562</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>100000</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>1234563</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>100000</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>1234561</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>100000</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>1234562</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>100000</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>1234563</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>厦门市妇幼保健院</td>
+                    <td>100000</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="wmqe-footer">
+    首次登录时，请下载并安装“CA证书客户端”仅支持IE浏览器<br><br>
+
+    管理单位：福建省医疗保障管理委员会办公室 丨 承建单位：福建省药械联合限价阳光采购中心<br>
+    技术支持: 厦门海西医药交易中心有限公司 联系我们 服务热线:<br>
+    Copyright(C)2016 闽ICP备14009242号-1
+</div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+    $('.ewm').hover(function(){
+        $('.ewm_pic').show()
+    },function(){
+        $('.ewm_pic').hide()
+    })
+})
+</script>
+ </body></html>

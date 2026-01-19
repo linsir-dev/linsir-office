@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>退换货管理-退货单</title>
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="../../assets/css/sub.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../assets/css/UI-style.css">
+    <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container-fluid yx">
+    <div class="col-md-12 h3 table-bordered">建立退货单</div>
+    <div class="col-md-12">
+        <form class="form-horizontal" role="form">
+            <fieldset>
+                <legend>退货信息</legend>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="ro_no">单据编号</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="ro_no" type="text" value="THBH201708101111"/>
+                    </div>
+                    <label class="col-sm-2 control-label" for="order_time">制单时间</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="order_time" type="text" value="2017-08-10"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="order_no">订单编号</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="order_no" type="text" value="CGBH201708101111"/>
+                    </div>
+                    <label class="col-sm-2 control-label" for="purchase_time">采购时间</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="purchase_time" type="text" value="2017-07-10"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="creator">制单人</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="creator" type="text" value="小李"/>
+                    </div>
+                    <label class="col-sm-2 control-label" for="ds_password">制单机构</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="ds_password" type="text" value="XX公司福建分公司"/>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>退货明细</legend>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>药品流水号</th>
+                        <th>基本名称</th>
+                        <th>生产厂家</th>
+                        <th>药品规格</th>
+                        <th>计量单位</th>
+                        <th>采购数量</th>
+                        <th>退货数量</th>
+                        <th>采购价格</th>
+                    </tr>
+                    <tr>
+                        <td align="center">BFA043161C</td>
+                        <td align="center">阿斯匹林</td>
+                        <td align="center">武汉太福制药有限公司</td>
+                        <td align="center">25mg</td>
+                        <td align="center">瓶</td>
+                        <td align="center">600</td>
+                        <td align="center">600</td>
+                        <td align="center">￥12345.00</td>
+                    </tr>
+                    <tr>
+                        <td align="center">AFA043161C</td>
+                        <td align="center">康泰克</td>
+                        <td align="center">天士力制药有限公司</td>
+                        <td align="center">糖衣</td>
+                        <td align="center">盒</td>
+                        <td align="center">300</td>
+                        <td align="center">300</td>
+                        <td align="center">￥12345.00</td>
+                    </tr>
+                    <tr>
+                        <td align="center">GBA043161C</td>
+                        <td align="center">复方利血片</td>
+                        <td align="center">河南百年药业有限公司</td>
+                        <td align="center">薄膜衣</td>
+                        <td align="center">盒</td>
+                        <td align="center">600</td>
+                        <td align="center">600</td>
+                        <td align="center">￥12345.00</td>
+                    </tr>
+                    <tr>
+                        <td align="center">HFA043161C</td>
+                        <td align="center">黄体酮注射液</td>
+                        <td align="center">天士力制药有限公司</td>
+                        <td align="center">25mg</td>
+                        <td align="center">盒</td>
+                        <td align="center">400</td>
+                        <td align="center">400</td>
+                        <td align="center">￥12345.00</td>
+                    </tr>
+                    <tr>
+                        <td align="center">WEA043161C</td>
+                        <td align="center">维C银翘片</td>
+                        <td align="center">河南制药有限公司</td>
+                        <td align="center">糖衣</td>
+                        <td align="center">瓶</td>
+                        <td align="center">600</td>
+                        <td align="center">600</td>
+                        <td align="center">￥12345.00</td>
+                    </tr>
+                    <tr>
+                        <td align="center">VCA043161C</td>
+                        <td align="center">马来酸</td>
+                        <td align="center">江苏制药有限公司</td>
+                        <td align="center">4mg</td>
+                        <td align="center">瓶</td>
+                        <td align="center">200</td>
+                        <td align="center">200</td>
+                        <td align="center">￥12345.00</td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/sub.js"></script>
+</body>
+</html>

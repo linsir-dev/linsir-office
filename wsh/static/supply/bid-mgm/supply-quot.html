@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>竞价管理-供应商报价</title>
+<link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/sub.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../assets/css/UI-style.css">
+<link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container-fluid yx">
+	<div class="clearfix pad_tb">
+		采购方位置：<span>福建省厦门市</span>
+		<input class="btn blue fr mar_l" type="submit" value="提交报价">
+		<button class="btn green-meadow fr mar_l">导入报价</button>
+		<button class="btn green-seagreen fr mar_l">导出需求</button>
+	</div>
+	<!--url: "../../apis/preq/supply-quot.json"-->
+	<div class="roll">
+	<table class="table table-bordered tab_list" id="suppy-quot-tb">
+		<!--<tr>
+			<th colspan="2">采购需求</th>
+			<th colspan="4">需求部分</th>
+			<th colspan="11">报价部分</th>
+		</tr>
+		<tr>
+			<th>药品流水号</th>
+			<th>基本名称</th>
+			<th>厂牌要求</th>
+			<th>通用剂型</th>
+			<th>通用规格包装</th>
+			<th>数量</th>
+			<th>总价</th>
+			<th>最小单价</th>
+			<th>通用单价</th>
+			<th>基准单价</th>
+			<th>厂牌</th>
+			<th>包装数量</th>
+			<th>整件数</th>
+			<th>零散数</th>
+			<th>药品规格</th>
+			<th>承诺配送时间</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td>345043161</td>
+			<td>阿斯匹林</td>
+			<td>天士力制药有限公司</td>
+			<td>25mg</td>
+			<td>100g/瓶</td>
+			<td>300</td>
+			<td><input class="form-control" type="text"></td>
+			<td><input class="form-control" type="text"></td>
+			<td><input class="form-control" type="text"></td>
+			<td>--</td>
+			<td>
+				<select class="form-control">
+					<option>天士力制药有限公司</option>
+					<option>无</option>
+				</select>
+			</td>
+			<td>200</td>
+			<td>1</td>
+			<td>100</td>
+			<td>25mg*100s</td>
+			<td>72小时</td>
+			<td><a class="glyphicon-plus-signadd replace-offer">替代报价</a></td>
+		</tr>
+
+			<tr class="bg_gree"><td></td><td></td><td></td><td></td><td></td><td><span>替代报价</span></td><td><input class="form-control" type="text"></td><td><input class="form-control" type="text"></td><td><input class="form-control" type="text"></td><td></td><td><input class="form-control  offer_ipt" type="text"></td><td></td><td></td><td></td><td></td><td></td><td><span class="glyphicon glyphicon-minus glyphicon-remove-circle2"></span></td></tr>
+
+		<tr>
+			<td>43161</td>
+			<td>阿斯匹林</td>
+			<td>无</td>
+			<td>25mg</td>
+			<td>100g/瓶</td>
+			<td>150</td>
+			<td><input class="form-control" type="text"></td>
+			<td><input class="form-control" type="text"></td>
+			<td><input class="form-control" type="text"></td>
+			<td>￥13.2</td>
+			<td>
+				<input class="form-control offer_ipt" type="text">
+			</td>
+			<td>200</td>
+			<td>1</td>
+			<td>100</td>
+			<td>25mg*100s</td>
+			<td>72小时</td>
+			<td><a class="glyphicon-plus-signadd">报价</a></td>
+		</tr>		-->
+	</table>
+	</div>
+    <!-- 分页 -->
+    <nav class="clearfix" aria-label="Page navigation">
+        <ul class="pagination fr">
+            <li class="disabled">
+                <a href="#" class="fa fa-caret-left"></a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" class="fa fa-caret-right"></a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<!-- 厂牌输入框下拉框 -->
+<div class="hand_add_box">
+	<table class="table table-bordered">
+		<tr>
+			<th>名称</th>
+			<th>厂牌</th>
+			<th>通用单价</th>
+			<th>是否在挂网目录</th>
+			<th>库存</th>
+		</tr>
+		<tr>
+			<td>复方利血片</td>
+			<td>天士力制药有限公司</td>
+			<td>￥12.3</td>
+			<td><span class="bg_color_blue">in</span></td>
+			<td class="pos_r"><span class="color_green glyphicon glyphicon-ok-circle"></span>300</td>
+		</tr>
+		<tr>
+			<td>复方利血片</td>
+			<td>天士力制药有限公司</td>
+			<td>￥12.3</td>
+			<td></td>
+			<td class="color_red pos_r"><span class="color_green glyphicon glyphicon-ok-circle"></span>100</td>
+		</tr>
+		<tr>
+			<td>复方利血片</td>
+			<td>天士力制药有限公司</td>
+			<td>￥12.3</td>
+			<td></td>
+			<td class="pos_r"><span class="color_red  glyphicon glyphicon-remove-circle"></span>&nbsp;&nbsp;0</td>
+		</tr>
+	</table>
+</div>
+
+<script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/sub.js"></script>
+<script>
+
+$(function(){
+	$.ajax({
+		type: "get",
+		url: "../../apis/preq/supply-quot.json",
+		dataType: "json",
+		success: function(data){
+			var htm = '<tr><th>药品流水号</th><th>基本名称</th><th>厂牌要求</th><th>通用剂型</th><th>通用规格包装</th><th>数量</th><th>总价</th><th>最小单价</th><th>通用单价</th><th>基准单价</th><th>厂牌</th><th>包装数量</th><th>整件数</th><th>零散数</th><th>药品规格</th><th>承诺配送时间</th><th>操作</th></tr>';
+
+			$.each(data.list, function(idx, item){
+				var opt = ''; 
+
+				for(var i=0;i<item.label.length;i++){
+					opt += '<option>'+item.label[i]+'</option>'
+				}
+
+				htm += '<tr><td>'+item.drugSno+'</td><td>'+item.baseName+'</td><td>'+item.labelReq+'</td><td>'+item.dose+'</td><td>'+item.specification+'</td><td>'+item.quantity+'</td><td><input class="form-control" type="text"></td><td><input class="form-control" type="text"></td><td><input class="form-control" type="text"></td><td>'+item.baseMoney+'</td><td><select class="form-control">'+opt+'</select></td><td>'+item.packQuantity+'</td><td>'+item.integerQuantity+'</td><td>'+item.scatteredQuantity+'</td><td>'+item.drugSpecific+'</td><td>'+item.distributeTime+'</td><td><a class="glyphicon-plus-signadd">'+item.operate+'</a></td></tr>'
+				
+			})
+
+			$('#suppy-quot-tb').html(htm)
+		},
+		error: function(XMLHTTPRequest, textStatus, errorThrown){
+			console.log("sorry error")
+		}
+	})
+});
+</script>
+</body>
+</html>

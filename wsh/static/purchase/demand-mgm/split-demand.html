@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>需求管理-拆分需求</title>
+<link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/sub.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../assets/css/UI-style.css">
+<link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container-fluid yx">
+	<table class="table table-bordered tab_list" id="tableList">
+		
+	</table>
+	<button class="btn blue add_line">增加一行</button>
+	<button class="btn green-meadow">确定</button>
+
+</div>
+
+<script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/sub.js"></script>
+<script>
+
+$(function(){
+
+	$.ajax({
+		type: "get",
+		url: "../../apis/preq/split-demand.json",
+		dataType: "json",
+		success: function(data){
+
+			var htm = '<tr><th>商品编码</th><th>商品名称</th><th>生产厂商</th><th width="10%">商品规格</th><th width="5%">计量单位</th><th>数量</th><th>删除</th></tr>';
+
+			$.each(data.list, function(idx, item){
+				var opt = ''; 
+
+				for(var i=0;i<item.proManufactor.length;i++){
+					opt += '<option>'+item.proManufactor[i]+'</option>'
+				}
+
+				htm += '<tr><td>'+item.goodsCode+'</td><td>'+item.goodsName+'</td><td><select class="form-control">'+opt+'</select></td><td>'+item.goodsSpecific+'</td><td>'+item.units+'</td><td><span class="btn-font fa fa-minus btn_decrease"></span><input class="ipt_small" value="'+item.quantity+'"><span class="btn-font fa fa-plus btn_increase"></span></td><td><span class="glyphicon glyphicon-trash close2"></span></td></tr>'
+			})
+
+			$('#tableList').html(htm)
+
+		},
+		error: function(XMLHTTPRequest, textStatus, errorThrown){
+			console.log("sorry error")
+		}
+	})
+});
+
+</script>
+</body>
+</html>

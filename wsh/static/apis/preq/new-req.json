@@ -1,0 +1,45 @@
+{
+	"status": 200,
+	"message": "OK",
+	"elapsed": 89,
+	"list": [{
+		"sno":"AFA043161C",
+		"baseName":"阿斯匹林",
+		"proManufactor": ["吉林药业有限公司", "湖北药业有限公司"],
+		"dose":"25mg",
+		"specification":"100s/瓶",
+		"quantity":"600"
+	},{
+		"sno":"BFA043161C",
+		"baseName":"阿斯匹林",
+		"proManufactor": ["沈阳药业有限公司", "湖北药业有限公司"],
+		"dose":"25mg",
+		"specification":"100s/瓶",
+		"quantity":"500"
+	},{
+		"sno":"CFA043161C",
+		"baseName":"阿斯匹林",
+		"proManufactor": ["沈阳药业有限公司", "湖北药业有限公司"],
+		"dose":"25mg",
+		"specification":"100s/瓶",
+		"quantity":"400"
+	},{
+		"sno":"DFA043161C",
+		"baseName":"阿斯匹林",
+		"proManufactor": ["沈阳药业有限公司", "湖北药业有限公司"],
+		"dose":"25mg",
+		"specification":"100s/瓶",
+		"quantity":"300"
+	},{
+		"sno":"EFA043161C",
+		"baseName":"阿斯匹林",
+		"proManufactor": ["北京药业有限公司", "上海药业有限公司"],
+		"dose":"25mg",
+		"specification":"100s/瓶",
+		"quantity":"200"
+	}],
+	"pageIndex": 1,
+	"pageSize": 10,
+	"totalRecords": 1000,
+	"totalPages": 100
+}

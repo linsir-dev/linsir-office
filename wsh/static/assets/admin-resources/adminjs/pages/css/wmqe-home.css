@@ -1,0 +1,89 @@
+/*html, body > {*/
+/*font-size: 10px;*/
+/*}*/
+.wmqe-top-menu {
+    background-color: #eee;
+}
+
+.wmqe-top-menu > .btn {
+    /*height:16px;*/
+}
+
+.wmqe-title {
+    /*background-color: blue;*/
+    height: 80px;
+}
+.wmqe-title > .btn {
+    /*height:16px;*/
+}
+.wmqe-logo {
+    /*background-color: blue;*/
+    height: 80px;
+    /*width: 300px;*/
+    background: url("../img/home-logo.png") no-repeat;
+}
+
+.wmqe-menu {
+    background-color: red;
+}
+ul,li,ol{list-style: none}
+/*.container .head_logo{height: 100px;overflow: hidden}*/
+/*.container .head_logo .logo{width: 300px;height: 80px;display: block;  float: left;margin-top: 10px;}*/
+.container  .message_menu{width: 500px;float: right;}
+.container  .message_menu ul{overflow: hidden;height: 50px;margin-top: 25px}
+.container  .message_menu ul li{float: right;padding: 0 10px;height: 40px;line-height: 40px;border:1px solid #ccc;margin-right: 10px}
+.container  .message_menu ul li i{display: inline-block;vertical-align: middle;width: 28px;height: 28px;background-size: contain !important;}
+.container  .message_menu ul li.my_order i{background: url("../img/icon_order.png") no-repeat}
+.container  .message_menu ul li.my_alert i{background: url("../img/icon_alert.png") no-repeat}
+.container  .message_menu ul li.shop_cat i{background: url("../img/icon_shopcart.png") no-repeat}
+.container  .message_menu ul li.shop_cat span{padding:2px 10px;background: orangered;color: #fff;border-radius: 5px;}
+
+
+.container .wmqe-nav-menu {
+    border-bottom: #337ab7 solid 3px;
+    border-top: #ccc solid 1px;
+}
+
+.container .wmqe-nav-menu ul li a {
+    /*height: 50px;*/
+    vertical-align: middle;
+    border-radius: 0px;
+}
+
+.container .wmqe-page-group {
+    border-bottom: #337ab7 solid 3px;
+
+}
+.container .wmqe-page-group table {
+    margin-top: 3px;
+}
+.container .wmqe-page-group-title {
+    height: 45px;
+    width: 150px;
+    background-color: #337ab7;
+    display: table;
+}
+
+.container .wmqe-page-group-title * {
+    color: white;
+    vertical-align: middle;
+    display: table-cell;
+    font-size: 1.4em;
+}
+
+.container .wmqe-slide{
+    height: 400px;
+    margin-bottom: 10px;
+}
+.container .wmqe-slide a img{
+    height: 400px;
+    width: 100%;
+}
+.container .wmqe-footer{
+    border-top: #337ab7 solid 3px;
+    text-align: center;
+    padding: 3px 3px 10px 3px;
+}
+/*.container .wmqe-nav-menu .dropdown-toggle {*/
+/*border: 0px;*/
+/*}*/

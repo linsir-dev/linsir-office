@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>账单管理-账单明细</title>
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="../../assets/css/sub.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../assets/css/UI-style.css">
+    <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container-fluid yx">
+    <div class="col-md-12">
+        <form class="form-horizontal" role="form">
+            <fieldset>
+                <legend>账单信息</legend>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="order_no">单据流水号</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="order_no" type="text" readonly value="THBH201708101111"/>
+                    </div>
+                    <label class="col-sm-2 control-label" for="order_state">单据状态</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="order_state" type="text" readonly value="已确认收货"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="purchaser">采购机构</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="purchaser" type="text" readonly value="福建省厦门市大学第一附属医院"/>
+                    </div>
+                    <label class="col-sm-2 control-label" for="postcode">邮政编码</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="postcode" type="text" readonly value="473002"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="link_man">收货联系人</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="link_man" type="text" readonly value="小李"/>
+                    </div>
+                    <label class="col-sm-2 control-label" for="link_mobile">联系人手机</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="link_mobile" type="text" readonly value="18822222222"/>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>账单明细</legend>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>子帐单号码</th>
+                        <th>供货方</th>
+                        <th>供货方帐号</th>
+                        <th>子帐单总价</th>
+                        <th>退货抵扣</th>
+                        <th>医保支付</th>
+                        <th>医保差价</th>
+                        <th>医保垫付</th>
+                        <th>其他支付</th>
+                    </tr>
+                    <tr>
+                        <td align="center">ZDD20170112_250_001</td>
+                        <td align="center">武汉太福制药有限公司</td>
+                        <td align="center">420101010222225555</td>
+                        <td align="center">￥115,4000.00</td>
+                        <td align="center">￥2,015.00</td>
+                        <td align="center">￥103,468.00</td>
+                        <td align="center">￥+3,100.00</td>
+                        <td align="center">￥42,617.00</td>
+                        <td align="center">￥0.00</td>
+                    </tr>
+                    <tr class="danger">
+                        <td align="center">ZDD20170112_110_003</td>
+                        <td align="center">天士力制药股份有限公司</td>
+                        <td align="center">4201010102222211111</td>
+                        <td align="center">￥100,4000.00</td>
+                        <td align="center">￥315.00</td>
+                        <td align="center">￥70,468.00</td>
+                        <td align="center">￥-100.00</td>
+                        <td align="center">￥2000.00</td>
+                        <td align="center">￥0.00</td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>统计信息</legend>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="order_total_price">订单总价</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="order_total_price" type="text" readonly value="￥215,400.00"/>
+                    </div>
+                    <label class="col-sm-2 control-label" for="return_deduction">退货抵扣</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" style="color:red;" id="return_deduction" type="text" readonly value="￥-2315.00"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="real_total_price">实际总价</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="real_total_price" type="text" readonly value="￥213,085.00"/>
+                    </div>
+                    <label class="col-sm-2 control-label" for="mi_paied">医保支付</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="mi_paied" type="text" readonly value="￥173,468.00"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="mi_diff">医保差价</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="mi_diff" type="text" readonly value="￥"/>
+                    </div>
+                    <label class="col-sm-2 control-label" for="mi_pay_for">医保垫付</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="mi_pay_for" type="text" readonly value="￥"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="other_paied">其他支付</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" id="other_paied" type="text" readonly value="￥0.00"/>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/sub.js"></script>
+
+</body>
+</html>

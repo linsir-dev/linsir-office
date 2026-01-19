@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022) -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <title>
+        药械采购交易平台 - 登录
+    </title>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+    </style>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="form row">
+        <form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form">
+            <h3 class="form-title">登录</h3>
+            <div class="col-sm-9 col-md-9">
+                <div class="form-group">
+                    <i class="fa fa-user fa-lg"></i>
+                    <input class="form-control required" type="text" placeholder="请填写帐号" name="username" id="username"
+                           autofocus="autofocus" maxlength="20"/>
+						       <span class="help-block hidden">帐号不能为空</span>
+                    <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-lock fa-lg"></i>
+                    <input class="form-control required" type="password" placeholder="请填写密码" name="password"
+                           maxlength="8"/>
+                </div>
+                <div class="form-group">
+                    <a href="sign-up.html" id="register_btn" class="">申请注册</a>
+                </div>
+                <div class="form-group">
+                    <input type="button" onclick="javascript:gotoAdmin();" class="btn btn-success pull-right" value="登录"/>
+                </div>
+                <div class="alert alert-info" id="testAccount">
+                    测试帐号<br/>
+                    <a href="#">purchase</a> : 医院帐号(采购方); <br/>
+                    <a href="#">supply</a> : 供应商帐号; <br/>
+                        <a href="#">manage</a> : 运营管理帐号; <br/>
+                            <a href="#">supervision</a> : 监管机构帐号;
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $().ready(function () {
+
+
+    });
+    function showTips(id) {
+        $(id).next("span.help-block").removeClass("hidden");
+        $(id).parent().addClass("has-error");
+    }
+    function hiddenTips(id) {
+        $(id).next("span.help-block").addClass("hidden");
+        $(id).parent().removeClass("has-error");
+    }
+
+    function gotoAdmin() {
+        var val = $("#username").val();
+        if(val == null || val == ""){
+            showTips("#username");
+            return;
+        }
+
+        if(val == "purchase" ||
+                val == "supply" ||
+                val == "manage" ||
+                val == "supervision" ) {
+        }else{
+            alert("帐号["+val+"]不存在，请使用测试帐号");
+            return;
+        }
+        window.location.href =  val + "/index.html";
+    }
+
+    $("#testAccount").children("a").click(function (e) {
+        // e 就是事件对象
+        var val = $(e.target).html();
+        //console.log($(e.target).html()); // 事件的目标 <a href="https://www.baidu.com/s?wd=dom&tn=44039180_cpr&fenlei=mv6quAkxTZn0IZRqIHckPjm4nH00T1dWnAmduHFhmhD1mW03ujI-0ZwV5Hcvrjm3rH6sPfKWUMw85HfYnjn4nH6sgvPsT6KdThsqpZwYTjCEQLGCpyw9Uz4Bmy-bIi4WUvYETgN-TLwGUv3EPHfsrjbvPjc4" target="_blank" class="baidu-highlight">dom</a>
+        //e.currentTarget; // 事件处理程序正在处理事件的那个元素
+        //console.log(e.srcElement); // 事件的目标 ie
+        $("#username").val(val);
+        $("#username").trigger("change");
+    });
+
+	$("#username").change(function(){
+        if(this.value == null || "" == this.value){
+            showTips("#username");
+        }else {
+            hiddenTips("#username");
+        }
+	});
+ </script>
+</body>
+</html>

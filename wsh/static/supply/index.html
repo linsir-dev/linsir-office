@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        药械采购交易平台 - 供应商管理后台
+    </title>
+    <script src="../assets/admin-resources/inculde-css.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+</head>
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo">
+<!-- BEGIN HEADER & CONTENT DIVIDER -->
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+    <!-- BEGIN HEADER INNER -->
+    <div class="page-header-inner ">
+        <!-- BEGIN LOGO -->
+        <div class="page-logo">
+            <a href="index.html">
+                <img src="../assets/images/home/home-logo.png" alt="logo" class="logo-default" /> </a>
+            <div class="menu-toggler sidebar-toggler">
+                <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+            </div>
+        </div>
+        <!-- END LOGO -->
+    </div>
+    <!-- END HEADER INNER -->
+    <!-- BEGIN TOP NAVIGATION MENU -->
+    <div class="top-menu">
+        <ul class="nav navbar-nav pull-right">
+            <li class="separator hide"> </li>
+            <!-- BEGIN NOTIFICATION DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="icon-bell"></i>
+                    <span class="badge badge-success"> 7 </span>
+                </a>
+            </li>
+            <!-- END NOTIFICATION DROPDOWN -->
+            <li class="separator hide"> </li>
+            <!-- BEGIN INBOX DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="icon-envelope-open"></i>
+                    <span class="badge badge-danger"> 4 </span>
+                </a>
+            </li>
+            <!-- END INBOX DROPDOWN -->
+            <li class="separator hide"> </li>
+            <!-- BEGIN TODO DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li class="dropdown dropdown-extended dropdown-tasks dropdown-dark" id="header_task_bar">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="icon-calendar"></i>
+                    <span class="badge badge-primary"> 3 </span>
+                </a>
+            </li>
+            <!-- END TODO DROPDOWN -->
+            <!-- BEGIN USER LOGIN DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li class="dropdown dropdown-user dropdown-dark">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <span class="username username-hide-on-mobile"> 九州通医药 - 小黄 </span>
+                    <img alt="" class="img-circle" src="../assets/admin-resources/avatar9.jpg" /> </a>               
+            </li>
+            <!-- END USER LOGIN DROPDOWN -->
+            <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+            <li class="dropdown dropdown-extended quick-sidebar-toggler">
+                <span class="sr-only">Toggle Quick Sidebar</span>
+                <i class="icon-logout"></i>
+            </li>
+            <!-- END QUICK SIDEBAR TOGGLER -->
+        </ul>
+    </div>
+    <!-- END TOP NAVIGATION MENU -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix"></div>
+<!-- END HEADER & CONTENT DIVIDER -->
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+        <div class="page-sidebar navbar-collapse collapse">
+            <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+
+                <li class="nav-item start active open">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-home"></i>
+                        <span class="title">管理子系统</span>
+                        <span class="selected"></span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item start ">
+                            <a href="suppIndex.html" class="nav-link ">
+                                <i class="icon-home"></i>
+                                <span class="title">控制面板</span>
+                            </a>
+                        </li>
+                        <li class="nav-item start ">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <i class="icon-home"></i>
+                                <span class="title">流程管理</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="heading">
+                    <h3 class="uppercase">规则管理</h3>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">供应商商品管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">供应商区域管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading">
+                    <h3 class="uppercase">系统管理</h3>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">机构管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">用户管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">菜单管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">权限管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">4</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">签章管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">5</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading">
+                    <h3 class="uppercase">基础数据</h3>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">药械基础数据</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">医疗机构基础数据</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">供货商基础数据</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">商品价格管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">4</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading">
+                    <h3 class="uppercase">内容管理</h3>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">政策法规</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">咨询答疑</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">通知公告</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading">
+                    <h3 class="uppercase">运行监控</h3>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">日志监控</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">业务审计</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="admin/manage/#" class="nav-link ">
+                                <span class="title">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading">
+                    <h3 class="uppercase">系统管理</h3>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">子帐号管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content-wrapper">
+        <div class="page-content" style="min-height:1098px">
+            <iframe src="suppIndex.html" name="iframepage" id="iframepage" scrolling="no" frameborder="0" width="100%" style="border-width:0;width:100%;height:2000px;"></iframe>
+        </div>
+    </div>
+</div>
+<script src="../assets/admin-resources/admin.js"></script>
+<script language="JavaScript">
+    startInit('iframepage', 560);
+    $("li.nav-item > a.nav-link").attr("target","iframepage");
+</script>
+</body>
+</html>

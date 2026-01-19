@@ -1,0 +1,14 @@
+document.write('<link href="../assets/admin-resources/font-awesome.min.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/simple-line-icons.min.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/uniform.default.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/bootstrap-switch.min.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/daterangepicker.min.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/morris.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/fullcalendar.min.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/jqvmap.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/components.min.css" rel="stylesheet" id="style_components" type="text/css">');
+document.write('<link href="../assets/admin-resources/plugins.min.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/layout.min.css" rel="stylesheet" type="text/css">');
+document.write('<link href="../assets/admin-resources/light.min.css" rel="stylesheet" type="text/css" id="style_color">');
+document.write('<link href="../assets/admin-resources/custom.min.css" rel="stylesheet" type="text/css">');

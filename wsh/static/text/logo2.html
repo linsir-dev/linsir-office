@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logo盒子布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "微软雅黑";
+            background-color: #eee;
+        }
+
+        #top {
+            width: 1054px;
+            margin: 0 auto;
+            padding-top: 35px;
+        }
+
+        .title {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .title h1 {
+            text-align: center;
+            font: 400 48px/104px "微软雅黑";
+        }
+
+        .line-l {
+            display: block;
+            border-bottom: 3px solid #000;
+            width: 130px;
+            position: absolute;
+            top: 50%;
+            left: 169px;
+            margin-top: -1px;
+        }
+
+        .line-r {
+            display: block;
+            border-bottom: 3px solid #000;
+            width: 130px;
+            position: absolute;
+            top: 50%;
+            right: 169px;
+            margin-top: -1px;
+        }
+
+        .down {
+            width: 1040px;
+            margin: 0 auto;
+        }
+
+        .img {
+            width: 500px;
+            height: 300px;
+        }
+
+        .down div {
+            float: left;
+            width: 500px;
+            /* height: 300px; */
+            /* line-height: 0; */
+            margin-right: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .down .down2 {
+            /* float: right!important; */
+            margin-right: 0;
+        }
+
+        .down .mask {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .down p {
+            color: #fff;
+            width: 410px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-left: 30px;
+            line-height: 28px;
+        }
+
+        .down div:hover {
+            box-shadow: 0 0 10px #888;
+        }
+
+        .down div:hover .mask {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <div class="title">
+            <h1>Logo设计图展示</h1>
+            <span class="line-l"></span>
+            <span class="line-r"></span>
+        </div>
+        <div class="down">
+            <div>
+                <img src="images/logo展示_03.jpg" alt="">
+                <div class="mask">
+                    <p>关键词：字母WM、互联网</p>
+                    <p>设计思路：运用“为民”的首字母，W和M，从左上往右看，呈现W字母，从左下往右看，呈现M字母。方块的寓意是平台，象征平台一步一脚印为人民服务。</p>
+                </div>
+            </div>
+            <div class="down2">
+                <img src="images/logo展示_05.jpg" alt="">
+                <div class="mask">
+                    <p>关键词：爱心、便捷、方便</p>
+                    <p>设计思路：整体设计是用心形轮廓，并将“为民”首字母以影印的方式呈现在轮廓上，整体呈现一个翅膀飞翔的图案，提现平台采购药物的方便与快捷。</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/logo展示_09.jpg" alt="">
+                <div class="mask">
+                    <p>关键词：企鹅、护士帽</p>
+                    <p>设计思路：企鹅代表公司形象，logo以护士的身份形象展现，重点突出公司平台式为医药机构采购服务的展现形式。</p>
+                </div>
+            </div>
+            <div class="down2">
+                <img src="images/logo展示_10.jpg" alt="">
+                <div class="mask">
+                    <p>关键词：企鹅、物流、医疗</p>
+                    <p>设计思路：LOGO展示了一只展翅前冲的企鹅，有强烈的画面感，展现了企鹅蓬勃发展的美好光景。爱心剪影代表了企业时时不忘一颗为民之心。</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/logo展示_13.jpg" alt="">
+                <div class="mask">
+                    <p>关键词：企鹅、医疗</p>
+                    <p>LOGO展示了一只怀抱爱心的企鹅。</p>
+                </div>
+            </div>
+            <div class="down2">
+                <img src="images/logo展示_14.jpg" alt="">
+                <div class="mask">
+                    <p>关键词：人、互联网、企鹅</p>
+                    <p>设计思路：图形由W和企鹅构成，W形似雀跃的人，W是为民企鹅的首字母，同时代表了互联网（WWW）,企鹅放置在人的下方，更能展现企业踏实发展，勤恳为民服务的文化理念</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

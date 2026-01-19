@@ -1,0 +1,35 @@
+body {
+    font: 16px/28px '微软雅黑';
+}
+h1 {
+    font-weight: 400;
+    text-align: center;
+}
+.fris {
+    color: rgb(136,136,136);
+    text-align: center;
+    font-size: 12px;
+}
+a {
+    text-decoration: none;
+}
+.sousuo {
+    color: #666;
+    width: 180px;
+}
+.btn {
+    font-weight: 700;
+}
+/* input[value="搜索"] {
+    font-width: 700;
+} */
+p {
+    text-indent: 2em;
+}
+div {
+    text-align: center;
+}
+.last {
+    color: #888;
+    font-size: 12px;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单管理-确认收货</title>
+<link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/sub.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../assets/css/UI-style.css">
+<link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container-fluid yx">
+		<ol class="breadcrumb">
+		    <li>订单管理</li>
+		    <li class="active">订单列表(供应商)</li>
+		</ol>
+		<div class="order_detail clearfix">
+		<div class="clearfix">
+			<p class="fl">
+				<i>采购订单编号:</i>
+				<span>z786544056</span>
+			</p>
+			<p class="fl">
+				<i>采购时间段:</i>
+				<span>2017年1月2号~2017年2月2号</span>
+			</p>
+		</div>
+		<div class="clearfix">
+			<p class="fl">
+				<i>包含药品编码:</i>
+				<span></span>
+			</p>
+			<p class="fl">
+				<i>包含药品名称:</i>
+				<span></span>
+			</p>
+		</div>
+	</div>
+	<h5>搜索结果</h5>
+
+	<table class="table table-bordered" id="tableList">
+		<!-- <tr>
+			<th>子订单号</th>
+			<th>下单时间</th>
+			<th>订单金额</th>
+			<th>支付方式</th>
+			<th>合同状态</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td>z24455454</td>
+			<td>2017/02/25周一</td>
+			<td>￥300</td>
+			<td>医保支付</td>
+			<td>未签订</td>
+			<td><span>提取</span></td>
+		</tr>
+		<tr>
+			<td>z24455454</td>
+			<td>2017/02/25周一</td>
+			<td>￥300</td>
+			<td>医保支付</td>
+			<td>签订完成</td>
+			<td><a href="confirm-receipt-upload.html">提取</a></td>
+		</tr>
+			<td>z24455454</td>
+			<td>2017/02/25周一</td>
+			<td>￥300</td>
+			<td>医保支付</td>
+			<td>签订完成</td>
+			<td><a href="confirm-receipt-upload.html">提取</a></td>
+		</tr>
+			<td>z24455454</td>
+			<td>2017/02/25周一</td>
+			<td>￥300</td>
+			<td>医保支付</td>
+			<td>签订完成</td>
+			<td><a href="confirm-receipt-upload.html">提取</a></td>
+		</tr> -->
+	</table>
+	<div class="order_total">
+		你好，采购方提醒您，<br>z24455454未签订合同
+	</div>
+	
+    <!-- 分页 -->
+    <nav class="clearfix" aria-label="Page navigation">
+        <ul class="pagination fr">
+            <li class="disabled">
+                <a href="#" class="fa fa-caret-left"></a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" class="fa fa-caret-right"></a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<script src="../../assets/js/jquery.js"></script>
+<script>
+
+$(function(){
+
+	$.ajax({
+		type: "get",
+		url: "../../apis/preq/order-list-suppy.json",
+		dataType: "json",
+		success: function(data){
+
+			var htm = '<tr><th>子订单号</th><th>下单时间</th><th>订单金额</th><th>支付方式</th><th>合同状态</th><th>操作</th></tr>';
+
+			$.each(data.list, function(idx, item){
+				var tx = item.contractState == '签订完成'?'<a href="confirm-receipt-upload.html">提取</a>':'提取'
+
+				htm += '<tr><td>'+item.subOrderNo+'</td><td>'+item.placeOrderTime+'</td><td>'+item.orderMoney+'</td><td>'+item.payWay+'</td><td>'+item.contractState+'</td><td>'+tx+'</td></tr>'
+			})
+
+			$('#tableList').html(htm)
+
+		},
+		error: function(XMLHTTPRequest, textStatus, errorThrown){
+			console.log("sorry error")
+		}
+	})
+});
+
+</script>
+</body>
+</html>

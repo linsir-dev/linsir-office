@@ -1,0 +1,58 @@
+{
+	"status": 200,
+	"message": "OK",
+	"elapsed": 89,
+	"list": [{
+		"drugSno":"4431613",
+		"baseName": "阿斯匹林",
+		"proManufactor": "武汉太福制药有限公司",
+		"drugSpecific": "25mg",
+		"units": "瓶",
+		"quantity": "600",
+		"minQuot": "￥12345.00"
+	},{
+		"drugSno":"4431613",
+		"baseName": "康泰克",
+		"proManufactor": "武汉太福制药有限公司",
+		"drugSpecific": "25mg",
+		"units": "瓶",
+		"quantity": "600",
+		"minQuot": "￥12345.00"
+	},{
+		"drugSno":"4431613",
+		"baseName": "康泰克",
+		"proManufactor": "武汉太福制药有限公司",
+		"drugSpecific": "25mg",
+		"units": "瓶",
+		"quantity": "600",
+		"minQuot": "￥12345.00"
+	},{
+		"drugSno":"4431613",
+		"baseName": "黄体酮注射液",
+		"proManufactor": "武汉太福制药有限公司",
+		"drugSpecific": "25mg",
+		"units": "瓶",
+		"quantity": "600",
+		"minQuot": "￥12345.00"
+	},{
+		"drugSno":"4431613",
+		"baseName": "维C银翘片",
+		"proManufactor": "武汉太福制药有限公司",
+		"drugSpecific": "25mg",
+		"units": "瓶",
+		"quantity": "600",
+		"minQuot": "￥12345.00"
+	},{
+		"drugSno":"4431613",
+		"baseName": "维C银翘片",
+		"proManufactor": "武汉太福制药有限公司",
+		"drugSpecific": "25mg",
+		"units": "瓶",
+		"quantity": "600",
+		"minQuot": "￥12345.00"
+	}],
+	"pageIndex": 1,
+	"pageSize": 10,
+	"totalRecords": 1000,
+	"totalPages": 100
+}

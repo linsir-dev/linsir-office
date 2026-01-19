@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022) -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <title>
+        药械采购交易平台 - 注册
+    </title>
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+
+    </style>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="form row">
+        <form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="register_form">
+            <h3 class="form-title">申请注册</h3>
+            <div class="col-sm-9 col-md-9">
+                <div class="form-group">
+                    <i class="fa fa-user fa-lg"></i>
+                    <input class="form-control required" type="text" placeholder="企业名称" name="ent-name"
+                           autofocus="autofocus"/>
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-user fa-lg"></i>
+                    <input class="form-control required" type="text" placeholder="企业电话" name="ent-tel"
+                           autofocus="autofocus"/>
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-user fa-lg"></i>
+                    <input class="form-control required" type="text" placeholder="企业地址" name="ent-addr"
+                           autofocus="autofocus"/>
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-user fa-lg"></i>
+                    <input class="form-control required" type="text" placeholder="营业执照注册号" name="ent-business-licence"
+                           autofocus="autofocus"/>
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-envelope fa-lg"></i>
+                    <input class="form-control eamil" type="text" placeholder="联系邮箱" name="email"/>
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-lock fa-lg"></i>
+                    <input class="form-control required" type="password" placeholder="设置登录密码" id="register_password"
+                           name="password"/>
+                </div>
+                <div class="form-group">
+                    <i class="fa fa-check fa-lg"></i>
+                    <input class="form-control required" type="password" placeholder="重复上面的登录密码" name="rpassword"/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success pull-right" value="注册"/>
+                    <a class="btn btn-info pull-left" id="back_btn" href="javascript:history.go(-1)">返回</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $().ready(function () {
+        $("#login_form").validate({
+            rules: {
+                username: "required",
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+            },
+            messages: {
+                username: "请输入姓名",
+                password: {
+                    required: "请输入密码",
+                    minlength: jQuery.format("密码不能小于{0}个字 符")
+                },
+            }
+        });
+        $("#register_form").validate({
+            rules: {
+                username: "required",
+                password: {
+                    required: true,
+                    minlength: 5
+                },
+                rpassword: {
+                    equalTo: "#register_password"
+                },
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                username: "请输入姓名",
+                password: {
+                    required: "请输入密码",
+                    minlength: jQuery.format("密码不能小于{0}个字 符")
+                },
+                rpassword: {
+                    equalTo: "两次密码不一样"
+                },
+                email: {
+                    required: "请输入邮箱",
+                    email: "请输入有效邮箱"
+                }
+            }
+        });
+    });
+    $(function () {
+        $("#register_btn").click(function () {
+            $("#register_form").css("display", "block");
+            $("#login_form").css("display", "none");
+        });
+        $("#back_btn").click(function () {
+            $("#register_form").css("display", "none");
+            $("#login_form").css("display", "block");
+        });
+    });
+</script>
+</body>
+</html>

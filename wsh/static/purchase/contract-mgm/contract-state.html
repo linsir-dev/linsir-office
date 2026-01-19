@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>合同列表(医院)</title>
+    <link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/sub.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/UI-style.css">
+    <link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="yx">
+        <div class="container-fluid">
+            <div>
+
+            </div>
+            <table class="table table-bordered" id="tableList">
+                <!-- <tr>
+			<th>合同编号</th>
+			<th>订单名称</th>
+			<th>订单状态</th>
+			<th>供应商名称</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td>345043161</td>
+			<td>需求——2017.5——订单</td>
+			<td>
+				未签订
+			</td>
+			<td>江西医药有限公司</td>
+			<td><button class="btn btn-danger">催单</button></td>
+		</tr>
+		<tr>
+			<td>345043161</td>
+			<td>需求——2017.5——订单</td>
+			<td>
+				签订
+			</td>
+			<td>湖北医药有限公司</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>345043161</td>
+			<td>需求——2017.5——订单</td>
+			<td>
+				未签订
+			</td>
+			<td>江西医药有限公司</td>
+			<td><button class="btn btn-danger">催单</button></td>
+		</tr>
+		<tr>
+			<td>345043161</td>
+			<td>需求——2017.5——订单</td>
+			<td>
+				签订
+			</td>
+			<td>湖北医药有限公司</td>
+			<td></td>
+		</tr> -->
+            </table>
+            <!-- 分页 -->
+            <nav class="clearfix" aria-label="Page navigation">
+                <ul class="pagination fr">
+                    <li class="disabled">
+                        <a href="#" class="fa fa-caret-left"></a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" class="fa fa-caret-right"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <script src="../../assets/js/jquery.js"></script>
+    <script src="../../assets/js/bootstrap.js"></script>
+    <script>
+        $(function() {
+
+            $.ajax({
+                type: "get",
+                url: "../../apis/preq/contract-state.json",
+                dataType: "json",
+                success: function(data) {
+
+                    var htm = '<tr><th>合同编号</th><th>订单名称</th><th>订单状态</th><th>供应商名称</th><th>操作</th></tr>';
+
+                    $.each(data.list, function(idx, item) {
+                        var tx = item.state == '未签订' ? '<button class="btn red">催单</button>' : '';
+
+                        htm += '<tr><td>' + item.contractNo + '</td><td>' + item.oName + '</td><td>' + item.state + '</td><td>' + item.supplyName + '</td><td>' + tx + '</td></tr>'
+                    })
+
+                    $('#tableList').html(htm)
+
+                },
+                error: function(XMLHTTPRequest, textStatus, errorThrown) {
+                    console.log("sorry error")
+                }
+            })
+        });
+
+    </script>
+
+</body>
+
+</html>

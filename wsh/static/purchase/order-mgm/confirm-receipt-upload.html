@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单管理-确认收货</title>
+<link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/sub.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../assets/css/UI-style.css">
+<link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container-fluid yx">
+	<div class="order_detail clearfix">
+		<div>订单明细</div>
+		<div class="clearfix">
+			<p class="fl">
+				<i>单据流水号:</i>
+				<span>z786544056</span>
+			</p>
+			<p class="fl">
+				<i>单据状态:</i>
+				<span>订单已提交</span>
+			</p>
+		</div>
+		<div class="clearfix">
+			<p class="fl">
+				<i>卖方机构:</i>
+				<span>天士力有限公司</span>
+			</p>
+			<p class="fl">
+				<i>下单时间:</i>
+				<span>2017-01-12 12:54:59</span>
+			</p>
+		</div>
+		<hr>
+		<div class="clearfix">
+			<p class="fl">
+				<i>收货地址:</i>
+				<span>福建省厦门市<i class="color_red">第一人民医院</i></span>
+			</p>
+			<p class="fl">
+				<i>邮政编码:</i>
+				<span>430000</span>
+			</p>
+		</div>
+		<div class="clearfix">
+			<p class="fl">
+				<i>收货联系人:</i>
+				<span>张小</span>
+			</p>
+			<p class="fl">
+				<i>联系人手机:</i>
+				<span>13703746245</span>
+			</p>
+		</div>
+	</div>
+	<table class="table table-bordered" id="tableList"> 
+
+	</table>
+	<div>
+		<h5>必填项</h5>
+		<div>
+			<span class="glyphicon glyphicon-picture" style="font-size: 100px"></span>
+			<span class="glyphicon glyphicon-picture" style="font-size: 100px"></span>
+			<span class="glyphicon glyphicon-picture" style="font-size: 100px"></span>
+		</div>
+		<button class="btn green-meadow">上传收货凭证</button>
+		<button class="btn blue-soft">清除并重新上传</button>
+	</div>
+	<div>
+		<span style="padding:15px 0" class="glyphicon glyphicon-check"></span>本订单已经严格按照国家规定提供两票制资质校验和票据
+	</div>
+	<button class="btn green">保存草稿</button>
+	<a href="contract-num2.html" class="btn blue">提交确认单</a>
+	<button class="btn red">确认收货</button>
+    <!-- 分页 -->
+    <nav class="clearfix" aria-label="Page navigation">
+        <ul class="pagination fr">
+            <li class="disabled">
+                <a href="#" class="fa fa-caret-left"></a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" class="fa fa-caret-right"></a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+<script src="../../assets/js/sub.js"></script>
+<script>
+
+$(function(){
+
+	$.ajax({
+		type: "get",
+		url: "../../apis/preq/confirm-receipt-upload.json",
+		dataType: "json",
+		success: function(data){
+
+			var htm = '<tr><th>药品流水号</th><th>基本名称</th><th>药品规格</th><th>计量单位</th><th>生产厂家</th><th>数量</th><th>单价</th><th>单行总价</th><th>批次</th><th>有效期</th><th>包装数量</th><th>整件数</th><th>零散数</th><th>已送货数量</th></tr>';
+
+			$.each(data.list, function(idx, item){
+				
+				htm += '<tr><td align="center">'+item.drugSno+'</td><td align="center">'+item.baseName+'</td><td align="center">'+item.drugSpecific+'</td><td align="center">'+item.units+'</td><td align="center">'+item.proManufactor+'</td><td align="center">'+item.quantity+'</td><td align="center">'+item.unitPrice+'</td><td align="center">'+item.singlePrice+'</td><td>'+item.batch+'</td><td>'+item.validTime+'</td><td>'+item.packQuantity+'</td><td>'+item.integerQuantity+'</td><td>'+item.scatteredQuantity+'</td><td>'+item.deliveryQuantity+'</td></tr>'
+			})
+
+			$('#tableList').html(htm)
+
+		},
+		error: function(XMLHTTPRequest, textStatus, errorThrown){
+			console.log("sorry error")
+		}
+	})
+});
+
+</script>
+
+</body>
+</html>

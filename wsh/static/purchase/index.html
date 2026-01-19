@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        药械采购交易平台 - 医疗机构管理后台
+    </title>
+    <script src="../assets/admin-resources/inculde-css.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <link href="../assets/css/sub.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../assets/css/UI-style.css">
+</head>
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo yx">
+<!-- BEGIN HEADER & CONTENT DIVIDER -->
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+    <!-- BEGIN HEADER INNER -->
+    <div class="page-header-inner ">
+        <!-- BEGIN LOGO -->
+        <div class="page-logo">
+            <a href="index.html">
+                <img src="../assets/images/home/home-logo.png" alt="logo" class="logo-default" /> </a>
+            <div class="menu-toggler sidebar-toggler">
+                <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+            </div>
+        </div>
+        <!-- END LOGO -->
+    </div>
+    <!-- END HEADER INNER -->
+    <!-- BEGIN TOP NAVIGATION MENU -->
+    <div class="top-menu">
+        <ul class="nav navbar-nav pull-right">
+            <li class="separator hide"> </li>
+            <!-- BEGIN NOTIFICATION DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+<!--             <li class="dropdown dropdown-extended dropdown-notification dropdown-dark" id="header_notification_bar">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="icon-bell"></i>
+                    <span class="badge badge-success"> 7 </span>
+                </a>
+            </li> -->
+            <!-- END NOTIFICATION DROPDOWN -->
+            <li class="separator hide"> </li>
+            <!-- BEGIN INBOX DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+<!--             <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark" id="header_inbox_bar">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="icon-envelope-open"></i>
+                    <span class="badge badge-danger"> 4 </span>
+                </a>
+            </li> -->
+            <!-- END INBOX DROPDOWN -->
+            <li class="separator hide"> </li>
+            <!-- BEGIN TODO DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+<!--             <li class="dropdown dropdown-extended dropdown-tasks dropdown-dark" id="header_task_bar">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <i class="icon-calendar"></i>
+                    <span class="badge badge-primary"> 3 </span>
+                </a>
+            </li> -->
+            <!-- END TODO DROPDOWN -->
+            <!-- BEGIN USER LOGIN DROPDOWN -->
+            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+            <li class="dropdown dropdown-user dropdown-dark">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                    <span class="username username-hide-on-mobile"> 武汉协和医院 - 小王 </span>
+                    <img alt="" class="img-circle" src="../assets/admin-resources/avatar9.jpg" /> </a>               
+            </li>
+            <!-- END USER LOGIN DROPDOWN -->
+            <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+             <li class="dropdown">
+                <a href="../index.html" style="height:100%">
+                    <span class="sr-only">Toggle Quick Sidebar</span>
+                    <i class="icon-logout" style="top:15px"></i>
+                </a>
+            </li>
+            <!-- END QUICK SIDEBAR TOGGLER -->
+        </ul>
+    </div>
+    <!-- END TOP NAVIGATION MENU -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix"></div>
+<!-- END HEADER & CONTENT DIVIDER -->
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+        <div class="page-sidebar navbar-collapse collapse">
+            <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+
+                <li class="nav-item start active open">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-home"></i>
+                        <span class="title">管理子系统</span>
+                        <span class="selected"></span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="nav-item start ">
+                            <a href="purIndex.html" class="nav-link ">
+                                <i class="icon-home"></i>
+                                <span class="title">控制面板</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="heading">
+                    <h3 class="uppercase">采购管理</h3>
+                </li>
+                <li class="nav-item  ">
+                    <a class="nav-link nav-toggle"  data-toggle="collapse" data-target="#mgm">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">采购需求</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="collapse sub_tree_list" id="mgm">
+                        <li class="nav-item">
+                            <a href="demand-mgm/demand-mgm.html" class="nav-link ">
+                                <span class="title">需求管理</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="demand-mgm/manual-input.html" class="nav-link ">
+                                <span class="title">新增需求</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="order-mgm/medical-institution-stock.html" class="nav-link ">
+                                <span class="title">机构预警</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-toggle" data-toggle="collapse" data-target="#bid-mgm">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">竞价管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="collapse sub_tree_list" id="bid-mgm">
+                        <li class="nav-item">
+                            <a href="../supply/bid-mgm/order-qry.html" class="nav-link ">
+                                <span class="title">竞价列表(医院)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../supply/bid-mgm/supply-bid.html" class="nav-link ">
+                                <span class="title">竞价列表(供应商)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-toggle" data-toggle="collapse" data-target="#order-mgm">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">订单管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="collapse sub_tree_list" id="order-mgm">
+                        <li class="nav-item">
+                            <a href="order-mgm/order-list.html" class="nav-link ">
+                                <span class="title">订单列表</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="order-mgm/order-view.html" class="nav-link ">
+                                <span class="title">订单查看(医院)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="order-mgm/confirm-receipt-deliver.html" class="nav-link ">
+                                <span class="title">订单列表(供应商)</span>
+                            </a>
+                        </li><!-- 
+                        <li class="nav-item">
+                            <a href="order-mgm/supply-stock.html" class="nav-link ">
+                                <span class="title">供货商库存维护</span>
+                            </a>
+                        </li> -->
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a class="nav-link nav-toggle" data-toggle="collapse" data-target="#contract-mgm">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">合同管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="collapse sub_tree_list" id="contract-mgm">
+                        <li class="nav-item">
+                            <a href="contract-mgm/contract-list.html" class="nav-link ">
+                                <span class="title">合同列表(医院)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="order-mgm/contract-list-supply.html" class="nav-link ">
+                                <span class="title">合同列表(供应商)</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="heading">
+                    <h3 class="uppercase">物流管理</h3>
+                </li>
+                <li class="nav-item">
+                    <a href="logistics/logistics-list-hospital.html" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">物流列表（医院）</span>
+                        <span class="arrow open"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="logistics/logistics-list-supply2.html" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">物流列表（供应商）</span>
+                        <span class="arrow open"></span>
+                    </a>
+                </li>
+                <!--<li class="nav-item">
+                    <a href="logistics/order-logistics-track.html" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">订单物流追踪</span>
+                        <span class="arrow open"></span>
+                    </a>
+                </li>-->
+                </li>
+                <li class="nav-item  ">
+                    <a href="order-mgm/receipt-hospital.html" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">收货列表（医院）</span>
+                        <span class="arrow open"></span>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="order-mgm/receipting-hospital.html" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">待收货列表（医院）</span>
+                        <span class="arrow open"></span>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a href="logistics/rejection-mgm.html" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">拒收管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                </li>
+
+                <li class="heading">
+                    <h3 class="uppercase">财务管理</h3>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">账号管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                    <a class="nav-link nav-toggle" data-toggle="collapse" data-target="#payment-mgm">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">支付管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="collapse sub_tree_list" id="payment-mgm">
+                        <li class="nav-item">
+                            <a href="payment-mgm/payment-examine.html" class="nav-link ">
+                                <span class="title">支付审核</span>
+                            </a>
+                        </li>
+                         <li class="nav-item">
+                            <a href="payment-mgm/payment-examine-bill.html" class="nav-link ">
+                                <span class="title">支付审核（账单明细）</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="payment-mgm/payment-order-detail.html" class="nav-link ">
+                                <span class="title">支付订单明细</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a class="nav-link nav-toggle" data-toggle="collapse" data-target="#bill-mgm">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">账单管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="collapse sub_tree_list" id="bill-mgm">
+                        <li class="nav-item">
+                            <a href="../supply/bid-mgm/bill-detail.html" class="nav-link ">
+                                <span class="title">账单明细</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="heading">
+                    <h3 class="uppercase">售后管理</h3>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle" data-toggle="collapse" data-target="#return-mgm">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">退换货管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+                    <ul class="collapse sub_tree_list" id="return-mgm">
+                        <li class="nav-item">
+                            <a href="return-mgm/return-order.html" class="nav-link ">
+                                <span class="title">退货单</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item  ">
+                    <a href="javascript:;" class="nav-link nav-toggle">
+                        <i class="icon-bar-chart"></i>
+                        <span class="title">在线客服(电话服务)</span>
+                        <span class="arrow open"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-content-wrapper">
+        <div class="page-content" style="min-height:1098px">
+            <iframe src="purIndex.html" name="iframepage" id="iframepage" scrolling="no" frameborder="0" width="100%" style="border-width:0;width:100%;height:2000px;"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="../assets/js/sub.js"></script>
+<script src="../assets/js/bootstrap.js"></script>
+<script src="../assets/admin-resources/admin.js"></script>
+<script language="JavaScript">
+    startInit('iframepage', 560);
+    $("li.nav-item > a.nav-link").attr("target","iframepage");
+</script>
+</body>
+</html>

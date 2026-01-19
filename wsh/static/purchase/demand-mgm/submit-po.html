@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>需求管理-手动输入</title>
+<link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/sub.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../assets/css/UI-style.css">
+<link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container-fluid yx">
+	<div class="row">
+		<p class="col-xs-6 col-lg-4">
+			<i>医院名称：</i>
+			<span>
+				厦门市第一人民医院
+			</span>
+		</p>
+		<p class="col-xs-6 col-lg-4">
+			<i>单位编码：</i>
+			<span>
+				H4200000000000
+			</span>
+		</p>
+	</div>
+	<div class="row">
+		<p class="col-xs-6 col-lg-4">
+			<i>
+				报价联系人：
+			</i>
+			<span>
+				<select class="form-control form-control-inline">
+					<option>张小</option>
+					<option>张三</option>
+				</select>
+			</span>
+		</p>
+		<p class="col-xs-6 col-lg-4">
+			<i>
+				联系人手机号码：
+			</i>
+			<span>
+				<input class="form-control form-control-inline" type="text">
+			</span>
+		</p>
+		<p class="col-xs-6 col-lg-4">
+			<i>
+				报价到达通知邮件：
+			</i>
+			<span>
+				<input class="form-control form-control-inline" type="text">
+			</span>		
+		</p>
+	</div>
+
+	<div class="demand_management">
+		<div class="clearfix demand_management_newadd">
+			<button class="btn btn-info check_new fl">勾选新增</button>
+			<button class="btn btn-info fl">导入excel</button>
+			<button class="btn btn-info hand_add fl">手动新增</button>
+			<div class="input-group fl">
+    			<input type="text" class="form-control" placeholder="快速检索已选明细">
+    			<span class="input-group-addon btn btn-primary">搜索</span>
+			</div>
+			<button class="btn btn-info clear_checked fr">清除已选</button>
+		</div>
+		<table class="table table-bordered demand_management_tb" width="100%">
+			<tr>
+				<th width="15%">流水号</th>
+				<th width="20%">基本名称</th>
+				<th width="20%">生产厂家</th>
+				<th width="10%">通用剂型</th>
+				<th width="10%">通用规格包装</th>
+				<th width="15%">数量</th>
+				<th width="10%">操作</th>
+			</tr>
+			<tr>
+				<td align="center">
+					BFA043161C
+				</td>
+				<td align="center">
+					阿斯匹林
+				</td>
+				<td align="center">
+					<select class="form-control">
+	 					<option>沈阳xx药业有限公司</option>
+	 					<option>湖北xx药业有限公司</option>
+					</select>
+				</td>
+				<td align="center">
+					25mg
+				</td>
+				<td align="center">
+					100s/瓶
+				</td>
+				<td align="center">
+					<button class="btn btn-default btn_decrease">-</button><input class="ipt_small" value="600"><button class="btn btn-default btn_add btn_increase">+</button> 
+				</td>
+				<td align="center">
+					拆分采购
+					<input type="checkbox">
+					<span class="glyphicon glyphicon-remove-circle glyphicon-remove-circle2"></span>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					AFA043161C
+				</td>
+				<td align="center">
+					康泰克
+				</td>
+				<td align="center">
+					<select class="form-control">
+	 					<option>北京xx药业有限公司</option>
+	 					<option>山西xx药业有限公司</option>
+					</select>
+				</td>
+				<td align="center">
+					35mg
+				</td>
+				<td align="center">
+					200s/瓶
+				</td>
+				<td align="center">
+					<button class="btn btn-default btn_decrease">-</button><input class="ipt_small" value="600"><button class="btn btn-default btn_add btn_increase">+</button> 
+				</td>
+				<td align="center">
+					拆分采购
+					<input type="checkbox">
+					<span class="glyphicon glyphicon-remove-circle glyphicon-remove-circle2"></span>
+				</td>
+			</tr>		
+			<tr>
+				<td align="center">
+					GBA043161C
+				</td>
+				<td align="center">
+					复方利血片
+				</td>
+				<td align="center">
+					<select class="form-control">
+	 					<option>南京xx药业有限公司</option>
+	 					<option>湖南xx药业有限公司</option>
+					</select>
+				</td>
+				<td align="center">
+					25mg
+				</td>
+				<td align="center">
+					100s/瓶
+				</td>
+				<td align="center">
+					<button class="btn btn-default btn_decrease">-</button><input class="ipt_small" value="600"><button class="btn btn-default btn_add btn_increase">+</button> 
+				</td>
+				<td align="center">
+					拆分采购
+					<input type="checkbox">
+					<span class="glyphicon glyphicon-remove-circle glyphicon-remove-circle2"></span>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					HFA043161C
+				</td>
+				<td align="center">
+					黄体酮注射液
+				</td>
+				<td align="center">
+					<select class="form-control">
+	 					<option>广州xx药业有限公司</option>
+	 					<option>海南xx药业有限公司</option>
+					</select>
+				</td>
+				<td align="center">
+					25mg
+				</td>
+				<td align="center">
+					100s/瓶
+				</td>
+				<td align="center">
+					<button class="btn btn-default btn_decrease">-</button><input class="ipt_small" value="600"><button class="btn btn-default btn_add btn_increase">+</button> 
+				</td>
+				<td align="center">
+					拆分采购
+					<input type="checkbox">
+					<span class="glyphicon glyphicon-remove-circle glyphicon-remove-circle2"></span>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					WEA043161C
+				</td>
+				<td align="center">
+					维C银翘片
+				</td>
+				<td align="center">
+					<select class="form-control">
+	 					<option>上海xx药业有限公司</option>
+	 					<option>黑龙江xx药业有限公司</option>
+	 					<option>湖北xx药业有限公司</option>
+					</select>
+				</td>
+				<td align="center">
+					25mg
+				</td>
+				<td align="center">
+					100s/瓶
+				</td>
+				<td align="center">
+					<button class="btn btn-default btn_decrease">-</button><input class="ipt_small" value="600"><button class="btn btn-default btn_add btn_increase">+</button> 
+				</td>
+				<td align="center">
+					拆分采购
+					<input type="checkbox">
+					<span class="glyphicon glyphicon-remove-circle glyphicon-remove-circle2"></span>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					VCA043161C
+				</td>
+				<td align="center">
+					马来酸
+				</td>
+				<td align="center">
+					<select class="form-control">
+	 					<option>山西xx药业有限公司</option>
+	 					<option>山东xx药业有限公司</option>
+	 					<option>湖北xx药业有限公司</option>
+					</select>
+				</td>
+				<td align="center">
+					15mg
+				</td>
+				<td align="center">
+					200s/瓶
+				</td>
+				<td align="center">
+					<button class="btn btn-default btn_decrease">-</button><input class="ipt_small" value="600"><button class="btn btn-default btn_add btn_increase">+</button> 
+				</td>
+				<td align="center">
+					拆分采购
+					<input type="checkbox">
+					<span class="glyphicon glyphicon-remove-circle glyphicon-remove-circle2"></span>
+				</td>
+			</tr>
+		</table>
+		<div class="demand_management_group">
+			<div class="remark_td">
+				<label class="remark_lable">需求备注：</label>
+				<textarea class="remark_textarea"></textarea>	
+			</div>
+			<div class="button">
+				<button class="btn btn-default">提交采购需求</button>
+				<button class="btn btn-default">保存</button>
+				<button class="btn btn-default">打印</button>
+				<button class="btn btn-default">另存为自定义</button>
+			</div>
+		</div>
+		<div class="hand_add_box">
+			<table class="table table-bordered">
+				<tr>
+					<td>阿司匹林肠溶片</td>
+					<td>片剂</td>
+					<td>50s/瓶</td>
+					<td>武汉太福制药有限公司</td>
+					<td>
+						<button class="btn btn-primary">挂网</button>
+						<button class="btn btn-danger">本院</button>
+						<button class="btn btn-warning">供货商</button>
+					</td>
+				</tr>
+				<tr>
+					<td>阿司匹林肠溶胶囊</td>
+					<td>胶囊</td>
+					<td>50s/瓶</td>
+					<td>武汉太福制药有限公司</td>
+					<td>
+						<button class="btn btn-primary">挂网</button>
+						<button class="btn btn-danger">本院</button>
+						<button class="btn btn-warning">供货商</button>
+					</td>
+				</tr>
+				<tr>
+					<td>阿司匹林肠溶片</td>
+					<td>片剂</td>
+					<td>50s/瓶</td>
+					<td>武汉太福制药有限公司</td>
+					<td>
+						<button class="btn btn-primary">挂网</button>
+						<button class="btn">本院</button>
+						<button class="btn">供货商</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<!--勾选新增弹出框-->
+<div class="pop">
+	<div class="demand_management_pop">
+		<div class="close" id="close">x</div>
+		<ul id="demand_management_tabtit" class="nav nav-tabs">
+			<li><a href="#pre" role="tab">上次采购</a></li>
+			<li><a href="#cycle" role="tab">周期采购</a></li>
+			<li><a href="#custom" role="tab">自定义采购清单</a></li>
+		</ul>
+		<div id="demand_management_tabcont" class="tab-content">
+			<div class="tab-pane active" id="pre">
+				<table class="table table-bordered" width="100%">
+					<tr>
+						<th><span class="all_check">全选</span></th>
+						<th>流水号</th>
+						<th>基本名称</th>
+						<th>生产厂家</th>
+						<th>通用剂量</th>
+						<th>通用规格包装</th>
+					</tr>			
+					<tr>
+						<td><input type="checkbox">1</td>
+						<td>BFA043161C</td>
+						<td>阿斯匹林</td>
+						<td>沈阳药业</td>
+						<td>25mg</td>
+						<td>100s/瓶</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox">2</td>
+						<td>BFA043161C</td>
+						<td>阿斯匹林</td>
+						<td>沈阳药业</td>
+						<td>25mg</td>
+						<td>100s/瓶</td>
+					</tr>	
+					<tr>
+						<td><input type="checkbox">3</td>
+						<td>BFA043161C</td>
+						<td>阿斯匹林</td>
+						<td>沈阳药业</td>
+						<td>25mg</td>
+						<td>100s/瓶</td>
+					</tr>					
+				</table>
+				<div class="prev_buy clearfix">
+					<button class="btn btn-default">确定</button>
+					<button class="btn btn-default">取消</button>
+				</div>
+			</div>
+			<div class="tab-pane" id="cycle">
+				<table class="table table-bordered" width="100%">
+					<tr>
+						<th>名称</th>
+						<th>种类数量</th>
+						<th>制定人</th>
+					</tr>
+					<tr>
+						<td align="center"><a class="pop2_btn">月周期</a></td>
+						<td align="center">100</td>
+						<td align="center">张三</td>
+					</tr>
+					<tr>
+						<td align="center"><a class="pop2_btn" href="#">周周期</a></td>
+						<td align="center">2</td>
+						<td align="center">张三</td>
+					</tr>						
+				</table>
+			</div>
+			<div class="tab-pane" id="custom">
+				<table class="table table-bordered" width="100%">
+					<tr>
+						<th>名称</th>
+						<th>种类数量</th>
+						<th>制定人</th>
+					</tr>
+					<tr>
+						<td align="center"><a class="pop3_btn" href="#">2015-4特殊采购</a></td>
+						<td align="center">100</td>
+						<td align="center">张三</td>
+					</tr>
+					<tr>
+						<td align="center"><a class="pop3_btn" href="#">2015-4紧急采购</a></td>
+						<td align="center">200</td>
+						<td align="center">张三</td>
+					</tr>						
+				</table>
+			</div>
+		</div> 	
+	</div>
+</div>
+
+<!-- 周期弹窗 -->
+<div class="pop2">
+	<div class="demand_management_pop">
+		<div class="close" id="close2">x</div>
+		<table class="table table-bordered" width="100%">
+			<tr>
+				<th></th>
+				<th>流水号</th>
+				<th>基本名称</th>
+				<th>生产厂家</th>
+				<th>通用剂量</th>
+				<th>通用规格包装</th>
+			</tr>			
+			<tr>
+				<td><input type="checkbox">1</td>
+				<td>BFA043161C</td>
+				<td>阿斯匹林</td>
+				<td>沈阳药业</td>
+				<td>25mg</td>
+				<td>100s/瓶</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">2</td>
+				<td>BFA043161C</td>
+				<td>阿斯匹林</td>
+				<td>沈阳药业</td>
+				<td>25mg</td>
+				<td>100s/瓶</td>
+			</tr>	
+			<tr>
+				<td><input type="checkbox">3</td>
+				<td>BFA043161C</td>
+				<td>阿斯匹林</td>
+				<td>沈阳药业</td>
+				<td>25mg</td>
+				<td>100s/瓶</td>
+			</tr>					
+		</table>
+	</div>
+</div>
+
+<!-- 特殊采购弹窗 -->
+<div class="pop3">
+	<div class="demand_management_pop">
+		<div class="close" id="close3">x</div>
+		<table class="table table-bordered" width="100%">
+			<tr>
+				<th></th>
+				<th>流水号</th>
+				<th>基本名称</th>
+				<th>生产厂家</th>
+				<th>通用剂量</th>
+				<th>通用规格包装</th>
+			</tr>			
+			<tr>
+				<td><input type="checkbox">1</td>
+				<td>BFA043161C</td>
+				<td>阿斯匹林</td>
+				<td>沈阳药业</td>
+				<td>25mg</td>
+				<td>100s/瓶</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox">2</td>
+				<td>BFA043161C</td>
+				<td>阿斯匹林</td>
+				<td>沈阳药业</td>
+				<td>25mg</td>
+				<td>100s/瓶</td>
+			</tr>	
+			<tr>
+				<td><input type="checkbox">3</td>
+				<td>BFA043161C</td>
+				<td>阿斯匹林</td>
+				<td>沈阳药业</td>
+				<td>25mg</td>
+				<td>100s/瓶</td>
+			</tr>					
+		</table>
+	</div>
+</div>
+
+<script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+<script src="../../assets/js/sub.js"></script>
+
+</body>
+</html>

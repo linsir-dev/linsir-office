@@ -1,0 +1,876 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #5c6466;
+}
+
+.yx a:hover,
+.yx a:focus {
+    color: #2d6e80;
+    text-decoration: none;
+}
+
+.yx input:focus {
+    outline-style: none;
+}
+
+.yx th {
+    font-weight: normal;
+}
+
+.yx .checkbox label,
+.yx .radio label {
+    padding-left: 0;
+}
+
+.yx label{
+	margin-bottom:0px;
+}
+
+/*间距 start */
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.mr16 {
+    margin-right: 16px;
+}
+
+.ml16 {
+    margin-left: 16px;
+}
+
+.mt16 {
+    margin-top: 16px;
+}
+
+.mb16 {
+    margin-bottom: 16px;
+}
+
+.pr16 {
+    padding-right: 16px;
+}
+
+.pl16 {
+    padding-left: 16px;
+}
+
+.pt16 {
+    padding-top: 16px;
+}
+
+.pb16 {
+    padding-bottom: 16px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.ml30 {
+    margin-left: 30px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.pr18 {
+    padding-right: 18px;
+}
+
+.pl18 {
+    padding-left: 18px;
+}
+
+.pt18 {
+    padding-top: 18px;
+}
+
+.pb18 {
+    padding-bottom: 18px;
+}
+
+.pr32 {
+    padding-right: 32px;
+}
+
+.pl32 {
+    padding-left: 32px;
+}
+
+.pt32 {
+    padding-top: 32px;
+}
+
+.pb32 {
+    padding-bottom: 32px;
+}
+
+
+/*间距 end */
+
+
+/*字体大小 start */
+
+.yx {
+    /*字体大小 end */
+    /********************************颜色***************************************/
+    /*********23add2用于突出强调文字，主要按钮，LOGO*************/
+    /*********d6dfe2用于次要按钮，边框，小按钮禁用状态************/
+    /**************e9f0f2用于背景***************************/
+    /**************dcdfe0用于禁用状态************************/
+    /**************2e3233用于标题***************************/
+    /**************5c6466用于正文***************************/
+    /************8a9699用于辅助文字，控件提示文字**************/
+    /**************2d6e80用于高亮文字***********************/
+    /**************表单外颜色按钮***************************/
+    /**************表单内颜色按钮***************************/
+    /**************用于表单内的状态标示**********************/
+    /**************用于表单内的状态标示*********************/
+    /********************************按钮***************************************/
+    /*表格按钮*/
+    /****************/
+    /****************/
+    /****************/
+    /****************/
+    /****************/
+    /****************/
+    /****************/
+    /****************/
+    /********************************控件***************************+++++++************/
+    /******************输入框***********************/
+    /******************搜索框***********************/
+    /*******************分页*************************/
+    /* 默认单选&复选框 start */
+    /* 默认单选&复选框 end */
+    /*下拉菜单 start */
+    /*下拉菜单 end */
+    /* 文本域 start */
+    /* 文本域 end */
+    /******************表单***********************/
+    /********************表格************************/
+}
+
+.yx .txt1 {
+    font-size: 24px;
+}
+
+.yx .txt2 {
+    font-size: 22px;
+}
+
+.yx .txt3 {
+    font-size: 16px;
+}
+
+.yx .txt4 {
+    font-size: 14px;
+}
+
+.yx .txt5 {
+    font-size: 12px;
+}
+
+.yx .txt1,
+.yx .txt2,
+.yx .txt3,
+.yx .txt4,
+.yx .txt5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.yx .colordiv {
+    padding: 10px;
+    line-height: 20px;
+}
+
+.yx .dp-inline {
+    display: inline;
+}
+
+.yx .font-blue {
+    color: #23add2;
+}
+
+.yx .bg-blue {
+    background-color: #23add2;
+}
+
+.yx .font-grey-silver {
+    color: #d6dfe2;
+}
+
+.yx .bg-grey-silver {
+    background-color: #d6dfe2;
+}
+
+.yx .border-grey-silver {
+    border-color: #d6dfe2;
+}
+
+.yx .bg-grey-light {
+    background-color: #e9f0f2;
+}
+
+.yx .bg-grey-salt {
+    background-color: #dcdfe0;
+}
+
+.yx .bg-dark {
+    background-color: #2e3233;
+}
+
+.yx .font-dark {
+    color: #2e3233;
+}
+
+.yx .bg-grey {
+    background-color: #5c6466;
+}
+
+.yx .font-grey {
+    color: #5c6466;
+}
+
+.yx .bg-grey-mint {
+    background-color: #8a9699;
+}
+
+.yx .font-grey-mint {
+    color: #8a9699;
+}
+
+.yx .bg-blue-sharp {
+    background-color: #2d6e80;
+}
+
+.yx .font-blue-sharp {
+    color: #2d6e80;
+}
+
+.yx .bg-green-seagreen {
+    background-color: #1ba39c;
+}
+
+.yx .bg-green-meadow {
+    background-color: #05bca3;
+}
+
+.yx .bg-blue-soft {
+    background-color: #03a1b2;
+}
+
+.yx .bg-orange {
+    background-color: #fcc232;
+}
+
+.yx .border-orange {
+    border-color: #fcc232;
+}
+
+.yx .bg-green {
+    background-color: #43c84a;
+}
+
+.yx .bg-red {
+    background-color: #ed4343;
+}
+
+.yx .bg-red-pink {
+    background-color: #ed6b75;
+}
+
+.yx .bg-orange-dark {
+    background-color: #edb16b;
+}
+
+.yx .bg-yellow {
+    background-color: #f5e877;
+}
+
+.yx .font-white {
+    color: #fff;
+}
+.yx .import_btn button{
+	height: 32px;
+}
+.yx .btn-drop {
+    color: #5c6466;
+    background-color: #FFF;
+    border-color: #d6dfe2;
+    vertical-align: middle;
+    height: 32px;
+}
+
+.yx .btn-p div {
+    margin-top: 10px;
+}
+
+.yx .btn {
+    padding: 5px 10px;
+}
+
+.yx .btn:hover {
+    color: #23add2;
+}
+
+.yx .btn:active {
+    box-shadow: none;
+}
+
+.yx .btn-font {
+    font-size: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.yx .btn-font:hover {
+    cursor: pointer;
+    color: #23add2;
+}
+
+.yx .btn.disabled:hover {
+    color: #5c6466;
+}
+
+.yx .btn.default {
+    color: #5c6466;
+    background-color: #d6dfe2;
+}
+
+.yx .btn.default:hover {
+    color: #fff;
+    background-color: #23add2;
+}
+
+.yx .btn.blue {
+    color: #fff;
+    background-color: #23add2;
+}
+
+.yx .btn.blue:hover {
+    color: #fff;
+    background-color: #0d93b8;
+}
+
+.yx .btn.grey-silver {
+    color: #5c6466;
+    background-color: #d6dfe2;
+}
+
+.yx .btn.grey-silver:hover {
+    color: #5c6466;
+    background-color: #abc2c9;
+}
+
+.yx .btn.green-seagreen {
+    color: #fff;
+    background-color: #1ba39c;
+}
+
+.yx .btn.green-seagreen:hover {
+    color: #fff;
+    background-color: #0a8a83;
+}
+
+.yx .btn.blue-soft {
+    color: #fff;
+    background-color: #03a1b2;
+}
+
+.yx .btn.blue-soft:hover {
+    color: #fff;
+    background-color: #128c99;
+}
+
+.yx .btn.green-meadow {
+    color: #fff;
+    background-color: #05bca3;
+}
+
+.yx .btn.green-meadow:hover {
+    color: #fff;
+    background-color: #05a38e;
+}
+
+.yx .btn.red {
+    color: #fff;
+    background-color: #ed4343;
+}
+
+.yx .btn.red:hover {
+    color: #fff;
+    background-color: #d42626;
+}
+
+.yx .btn.green {
+    color: #fff;
+    background-color: #43c84a;
+}
+
+.yx .btn.green:hover {
+    color: #fff;
+    background-color: #28ad2f;
+}
+
+.yx .btn.yellow {
+    color: #fff;
+    background-color: #fcc232;
+}
+
+.yx .btn.yellow:hover {
+    color: #fff;
+    background-color: #f0af0c;
+}
+
+
+.yx .breadcrumb{
+	background-color:#FFFFFF;
+	font:normal normal normal 14px/1 FontAwesome;
+	padding: 15px 0px;
+	border-bottom: 1px solid #d6dfe2;
+	border-radius: 0px;
+}
+
+.yx .breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content:"\f105";
+    padding: 0 10px;
+
+}
+
+
+.yx .form-control {
+    padding: 5px 10px;
+    height: 32px;
+    border-color: #d6dfe2;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(102, 175, 233, 0.6);
+}
+
+.yx .form-control:focus {
+    border-color: #23add2;
+    outline: 0;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075), 0 0 0px rgba(102, 175, 233, 0.6);
+}
+
+.yx .form-control::-webkit-input-placeholder {
+    color: #8a9699;
+}
+
+.yx .form-control[disabled],
+.yx .form-control[readonly],
+.yx fieldset[disabled] .form-control {
+    background-color: #dcdfe0;
+    color: #2e3233;
+    opacity: 0.7;
+}
+
+.yx .input-group-addon {
+    padding: 7px 10px;
+    border: solid 1px #d6dfe2;
+    font-size: 20px;
+}
+
+.yx .input-fsearch {
+    padding-left: 28px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.yx .ic-fsearch {
+    position: absolute;
+    left: 10px;
+    z-index: 10;
+    color: #8a9699;
+}
+
+.yx .pagination>li>a,
+.yx .pagination>li>span {
+    padding: 7px 15px;
+    border: solid 1px #d6dfe2;
+}
+
+.yx .pagination>li>a:hover,
+.yx .pagination>li>span:hover {
+    color: #23add2;
+    border-color: #23add2;
+    background-color: #fff;
+}
+
+.yx .pagination>.active>a,
+.yx .pagination>.active>a:focus,
+.yx .pagination>.active>a:hover,
+.yx .pagination>.active>span,
+.yx .pagination>.active>span:focus,
+.yx .pagination>.active>span:hover {
+    background-color: #23add2;
+    border-color: #23add2;
+}
+
+.yx .pagination>.disabled>a,
+.yx .pagination>.disabled>a:focus,
+.yx .pagination>.disabled>a:hover,
+.yx .pagination>.disabled>span,
+.yx .pagination>.disabled>span:focus,
+.yx .pagination>.disabled>span:hover {
+    color: #d6dfe2;
+    border-color: #d6dfe2;
+}
+
+.yx .pagination>.active>a,
+.yx .pagination>.active>a:focus,
+.yx .pagination>.active>a:hover,
+.yx .pagination>.active>span,
+.yx .pagination>.active>span:focus,
+.yx .pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #23add2;
+    border-color: #23add2;
+}
+
+.yx .pagination>li>a,
+.yx .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 7px 15px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #8a9699;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.yx .u_search_tit {
+    line-height: 36px;
+}
+
+.yx .u_search {
+    position: relative;
+}
+
+.yx .radio,
+.yx .checkbox {
+    cursor: pointer;
+}
+
+.yx input[type=checkbox].wmui.lbl:hover::before,
+.yx input[type=checkbox].wmui:hover+.lbl::before,
+.yx input[type=radio].wmui+.lbl:hover::before,
+.yx input[type=radio].wmui:hover+.lbl::before {
+    border-color: #04a1b3;
+}
+
+.yx label input[type=checkbox].wmui,
+.yx label input[type=radio].wmui {
+    z-index: -100 !important;
+    width: 1px !important;
+    height: 1px !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+}
+
+input[type=checkbox].wmui+.lbl,
+input[type=radio].wmui+.lbl {
+    *zoom: expression( this.runtimeStyle['zoom']='1', this.innerHTML='<before>\f00c</before>'+this.innerHTML);
+}
+
+.yx input[type=checkbox].wmui+.lbl:before,
+.yx input[type=checkbox].wmui+.lbl before,
+.yx input[type=radio].wmui+.lbl:before,
+.yx input[type=radio].wmui+.lbl before {
+    cursor: pointer;
+    font-family: fontAwesome;
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFF;
+    content: "\a0";
+    background-color: #fff;
+    border: 1px solid #C8C8C8;
+    border-radius: 0;
+    display: inline-block;
+    text-align: center;
+    height: 16px;
+    line-height: 14px;
+    min-width: 16px;
+    position: relative;
+    top: -1px;
+    *top: 2px;
+}
+
+.yx input[type=radio].wmui+.lbl:before,
+.yx input[type=radio].wmui+.lbl before {
+    border-radius: 100%;
+}
+
+.yx input[type=radio].wmui+.lbl:before,
+.yx input[type=radio].wmui+.lbl before {
+    border-radius: 100%;
+    font-size: 10px;
+    *font-size: 12px;
+    line-height: 16px;
+    height: 18px;
+    min-width: 18px;
+}
+
+.yx input[type=checkbox].wmui-checkbox-lg+.lbl:before,
+.yx input[type=checkbox].wmui-checkbox-lg+.lbl before,
+.yx input[type=radio].wmui-checkbox-lg+.lbl:before,
+.yx input[type=radio].wmui-checkbox-lg+.lbl before {
+    font-size: 16px;
+    height: 24px;
+    line-height: 21px;
+    min-width: 24px;
+    top: auto;
+}
+
+.yx input[type=checkbox].wmui:checked+.lbl:before,
+.yx input[type=radio].wmui:checked+.lbl:before {
+    display: inline-block;
+    content: '\f00c';
+    color: #04a1b3;
+    background-color: #fff;
+    border-color: #04a1b3;
+}
+
+.yx .checked input[type=checkbox].wmui+.lbl:before,
+.yx .checked input[type=checkbox].wmui+.lbl before,
+.yx .checked input[type=radio].wmui+.lbl:before,
+.yx .checked input[type=radio].wmui+.lbl before {
+    display: inline-block;
+    content: '\f00c';
+    color: #04a1b3;
+    background-color: #fff;
+    border-color: #04a1b3;
+}
+
+.yx input[type=checkbox].wmui-checkbox-2:checked+.lbl:before {
+    background-color: #fff;
+    border-color: #04a1b3;
+    color: #04a1b3;
+}
+
+.yx .checked input[type=checkbox].wmui-checkbox-2+.lbl:before,
+.yx .checked input[type=checkbox].wmui-checkbox-2+.lbl before {
+    background-color: #fff;
+    border-color: #04a1b3;
+    color: #04a1b3;
+}
+
+.yx input[type=checkbox].wmui.disabled+.lbl:before,
+.yx input[type=checkbox].wmui[disabled]+.lbl:before,
+.yx input[type=checkbox].wmui[disabled]+.lbl before,
+.yx input[type=radio].wmui.disabled+.lbl:before,
+.yx input[type=radio].wmui[disabled]+.lbl:before,
+.yx input[type=radio].wmui[disabled]+.lbl before {
+    background-color: transparent !important;
+    border-color: #dcdfe0 !important;
+    box-shadow: none !important;
+    color: #dcdfe0;
+}
+
+.yx input[type=radio].wmui:checked+.lbl:before {
+    content: "\f111";
+}
+
+.yx .checked input[type=radio].wmui+.lbl:before,
+.yx .checked input[type=radio].wmui+.lbl before {
+    content: "\f00c";
+}
+
+.yx .chosen-group {
+    display: inline-block;
+    position: relative;
+    padding-right: 25px;
+}
+
+.yx .chosen-group:hover .btn {
+    border-top-color: #23add2;
+    border-bottom-color: #23add2;
+}
+
+.yx .chosen-group .btn:nth-child(1) {
+    padding-left: 16px;
+    padding-right: 16px;
+    min-width: 60px;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #5c6466;
+    float: right;
+}
+
+.yx .chosen-group .btn:nth-last-child(2) {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.yx .chosen-group:hover .btn {
+    border-top-color: #23add2;
+    border-bottom-color: #23add2;
+}
+
+.yx .chosen-group:hover .btn:nth-child(1) {
+    border-left-color: #23add2;
+}
+
+.yx .chosen-group:hover .btn:nth-child(2) {
+    border-right-color: #23add2;
+    background-color: #e9f0f2;
+}
+
+.yx .chosen-group .dropdown-menu {
+    margin-top: 0;
+    box-shadow: none;
+    min-width: 85px;
+    width: 100%;
+    max-height: 140px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.yx .chosen-group .dropdown-menu>li>a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.yx .chosen-group .dropdown-menu>li>a:focus,
+.yx .chosen-group .dropdown-menu>li>a:hover {
+    background-color: #e9f0f2;
+}
+
+.yx .textarea.form-control {
+    height: auto;
+}
+
+.yx .form-control::-moz-placeholder {
+    color: #8a9699;
+    opacity: 1;
+}
+
+.yx .form-control:focus {
+    border: 1px solid #23add2;
+    box-shadow: none;
+}
+
+.yx .txth {
+    line-height: 32px;
+}
+
+.yx .table-head>th {
+    font-weight: bold;
+}
+
+.yx .table-border {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d6dfe2;
+}
+.yx .table-hover > tbody > tr:hover {
+  background-color: #f4f7f8;
+}
+.yx .table>tbody>tr>td,
+.yx .table>tbody>tr>th,
+.yx .table>tfoot>tr>td,
+.yx .table>tfoot>tr>th,
+.yx .table>thead>tr>td,
+.yx .table>thead>tr>th {
+    text-align: center;
+    vertical-align: middle;
+    padding:10px;
+}
+
+.yx .roll {
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+    -webkit-backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.yx .btn.disabled {
+    color: #5c6466;
+    background-color: #dcdfe0;
+}
+

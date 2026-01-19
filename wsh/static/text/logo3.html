@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logo盒子布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #eee;
+            font-family: "微软雅黑";
+        }
+
+        #t1 {
+            width: 1054px;
+            margin: 0 auto;
+            background-color: rgb(70, 119, 103);
+            padding-top: 35px;
+        }
+
+        .top {
+            width: 1054px;
+            background-color: pink;
+            position: relative;
+
+        }
+
+        .top h1 {
+            text-align: center;
+            font: 400 48px/104px "微软雅黑";
+        }
+
+        span {
+            display: block;
+        }
+
+        .r {
+            width: 130px;
+            border-bottom: 3px solid #000;
+            position: absolute;
+            top: 50%;
+            left: 169px;
+        }
+
+        .l {
+            width: 130px;
+            border-bottom: 3px solid #000;
+            position: absolute;
+            top: 50%;
+            right: 169px;
+        }
+
+        .dwon {
+            /* float: left; */
+            overflow: hidden;
+            width: 1040px;
+            /* height: 980px; */
+            background-color: rgb(197, 25, 25);
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .dwon div {
+            width: 500px;
+            /* 行高和固定高度设置一个可解决多于无法控制像素问题 */
+            height: 300px;
+            /* line-height: 0; */
+            background-color: rgb(49, 24, 105);
+            float: left;
+            margin-right: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .dwon .t2 {
+            margin-right: 0;
+        }
+
+        .dwon .mask {
+            background-color: rgba(0, 0, 0, .2);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* 浮动会覆盖没有高度的背景
+        .dwon div {
+            float: left;
+        } */
+        /* .d1 {
+            width: 1040px;
+            height: 300px;
+            background-color: rgb(49, 24, 105);
+            margin-bottom: 40px;
+        }
+        .d1 div {
+            float: left;
+            width: 500px;
+            height: 300px;
+            background-color: powderblue;
+            margin-right: 40px;
+        }
+        .dwon .d12 {
+            margin-right: 0;
+        }
+
+        .d2 {
+            width: 1040px;
+            height: 300px;
+            background-color: rgb(49, 24, 105);
+            margin-bottom: 40px;
+        }
+        .d2 div {
+            float: left;
+            width: 500px;
+            height: 300px;
+            background-color: powderblue;
+            margin-right: 40px;
+        }
+        .d3 {
+            width: 1040px;
+            height: 300px;
+            background-color: rgb(49, 24, 105);
+            margin-bottom: 40px;
+        }
+        .d3 div {
+            float: left;
+            width: 500px;
+            height: 300px;
+            background-color: powderblue;
+            margin-right: 40px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div id="t1">
+        <div class="top">
+            <h1>logo.....</h1>
+            <span class="r"></span>
+            <span class="l"></span>
+        </div>
+        <div class="dwon">
+            <!-- <div class="d1">
+                <div></div>
+                <div class="d12"></div>
+            </div>
+            <div class="d2">
+                <div></div>
+                <div class="d12"></div>
+            </div>
+            <div class="d3">
+                <div></div>
+                <div class="d12"></div>
+            </div> -->
+            <div>
+                <img src="" alt="" width="500px" height="300px">
+                <div class="mask">
+                    <p>5655</p>
+                </div>
+            </div>
+            <div class="t2">
+                <img src="" alt="" width="500px" height="300px">
+                <div class="mask">
+                    <p>5655</p>
+                </div>
+            </div>
+            <div>
+                <img src="" alt="" width="500px" height="300px">
+                <div class="mask">
+                    <p>5655</p>
+                </div>
+            </div>
+            <div class="t2">
+                <img src="" alt="" width="500px" height="300px">
+                <div class="mask">
+                    <p>5655</p>
+                </div>
+            </div>
+            <div>
+                <img src="" alt="" width="500px" height="300px">
+                <div class="mask">
+                    <p>5655</p>
+                </div>
+            </div>
+            <div class="t2">
+                <img src="" alt="" width="500px" height="300px">
+                <div class="mask">
+                    <p>5655</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>需求管理</title>
+<link href="../../assets/css/main.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="../../assets/css/sub.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="../../assets/css/UI-style.css">
+<link rel="stylesheet" href="../../assets/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container-fluid yx">
+	<ol class="breadcrumb">
+	    <li>采购需求</li>
+	    <li class="active">需求管理</li>
+	</ol>
+	
+	<div class="demand_management">
+            <div class="demand_management">
+                <div class="clearfix demand_management_newadd">
+                    <div class="input-group fl">
+                        <input type="text" class="border-grey-silver form-control" placeholder="输入提示文字">
+                        <span class="input-group-btn">
+		           		<div class="btn default">查找</div>
+		            </span>
+                    </div>
+                    <button class="btn blue mar_l fl hand_add_href">新增需求</button>
+                    <span class="import_btn fl"> 
+				<button class="btn green-meadow">导入需求</button>
+				<input class="import_file_btn" type="file">
+			</span>
+		</div>
+    
+        <table class="tab_list table table-bordered demand_management_tb" id="tableList" width="100%">
+			</table>
+	</div>
+
+    <!-- 分页 -->
+    <nav class="clearfix" aria-label="Page navigation">
+        <ul class="pagination fr">
+            <li class="disabled">
+                <a href="#" class="fa fa-caret-left"></a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" class="fa fa-caret-right"></a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+<script src="../../assets/js/jquery.js"></script>
+<script src="../../assets/js/bootstrap.js"></script>
+<script src="../../assets/js/sub.js"></script>
+<script src="../../assets/js/wmqe-datagrid.js"></script> 
+    
+<script type="text/javascript">
+var chkTemplate ="<input type='checkbox'>";
+var editAndDeleteTemplate ='<a href="manual-input.html" class="btn yellow">编辑</a><button class="btn red mar_l glyphicon-remove-circle2">删除</button>';
+
+Wq("#tableList").datagrid("../../apis/preq/req-mgm.json",
+     [
+     {'template':chkTemplate,'colTitle':'合并'},
+     {'colName':'reqNo','colTitle':'需求编号'},
+     {'colName':'reqName','colTitle':'需求名称'},
+     {'colName':'lastUpdateTime','colTitle':'最后编辑日期'},
+     {'template':editAndDeleteTemplate,'colTitle':'操作'},
+     {'colName':'lastUpdatePerson','colTitle':'最后编辑人'}
+     ]
+);
+</script>
+</body>
+</html>
