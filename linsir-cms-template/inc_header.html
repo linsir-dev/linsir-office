@@ -1,0 +1,77 @@
+<!-- 导航栏 -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+            <!-- Logo 和公司名称（带首页链接） -->
+            <a href="#home" class="flex items-center space-x-3 hover:opacity-90 transition-all-300">
+                <div class="w-12 h-12">
+                    <img src="_files/img/logo.svg" alt="凌越・Lin 科技 Logo" class="w-full h-full object-contain text-primary">
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-white" data-lang="zh">凌越・Lin 科技</h1>
+                    <h1 class="text-xl font-bold text-white hidden" data-lang="en">LinTranscend Tech</h1>
+                </div>
+            </a>
+            
+            <!-- 导航链接 -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#public-safety" class="text-white hover:text-primary transition-all-300 font-medium" data-lang="zh">公共安全</a>
+                <a href="#public-safety" class="text-white hover:text-primary transition-all-300 font-medium hidden" data-lang="en">Public Safety</a>
+                <a href="#healthcare" class="text-white hover:text-primary transition-all-300 font-medium" data-lang="zh">医疗大健康</a>
+                <a href="#healthcare" class="text-white hover:text-primary transition-all-300 font-medium hidden" data-lang="en">Healthcare</a>
+                <a href="#smart-transportation" class="text-white hover:text-primary transition-all-300 font-medium" data-lang="zh">智慧公共交通</a>
+                <a href="#smart-transportation" class="text-white hover:text-primary transition-all-300 font-medium hidden" data-lang="en">Smart Transportation</a>
+                <a href="#support" class="text-white hover:text-primary transition-all-300 font-medium" data-lang="zh">服务与支持</a>
+                <a href="#support" class="text-white hover:text-primary transition-all-300 font-medium hidden" data-lang="en">Support</a>
+                <a href="#mall" class="text-white hover:text-primary transition-all-300 font-medium" data-lang="zh">商城</a>
+                <a href="#mall" class="text-white hover:text-primary transition-all-300 font-medium hidden" data-lang="en">Mall</a>
+            </nav>
+            
+            <!-- 搜索、登录和语言切换 -->
+            <div class="flex items-center space-x-4">
+                <!-- 搜索功能 -->
+                <div class="relative">
+                    <button id="search-toggle" class="text-white hover:text-primary transition-all-300">
+                        <i class="fa fa-search text-xl"></i>
+                    </button>
+                    <!-- 搜索框 -->
+                    <div id="search-box" class="absolute right-0 top-full mt-2 w-64 bg-white rounded-lg shadow-lg p-2 hidden z-50">
+                        <input type="text" placeholder="搜索..." class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                </div>
+                
+                <!-- 登录图标 -->
+                <button id="login-btn" class="text-white hover:text-primary transition-all-300">
+                    <i class="fa fa-user text-xl"></i>
+                </button>
+                
+                <!-- 语言切换 -->
+                <button id="lang-zh" class="text-white hover:text-primary transition-all-300 font-medium">中文</button>
+                <button id="lang-en" class="text-white hover:text-primary transition-all-300">English</button>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+                <div class="container mx-auto px-4 py-3">
+                    <nav class="flex flex-col space-y-3">
+                        <a href="#public-safety" class="text-dark hover:text-primary transition-all-300 font-medium py-2" data-lang="zh">公共安全</a>
+                        <a href="#public-safety" class="text-dark hover:text-primary transition-all-300 font-medium py-2 hidden" data-lang="en">Public Safety</a>
+                        <a href="#healthcare" class="text-dark hover:text-primary transition-all-300 font-medium py-2" data-lang="zh">医疗大健康</a>
+                        <a href="#healthcare" class="text-dark hover:text-primary transition-all-300 font-medium py-2 hidden" data-lang="en">Healthcare</a>
+                        <a href="#smart-transportation" class="text-dark hover:text-primary transition-all-300 font-medium py-2" data-lang="zh">智慧公共交通</a>
+                        <a href="#smart-transportation" class="text-dark hover:text-primary transition-all-300 font-medium py-2 hidden" data-lang="en">Smart Transportation</a>
+                        <a href="#mall" class="text-dark hover:text-primary transition-all-300 font-medium py-2" data-lang="zh">商城</a>
+                        <a href="#mall" class="text-dark hover:text-primary transition-all-300 font-medium py-2 hidden" data-lang="en">Mall</a>
+                        <a href="#support" class="text-dark hover:text-primary transition-all-300 font-medium py-2" data-lang="zh">服务与支持</a>
+                        <a href="#support" class="text-dark hover:text-primary transition-all-300 font-medium py-2 hidden" data-lang="en">Support</a>
+                    </nav>
+                </div>
+            </div>
+</header>
