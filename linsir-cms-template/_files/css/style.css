@@ -60,6 +60,98 @@ header {
     @apply w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6;
 }
 
+/* 动画定义 */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-zoom {
+    animation: zoomIn 8s ease-in-out infinite alternate;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* 新动画效果 */
+@keyframes pulseSlow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fadePulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.03);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 4s ease-in-out infinite;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-pulse {
+    animation: fadePulse 5s ease-in-out infinite;
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+}
+
+.animate-slide-up-delay {
+    animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+.animate-slide-up-delay-2 {
+    animation: slideUp 0.8s ease-out 0.4s both;
+}
+
 /* 响应式调整 */
 @media (max-width: 768px) {
     .hero-title {

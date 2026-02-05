@@ -166,64 +166,88 @@ function initializeMain() {
     }
     
     // 轮播图功能
-    const carouselContainer = document.getElementById('carousel-container');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const indicators = document.querySelectorAll('.carousel-indicator');
-    
-    if (carouselContainer && prevBtn && nextBtn && indicators.length > 0) {
-        let currentSlide = 0;
-        const totalSlides = indicators.length;
+    function initializeCarousel() {
+        const carouselContainer = document.getElementById('carousel-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const progressBars = document.querySelectorAll('.carousel-progress');
         
-        // 自动轮播
-        let slideInterval = setInterval(nextSlide, 5000);
-        
-        function updateSlide() {
-            carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        if (carouselContainer && prevBtn && nextBtn && progressBars.length > 0) {
+            let currentSlide = 0;
+            const totalSlides = progressBars.length;
             
-            // 更新指示器状态
-            indicators.forEach((indicator, index) => {
-                if (index === currentSlide) {
-                    indicator.style.opacity = '1';
-                } else {
-                    indicator.style.opacity = '0.5';
-                }
-            });
+            // 重置所有进度条
+            function resetAllProgressBars() {
+                progressBars.forEach(bar => {
+                    bar.style.width = '0%';
+                });
+            }
+            
+            // 启动当前进度条动画
+        function startProgressAnimation() {
+            // 重置所有进度条
+            resetAllProgressBars();
+            
+            // 启动当前进度条动画
+            const currentBar = progressBars[currentSlide];
+            if (currentBar) {
+                // 强制重排
+                currentBar.offsetHeight;
+                currentBar.style.width = '100%';
+            }
         }
-        
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlide();
-        }
-        
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateSlide();
-        }
-        
-        // 控制按钮事件
-        prevBtn.addEventListener('click', () => {
-            clearInterval(slideInterval);
-            prevSlide();
-            slideInterval = setInterval(nextSlide, 5000);
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            clearInterval(slideInterval);
-            nextSlide();
-            slideInterval = setInterval(nextSlide, 5000);
-        });
-        
-        // 指示器点击事件
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                clearInterval(slideInterval);
-                currentSlide = index;
+            
+            // 自动轮播
+            let slideInterval = setInterval(nextSlide, 10000);
+            
+            function updateSlide() {
+                carouselContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // 启动当前进度条动画
+                startProgressAnimation();
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
                 updateSlide();
-                slideInterval = setInterval(nextSlide, 5000);
+            }
+            
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateSlide();
+            }
+            
+            // 控制按钮事件
+            prevBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                prevSlide();
+                slideInterval = setInterval(nextSlide, 10000);
             });
-        });
+            
+            nextBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                nextSlide();
+                slideInterval = setInterval(nextSlide, 10000);
+            });
+            
+            // 进度条点击事件
+            progressBars.forEach((bar, index) => {
+                bar.parentElement.addEventListener('click', () => {
+                    clearInterval(slideInterval);
+                    currentSlide = index;
+                    updateSlide();
+                    slideInterval = setInterval(nextSlide, 10000);
+                });
+            });
+            
+            // 初始化
+            resetAllProgressBars();
+            startProgressAnimation();
+        }
     }
+    
+    // 初始化轮播图
+    initializeCarousel();
 }
 
 // 页面加载完成后执行

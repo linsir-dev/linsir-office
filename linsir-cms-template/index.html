@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="_files/css/style.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Tailwind 配置 -->
     <script>
@@ -43,6 +43,7 @@
     
     <!-- 加载组件的脚本 -->
     <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
 
     <!-- 英雄区轮播 -->
     <section id="home" class="pt-0 pb-0 bg-white">
@@ -51,38 +52,39 @@
             <div class="relative overflow-hidden w-full h-screen">
                 <!-- 轮播图片容器 -->
                 <div id="carousel-container" class="flex transition-transform duration-500 ease-in-out w-full h-full">
-                    <!-- 轮播图1 -->
+                    <!-- 轮播图1：人工智能 -->
                     <div class="min-w-full h-full">
                         <div class="relative w-full h-full">
-                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20technology%20company%20hero%20image%20with%20AI%20computing%20visualization%2C%20red%20and%20white%20color%20scheme%2C%20professional%20looking&image_size=landscape_16_9" alt="智能计算技术" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
-                                <div class="container mx-auto px-4 md:px-12">
-                                    <div class="max-w-lg">
-                                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                                            <span data-lang="zh">Lin 启智算，</span>
-                                            <span data-lang="en" class="hidden">Lin Ignites Intelligence,</span>
-                                            <br>
-                                            <span class="text-primary" data-lang="zh">凌越科技新境</span>
-                                            <span class="text-primary hidden" data-lang="en">Transcend Tech Frontiers</span>
-                                        </h2>
-                                        <p class="text-lg text-gray-200 mb-8 max-w-lg" data-lang="zh">
-                                            凌越・Lin 科技致力于智能计算领域的创新与突破，为企业和个人提供前沿的科技解决方案，引领智能时代的发展潮流。
+                            <div class="absolute inset-0 overflow-hidden">
+                                <video src="_files/img/ai-background.mp4" alt="人工智能" class="w-full h-full object-cover" autoplay muted loop playsinline>
+                                    您的浏览器不支持视频播放
+                                </video>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30 flex items-center justify-center">
+                                <div class="container mx-auto px-4 md:px-12 text-center">
+                                    <div class="max-w-3xl mx-auto">
+                                        <h3 class="text-2xl md:text-4xl font-semibold mb-6 text-white">
+                                            <span data-lang="zh">AI驱动智能未来，引领科技革新</span>
+                                            <span data-lang="en" class="hidden">AI Drives Intelligent Future, Leading Tech Innovation</span>
+                                        </h3>
+                                        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto" data-lang="zh">
+                                            基于深度学习和机器学习的先进AI技术，为企业提供全方位的智能解决方案，助力数字化转型
                                         </p>
-                                        <p class="text-lg text-gray-200 mb-8 max-w-lg hidden" data-lang="en">
-                                            LinTranscend Tech is committed to innovation and breakthroughs in the field of intelligent computing, providing cutting-edge technology solutions for businesses and individuals, leading the development trend of the intelligent era.
+                                        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto hidden" data-lang="en">
+                                            Advanced AI technologies based on deep learning and machine learning, providing comprehensive intelligent solutions for enterprises to facilitate digital transformation
                                         </p>
-                                        <div class="flex flex-wrap gap-4">
-                                            <a href="#products" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl" data-lang="zh">
-                                                探索产品
+                                        <div class="flex flex-wrap justify-center gap-6">
+                                            <a href="#products" class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-400 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-500 transition-all-300 shadow-lg hover:shadow-xl" data-lang="zh">
+                                                了解AI解决方案
                                             </a>
-                                            <a href="#products" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl hidden" data-lang="en">
-                                                Explore Products
+                                            <a href="#products" class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-400 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-500 transition-all-300 shadow-lg hover:shadow-xl hidden" data-lang="en">
+                                                Explore AI Solutions
                                             </a>
-                                            <a href="#contact" class="px-8 py-3 bg-white text-dark font-medium rounded-lg hover:bg-gray-50 transition-all-300 border border-gray-300 shadow-md hover:shadow-lg" data-lang="zh">
-                                                联系我们
+                                            <a href="#contact" class="px-8 py-3 bg-transparent border border-white/30 text-white font-medium rounded-lg hover:border-white/50 transition-all-300" data-lang="zh">
+                                                预约咨询
                                             </a>
-                                            <a href="#contact" class="px-8 py-3 bg-white text-dark font-medium rounded-lg hover:bg-gray-50 transition-all-300 border border-gray-300 shadow-md hover:shadow-lg hidden" data-lang="en">
-                                                Contact Us
+                                            <a href="#contact" class="px-8 py-3 bg-transparent border border-white/30 text-white font-medium rounded-lg hover:border-white/50 transition-all-300 hidden" data-lang="en">
+                                                Schedule Consultation
                                             </a>
                                         </div>
                                     </div>
@@ -91,32 +93,39 @@
                         </div>
                     </div>
                     
-                    <!-- 轮播图2 -->
+                    <!-- 轮播图2：智算中心 -->
                     <div class="min-w-full h-full">
                         <div class="relative w-full h-full">
-                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20data%20center%20with%20servers%20and%20AI%20technology%2C%20red%20accents%2C%20professional%20looking&image_size=landscape_16_9" alt="智能服务器" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
-                                <div class="container mx-auto px-4 md:px-12">
-                                    <div class="max-w-lg">
-                                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                                            <span data-lang="zh">智能服务器，</span>
-                                            <span data-lang="en" class="hidden">Intelligent Servers,</span>
-                                            <br>
-                                            <span class="text-primary" data-lang="zh">赋能未来计算</span>
-                                            <span class="text-primary hidden" data-lang="en">Empowering Future Computing</span>
-                                        </h2>
-                                        <p class="text-lg text-gray-200 mb-8 max-w-lg" data-lang="zh">
-                                            凌越・Lin 科技的智能服务器系列，采用最新AI芯片技术，性能提升50%以上，为企业提供强大的计算能力和稳定的运行环境。
+                            <div class="absolute inset-0 overflow-hidden">
+                                <video src="_files/img/computing-center.mp4" alt="智算中心" class="w-full h-full object-cover" autoplay muted loop playsinline>
+                                    您的浏览器不支持视频播放
+                                </video>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30 flex items-center justify-center">
+                                <div class="container mx-auto px-4 md:px-12 text-center">
+                                    <div class="max-w-3xl mx-auto">
+                                        <h3 class="text-2xl md:text-4xl font-semibold mb-6 text-white">
+                                            <span data-lang="zh">智算中心赋能千行百业，释放数据价值</span>
+                                            <span data-lang="en" class="hidden">Smart Computing Center Empowers Industries, Unleashing Data Value</span>
+                                        </h3>
+                                        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto" data-lang="zh">
+                                            高性能智算中心，提供强大的计算能力和数据处理能力，为企业数字化转型提供核心支撑
                                         </p>
-                                        <p class="text-lg text-gray-200 mb-8 max-w-lg hidden" data-lang="en">
-                                            LinTranscend Tech's intelligent server series adopts the latest AI chip technology, with performance improved by more than 50%, providing enterprises with powerful computing capabilities and stable operating environments.
+                                        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto hidden" data-lang="en">
+                                            High-performance smart computing center providing powerful computing and data processing capabilities, offering core support for enterprise digital transformation
                                         </p>
-                                        <div class="flex flex-wrap gap-4">
-                                            <a href="#products" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl" data-lang="zh">
-                                                了解详情
+                                        <div class="flex flex-wrap justify-center gap-6">
+                                            <a href="#products" class="px-8 py-3 bg-gradient-to-r from-green-500 to-blue-400 text-white font-medium rounded-lg hover:from-green-600 hover:to-blue-500 transition-all-300 shadow-lg hover:shadow-xl" data-lang="zh">
+                                                了解智算方案
                                             </a>
-                                            <a href="#products" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl hidden" data-lang="en">
-                                                Learn More
+                                            <a href="#products" class="px-8 py-3 bg-gradient-to-r from-green-500 to-blue-400 text-white font-medium rounded-lg hover:from-green-600 hover:to-blue-500 transition-all-300 shadow-lg hover:shadow-xl hidden" data-lang="en">
+                                                Explore Computing Solutions
+                                            </a>
+                                            <a href="#contact" class="px-8 py-3 bg-transparent border border-white/30 text-white font-medium rounded-lg hover:border-white/50 transition-all-300" data-lang="zh">
+                                                技术咨询
+                                            </a>
+                                            <a href="#contact" class="px-8 py-3 bg-transparent border border-white/30 text-white font-medium rounded-lg hover:border-white/50 transition-all-300 hidden" data-lang="en">
+                                                Technical Consultation
                                             </a>
                                         </div>
                                     </div>
@@ -125,32 +134,39 @@
                         </div>
                     </div>
                     
-                    <!-- 轮播图3 -->
+                    <!-- 轮播图3：高质量数据 -->
                     <div class="min-w-full h-full">
                         <div class="relative w-full h-full">
-                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20AI%20technology%20solution%20visualization%2C%20red%20and%20white%20color%20scheme%2C%20futuristic%20looking&image_size=landscape_16_9" alt="AI解决方案" class="w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center">
-                                <div class="container mx-auto px-4 md:px-12">
-                                    <div class="max-w-lg">
-                                        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
-                                            <span data-lang="zh">AI 解决方案，</span>
-                                            <span data-lang="en" class="hidden">AI Solutions,</span>
-                                            <br>
-                                            <span class="text-primary" data-lang="zh">引领智能转型</span>
-                                            <span class="text-primary hidden" data-lang="en">Leading Intelligent Transformation</span>
-                                        </h2>
-                                        <p class="text-lg text-gray-200 mb-8 max-w-lg" data-lang="zh">
-                                            基于深度学习和机器学习的智能解决方案，助力企业实现数字化转型和智能化升级，开启智能时代新篇章。
+                            <div class="absolute inset-0 overflow-hidden">
+                                <video src="_files/img/data-visualization.mp4" alt="高质量数据" class="w-full h-full object-cover" autoplay muted loop playsinline>
+                                    您的浏览器不支持视频播放
+                                </video>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30 flex items-center justify-center">
+                                <div class="container mx-auto px-4 md:px-12 text-center">
+                                    <div class="max-w-3xl mx-auto">
+                                        <h3 class="text-2xl md:text-4xl font-semibold mb-6 text-white">
+                                            <span data-lang="zh">高质量数据驱动，释放业务潜能</span>
+                                            <span data-lang="en" class="hidden">High-Quality Data Drives, Unleashing Business Potential</span>
+                                        </h3>
+                                        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto" data-lang="zh">
+                                            基于高质量数据的分析和处理，为企业提供精准的决策支持，助力业务增长和创新
                                         </p>
-                                        <p class="text-lg text-gray-200 mb-8 max-w-lg hidden" data-lang="en">
-                                            Intelligent solutions based on deep learning and machine learning to help enterprises achieve digital transformation and intelligent upgrading, opening a new chapter in the intelligent era.
+                                        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto hidden" data-lang="en">
+                                            Based on high-quality data analysis and processing, providing precise decision support for enterprises to drive business growth and innovation
                                         </p>
-                                        <div class="flex flex-wrap gap-4">
-                                            <a href="#products" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl" data-lang="zh">
-                                                探索应用
+                                        <div class="flex flex-wrap justify-center gap-6">
+                                            <a href="#products" class="px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-400 text-white font-medium rounded-lg hover:from-yellow-600 hover:to-orange-500 transition-all-300 shadow-lg hover:shadow-xl" data-lang="zh">
+                                                了解数据解决方案
                                             </a>
-                                            <a href="#products" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl hidden" data-lang="en">
-                                                Explore Applications
+                                            <a href="#products" class="px-8 py-3 bg-gradient-to-r from-yellow-500 to-orange-400 text-white font-medium rounded-lg hover:from-yellow-600 hover:to-orange-500 transition-all-300 shadow-lg hover:shadow-xl hidden" data-lang="en">
+                                                Explore Data Solutions
+                                            </a>
+                                            <a href="#contact" class="px-8 py-3 bg-transparent border border-white/30 text-white font-medium rounded-lg hover:border-white/50 transition-all-300" data-lang="zh">
+                                                咨询详情
+                                            </a>
+                                            <a href="#contact" class="px-8 py-3 bg-transparent border border-white/30 text-white font-medium rounded-lg hover:border-white/50 transition-all-300 hidden" data-lang="en">
+                                                Consult Details
                                             </a>
                                         </div>
                                     </div>
@@ -169,232 +185,28 @@
                 </button>
                 
                 <!-- 轮播指示器 -->
-                <div class="absolute bottom-16 left-1/2 -translate-x-1/2 flex space-x-2">
-                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-100" data-index="0"></button>
-                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-50" data-index="1"></button>
-                    <button class="carousel-indicator w-3 h-3 rounded-full bg-white opacity-50" data-index="2"></button>
+                <div class="absolute bottom-16 left-1/2 -translate-x-1/2 flex items-center space-x-3">
+                    <!-- 三根线指示器 -->
+                    <div class="w-16 h-1 bg-white/30 rounded-full overflow-hidden cursor-pointer" data-index="0">
+                        <div class="carousel-progress h-full bg-white rounded-full transition-all duration-10000 ease-linear" data-index="0"></div>
+                    </div>
+                    <div class="w-16 h-1 bg-white/30 rounded-full overflow-hidden cursor-pointer" data-index="1">
+                        <div class="carousel-progress h-full bg-white rounded-full transition-all duration-10000 ease-linear" data-index="1"></div>
+                    </div>
+                    <div class="w-16 h-1 bg-white/30 rounded-full overflow-hidden cursor-pointer" data-index="2">
+                        <div class="carousel-progress h-full bg-white rounded-full transition-all duration-10000 ease-linear" data-index="2"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- 轮播图下方空间 -->
-    <div class="py-20"></div>
-
-    <!-- 产品服务 -->
-    <section id="products" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark" data-lang="zh">产品与服务</h2>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark hidden" data-lang="en">Products & Services</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-lang="zh">
-                    我们提供全方位的智能计算解决方案，满足不同行业的多样化需求
-                </p>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto hidden" data-lang="en">
-                    We provide comprehensive intelligent computing solutions to meet the diverse needs of different industries
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 产品1 -->
-                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all-300 border border-gray-100">
-                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-server text-2xl text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">智能服务器</h3>
-                    <h3 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Intelligent Servers</h3>
-                    <p class="text-gray-600 mb-6" data-lang="zh">
-                        高性能、低功耗的智能服务器系列，为企业提供强大的计算能力和稳定的运行环境。
-                    </p>
-                    <p class="text-gray-600 mb-6 hidden" data-lang="en">
-                        High-performance, low-power intelligent server series that provide enterprises with powerful computing capabilities and stable operating environments.
-                    </p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300" data-lang="zh">
-                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300 hidden" data-lang="en">
-                        Learn More <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-                
-                <!-- 产品2 -->
-                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all-300 border border-gray-100">
-                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-brain text-2xl text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">AI 解决方案</h3>
-                    <h3 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">AI Solutions</h3>
-                    <p class="text-gray-600 mb-6" data-lang="zh">
-                        基于深度学习和机器学习的智能解决方案，助力企业实现数字化转型和智能化升级。
-                    </p>
-                    <p class="text-gray-600 mb-6 hidden" data-lang="en">
-                        Intelligent solutions based on deep learning and machine learning to help enterprises achieve digital transformation and intelligent upgrading.
-                    </p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300" data-lang="zh">
-                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300 hidden" data-lang="en">
-                        Learn More <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-                
-                <!-- 产品3 -->
-                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all-300 border border-gray-100">
-                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-cloud text-2xl text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">云计算服务</h3>
-                    <h3 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Cloud Computing</h3>
-                    <p class="text-gray-600 mb-6" data-lang="zh">
-                        安全、高效、可扩展的云计算服务，为企业提供灵活的IT基础设施和应用部署环境。
-                    </p>
-                    <p class="text-gray-600 mb-6 hidden" data-lang="en">
-                        Secure, efficient, and scalable cloud computing services that provide enterprises with flexible IT infrastructure and application deployment environments.
-                    </p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300" data-lang="zh">
-                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300 hidden" data-lang="en">
-                        Learn More <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-                
-                <!-- 产品4 -->
-                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all-300 border border-gray-100">
-                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-shield text-2xl text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">网络安全</h3>
-                    <h3 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Network Security</h3>
-                    <p class="text-gray-600 mb-6" data-lang="zh">
-                        全方位的网络安全解决方案，保障企业数据和系统的安全，抵御各类网络威胁。
-                    </p>
-                    <p class="text-gray-600 mb-6 hidden" data-lang="en">
-                        Comprehensive network security solutions to protect enterprise data and systems from various network threats.
-                    </p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300" data-lang="zh">
-                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300 hidden" data-lang="en">
-                        Learn More <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-                
-                <!-- 产品5 -->
-                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all-300 border border-gray-100">
-                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-microchip text-2xl text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">芯片设计</h3>
-                    <h3 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Chip Design</h3>
-                    <p class="text-gray-600 mb-6" data-lang="zh">
-                        自主研发的高性能芯片设计，为智能设备和系统提供核心计算能力支持。
-                    </p>
-                    <p class="text-gray-600 mb-6 hidden" data-lang="en">
-                        Independently developed high-performance chip design that provides core computing support for intelligent devices and systems.
-                    </p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300" data-lang="zh">
-                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300 hidden" data-lang="en">
-                        Learn More <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-                
-                <!-- 产品6 -->
-                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all-300 border border-gray-100">
-                    <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-lightbulb-o text-2xl text-primary"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">定制化方案</h3>
-                    <h3 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Custom Solutions</h3>
-                    <p class="text-gray-600 mb-6" data-lang="zh">
-                        根据客户特定需求，提供个性化的技术解决方案，满足不同场景的专业需求。
-                    </p>
-                    <p class="text-gray-600 mb-6 hidden" data-lang="en">
-                        Provide personalized technical solutions based on specific customer needs to meet professional requirements in different scenarios.
-                    </p>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300" data-lang="zh">
-                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300 hidden" data-lang="en">
-                        Learn More <i class="fa fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 关于我们 -->
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <div class="relative">
-                        <div class="absolute -bottom-4 -right-4 w-full h-full bg-primary/10 rounded-2xl"></div>
-                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20technology%20company%20office%20with%20professional%20team%20working%2C%20bright%20and%20open%20space%2C%20red%20accents&image_size=landscape_16_9" alt="关于我们" class="w-full h-auto rounded-2xl shadow-2xl relative z-10">
-                    </div>
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark" data-lang="zh">关于凌越・Lin 科技</h2>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-dark hidden" data-lang="en">About LinTranscend Tech</h2>
-                    <p class="text-lg text-gray-600 mb-6" data-lang="zh">
-                        凌越・Lin 科技成立于2020年，是一家专注于智能计算领域的高科技企业。公司汇聚了来自全球顶尖高校和科技企业的精英人才，致力于通过技术创新推动智能时代的发展。
-                    </p>
-                    <p class="text-lg text-gray-600 mb-6 hidden" data-lang="en">
-                        Founded in 2020, LinTranscend Tech is a high-tech enterprise focused on the field of intelligent computing. The company brings together elite talents from top universities and technology companies around the world, dedicated to driving the development of the intelligent era through technological innovation.
-                    </p>
-                    <p class="text-lg text-gray-600 mb-8" data-lang="zh">
-                        我们秉承"创新、卓越、协作、诚信"的核心价值观，以"Lin 启智算，凌越科技新境"为使命，不断突破技术边界，为客户创造更大价值。
-                    </p>
-                    <p class="text-lg text-gray-600 mb-8 hidden" data-lang="en">
-                        We adhere to the core values of "Innovation, Excellence, Collaboration, Integrity" and take "Lin Ignites Intelligence, Transcend Tech Frontiers" as our mission, constantly breaking through technical boundaries to create greater value for customers.
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div>
-                            <h3 class="text-3xl font-bold text-primary mb-2" data-lang="zh">500+</h3>
-                            <h3 class="text-3xl font-bold text-primary mb-2 hidden" data-lang="en">500+</h3>
-                            <p class="text-gray-600" data-lang="zh">专业员工</p>
-                            <p class="text-gray-600 hidden" data-lang="en">Professional Employees</p>
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-primary mb-2" data-lang="zh">100+</h3>
-                            <h3 class="text-3xl font-bold text-primary mb-2 hidden" data-lang="en">100+</h3>
-                            <p class="text-gray-600" data-lang="zh">技术专利</p>
-                            <p class="text-gray-600 hidden" data-lang="en">Technical Patents</p>
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-primary mb-2" data-lang="zh">30+</h3>
-                            <h3 class="text-3xl font-bold text-primary mb-2 hidden" data-lang="en">30+</h3>
-                            <p class="text-gray-600" data-lang="zh">国家市场</p>
-                            <p class="text-gray-600 hidden" data-lang="en">Countries & Regions</p>
-                        </div>
-                        <div>
-                            <h3 class="text-3xl font-bold text-primary mb-2" data-lang="zh">1000+</h3>
-                            <h3 class="text-3xl font-bold text-primary mb-2 hidden" data-lang="en">1000+</h3>
-                            <p class="text-gray-600" data-lang="zh">企业客户</p>
-                            <p class="text-gray-600 hidden" data-lang="en">Enterprise Clients</p>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl inline-block" data-lang="zh">
-                        加入我们
-                    </a>
-                    <a href="#contact" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl inline-block hidden" data-lang="en">
-                        Join Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 新闻动态 -->
+    <!-- 最新动态 -->
     <section id="news" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark" data-lang="zh">新闻动态</h2>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark hidden" data-lang="en">News & Events</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark" data-lang="zh">最新动态</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark hidden" data-lang="en">Latest Updates</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-lang="zh">
                     了解凌越・Lin 科技的最新动态和行业资讯
                 </p>
@@ -404,9 +216,11 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 新闻1 -->
+                <!-- 最新动态1 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-xl transition-all-300 border border-gray-100">
-                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=technology%20conference%20event%20with%20speakers%20and%20audience%2C%20professional%20setting&image_size=landscape_16_9" alt="新闻图片" class="w-full h-56 object-cover">
+                    <div class="overflow-hidden">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=technology%20conference%20event%20with%20speakers%20and%20audience%2C%20professional%20setting&image_size=landscape_16_9" alt="最新动态图片" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
                     <div class="p-6">
                         <span class="text-sm text-gray-500 mb-3 inline-block" data-lang="zh">2026年1月15日</span>
                         <span class="text-sm text-gray-500 mb-3 inline-block hidden" data-lang="en">January 15, 2026</span>
@@ -427,9 +241,11 @@
                     </div>
                 </div>
                 
-                <!-- 新闻2 -->
+                <!-- 最新动态2 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-xl transition-all-300 border border-gray-100">
-                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=technology%20partnership%20signing%20ceremony%20with%20business%20people%20shaking%20hands%2C%20professional%20setting&image_size=landscape_16_9" alt="新闻图片" class="w-full h-56 object-cover">
+                    <div class="overflow-hidden">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=technology%20partnership%20signing%20ceremony%20with%20business%20people%20shaking%20hands%2C%20professional%20setting&image_size=landscape_16_9" alt="最新动态图片" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
                     <div class="p-6">
                         <span class="text-sm text-gray-500 mb-3 inline-block" data-lang="zh">2025年12月20日</span>
                         <span class="text-sm text-gray-500 mb-3 inline-block hidden" data-lang="en">December 20, 2025</span>
@@ -450,9 +266,11 @@
                     </div>
                 </div>
                 
-                <!-- 新闻3 -->
+                <!-- 最新动态3 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-xl transition-all-300 border border-gray-100">
-                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=technology%20award%20ceremony%20with%20trophy%20and%20celebration%2C%20professional%20setting&image_size=landscape_16_9" alt="新闻图片" class="w-full h-56 object-cover">
+                    <div class="overflow-hidden">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=technology%20award%20ceremony%20with%20trophy%20and%20celebration%2C%20professional%20setting&image_size=landscape_16_9" alt="最新动态图片" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
                     <div class="p-6">
                         <span class="text-sm text-gray-500 mb-3 inline-block" data-lang="zh">2025年11月10日</span>
                         <span class="text-sm text-gray-500 mb-3 inline-block hidden" data-lang="en">November 10, 2025</span>
@@ -476,145 +294,695 @@
         </div>
     </section>
 
-    <!-- 联系我们 -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <!-- 技术实力 -->
+    <section id="technology" class="py-20 bg-gray-900 text-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark" data-lang="zh">联系我们</h2>
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark hidden" data-lang="en">Contact Us</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-lang="zh">
-                    无论您有任何问题或需求，我们都随时准备为您提供支持和服务
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang="zh">深耕 AI 底层技术，筑牢行业赋能根基</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 hidden" data-lang="en">Deeply Cultivate AI Underlying Technology, Build a Solid Foundation for Industry Empowerment</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto" data-lang="zh">
+                    凸显 AI 底层技术硬核能力，区别于普通集成商，传递技术自主研发的核心优势
                 </p>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto hidden" data-lang="en">
-                    We are always ready to provide support and services for any questions or needs you may have
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto hidden" data-lang="en">
+                    Highlight the hardcore capabilities of AI underlying technology, distinguish from ordinary integrators, and convey the core advantages of independent technology research and development
                 </p>
             </div>
             
-            <div class="flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/2">
-                    <form class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="name" class="block text-gray-700 font-medium mb-2" data-lang="zh">姓名</label>
-                                <label for="name" class="block text-gray-700 font-medium mb-2 hidden" data-lang="en">Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all-300" placeholder="请输入您的姓名" data-lang="zh">
-                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all-300 hidden" placeholder="Please enter your name" data-lang="en">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-700 font-medium mb-2" data-lang="zh">邮箱</label>
-                                <label for="email" class="block text-gray-700 font-medium mb-2 hidden" data-lang="en">Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all-300" placeholder="请输入您的邮箱" data-lang="zh">
-                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all-300 hidden" placeholder="Please enter your email" data-lang="en">
-                            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 算法引擎 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:shadow-xl transition-all-300 border border-gray-700 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa fa-microchip text-2xl text-primary"></i>
                         </div>
-                        <div class="mb-6">
-                            <label for="subject" class="block text-gray-700 font-medium mb-2" data-lang="zh">主题</label>
-                            <label for="subject" class="block text-gray-700 font-medium mb-2 hidden" data-lang="en">Subject</label>
-                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all-300" placeholder="请输入咨询主题" data-lang="zh">
-                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all-300 hidden" placeholder="Please enter subject" data-lang="en">
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2" data-lang="zh">留言内容</label>
-                            <label for="message" class="block text-gray-700 font-medium mb-2 hidden" data-lang="en">Message</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all-300" placeholder="请输入您的留言内容" data-lang="zh"></textarea>
-                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all-300 hidden" placeholder="Please enter your message" data-lang="en"></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl" data-lang="zh">
-                            提交留言
-                        </button>
-                        <button type="submit" class="w-full py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all-300 shadow-lg hover:shadow-xl hidden" data-lang="en">
-                            Submit Message
-                        </button>
-                    </form>
+                        <h3 class="text-xl font-semibold" data-lang="zh">算法引擎</h3>
+                        <h3 class="text-xl font-semibold hidden" data-lang="en">Algorithm Engine</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6" data-lang="zh">
+                        自研多模态 AI 算法（视觉识别、NLP、预测模型），适配行业复杂场景
+                    </p>
+                    <p class="text-gray-300 mb-6 hidden" data-lang="en">
+                        Self-developed multimodal AI algorithms (visual recognition, NLP, prediction models) adapted to complex industry scenarios
+                    </p>
+                    <div class="text-sm text-gray-400" data-lang="zh">
+                        准确率：98%+
+                    </div>
+                    <div class="text-sm text-gray-400 hidden" data-lang="en">
+                        Accuracy: 98%+
+                    </div>
                 </div>
                 
-                <div class="lg:w-1/2">
-                    <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100 h-full">
-                        <h3 class="text-2xl font-semibold mb-8 text-dark" data-lang="zh">联系方式</h3>
-                        <h3 class="text-2xl font-semibold mb-8 text-dark hidden" data-lang="en">Contact Information</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa fa-map-marker text-xl text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-medium mb-2 text-dark" data-lang="zh">公司地址</h4>
-                                    <h4 class="text-lg font-medium mb-2 text-dark hidden" data-lang="en">Company Address</h4>
-                                    <p class="text-gray-600" data-lang="zh">
-                                        北京市海淀区中关村科技园区88号凌越大厦
-                                    </p>
-                                    <p class="text-gray-600 hidden" data-lang="en">
-                                        LinTranscend Building, No. 88, Zhongguancun Science Park, Haidian District, Beijing
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa fa-phone text-xl text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-medium mb-2 text-dark" data-lang="zh">联系电话</h4>
-                                    <h4 class="text-lg font-medium mb-2 text-dark hidden" data-lang="en">Phone Number</h4>
-                                    <p class="text-gray-600" data-lang="zh">+86 10 8888 8888</p>
-                                    <p class="text-gray-600 hidden" data-lang="en">+86 10 8888 8888</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa fa-envelope text-xl text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-medium mb-2 text-dark" data-lang="zh">电子邮箱</h4>
-                                    <h4 class="text-lg font-medium mb-2 text-dark hidden" data-lang="en">Email Address</h4>
-                                    <p class="text-gray-600" data-lang="zh">contact@lintranscend.com</p>
-                                    <p class="text-gray-600 hidden" data-lang="en">contact@lintranscend.com</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa fa-clock-o text-xl text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-medium mb-2 text-dark" data-lang="zh">工作时间</h4>
-                                    <h4 class="text-lg font-medium mb-2 text-dark hidden" data-lang="en">Working Hours</h4>
-                                    <p class="text-gray-600" data-lang="zh">周一至周五: 9:00 - 18:00</p>
-                                    <p class="text-gray-600 hidden" data-lang="en">Monday to Friday: 9:00 - 18:00</p>
-                                </div>
-                            </div>
+                <!-- 数据中台 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:shadow-xl transition-all-300 border border-gray-700 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa fa-database text-2xl text-primary"></i>
                         </div>
-                        
-                        <div class="mt-10">
-                            <h4 class="text-lg font-medium mb-4 text-dark" data-lang="zh">关注我们</h4>
-                            <h4 class="text-lg font-medium mb-4 text-dark hidden" data-lang="en">Follow Us</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all-300">
-                                    <i class="fa fa-weixin"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all-300">
-                                    <i class="fa fa-weibo"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all-300">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                                <a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all-300">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </div>
+                        <h3 class="text-xl font-semibold" data-lang="zh">数据中台</h3>
+                        <h3 class="text-xl font-semibold hidden" data-lang="en">Data Middle Platform</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6" data-lang="zh">
+                        全链路数据采集、清洗、分析，支撑精准决策与迭代优化
+                    </p>
+                    <p class="text-gray-300 mb-6 hidden" data-lang="en">
+                        Full-link data collection, cleaning, and analysis to support precise decision-making and iterative optimization
+                    </p>
+                    <div class="text-sm text-gray-400" data-lang="zh">
+                        处理能力：10TB/日
+                    </div>
+                    <div class="text-sm text-gray-400 hidden" data-lang="en">
+                        Processing capacity: 10TB/day
+                    </div>
+                </div>
+                
+                <!-- 边缘计算 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:shadow-xl transition-all-300 border border-gray-700 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa fa-wifi text-2xl text-primary"></i>
                         </div>
+                        <h3 class="text-xl font-semibold" data-lang="zh">边缘计算</h3>
+                        <h3 class="text-xl font-semibold hidden" data-lang="en">Edge Computing</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6" data-lang="zh">
+                        端边云协同，低延迟响应，满足交通 / 安防实时性需求
+                    </p>
+                    <p class="text-gray-300 mb-6 hidden" data-lang="en">
+                        End-edge-cloud collaboration, low-latency response, meeting real-time requirements for transportation/security
+                    </p>
+                    <div class="text-sm text-gray-400" data-lang="zh">
+                        延迟：&lt;10ms
+                    </div>
+                    <div class="text-sm text-gray-400 hidden" data-lang="en">
+                        Latency: &lt;10ms
+                    </div>
+                </div>
+                
+                <!-- 安全合规 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:shadow-xl transition-all-300 border border-gray-700 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa fa-lock text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold" data-lang="zh">安全合规</h3>
+                        <h3 class="text-xl font-semibold hidden" data-lang="en">Security Compliance</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6" data-lang="zh">
+                        等保三级认证、数据加密传输，适配医疗 / 政务安全标准
+                    </p>
+                    <p class="text-gray-300 mb-6 hidden" data-lang="en">
+                        Level 3 certification for information security, data encryption transmission, adapting to medical/government security standards
+                    </p>
+                    <div class="text-sm text-gray-400" data-lang="zh">
+                        认证：等保三级
+                    </div>
+                    <div class="text-sm text-gray-400 hidden" data-lang="en">
+                        Certification: Level 3
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 技术实力 -->
+            <div class="mt-16 bg-gray-800 rounded-xl p-8 border border-gray-700">
+                <h3 class="text-2xl font-bold mb-8 text-center" data-lang="zh">技术实力</h3>
+                <h3 class="text-2xl font-bold mb-8 text-center hidden" data-lang="en">Technical Capabilities</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <h4 class="text-4xl font-bold text-primary mb-2" data-lang="zh">100+</h4>
+                        <h4 class="text-4xl font-bold text-primary mb-2 hidden" data-lang="en">100+</h4>
+                        <p class="text-gray-300" data-lang="zh">技术专利</p>
+                        <p class="text-gray-300 hidden" data-lang="en">Technical Patents</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-4xl font-bold text-primary mb-2" data-lang="zh">98%+</h4>
+                        <h4 class="text-4xl font-bold text-primary mb-2 hidden" data-lang="en">98%+</h4>
+                        <p class="text-gray-300" data-lang="zh">算法精度</p>
+                        <p class="text-gray-300 hidden" data-lang="en">Algorithm Accuracy</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-4xl font-bold text-primary mb-2" data-lang="zh">50+</h4>
+                        <h4 class="text-4xl font-bold text-primary mb-2 hidden" data-lang="en">50+</h4>
+                        <p class="text-gray-300" data-lang="zh">技术解决方案</p>
+                        <p class="text-gray-300 hidden" data-lang="en">Technical Solutions</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页脚容器 -->
-    <div id="footer-container"></div>
+    <!-- 标杆案例 -->
+    <section id="cases" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark" data-lang="zh">落地标杆案例，见证AI赋能实效</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark hidden" data-lang="en">Benchmark Cases, Witness the Effectiveness of AI Empowerment</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-lang="zh">
+                    从方案到落地，我们用数据说话
+                </p>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto hidden" data-lang="en">
+                    From solution to implementation, we let the data speak
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 交通案例 -->
+                <div class="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all-300 border border-gray-100">
+                    <div class="overflow-hidden">
+                        <video src="_files/img/智慧交通.mp4" alt="智能公交系统" class="w-full h-56 object-cover" autoplay muted loop playsinline>
+                            您的浏览器不支持视频播放
+                        </video>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">智能公交系统解决方案</h3>
+                        <h3 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Smart Bus System Solution</h3>
+                        <p class="text-gray-600 mb-6" data-lang="zh">
+                            提升公交运营效率，改善乘客出行体验，构建智慧出行生态
+                        </p>
+                        <p class="text-gray-600 mb-6 hidden" data-lang="en">
+                            Improve bus operation efficiency, enhance passenger travel experience, and build a smart travel ecosystem
+                        </p>
+                        <div class="space-y-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-600" data-lang="zh">准点率提升</span>
+                                    <span class="text-gray-600 hidden" data-lang="en">On-time rate improvement</span>
+                                    <span class="font-bold text-primary" data-lang="zh">35%</span>
+                                    <span class="font-bold text-primary hidden" data-lang="en">35%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 35%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-600" data-lang="zh">乘客满意度提升</span>
+                                    <span class="text-gray-600 hidden" data-lang="en">Passenger satisfaction improvement</span>
+                                    <span class="font-bold text-primary" data-lang="zh">42%</span>
+                                    <span class="font-bold text-primary hidden" data-lang="en">42%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 42%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center" data-lang="zh">
+                                    <span class="text-gray-600">运营成本降低</span>
+                                    <span class="font-bold text-primary">18%</span>
+                                </div>
+                                <div class="flex justify-between items-center hidden" data-lang="en">
+                                    <span class="text-gray-600">Operating cost reduction</span>
+                                    <span class="font-bold text-primary">18%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300" data-lang="zh">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300 hidden" data-lang="en">
+                            View Details <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 医疗案例 -->
+                <div class="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all-300 border border-gray-100">
+                    <div class="overflow-hidden">
+                        <video src="_files/img/智慧医疗.mp4" alt="药械交易系统" class="w-full h-56 object-cover" autoplay muted loop playsinline>
+                            您的浏览器不支持视频播放
+                        </video>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">药械交易系统解决方案</h3>
+                        <h3 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Medical Device Trading System Solution</h3>
+                        <p class="text-gray-600 mb-6" data-lang="zh">
+                            优化药械采购流程，提升交易效率，确保供应链安全
+                        </p>
+                        <p class="text-gray-600 mb-6 hidden" data-lang="en">
+                            Optimize medical device procurement process, improve transaction efficiency, and ensure supply chain security
+                        </p>
+                        <div class="space-y-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-600" data-lang="zh">采购周期缩短</span>
+                                    <span class="text-gray-600 hidden" data-lang="en">Procurement cycle reduction</span>
+                                    <span class="font-bold text-primary" data-lang="zh">40%</span>
+                                    <span class="font-bold text-primary hidden" data-lang="en">40%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-600" data-lang="zh">交易效率提升</span>
+                                    <span class="text-gray-600 hidden" data-lang="en">Transaction efficiency improvement</span>
+                                    <span class="font-bold text-primary" data-lang="zh">55%</span>
+                                    <span class="font-bold text-primary hidden" data-lang="en">55%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 55%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center" data-lang="zh">
+                                    <span class="text-gray-600">供应链透明度</span>
+                                    <span class="font-bold text-primary">98%</span>
+                                </div>
+                                <div class="flex justify-between items-center hidden" data-lang="en">
+                                    <span class="text-gray-600">Supply chain transparency</span>
+                                    <span class="font-bold text-primary">98%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300" data-lang="zh">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300 hidden" data-lang="en">
+                            View Details <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 公共安全案例 -->
+                <div class="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-all-300 border border-gray-100">
+                    <div class="overflow-hidden">
+                        <video src="_files/img/智慧公安.mp4" alt="数据警规系统" class="w-full h-56 object-cover" autoplay muted loop playsinline>
+                            您的浏览器不支持视频播放
+                        </video>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">数据警规系统解决方案</h3>
+                        <h3 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Data Police Regulation System Solution</h3>
+                        <p class="text-gray-600 mb-6" data-lang="zh">
+                            整合多源数据，实现智能化警务管理，提升执法效率
+                        </p>
+                        <p class="text-gray-600 mb-6 hidden" data-lang="en">
+                            Integrate multi-source data, realize intelligent police management, and improve law enforcement efficiency
+                        </p>
+                        <div class="space-y-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-600" data-lang="zh">案件侦破时间缩短</span>
+                                    <span class="text-gray-600 hidden" data-lang="en">Case detection time reduction</span>
+                                    <span class="font-bold text-primary" data-lang="zh">65%</span>
+                                    <span class="font-bold text-primary hidden" data-lang="en">65%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-gray-600" data-lang="zh">执法效率提升</span>
+                                    <span class="text-gray-600 hidden" data-lang="en">Law enforcement efficiency improvement</span>
+                                    <span class="font-bold text-primary" data-lang="zh">50%</span>
+                                    <span class="font-bold text-primary hidden" data-lang="en">50%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <div class="flex justify-between items-center" data-lang="zh">
+                                    <span class="text-gray-600">数据整合率</span>
+                                    <span class="font-bold text-primary">95%</span>
+                                </div>
+                                <div class="flex justify-between items-center hidden" data-lang="en">
+                                    <span class="text-gray-600">Data integration rate</span>
+                                    <span class="font-bold text-primary">95%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300" data-lang="zh">
+                            查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center transition-all-300 hidden" data-lang="en">
+                            View Details <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- JavaScript -->
-    <script src="_files/js/main.js"></script>
+    <!-- 合作生态 -->
+    <section id="ecosystem" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark" data-lang="zh">开放合作生态，共筑AI行业新价值</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark hidden" data-lang="en">Open Cooperation Ecosystem, Co-building New Value in AI Industry</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-lang="zh">
+                    携手同行，让AI赋能更高效
+                </p>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto hidden" data-lang="en">
+                    Working together to make AI empowerment more efficient
+                </p>
+            </div>
+            
+            <!-- 合作模式 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-dark" data-lang="zh">合作模式</h3>
+                <h3 class="text-2xl font-semibold mb-8 text-center text-dark hidden" data-lang="en">Cooperation Models</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all-300 border border-gray-100">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa fa-building text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">政企项目定制</h4>
+                        <h4 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Government-Enterprise Project Customization</h4>
+                        <p class="text-gray-600" data-lang="zh">
+                            根据政府和企业的具体需求，定制专属AI解决方案
+                        </p>
+                        <p class="text-gray-600 hidden" data-lang="en">
+                            Customize exclusive AI solutions based on specific needs of government and enterprises
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all-300 border border-gray-100">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa fa-certificate text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">产品授权合作</h4>
+                        <h4 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Product Authorization Cooperation</h4>
+                        <p class="text-gray-600" data-lang="zh">
+                            通过授权模式，让合作伙伴使用我们的AI产品
+                        </p>
+                        <p class="text-gray-600 hidden" data-lang="en">
+                            Enable partners to use our AI products through authorization mode
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all-300 border border-gray-100">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa fa-flask text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">技术联合研发</h4>
+                        <h4 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Joint Technology R&D</h4>
+                        <p class="text-gray-600" data-lang="zh">
+                            与合作伙伴共同研发前沿AI技术，共享研发成果
+                        </p>
+                        <p class="text-gray-600 hidden" data-lang="en">
+                            Jointly develop cutting-edge AI technologies with partners and share R&D results
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 text-center hover:shadow-xl transition-all-300 border border-gray-100">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa fa-cubes text-2xl text-primary"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4 text-dark" data-lang="zh">解决方案集成</h4>
+                        <h4 class="text-xl font-semibold mb-4 text-dark hidden" data-lang="en">Solution Integration</h4>
+                        <p class="text-gray-600" data-lang="zh">
+                            将我们的AI技术集成到合作伙伴的解决方案中
+                        </p>
+                        <p class="text-gray-600 hidden" data-lang="en">
+                            Integrate our AI technology into partners' solutions
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 合作流程 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-dark" data-lang="zh">合作流程</h3>
+                <h3 class="text-2xl font-semibold mb-8 text-center text-dark hidden" data-lang="en">Cooperation Process</h3>
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- 流程线 -->
+                    <div class="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gray-200 -translate-y-1/2 z-0"></div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">1</div>
+                            <h4 class="text-xl font-semibold mb-2 text-dark" data-lang="zh">需求对接</h4>
+                            <h4 class="text-xl font-semibold mb-2 text-dark hidden" data-lang="en">Needs Docking</h4>
+                            <p class="text-gray-600" data-lang="zh">
+                                深入了解客户需求和业务场景
+                            </p>
+                            <p class="text-gray-600 hidden" data-lang="en">
+                                Deeply understand customer needs and business scenarios
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">2</div>
+                            <h4 class="text-xl font-semibold mb-2 text-dark" data-lang="zh">方案定制</h4>
+                            <h4 class="text-xl font-semibold mb-2 text-dark hidden" data-lang="en">Solution Customization</h4>
+                            <p class="text-gray-600" data-lang="zh">
+                                根据需求定制专属AI解决方案
+                            </p>
+                            <p class="text-gray-600 hidden" data-lang="en">
+                                Customize exclusive AI solutions based on needs
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">3</div>
+                            <h4 class="text-xl font-semibold mb-2 text-dark" data-lang="zh">技术落地</h4>
+                            <h4 class="text-xl font-semibold mb-2 text-dark hidden" data-lang="en">Technology Implementation</h4>
+                            <p class="text-gray-600" data-lang="zh">
+                                专业团队进行技术部署和落地
+                            </p>
+                            <p class="text-gray-600 hidden" data-lang="en">
+                                Professional team for technical deployment and implementation
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">4</div>
+                            <h4 class="text-xl font-semibold mb-2 text-dark" data-lang="zh">运维迭代</h4>
+                            <h4 class="text-xl font-semibold mb-2 text-dark hidden" data-lang="en">Operation & Iteration</h4>
+                            <p class="text-gray-600" data-lang="zh">
+                                持续运维和技术迭代优化
+                            </p>
+                            <p class="text-gray-600 hidden" data-lang="en">
+                                Continuous operation and technical iteration optimization
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 我的客户 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 text-center text-dark" data-lang="zh">我的客户</h3>
+                <h3 class="text-2xl font-semibold mb-8 text-center text-dark hidden" data-lang="en">My Customers</h3>
+                <div class="bg-white rounded-xl p-8 border border-gray-100">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                        <div class="text-center p-4">
+                            <div class="h-16 flex items-center justify-center bg-gray-100 rounded-lg">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20corporate%20logo%20for%20smart%20transportation%20company%2C%20blue%20color%2C%20clean%20design%2C%20professional&image_size=square" alt="智慧交通" class="h-full max-h-12 object-contain">
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="h-16 flex items-center justify-center bg-gray-100 rounded-lg">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20corporate%20logo%20for%20smart%20medical%20company%2C%20green%20color%2C%20clean%20design%2C%20professional&image_size=square" alt="智慧医疗" class="h-full max-h-12 object-contain">
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="h-16 flex items-center justify-center bg-gray-100 rounded-lg">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20corporate%20logo%20for%20smart%20government%20services%2C%20red%20color%2C%20clean%20design%2C%20professional&image_size=square" alt="智慧政务" class="h-full max-h-12 object-contain">
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="h-16 flex items-center justify-center bg-gray-100 rounded-lg">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20corporate%20logo%20for%20smart%20manufacturing%20company%2C%20orange%20color%2C%20clean%20design%2C%20professional&image_size=square" alt="智能制造" class="h-full max-h-12 object-contain">
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="h-16 flex items-center justify-center bg-gray-100 rounded-lg">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20corporate%20logo%20for%20smart%20education%20institution%2C%20purple%20color%2C%20clean%20design%2C%20professional&image_size=square" alt="智慧教育" class="h-full max-h-12 object-contain">
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <div class="h-16 flex items-center justify-center bg-gray-100 rounded-lg">
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20corporate%20logo%20for%20smart%20energy%20company%2C%20yellow%20color%2C%20clean%20design%2C%20professional&image_size=square" alt="智慧能源" class="h-full max-h-12 object-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 转化引导 -->
+            <div class="text-center">
+                <div class="inline-flex flex-col sm:flex-row gap-4">
+                    <a href="#" class="px-8 py-4 bg-gradient-primary text-white font-medium rounded-lg hover:shadow-xl transition-all-300" data-lang="zh">
+                        立即对接合作
+                    </a>
+                    <a href="#" class="px-8 py-4 bg-transparent text-primary font-medium rounded-lg border border-primary hover:bg-primary/5 transition-all-300" data-lang="zh">
+                        下载合作白皮书
+                    </a>
+                    <a href="#" class="px-8 py-4 bg-gradient-primary text-white font-medium rounded-lg hover:shadow-xl transition-all-300 hidden" data-lang="en">
+                        Connect for Cooperation Now
+                    </a>
+                    <a href="#" class="px-8 py-4 bg-transparent text-primary font-medium rounded-lg border border-primary hover:bg-primary/5 transition-all-300 hidden" data-lang="en">
+                        Download Cooperation White Paper
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-6" data-lang="zh">凌越科技</h3>
+                    <h3 class="text-xl font-bold mb-6 hidden" data-lang="en">LinTranscend Tech</h3>
+                    <p class="text-gray-400 mb-6" data-lang="zh">
+                        专注于智能计算领域的高科技企业，致力于通过技术创新推动智能时代的发展。
+                    </p>
+                    <p class="text-gray-400 mb-6 hidden" data-lang="en">
+                        A high-tech enterprise focused on the field of intelligent computing, dedicated to driving the development of the intelligent era through technological innovation.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6" data-lang="zh">关于我们</h3>
+                    <h3 class="text-xl font-bold mb-6 hidden" data-lang="en">About Us</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300" data-lang="zh">公司简介</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300 hidden" data-lang="en">Company Profile</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300" data-lang="zh">发展历程</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300 hidden" data-lang="en">Development History</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300" data-lang="zh">企业文化</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300 hidden" data-lang="en">Corporate Culture</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300" data-lang="zh">团队介绍</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300 hidden" data-lang="en">Team Introduction</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300" data-lang="zh">加入我们</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-all-300 hidden" data-lang="en">Join Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-6" data-lang="zh">联系我们</h3>
+                    <h3 class="text-xl font-bold mb-6 hidden" data-lang="en">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <i class="fa fa-map-marker text-gray-400"></i>
+                            <span class="text-gray-400" data-lang="zh">北京市海淀区中关村科技园区</span>
+                            <span class="text-gray-400 hidden" data-lang="en">Zhongguancun Science Park, Haidian District, Beijing</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa fa-phone text-gray-400"></i>
+                            <span class="text-gray-400">+86 10 8888 8888</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa fa-envelope text-gray-400"></i>
+                            <span class="text-gray-400">info@lintranscend.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p data-lang="zh">© 2026 凌越科技 版权所有</p>
+                <p hidden data-lang="en">© 2026 LinTranscend Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-all-300 opacity-0 invisible">
+        <i class="fa fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- 轮播图脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselContainer = document.getElementById('carousel-container');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const indicators = document.querySelectorAll('.carousel-indicator');
+            let currentIndex = 0;
+            const slideCount = indicators.length;
+
+            function updateCarousel() {
+                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                indicators.forEach((indicator, index) => {
+                    indicator.style.opacity = index === currentIndex ? '1' : '0.5';
+                });
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateCarousel();
+            }
+
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+
+            // 自动轮播
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+
+    <!-- 回到顶部脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopBtn = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+            });
+
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <!-- 语言切换脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const langToggle = document.createElement('button');
+            langToggle.className = 'fixed top-20 right-4 px-4 py-2 bg-primary text-white rounded-lg shadow-lg hover:bg-primary/90 transition-all-300 z-50';
+            langToggle.textContent = 'EN';
+            langToggle.id = 'lang-toggle';
+            document.body.appendChild(langToggle);
+
+            let currentLang = 'zh';
+
+            langToggle.addEventListener('click', function() {
+                currentLang = currentLang === 'zh' ? 'en' : 'zh';
+                langToggle.textContent = currentLang === 'zh' ? 'EN' : '中文';
+
+                document.querySelectorAll('[data-lang]').forEach(element => {
+                    if (element.getAttribute('data-lang') === currentLang) {
+                        element.classList.remove('hidden');
+                    } else {
+                        element.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

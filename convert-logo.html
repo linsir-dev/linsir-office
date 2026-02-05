@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PNG to SVG Converter</title>
+    <script>
+        function convertToSvg() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            img.crossOrigin = 'anonymous';
+            img.src = 'linsir-cms-template/img/logo.png';
+            
+            img.onload = function() {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0);
+                
+                // Get image data
+                const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const data = imageData.data;
+                
+                // Create SVG
+                let svg = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"${canvas.width}\" height=\"${canvas.height}\">`;
+                
+                // Process each pixel
+                for (let y = 0; y < canvas.height; y++) {
+                    for (let x = 0; x < canvas.width; x++) {
+                        const index = (y * canvas.width + x) * 4;
+                        const r = data[index];
+                        const g = data[index + 1];
+                        const b = data[index + 2];
+                        const a = data[index + 3];
+                        
+                        // Only add non-transparent pixels
+                        if (a > 0) {
+                            svg += `<rect x=\"${x}\" y=\"${y}\" width=\"1\" height=\"1\" fill=\"rgb(${r},${g},${b})\" opacity=\"${a/255}\"/>`;
+                        }
+                    }
+                }
+                
+                svg += '</svg>';
+                
+                // Display SVG
+                document.getElementById('svg-output').textContent = svg;
+                
+                // Create download link
+                const blob = new Blob([svg], {type: 'image/svg+xml'});
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'logo.svg';
+                link.textContent = 'Download SVG';
+                document.getElementById('download-link').appendChild(link);
+            };
+        }
+    </script>
+</head>
+<body>
+    <h1>PNG to SVG Converter</h1>
+    <button onclick="convertToSvg()">Convert logo.png to SVG</button>
+    <div id="download-link"></div>
+    <pre id="svg-output"></pre>
+</body>
+</html>
