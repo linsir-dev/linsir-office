@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>预约服务 - 凌越・Lin 科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e60012',
+                        secondary: '#1a1a1a',
+                        accent: '#0066cc',
+                        light: '#f5f5f5',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-dark bg-white">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+    
+    <!-- 加载组件的脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">预约服务</h1>
+                <p class="text-xl opacity-90">Appointment Service</p>
+                <p class="mt-4 text-lg opacity-80">专业、高效、贴心的服务体验</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务说明区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">服务流程</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold">1</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">选择服务</h3>
+                        <p class="text-gray-600">选择您需要的服务类型</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold">2</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">填写信息</h3>
+                        <p class="text-gray-600">完善预约信息</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold">3</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">确认预约</h3>
+                        <p class="text-gray-600">确认服务时间</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl font-bold">4</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">享受服务</h3>
+                        <p class="text-gray-600">专业工程师上门服务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预约表单区 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">在线预约</h2>
+                <form class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">服务类型 *</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <option value="">请选择服务类型</option>
+                            <option value="maintenance">设备维护</option>
+                            <option value="repair">设备维修</option>
+                            <option value="consultation">技术咨询</option>
+                            <option value="installation">设备安装</option>
+                            <option value="upgrade">系统升级</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">联系人姓名 *</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您的姓名">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">联系电话 *</label>
+                        <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您的手机号码">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">电子邮箱</label>
+                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="请输入您的邮箱地址">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">预约日期 *</label>
+                        <input type="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">预约时间 *</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <option value="">请选择时间段</option>
+                            <option value="09:00-12:00">上午 09:00-12:00</option>
+                            <option value="14:00-17:00">下午 14:00-17:00</option>
+                            <option value="18:00-20:00">晚上 18:00-20:00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">服务地址 *</label>
+                        <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" rows="3" placeholder="请输入详细的服务地址"></textarea>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-semibold mb-2">问题描述</label>
+                        <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" rows="4" placeholder="请详细描述您遇到的问题或需求"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors-300">
+                        提交预约
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务承诺区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">服务承诺</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-clock text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">快速响应</h3>
+                    <p class="text-gray-600">24小时内响应您的预约需求</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-user-md text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">专业团队</h3>
+                    <p class="text-gray-600">资深工程师提供专业服务</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa fa-shield text-4xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">质量保障</h3>
+                    <p class="text-gray-600">服务完成后提供质保服务</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式区 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">联系我们</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-phone text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">服务热线</h3>
+                        <p class="text-gray-600">400-888-8888</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-envelope text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">服务邮箱</h3>
+                        <p class="text-gray-600">service@lintranscend.com</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-clock-o text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">服务时间</h3>
+                        <p class="text-gray-600">周一至周日 9:00-20:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+</body>
+</html>

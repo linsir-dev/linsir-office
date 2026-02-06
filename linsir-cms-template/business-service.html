@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商用服务 - 凌越・Lin 科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e60012',
+                        secondary: '#1a1a1a',
+                        accent: '#0066cc',
+                        light: '#f5f5f5',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-dark bg-white">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+    
+    <!-- 加载组件的脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">商用服务</h1>
+                <p class="text-xl opacity-90">Business Services</p>
+                <p class="mt-4 text-lg opacity-80">为企业提供全方位的智能化解决方案</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务概述区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">为什么选择我们的商用服务</h2>
+                <p class="text-gray-600 text-lg leading-relaxed mb-12">
+                    凌越科技凭借多年行业经验和技术积累，为各类企业提供定制化的智能化解决方案。我们深入了解不同行业的业务需求，提供从咨询规划到实施部署的全流程服务，助力企业实现数字化转型，提升运营效率，创造更大价值。
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 bg-gray-50 rounded-lg">
+                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-industry text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">行业经验</h3>
+                        <p class="text-gray-600">深耕智慧交通、医疗AI、公共安全等领域</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-lg">
+                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-cogs text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">定制化方案</h3>
+                        <p class="text-gray-600">根据企业需求量身定制解决方案</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-lg">
+                        <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-headset text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">专业支持</h3>
+                        <p class="text-gray-600">7x24小时专业技术支持服务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解决方案区 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">行业解决方案</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <i class="fa fa-bus text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">智慧交通</h3>
+                        <p class="text-gray-600 mb-4">提供智能公交调度、客流预测、安全预警等解决方案，提升城市交通管理水平。</p>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li><i class="fa fa-check text-green-500 mr-2"></i>智能调度系统</li>
+                            <li><i class="fa fa-check text-green-500 mr-2"></i>实时监控平台</li>
+                            <li><i class="fa fa-check text-green-500 mr-2"></i>数据分析报告</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                        <i class="fa fa-heartbeat text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">医疗AI</h3>
+                        <p class="text-gray-600 mb-4">提供医学影像识别、辅助诊断、健康管理等AI解决方案，赋能智慧医疗。</p>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li><i class="fa fa-check text-green-500 mr-2"></i>影像识别系统</li>
+                            <li><i class="fa fa-check text-green-500 mr-2"></i>辅助诊断平台</li>
+                            <li><i class="fa fa-check text-green-500 mr-2"></i>健康管理系统</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-violet-500 flex items-center justify-center">
+                        <i class="fa fa-shield-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">公共安全</h3>
+                        <p class="text-gray-600 mb-4">提供视频监控、人脸识别、行为分析等安防解决方案，保障公共安全。</p>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li><i class="fa fa-check text-green-500 mr-2"></i>智能监控系统</li>
+                            <li><i class="fa fa-check text-green-500 mr-2"></i>人脸识别平台</li>
+                            <li><i class="fa fa-check text-green-500 mr-2"></i>行为分析系统</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务内容区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">服务内容</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="flex items-start p-6 bg-gray-50 rounded-lg">
+                    <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fa fa-comments text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">咨询服务</h3>
+                        <p class="text-gray-600">提供专业的业务咨询和技术咨询，帮助企业梳理需求，制定数字化转型规划。</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-gray-50 rounded-lg">
+                    <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fa fa-laptop-code text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">定制开发</h3>
+                        <p class="text-gray-600">根据企业具体需求，提供定制化的软件开发和系统集成服务。</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-gray-50 rounded-lg">
+                    <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fa fa-server text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">部署实施</h3>
+                        <p class="text-gray-600">提供专业的系统部署和实施服务，确保项目顺利上线运行。</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-gray-50 rounded-lg">
+                    <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fa fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">培训服务</h3>
+                        <p class="text-gray-600">提供系统使用培训和操作指导，帮助企业快速掌握系统使用方法。</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-gray-50 rounded-lg">
+                    <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fa fa-wrench text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">运维支持</h3>
+                        <p class="text-gray-600">提供7x24小时运维支持，保障系统稳定运行。</p>
+                    </div>
+                </div>
+                <div class="flex items-start p-6 bg-gray-50 rounded-lg">
+                    <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mr-6 flex-shrink-0">
+                        <i class="fa fa-line-chart text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">优化升级</h3>
+                        <p class="text-gray-600">持续优化系统性能，定期升级功能，满足业务发展需求。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合作流程区 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">合作流程</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl font-bold">1</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">需求对接</h3>
+                        <p class="text-gray-600 text-sm">了解企业需求，制定初步方案</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl font-bold">2</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">方案定制</h3>
+                        <p class="text-gray-600 text-sm">量身定制解决方案，确定实施计划</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl font-bold">3</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">实施部署</h3>
+                        <p class="text-gray-600 text-sm">专业团队实施，确保系统上线</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl font-bold">4</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">持续服务</h3>
+                        <p class="text-gray-600 text-sm">提供长期技术支持和维护服务</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">成功案例</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 text-white rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa fa-building text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">某市交通局</h3>
+                            <p class="text-sm text-gray-500">智慧交通项目</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">为某市交通局部署智能公交调度系统，提升公交运营效率30%，减少拥堵时间25%。</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 text-white rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa fa-hospital text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">某三甲医院</h3>
+                            <p class="text-sm text-gray-500">医疗AI项目</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">为某三甲医院部署医学影像识别系统，辅助诊断准确率达99%，提升诊疗效率。</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-500 text-white rounded-lg flex items-center justify-center mr-4">
+                            <i class="fa fa-shield text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold">某园区运营集团</h3>
+                            <p class="text-sm text-gray-500">公共安全项目</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">为某园区部署智能安防系统，实现24小时实时监控，安全事件响应时间缩短50%。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们区 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">联系我们</h2>
+                <p class="text-gray-600 mb-8">如果您有任何商用服务需求，欢迎随时联系我们</p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="tel:400-888-8888" class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:bg-red-700 transition-colors-300">
+                        <i class="fa fa-phone mr-2"></i>
+                        400-888-8888
+                    </a>
+                    <a href="mailto:business@lintranscend.com" class="inline-flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors-300">
+                        <i class="fa fa-envelope mr-2"></i>
+                        business@lintranscend.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+</body>
+</html>

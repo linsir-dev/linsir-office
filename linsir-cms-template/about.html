@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 凌越・Lin 科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e60012',
+                        secondary: '#1a1a1a',
+                        accent: '#0066cc',
+                        light: '#f5f5f5',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-dark bg-white">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+    
+    <!-- 加载组件的脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">关于我们</h1>
+                <p class="text-xl opacity-90">About Us</p>
+                <p class="mt-4 text-lg opacity-80">了解凌越科技的发展历程和企业文化</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司简介区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">公司简介</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            凌越・Lin 科技成立于2018年，是一家专注于人工智能技术研发与应用的高科技企业。公司以"Lin启智算，凌越科技新境"为使命，致力于通过AI技术赋能各行各业，推动社会数字化转型。
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            经过多年的发展，凌越科技已成长为行业领先的人工智能解决方案提供商。我们的业务涵盖智慧交通、医疗AI、公共安全等多个领域，为客户提供从咨询规划到实施部署的全流程服务。
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            公司拥有一支由资深工程师、行业专家和管理人才组成的专业团队，在人工智能、大数据、物联网等领域拥有深厚的技术积累和丰富的项目经验。我们始终坚持以客户为中心，以技术创新为驱动，为客户创造更大的价值。
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 rounded-lg p-6 text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">500+</div>
+                            <p class="text-gray-600">员工人数</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6 text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">100+</div>
+                            <p class="text-gray-600">合作伙伴</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6 text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">200+</div>
+                            <p class="text-gray-600">成功案例</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6 text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">50+</div>
+                            <p class="text-gray-600">专利技术</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程区 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">发展历程</h2>
+                <div class="space-y-8">
+                    <div class="flex items-start">
+                        <div class="w-24 flex-shrink-0">
+                            <div class="text-3xl font-bold text-primary mb-1">2018</div>
+                            <p class="text-gray-500 text-sm">5月</p>
+                        </div>
+                        <div class="flex-grow bg-white rounded-lg p-6 shadow-sm">
+                            <h3 class="font-semibold mb-2">公司成立</h3>
+                            <p class="text-gray-600">凌越科技在北京中关村科技园区正式成立，开启AI技术探索之旅。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-24 flex-shrink-0">
+                            <div class="text-3xl font-bold text-primary mb-1">2019</div>
+                            <p class="text-gray-500 text-sm">8月</p>
+                        </div>
+                        <div class="flex-grow bg-white rounded-lg p-6 shadow-sm">
+                            <h3 class="font-semibold mb-2">首轮融资</h3>
+                            <p class="text-gray-600">完成A轮融资，获得知名投资机构支持，加速技术研发和市场拓展。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-24 flex-shrink-0">
+                            <div class="text-3xl font-bold text-primary mb-1">2020</div>
+                            <p class="text-gray-500 text-sm">3月</p>
+                        </div>
+                        <div class="flex-grow bg-white rounded-lg p-6 shadow-sm">
+                            <h3 class="font-semibold mb-2">智慧交通项目落地</h3>
+                            <p class="text-gray-600">首个智慧公交调度系统成功部署，标志着公司在智慧交通领域取得突破。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-24 flex-shrink-0">
+                            <div class="text-3xl font-bold text-primary mb-1">2021</div>
+                            <p class="text-gray-500 text-sm">6月</p>
+                        </div>
+                        <div class="flex-grow bg-white rounded-lg p-6 shadow-sm">
+                            <h3 class="font-semibold mb-2">医疗AI突破</h3>
+                            <p class="text-gray-600">医学影像识别算法准确率突破99%，获得多项行业认证和奖项。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-24 flex-shrink-0">
+                            <div class="text-3xl font-bold text-primary mb-1">2023</div>
+                            <p class="text-gray-500 text-sm">9月</p>
+                        </div>
+                        <div class="flex-grow bg-white rounded-lg p-6 shadow-sm">
+                            <h3 class="font-semibold mb-2">B轮融资</h3>
+                            <p class="text-gray-600">完成B轮融资，估值突破10亿元，为规模化发展奠定基础。</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-24 flex-shrink-0">
+                            <div class="text-3xl font-bold text-primary mb-1">2025</div>
+                            <p class="text-gray-500 text-sm">12月</p>
+                        </div>
+                        <div class="flex-grow bg-white rounded-lg p-6 shadow-sm">
+                            <h3 class="font-semibold mb-2">行业领先地位</h3>
+                            <p class="text-gray-600">入选中国AI企业百强，在智慧交通、医疗AI、公共安全领域确立领先地位。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业文化区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">企业文化</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-gradient-to-br from-primary to-red-600 text-white rounded-lg p-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fa fa-bullseye text-4xl mr-4"></i>
+                            <h3 class="text-2xl font-bold">使命</h3>
+                        </div>
+                        <p class="text-lg leading-relaxed">
+                            Lin启智算，凌越科技新境
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fa fa-eye text-4xl mr-4"></i>
+                            <h3 class="text-2xl font-bold">愿景</h3>
+                        </div>
+                        <p class="text-lg leading-relaxed">
+                            成为全球领先的人工智能解决方案提供商，用科技创造更美好的未来
+                        </p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="text-center p-6 bg-gray-50 rounded-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-lightbulb text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">创新</h3>
+                        <p class="text-gray-600">持续技术创新，引领行业发展</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-handshake text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">诚信</h3>
+                        <p class="text-gray-600">以诚待人，信守承诺</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-users text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">协作</h3>
+                        <p class="text-gray-600">团队合作，共同成长</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-lg">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-star text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">卓越</h3>
+                        <p class="text-gray-600">追求卓越，超越期望</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势区 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">核心优势</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa fa-rocket text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">技术领先</h3>
+                        </div>
+                        <p class="text-gray-600">拥有50余项核心专利，在AI算法、大数据分析等领域处于行业领先水平。</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa fa-industry text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">经验丰富</h3>
+                        </div>
+                        <p class="text-gray-600">深耕智慧交通、医疗AI、公共安全等领域，拥有200+成功案例。</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-4">
+                                <i class="fa fa-headset text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">服务专业</h3>
+                        </div>
+                        <p class="text-gray-600">提供7x24小时专业技术支持，从咨询到实施全流程服务保障。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12">联系我们</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6">公司地址</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fa fa-building text-primary text-xl mr-4 mt-1"></i>
+                                <div>
+                                    <p class="font-semibold mb-1">凌越・Lin 科技有限公司</p>
+                                    <p class="text-gray-600">北京市海淀区中关村科技园区88号凌越大厦</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-phone text-primary text-xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold mb-1">服务热线</p>
+                                    <p class="text-gray-600">400-888-8888</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-envelope text-primary text-xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold mb-1">商务邮箱</p>
+                                    <p class="text-gray-600">business@lintranscend.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-globe text-primary text-xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold mb-1">官方网站</p>
+                                    <p class="text-gray-600">www.lintranscend.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6">加入我们</h3>
+                        <p class="text-gray-600 mb-6">
+                            我们正在寻找有激情、有才华的人才加入我们的团队。如果您对人工智能技术充满热情，欢迎投递简历。
+                        </p>
+                        <div class="space-y-4">
+                            <a href="#" class="inline-flex items-center justify-center w-full px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-red-700 transition-colors-300">
+                                <i class="fa fa-briefcase mr-2"></i>
+                                查看职位
+                            </a>
+                            <a href="mailto:hr@lintranscend.com" class="inline-flex items-center justify-center w-full px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors-300">
+                                <i class="fa fa-paper-plane mr-2"></i>
+                                投递简历
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+</body>
+</html>

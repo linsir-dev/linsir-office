@@ -52,6 +52,11 @@ function initializeComponents() {
     if (typeof window.initializeMain === 'function') {
         window.initializeMain();
     }
+    
+    // 调用news.js中的初始化函数
+    if (typeof window.initializeNews === 'function') {
+        window.initializeNews();
+    }
 }
 
 
@@ -59,6 +64,7 @@ function initializeComponents() {
 // 加载所有组件
 function loadAllComponents() {
     loadComponent('header-container', 'inc_header.html');
+    loadComponent('footer-container', 'inc_footer.html');
 }
 
 // 页面加载完成后加载组件

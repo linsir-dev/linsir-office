@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于cookies - 凌越・Lin 科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e60012',
+                        secondary: '#1a1a1a',
+                        accent: '#0066cc',
+                        light: '#f5f5f5',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-dark bg-white">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+    
+    <!-- 加载组件的脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">关于cookies</h1>
+                <p class="text-xl opacity-90">About Cookies</p>
+                <p class="mt-4 text-lg opacity-80">了解我们如何使用cookies来改善您的体验</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookies内容区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">什么是cookies？</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Cookies是存储在您设备上的小型文本文件，由网站发送并由您的浏览器保存。当您再次访问我们的网站时，cookies帮助我们识别您并记住您的偏好设置。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Cookies在互联网上被广泛使用，用于使网站更高效、更个性化。它们不会损害您的设备，也不会包含病毒或恶意软件。
+                    </p>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">我们如何使用cookies</h2>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="font-semibold mb-2">1. 必要cookies</h3>
+                            <p class="text-gray-600">这些cookies对于网站的基本功能是必需的，例如页面导航、访问安全区域等。没有这些cookies，网站无法正常工作。</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="font-semibold mb-2">2. 性能cookies</h3>
+                            <p class="text-gray-600">这些cookies帮助我们了解您如何使用我们的网站，例如访问的页面、点击的链接等。我们使用这些信息来改进网站性能和用户体验。</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="font-semibold mb-2">3. 功能cookies</h3>
+                            <p class="text-gray-600">这些cookies记住您的选择和偏好设置，例如语言选择、字体大小等，以便在您下次访问时提供个性化的体验。</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <h3 class="font-semibold mb-2">4. 目标cookies</h3>
+                            <p class="text-gray-600">这些cookies用于跟踪您的访问行为，以便我们了解广告和营销活动的效果，并为您提供相关的内容。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">第三方cookies</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        我们的网站可能包含来自第三方的cookies，例如分析服务、社交媒体插件等。这些第三方有自己的隐私政策，我们对这些cookies的使用不承担责任。
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        您可以通过访问第三方的网站了解其cookies使用情况，并选择是否接受这些cookies。
+                    </p>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">如何管理cookies</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-cog"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">浏览器设置</h4>
+                                <p class="text-gray-600">您可以通过浏览器设置管理或删除cookies。大多数浏览器允许您拒绝cookies，但请注意这可能会影响网站的某些功能。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-info-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">设备设置</h4>
+                                <p class="text-gray-600">移动设备通常有专门的设置来管理cookies。请查看您的设备说明书了解如何管理cookies。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-refresh"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">定期清理</h4>
+                                <p class="text-gray-600">建议定期清理浏览器缓存和cookies，以保持浏览器的最佳性能。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">cookies政策更新</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        我们可能会不时更新本cookies政策。更新后的政策将在本网站上发布，并在发布后立即生效。继续使用我们的网站即表示您接受更新后的政策。建议您定期查看本政策以了解最新内容。
+                    </p>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">联系我们</h2>
+                    <div class="bg-gray-50 rounded-lg p-8">
+                        <p class="text-gray-600 mb-6">
+                            如果您对本cookies政策有任何疑问，请通过以下方式联系我们：
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fa fa-envelope text-primary text-xl mr-4"></i>
+                                <span class="text-gray-600">邮箱：privacy@lintranscend.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-phone text-primary text-xl mr-4"></i>
+                                <span class="text-gray-600">电话：400-888-8888</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-map-marker text-primary text-xl mr-4"></i>
+                                <span class="text-gray-600">地址：北京市海淀区中关村科技园区88号凌越大厦</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-gray-500 text-sm">
+                    <p>最后更新日期：2026年1月</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+</body>
+</html>

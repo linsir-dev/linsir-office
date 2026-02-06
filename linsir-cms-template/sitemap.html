@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站地图 - 凌越・Lin 科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e60012',
+                        secondary: '#1a1a1a',
+                        accent: '#0066cc',
+                        light: '#f5f5f5',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-dark bg-white">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+    
+    <!-- 加载组件的脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">网站地图</h1>
+                <p class="text-xl opacity-90">Site Map</p>
+                <p class="mt-4 text-lg opacity-80">快速导航到网站的各个页面</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 网站地图内容区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h2 class="text-xl font-bold mb-4 text-primary"><i class="fa fa-home mr-2"></i>主要页面</h2>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-600 hover:text-primary transition-colors-300">首页</a></li>
+                            <li><a href="channel_news.html" class="text-gray-600 hover:text-primary transition-colors-300">新闻与媒体</a></li>
+                            <li><a href="business-service.html" class="text-gray-600 hover:text-primary transition-colors-300">商用服务</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h2 class="text-xl font-bold mb-4 text-primary"><i class="fa fa-cogs mr-2"></i>服务与支持</h2>
+                        <ul class="space-y-2">
+                            <li><a href="appointment.html" class="text-gray-600 hover:text-primary transition-colors-300">预约服务</a></li>
+                            <li><a href="after-sales.html" class="text-gray-600 hover:text-primary transition-colors-300">售后政策</a></li>
+                            <li><a href="service-privacy.html" class="text-gray-600 hover:text-primary transition-colors-300">服务隐私声明</a></li>
+                            <li><a href="business-service.html" class="text-gray-600 hover:text-primary transition-colors-300">商用服务</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h2 class="text-xl font-bold mb-4 text-primary"><i class="fa fa-mobile mr-2"></i>应用与下载</h2>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">凌越APP下载</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">智慧交通解决方案</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">医疗AI解决方案</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">公共安全解决方案</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">企业服务APP</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h2 class="text-xl font-bold mb-4 text-primary"><i class="fa fa-info-circle mr-2"></i>法律信息</h2>
+                        <ul class="space-y-2">
+                            <li><a href="privacy.html" class="text-gray-600 hover:text-primary transition-colors-300">隐私声明</a></li>
+                            <li><a href="terms.html" class="text-gray-600 hover:text-primary transition-colors-300">使用条款</a></li>
+                            <li><a href="cookies.html" class="text-gray-600 hover:text-primary transition-colors-300">关于cookies</a></li>
+                            <li><a href="legal.html" class="text-gray-600 hover:text-primary transition-colors-300">法律信息</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h2 class="text-xl font-bold mb-4 text-primary"><i class="fa fa-building mr-2"></i>关于我们</h2>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">公司简介</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">发展历程</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">企业文化</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">加入我们</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-primary transition-colors-300">联系我们</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h2 class="text-xl font-bold mb-4 text-primary"><i class="fa fa-newspaper mr-2"></i>新闻中心</h2>
+                        <ul class="space-y-2">
+                            <li><a href="channel_news.html" class="text-gray-600 hover:text-primary transition-colors-300">全部新闻</a></li>
+                            <li><a href="channel_news.html" class="text-gray-600 hover:text-primary transition-colors-300">公司动态</a></li>
+                            <li><a href="channel_news.html" class="text-gray-600 hover:text-primary transition-colors-300">行业资讯</a></li>
+                            <li><a href="channel_news.html" class="text-gray-600 hover:text-primary transition-colors-300">媒体报道</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+</body>
+</html>

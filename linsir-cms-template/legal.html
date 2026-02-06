@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法律信息 - 凌越・Lin 科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e60012',
+                        secondary: '#1a1a1a',
+                        accent: '#0066cc',
+                        light: '#f5f5f5',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-dark bg-white">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+    
+    <!-- 加载组件的脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">法律信息</h1>
+                <p class="text-xl opacity-90">Legal Information</p>
+                <p class="mt-4 text-lg opacity-80">了解我们的法律合规和备案信息</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 法律信息内容区 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">公司信息</h2>
+                    <div class="bg-gray-50 rounded-lg p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-semibold mb-2">公司名称</h3>
+                                <p class="text-gray-600">凌越・Lin 科技有限公司</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-2">英文名称</h3>
+                                <p class="text-gray-600">LinTranscend Technology Co., Ltd.</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-2">统一社会信用代码</h3>
+                                <p class="text-gray-600">91110000XXXXXXXXXXXX</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-2">法定代表人</h3>
+                                <p class="text-gray-600">张三</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-2">成立日期</h3>
+                                <p class="text-gray-600">2018年5月15日</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-2">注册资本</h3>
+                                <p class="text-gray-600">人民币5000万元</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-2">企业类型</h3>
+                                <p class="text-gray-600">有限责任公司（自然人投资或控股）</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold mb-2">经营状态</h3>
+                                <p class="text-gray-600">在业（开业）</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">备案信息</h2>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center">
+                                <i class="fa fa-globe text-primary text-2xl mr-4"></i>
+                                <div>
+                                    <h3 class="font-semibold mb-1">ICP备案号</h3>
+                                    <p class="text-gray-600">京ICP备XXXXXXXX号-1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center">
+                                <i class="fa fa-shield text-primary text-2xl mr-4"></i>
+                                <div>
+                                    <h3 class="font-semibold mb-1">公安备案号</h3>
+                                    <p class="text-gray-600">京公网安备XXXXXXXXXX号</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center">
+                                <i class="fa fa-certificate text-primary text-2xl mr-4"></i>
+                                <div>
+                                    <h3 class="font-semibold mb-1">网站域名</h3>
+                                    <p class="text-gray-600">www.lintranscend.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">经营范围</h2>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <p class="text-gray-600 leading-relaxed">
+                            技术开发、技术咨询、技术转让、技术推广、技术服务；软件开发；计算机系统服务；数据处理服务；信息系统集成服务；智能设备研发与销售；人工智能技术开发与应用；物联网技术开发；云计算服务；大数据服务；网络技术服务；电子产品销售；货物进出口；技术进出口；代理进出口。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">资质证书</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center mb-2">
+                                <i class="fa fa-award text-primary text-xl mr-3"></i>
+                                <h3 class="font-semibold">高新技术企业证书</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">国家级高新技术企业认证</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center mb-2">
+                                <i class="fa fa-check-circle text-primary text-xl mr-3"></i>
+                                <h3 class="font-semibold">ISO9001质量管理体系</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">国际质量管理体系认证</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center mb-2">
+                                <i class="fa fa-shield-alt text-primary text-xl mr-3"></i>
+                                <h3 class="font-semibold">ISO27001信息安全</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">信息安全管理体系认证</p>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex items-center mb-2">
+                                <i class="fa fa-star text-primary text-xl mr-3"></i>
+                                <h3 class="font-semibold">CMMI5级认证</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">软件能力成熟度模型认证</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">知识产权</h2>
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            凌越科技高度重视知识产权保护，拥有多项自主知识产权，包括但不限于：
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="flex items-start">
+                                <i class="fa fa-file-text text-primary mr-2 mt-1"></i>
+                                <span class="text-gray-600">发明专利50余项</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-file-text text-primary mr-2 mt-1"></i>
+                                <span class="text-gray-600">实用新型专利80余项</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-file-text text-primary mr-2 mt-1"></i>
+                                <span class="text-gray-600">外观设计专利30余项</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-file-code text-primary mr-2 mt-1"></i>
+                                <span class="text-gray-600">软件著作权100余项</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-trademark text-primary mr-2 mt-1"></i>
+                                <span class="text-gray-600">注册商标20余项</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-copyright text-primary mr-2 mt-1"></i>
+                                <span class="text-gray-600">作品著作权10余项</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">法律合规</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">数据安全</h4>
+                                <p class="text-gray-600">严格遵守《网络安全法》《数据安全法》《个人信息保护法》等法律法规。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">网络安全</h4>
+                                <p class="text-gray-600">按照《网络安全法》要求，落实网络安全等级保护制度。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">内容合规</h4>
+                                <p class="text-gray-600">建立内容审核机制，确保平台内容符合法律法规要求。</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">消费者保护</h4>
+                                <p class="text-gray-600">遵守《消费者权益保护法》，保障用户合法权益。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6 text-primary">联系我们</h2>
+                    <div class="bg-gray-50 rounded-lg p-8">
+                        <p class="text-gray-600 mb-6">
+                            如果您对我们的法律信息有任何疑问，请通过以下方式联系我们：
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fa fa-envelope text-primary text-xl mr-4"></i>
+                                <span class="text-gray-600">邮箱：legal@lintranscend.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-phone text-primary text-xl mr-4"></i>
+                                <span class="text-gray-600">电话：400-888-8888</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa fa-map-marker text-primary text-xl mr-4"></i>
+                                <span class="text-gray-600">地址：北京市海淀区中关村科技园区88号凌越大厦</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center text-gray-500 text-sm">
+                    <p>最后更新日期：2026年1月</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+</body>
+</html>
