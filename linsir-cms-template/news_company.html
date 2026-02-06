@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司动态 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    <link rel="stylesheet" href="_files/css/news.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        primary: '#6366f1',
+                        secondary: '#a855f7'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white dark">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 栏目标题 -->
+    <section class="pt-32 pb-16 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">公司动态</h1>
+                <p class="text-xl text-gray-400 mb-6">Company News</p>
+                <p class="text-gray-400 max-w-3xl mx-auto">了解凌越科技最新发展动态、产品发布、合作签约等重要信息</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻分类导航 -->
+    <section class="py-8 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center space-x-4 md:space-x-8 overflow-x-auto pb-4">
+                <a href="channel_news.html" class="news-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-th-large mr-2"></i>全部
+                </a>
+                <a href="news_company.html" class="news-nav-btn active whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-primary/20 transition-all-300">
+                    <i class="fa fa-building mr-2"></i>公司动态
+                </a>
+                <a href="news_industry.html" class="news-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-industry mr-2"></i>行业资讯
+                </a>
+                <a href="news_media.html" class="news-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-newspaper-o mr-2"></i>媒体报道
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻列表区 -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 公司动态卡片 1 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技与XX市交通局达成合作" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag company-tag px-3 py-1 rounded-full text-sm font-medium">公司动态</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-12-25</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">凌越科技与XX市交通局达成智慧公交AI合作，共筑城市智能出行新生态</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">双方将围绕智慧公交调度、客流预测、安全预警等核心场景展开深度合作，依托凌越AI核心算法，提升城市公共交通智能化水平，缓解交通拥堵，优化市民出行体验。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 公司动态卡片 2 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技发布全新AI算法" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag company-tag px-3 py-1 rounded-full text-sm font-medium">公司动态</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-12-05</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">凌越科技发布全新AI算法，在医疗影像识别准确率突破99%</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">凌越科技今日正式发布新一代医疗AI算法，在多项国际权威数据集上的识别准确率突破99%，将为医疗诊断提供更精准的辅助决策支持。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 公司动态卡片 3 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技完成C轮融资" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag company-tag px-3 py-1 rounded-full text-sm font-medium">公司动态</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-11-15</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">凌越科技完成C轮5亿元融资，估值突破50亿元</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">本轮融资由知名投资机构领投，资金将用于AI核心技术研发、市场拓展和人才引进，加速公司在智慧交通、医疗AI、公共安全领域的布局。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 公司动态卡片 4 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技团队扩充" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag company-tag px-3 py-1 rounded-full text-sm font-medium">公司动态</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-10-28</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">凌越科技研发团队扩充至500人，博士占比超30%</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">公司持续加大人才引进力度，研发团队规模突破500人，其中博士学历占比超过30%，为公司技术创新提供强有力的人才支撑。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 公司动态卡片 5 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技新总部" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag company-tag px-3 py-1 rounded-full text-sm font-medium">公司动态</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-10-10</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">凌越科技新总部大楼正式启用，打造AI创新高地</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">位于中关村科技园的新总部大楼正式投入使用，建筑面积超过3万平方米，配备先进的AI实验室和研发中心，为员工提供一流的办公环境。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 公司动态卡片 6 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技战略合作" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag company-tag px-3 py-1 rounded-full text-sm font-medium">公司动态</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-09-20</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">凌越科技与华为达成战略合作，共建AI生态</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">双方将在云计算、人工智能、物联网等领域展开全方位合作，共同推动AI技术在智慧城市、智慧医疗等场景的落地应用。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分页区 -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center space-x-2">
+                <button class="page-btn px-4 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+                <button class="page-btn px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white">1</button>
+                <button class="page-btn px-4 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">2</button>
+                <button class="page-btn px-4 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">3</button>
+                <span class="text-gray-400">...</span>
+                <button class="page-btn px-4 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <!-- 脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服务与支持 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#e60012',
+                        secondary: '#1a1a1a',
+                        accent: '#0066cc',
+                        light: '#f5f5f5',
+                        dark: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-dark bg-white">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+    
+    <!-- 加载组件的脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">服务与支持</h1>
+                <p class="text-xl text-white/80 mb-6">Service & Support</p>
+                <p class="text-white/60 max-w-3xl mx-auto">
+                    为客户提供全方位的技术支持和服务保障，确保系统稳定运行和业务持续发展
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务内容区 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- 服务理念 -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">我们的服务理念</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto mb-8">
+                    以客户为中心，以技术为支撑，提供全生命周期的服务保障，助力客户数字化转型
+                </p>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <!-- 服务体系 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                <!-- 服务项目 1 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-headphones text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">7×24小时技术支持</h3>
+                    <p class="text-gray-600 mb-6">
+                        提供全天候技术支持服务，快速响应客户需求，确保系统稳定运行
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>电话支持</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>在线支持</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>远程协助</li>
+                    </ul>
+                </div>
+
+                <!-- 服务项目 2 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-cogs text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">系统运维服务</h3>
+                    <p class="text-gray-600 mb-6">
+                        提供专业的系统运维服务，包括日常维护、性能优化、安全加固等
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>日常维护</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>性能优化</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>安全加固</li>
+                    </ul>
+                </div>
+
+                <!-- 服务项目 3 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-graduation-cap text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">培训服务</h3>
+                    <p class="text-gray-600 mb-6">
+                        提供系统操作、管理维护等方面的培训，提升客户技术能力
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>操作培训</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>维护培训</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>定制培训</li>
+                    </ul>
+                </div>
+
+                <!-- 服务项目 4 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-laptop text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">现场服务</h3>
+                    <p class="text-gray-600 mb-6">
+                        提供现场技术支持和服务，解决复杂问题，确保系统正常运行
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>安装部署</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>故障处理</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>技术指导</li>
+                    </ul>
+                </div>
+
+                <!-- 服务项目 5 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-refresh text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">升级服务</h3>
+                    <p class="text-gray-600 mb-6">
+                        提供系统版本升级和功能扩展服务，确保系统始终保持最新状态
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>版本升级</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>功能扩展</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>兼容性测试</li>
+                    </ul>
+                </div>
+
+                <!-- 服务项目 6 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-gray-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-file-text text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">咨询服务</h3>
+                    <p class="text-gray-600 mb-6">
+                        提供技术咨询和解决方案设计服务，助力客户业务发展
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>技术咨询</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>方案设计</li>
+                        <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>业务规划</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 服务流程 -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">服务流程</h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto">
+                        标准化的服务流程，确保服务质量和客户满意度
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <!-- 流程线 -->
+                    <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform -translate-x-1/2"></div>
+
+                    <!-- 流程步骤 -->
+                    <div class="space-y-12">
+                        <!-- 步骤 1 -->
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                                <h3 class="text-xl font-bold mb-3">需求受理</h3>
+                                <p class="text-gray-600">
+                                    客户通过电话、邮件、在线客服等方式提交服务需求，我们的客服团队快速响应
+                                </p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center z-10">
+                                <span class="font-bold">1</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+
+                        <!-- 步骤 2 -->
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12"></div>
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center z-10">
+                                <span class="font-bold">2</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0">
+                                <h3 class="text-xl font-bold mb-3">问题分析</h3>
+                                <p class="text-gray-600">
+                                    技术团队对问题进行分析评估，确定解决方案和服务计划
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 步骤 3 -->
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                                <h3 class="text-xl font-bold mb-3">方案实施</h3>
+                                <p class="text-gray-600">
+                                    根据解决方案，实施相应的服务措施，解决客户问题
+                                </p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center z-10">
+                                <span class="font-bold">3</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+
+                        <!-- 步骤 4 -->
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12"></div>
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center z-10">
+                                <span class="font-bold">4</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12 mt-6 md:mt-0">
+                                <h3 class="text-xl font-bold mb-3">效果验证</h3>
+                                <p class="text-gray-600">
+                                    验证服务效果，确保问题得到彻底解决，系统运行正常
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 步骤 5 -->
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                                <h3 class="text-xl font-bold mb-3">服务评估</h3>
+                                <p class="text-gray-600">
+                                    客户对服务质量进行评估，我们持续改进服务流程
+                                </p>
+                            </div>
+                            <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center z-10">
+                                <span class="font-bold">5</span>
+                            </div>
+                            <div class="md:w-1/2 md:pl-12"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 联系我们 -->
+            <div class="bg-gray-50 rounded-2xl p-10 md:p-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">联系我们</h2>
+                    <p class="text-gray-600 max-w-3xl mx-auto">
+                        无论您有任何问题或需求，我们都随时为您提供支持
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- 联系方式 1 -->
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa fa-phone text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">服务热线</h3>
+                        <p class="text-gray-600 mb-2">400-123-4567</p>
+                        <p class="text-gray-500 text-sm">7×24小时服务</p>
+                    </div>
+
+                    <!-- 联系方式 2 -->
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa fa-envelope text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">电子邮箱</h3>
+                        <p class="text-gray-600 mb-2">support@lingyue-tech.com</p>
+                        <p class="text-gray-500 text-sm">24小时内回复</p>
+                    </div>
+
+                    <!-- 联系方式 3 -->
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa fa-map-marker text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">服务中心</h3>
+                        <p class="text-gray-600 mb-2">北京市海淀区中关村科技园</p>
+                        <p class="text-gray-500 text-sm">工作日 9:00-18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="py-20 bg-white border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">常见问题</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    解答客户常见的技术和服务问题
+                </p>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- 问题 1 -->
+                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span class="font-bold text-left">系统出现故障怎么办？</span>
+                        <i class="fa fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div class="px-6 py-4 bg-white">
+                        <p class="text-gray-600">
+                            当系统出现故障时，请立即联系我们的服务热线 400-123-4567，我们的技术团队会快速响应并提供解决方案。对于紧急情况，我们会安排技术人员远程或现场处理。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 问题 2 -->
+                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span class="font-bold text-left">如何申请系统升级？</span>
+                        <i class="fa fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div class="px-6 py-4 bg-white">
+                        <p class="text-gray-600">
+                            您可以通过服务热线、电子邮箱或在线客服申请系统升级。我们的技术团队会根据您的系统版本和需求，制定详细的升级计划，并在您确认后实施升级服务。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 问题 3 -->
+                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span class="font-bold text-left">系统培训如何安排？</span>
+                        <i class="fa fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div class="px-6 py-4 bg-white">
+                        <p class="text-gray-600">
+                            我们提供线上和线下两种培训方式。线上培训通过远程视频会议进行，线下培训由专业讲师现场授课。培训内容包括系统操作、管理维护、故障处理等方面。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 问题 4 -->
+                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span class="font-bold text-left">服务响应时间是多久？</span>
+                        <i class="fa fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div class="px-6 py-4 bg-white">
+                        <p class="text-gray-600">
+                            我们的服务响应时间根据问题等级而定：紧急问题（如系统宕机）15分钟内响应，重要问题（如功能异常）30分钟内响应，一般问题（如操作咨询）2小时内响应。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务承诺 -->
+    <section class="py-20 bg-primary/5">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">服务承诺</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    我们承诺为客户提供高质量的服务，确保客户满意度
+                </p>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 承诺 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-clock-o text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">快速响应</h3>
+                    <p class="text-gray-600">
+                        15分钟内响应紧急问题，确保系统快速恢复
+                    </p>
+                </div>
+
+                <!-- 承诺 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-check-circle text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">问题解决</h3>
+                    <p class="text-gray-600">
+                        80%的问题在4小时内解决，确保业务连续性
+                    </p>
+                </div>
+
+                <!-- 承诺 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-smile-o text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">客户满意</h3>
+                    <p class="text-gray-600">
+                        客户满意度达到95%以上，持续改进服务质量
+                    </p>
+                </div>
+
+                <!-- 承诺 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-shield text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">安全保障</h3>
+                    <p class="text-gray-600">
+                        严格遵守数据安全规范，保护客户信息安全
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预约服务 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">预约服务</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    填写以下表单预约服务，我们的客服团队会尽快与您联系
+                </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2">姓名</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">电话</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 mb-2">邮箱</label>
+                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 mb-2">服务类型</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            <option>技术支持</option>
+                            <option>系统升级</option>
+                            <option>培训服务</option>
+                            <option>现场服务</option>
+                            <option>咨询服务</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 mb-2">问题描述</label>
+                        <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" rows="4"></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary">
+                            提交预约
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <div id="footer-container"></div>
+</body>
+</html>

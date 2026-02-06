@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体报道 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    <link rel="stylesheet" href="_files/css/news.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        primary: '#6366f1',
+                        secondary: '#a855f7'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white dark">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 栏目标题 -->
+    <section class="pt-32 pb-16 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">媒体报道</h1>
+                <p class="text-xl text-gray-400 mb-6">Media Coverage</p>
+                <p class="text-gray-400 max-w-3xl mx-auto">汇集权威媒体对凌越科技的报道与专访，见证品牌成长历程</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻分类导航 -->
+    <section class="py-8 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center space-x-4 md:space-x-8 overflow-x-auto pb-4">
+                <a href="channel_news.html" class="news-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-th-large mr-2"></i>全部
+                </a>
+                <a href="news_company.html" class="news-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-building mr-2"></i>公司动态
+                </a>
+                <a href="news_industry.html" class="news-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-industry mr-2"></i>行业资讯
+                </a>
+                <a href="news_media.html" class="news-nav-btn active whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gradient-to-r from-primary to-secondary text-white shadow-lg shadow-primary/20 transition-all-300">
+                    <i class="fa fa-newspaper-o mr-2"></i>媒体报道
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻列表区 -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 媒体报道卡片 1 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="专访凌越科技CEO" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag media-tag px-3 py-1 rounded-full text-sm font-medium">媒体报道</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-12-10</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">专访凌越科技CEO：以AI技术为核心，助力公共安全领域智能化转型</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">近日，凌越科技CEO接受行业权威媒体专访，谈及AI技术在公共安全领域的应用成果、未来发展规划，以及如何助力行业实现从被动防控到主动预警的转型。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 媒体报道卡片 2 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技入选AI百强" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag media-tag px-3 py-1 rounded-full text-sm font-medium">媒体报道</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-11-20</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">凌越科技入选2025年度中国AI企业百强，排名行业前20</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">在近日发布的《2025年度中国AI企业百强榜单》中，凌越科技凭借在智慧交通、医疗AI、公共安全领域的创新成果，成功入选并排名行业前20。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 媒体报道卡片 3 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="央视报道" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag media-tag px-3 py-1 rounded-full text-sm font-medium">媒体报道</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-10-28</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">央视《新闻联播》报道凌越科技智慧交通解决方案</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">凌越科技智慧公交AI系统在某市成功落地，有效提升公交准点率30%，央视《新闻联播》对此进行了专题报道，肯定公司在智慧交通领域的创新贡献。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 媒体报道卡片 4 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="经济日报报道" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag media-tag px-3 py-1 rounded-full text-sm font-medium">媒体报道</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-10-15</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">《经济日报》：凌越科技以AI赋能医疗，让优质医疗资源下沉</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">《经济日报》专题报道凌越科技医疗AI解决方案在县域医院的应用，通过AI辅助诊断，让基层患者享受三甲医院水平的医疗服务。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 媒体报道卡片 5 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="科技日报报道" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag media-tag px-3 py-1 rounded-full text-sm font-medium">媒体报道</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-09-28</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">《科技日报》：凌越科技自研AI芯片，打破国外技术垄断</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">《科技日报》深度报道凌越科技自研AI芯片的技术突破，该芯片在边缘计算场景性能优异，成功打破国外厂商的技术垄断。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- 媒体报道卡片 6 -->
+                <div class="news-card animate-slide-up">
+                    <div class="overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="人民日报报道" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="news-meta mb-3 flex items-center">
+                        <span class="news-tag media-tag px-3 py-1 rounded-full text-sm font-medium">媒体报道</span>
+                        <span class="news-date text-gray-400 ml-auto">2025-09-10</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">《人民日报》：凌越科技用AI守护城市安全，科技向善践行社会责任</h3>
+                    <p class="text-gray-400 mb-4 line-clamp-3">《人民日报》报道凌越科技AI安防系统在重大活动安保中的应用，公司用技术创新守护城市安全，践行科技企业的社会责任。</p>
+                    <a href="#" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                        阅读更多
+                        <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 分页区 -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center space-x-2">
+                <button class="page-btn px-4 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">
+                    <i class="fa fa-angle-left"></i>
+                </button>
+                <button class="page-btn px-4 py-2 rounded-full bg-gradient-to-r from-primary to-secondary text-white">1</button>
+                <button class="page-btn px-4 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">2</button>
+                <button class="page-btn px-4 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">3</button>
+                <span class="text-gray-400">...</span>
+                <button class="page-btn px-4 py-2 rounded-full border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">
+                    <i class="fa fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <!-- 脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+</body>
+</html>

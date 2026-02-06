@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智慧安全解决方案 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        primary: '#6366f1',
+                        secondary: '#a855f7',
+                        security: {
+                            500: '#3b82f6',
+                            600: '#2563eb'
+                        },
+                        medical: {
+                            500: '#10b981',
+                            600: '#059669'
+                        },
+                        transport: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 解决方案导航样式 */
+        .solution-nav-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .solution-nav-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .solution-nav-btn.active {
+            box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.5);
+        }
+        
+        /* 内容卡片样式 */
+        .content-card {
+            transition: all 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 分类标签样式 */
+        .category-tag {
+            position: relative;
+            padding-left: 16px;
+        }
+        
+        .category-tag::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+        
+        /* 解决方案项样式 */
+        .solution-item {
+            transition: all 0.2s ease;
+        }
+        
+        .solution-item:hover {
+            padding-left: 8px;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white dark">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 relative overflow-hidden">
+        <!-- 背景图片 -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1920&q=80" alt="智慧安全" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-security-500/90 to-blue-600/90"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center text-white">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm mb-6">
+                    <i class="fa fa-shield text-4xl text-white"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">智慧公共安全解决方案</h1>
+                <p class="text-xl text-white/80 mb-6 animate-fade-in" style="animation-delay: 0.1s">构建全方位智能公安体系，助力公安工作智能化转型</p>
+                <p class="text-white/60 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+                    以大数据、人工智能为核心技术，为公安机关提供从顶层设计到业务应用的全栈解决方案
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解决方案分类导航 -->
+    <section class="py-8 border-b border-gray-800 bg-gray-900/50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center space-x-4 md:space-x-8 overflow-x-auto pb-4">
+                <a href="solutions.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-th-large mr-2"></i>全部方案
+                </a>
+                <a href="solution_security.html" class="solution-nav-btn active whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gradient-to-r from-security-500 to-security-600 text-white shadow-lg shadow-security-500/20 transition-all-300">
+                    <i class="fa fa-shield mr-2"></i>智慧安全
+                </a>
+                <a href="solution_medical.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-heartbeat mr-2"></i>健康云大数据
+                </a>
+                <a href="solution_transport.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-bus mr-2"></i>智慧公共交通
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 顶层设计 -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 flex items-center">
+                    <span class="w-1 h-8 bg-security-500 rounded-full mr-4"></span>
+                    顶层设计
+                </h2>
+                <p class="text-gray-400 ml-5">基于云计算架构，构建公安业务全栈技术支撑体系</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="content-card bg-gray-800 rounded-2xl p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-security-500/20 to-security-600/20 flex items-center justify-center">
+                        <i class="fa fa-server text-2xl text-security-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">IaaS</h3>
+                    <p class="text-gray-400 text-sm">基础设施即服务，提供弹性计算、存储、网络资源</p>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-security-500/20 to-security-600/20 flex items-center justify-center">
+                        <i class="fa fa-cogs text-2xl text-security-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">PaaS</h3>
+                    <p class="text-gray-400 text-sm">平台即服务，提供开发、测试、部署一体化平台</p>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-security-500/20 to-security-600/20 flex items-center justify-center">
+                        <i class="fa fa-database text-2xl text-security-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">BaaS</h3>
+                    <p class="text-gray-400 text-sm">后端即服务，提供数据存储、消息推送等能力</p>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-br from-security-500/20 to-security-600/20 flex items-center justify-center">
+                        <i class="fa fa-cloud text-2xl text-security-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">SaaS</h3>
+                    <p class="text-gray-400 text-sm">软件即服务，提供即开即用的业务应用系统</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业务数据智能中台 -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 flex items-center">
+                    <span class="w-1 h-8 bg-security-500 rounded-full mr-4"></span>
+                    业务数据智能中台设计
+                </h2>
+                <p class="text-gray-400 ml-5">三大核心驱动能力，构建智能化业务支撑体系</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="content-card bg-gray-700 rounded-2xl p-8">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-security-500 to-security-600 flex items-center justify-center mb-6">
+                        <i class="fa fa-briefcase text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">业务驱动能力</h3>
+                    <p class="text-gray-400 mb-6">基于公安业务流程，构建业务中台，实现业务流程标准化、组件化，支撑快速业务创新</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fa fa-check text-security-500 mr-3"></i>
+                            <span>业务流程建模</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fa fa-check text-security-500 mr-3"></i>
+                            <span>业务组件复用</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fa fa-check text-security-500 mr-3"></i>
+                            <span>业务规则引擎</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="content-card bg-gray-700 rounded-2xl p-8">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-security-500 to-security-600 flex items-center justify-center mb-6">
+                        <i class="fa fa-database text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">数据驱动能力</h3>
+                    <p class="text-gray-400 mb-6">构建数据中台，实现数据资产化管理，为业务决策提供数据支撑</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fa fa-check text-security-500 mr-3"></i>
+                            <span>数据汇聚治理</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fa fa-check text-security-500 mr-3"></i>
+                            <span>数据资产目录</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fa fa-check text-security-500 mr-3"></i>
+                            <span>数据服务开放</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="content-card bg-gray-700 rounded-2xl p-8">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-security-500 to-security-600 flex items-center justify-center mb-6">
+                        <i class="fa fa-brain text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">AI驱动能力</h3>
+                    <p class="text-gray-400 mb-6">打造AI中台，提供算法模型管理、训练、推理全生命周期服务</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fa fa-check text-security-500 mr-3"></i>
+                            <span>算法模型管理</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fa fa-check text-security-500 mr-3"></i>
+                            <span>智能推理服务</span>
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fa fa-check text-security-500 mr-3"></i>
+                            <span>模型训练平台</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行业解决方案 -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 flex items-center">
+                    <span class="w-1 h-8 bg-security-500 rounded-full mr-4"></span>
+                    行业解决方案
+                </h2>
+                <p class="text-gray-400 ml-5">覆盖公安业务全场景的专业解决方案</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-users text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">大数据客流聚集安全风险监测平台</h3>
+                        <p class="text-gray-400 text-sm">实时监测重点区域人流密度，智能预警聚集风险，保障公共安全</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-id-card text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">重点人超级档案系统</h3>
+                        <p class="text-gray-400 text-sm">整合多源数据，构建重点人员全息档案，支撑精准管控</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-crosshairs text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">重点人多维布控解决方案</h3>
+                        <p class="text-gray-400 text-sm">基于人脸识别、车辆识别等技术，实现多维度智能布控预警</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-search text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">警情研判解决方案</h3>
+                        <p class="text-gray-400 text-sm">基于大数据和AI技术，实现警情智能分析、趋势预测、关联挖掘</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-bullhorn text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">指令情报滴灌解决方案</h3>
+                        <p class="text-gray-400 text-sm">精准推送情报信息，实现指令直达一线，提升警务效能</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-calendar-check-o text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">智慧勤务解决方案</h3>
+                        <p class="text-gray-400 text-sm">智能排班、勤务监督、绩效考核一体化管理，提升勤务效能</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-file-text-o text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">数据警规解决方案</h3>
+                        <p class="text-gray-400 text-sm">基于数据分析，规范警务行为，提升执法规范化水平</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-map text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">可视化指挥调度解决方案</h3>
+                        <p class="text-gray-400 text-sm">融合GIS、视频、语音，实现可视化、扁平化指挥调度</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-fire-extinguisher text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">消防业务数据挖掘分析解决方案</h3>
+                        <p class="text-gray-400 text-sm">消防数据深度挖掘，支撑火灾预防、应急救援决策</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-security-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-desktop text-security-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">公安一体化运维监控系统（IOMS）</h3>
+                        <p class="text-gray-400 text-sm">统一监控IT基础设施，智能告警，保障系统稳定运行</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA区域 -->
+    <section class="py-16 bg-gradient-to-r from-security-500/20 to-blue-600/20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">了解更多智慧安全解决方案</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">我们的专家团队将根据您的实际需求，为您提供专业的解决方案咨询</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="appointment.html" class="px-8 py-4 rounded-xl bg-gradient-to-r from-security-500 to-security-600 text-white font-medium hover:shadow-lg hover:shadow-security-500/30 transition-all-300">
+                    预约咨询 <i class="fa fa-calendar ml-2"></i>
+                </a>
+                <a href="business-service.html" class="px-8 py-4 rounded-xl border-2 border-security-500 text-security-500 font-medium hover:bg-security-500 hover:text-white transition-all-300">
+                    了解商用服务 <i class="fa fa-briefcase ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <!-- 组件加载脚本 -->
+    <script src="_files/js/components.js"></script>
+</body>
+</html>

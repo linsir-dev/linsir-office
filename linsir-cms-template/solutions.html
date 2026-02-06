@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行业与解决方案 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        primary: '#6366f1',
+                        secondary: '#a855f7',
+                        security: {
+                            500: '#3b82f6',
+                            600: '#2563eb'
+                        },
+                        medical: {
+                            500: '#10b981',
+                            600: '#059669'
+                        },
+                        transport: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 解决方案卡片样式 */
+        .solution-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .solution-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover .solution-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        /* 按钮样式 */
+        .btn-solution {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-solution::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-solution:hover::before {
+            left: 100%;
+        }
+        
+        /* 特色标签样式 */
+        .feature-tag {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-tag:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-dark text-white dark">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 relative overflow-hidden">
+        <!-- 背景图片 -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&q=80" alt="背景" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">行业与解决方案</h1>
+                <p class="text-xl text-white/80 mb-6 animate-fade-in" style="animation-delay: 0.1s">深耕垂直领域，打造行业数字化标杆</p>
+                <p class="text-white/60 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+                    以AI技术为核心，为智慧安全、健康医疗、公共交通三大领域提供全栈式解决方案
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 三大解决方案概览 -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">三大核心领域</h2>
+                <p class="text-gray-400">选择下方领域，了解详细解决方案</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- 智慧安全方向 -->
+                <div class="solution-card bg-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=600&h=400&fit=crop" alt="智慧安全" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-800 via-gray-800/50 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="flex items-center justify-between">
+                                <div class="solution-icon w-16 h-16 rounded-2xl bg-gradient-to-br from-security-500 to-security-600 flex items-center justify-center shadow-lg">
+                                    <i class="fa fa-shield text-3xl text-white"></i>
+                                </div>
+                                <span class="px-4 py-1.5 rounded-full bg-security-500/20 text-security-500 text-sm font-medium backdrop-blur-sm border border-security-500/30">公共安全</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-3">智慧公共安全</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">构建全方位智能公安体系，以大数据、人工智能为核心技术，提供从顶层设计到业务应用的全栈解决方案</p>
+                        
+                        <!-- 核心亮点标签 -->
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="feature-tag px-3 py-1.5 bg-security-500/10 text-security-500 text-sm rounded-lg border border-security-500/20">
+                                <i class="fa fa-database mr-1"></i>数据中台
+                            </span>
+                            <span class="feature-tag px-3 py-1.5 bg-security-500/10 text-security-500 text-sm rounded-lg border border-security-500/20">
+                                <i class="fa fa-brain mr-1"></i>AI智能
+                            </span>
+                            <span class="feature-tag px-3 py-1.5 bg-security-500/10 text-security-500 text-sm rounded-lg border border-security-500/20">
+                                <i class="fa fa-crosshairs mr-1"></i>精准布控
+                            </span>
+                            <span class="feature-tag px-3 py-1.5 bg-security-500/10 text-security-500 text-sm rounded-lg border border-security-500/20">
+                                <i class="fa fa-map mr-1"></i>指挥调度
+                            </span>
+                        </div>
+                        
+                        <a href="solution_security.html" class="btn-solution block w-full py-4 rounded-xl bg-gradient-to-r from-security-500 to-security-600 text-white font-medium text-center hover:shadow-lg hover:shadow-security-500/30">
+                            探索解决方案 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 健康云大数据方向 -->
+                <div class="solution-card bg-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop" alt="健康云大数据" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-800 via-gray-800/50 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="flex items-center justify-between">
+                                <div class="solution-icon w-16 h-16 rounded-2xl bg-gradient-to-br from-medical-500 to-medical-600 flex items-center justify-center shadow-lg">
+                                    <i class="fa fa-heartbeat text-3xl text-white"></i>
+                                </div>
+                                <span class="px-4 py-1.5 rounded-full bg-medical-500/20 text-medical-500 text-sm font-medium backdrop-blur-sm border border-medical-500/30">医疗健康</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-3">健康云大数据</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">赋能智慧医疗数字化转型，覆盖医院信息系统、医药交易物流、区域医疗养老全产业链</p>
+                        
+                        <!-- 核心亮点标签 -->
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="feature-tag px-3 py-1.5 bg-medical-500/10 text-medical-500 text-sm rounded-lg border border-medical-500/20">
+                                <i class="fa fa-hospital-o mr-1"></i>智慧医院
+                            </span>
+                            <span class="feature-tag px-3 py-1.5 bg-medical-500/10 text-medical-500 text-sm rounded-lg border border-medical-500/20">
+                                <i class="fa fa-exchange mr-1"></i>医药流通
+                            </span>
+                            <span class="feature-tag px-3 py-1.5 bg-medical-500/10 text-medical-500 text-sm rounded-lg border border-medical-500/20">
+                                <i class="fa fa-cloud mr-1"></i>区域医疗
+                            </span>
+                            <span class="feature-tag px-3 py-1.5 bg-medical-500/10 text-medical-500 text-sm rounded-lg border border-medical-500/20">
+                                <i class="fa fa-user-md mr-1"></i>互联网医院
+                            </span>
+                        </div>
+                        
+                        <a href="solution_medical.html" class="btn-solution block w-full py-4 rounded-xl bg-gradient-to-r from-medical-500 to-medical-600 text-white font-medium text-center hover:shadow-lg hover:shadow-medical-500/30">
+                            探索解决方案 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 智慧公共交通方向 -->
+                <div class="solution-card bg-gray-800 rounded-2xl overflow-hidden shadow-2xl">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&h=400&fit=crop" alt="智慧公共交通" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-800 via-gray-800/50 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="flex items-center justify-between">
+                                <div class="solution-icon w-16 h-16 rounded-2xl bg-gradient-to-br from-transport-500 to-transport-600 flex items-center justify-center shadow-lg">
+                                    <i class="fa fa-bus text-3xl text-white"></i>
+                                </div>
+                                <span class="px-4 py-1.5 rounded-full bg-transport-500/20 text-transport-500 text-sm font-medium backdrop-blur-sm border border-transport-500/30">智慧交通</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-white mb-3">智慧公共交通</h3>
+                        <p class="text-gray-400 mb-6 leading-relaxed">打造智慧城市交通大脑，提供智慧公交、出行服务、智慧充电停车等全方位解决方案</p>
+                        
+                        <!-- 核心亮点标签 -->
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="feature-tag px-3 py-1.5 bg-transport-500/10 text-transport-500 text-sm rounded-lg border border-transport-500/20">
+                                <i class="fa fa-mobile mr-1"></i>出行服务
+                            </span>
+                            <span class="feature-tag px-3 py-1.5 bg-transport-500/10 text-transport-500 text-sm rounded-lg border border-transport-500/20">
+                                <i class="fa fa-cogs mr-1"></i>智能调度
+                            </span>
+                            <span class="feature-tag px-3 py-1.5 bg-transport-500/10 text-transport-500 text-sm rounded-lg border border-transport-500/20">
+                                <i class="fa fa-bolt mr-1"></i>智慧充电
+                            </span>
+                            <span class="feature-tag px-3 py-1.5 bg-transport-500/10 text-transport-500 text-sm rounded-lg border border-transport-500/20">
+                                <i class="fa fa-shield mr-1"></i>安全监控
+                            </span>
+                        </div>
+                        
+                        <a href="solution_transport.html" class="btn-solution block w-full py-4 rounded-xl bg-gradient-to-r from-transport-500 to-transport-600 text-white font-medium text-center hover:shadow-lg hover:shadow-transport-500/30">
+                            探索解决方案 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">核心优势</h2>
+                <p class="text-gray-400">为什么选择凌越科技的解决方案</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-700/50 rounded-2xl overflow-hidden group hover:bg-gray-700 transition-all-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="_files/img/advantages/tech.jpg" alt="全栈技术" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 mx-auto -mt-12 mb-4 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                            <i class="fa fa-cogs text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">全栈技术能力</h3>
+                        <p class="text-gray-400 text-sm">从底层架构到应用层，提供端到端的技术支持</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-700/50 rounded-2xl overflow-hidden group hover:bg-gray-700 transition-all-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="_files/img/advantages/ai.jpg" alt="AI赋能" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 mx-auto -mt-12 mb-4 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                            <i class="fa fa-brain text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">AI深度赋能</h3>
+                        <p class="text-gray-400 text-sm">自研AI算法引擎，实现智能决策与预测分析</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-700/50 rounded-2xl overflow-hidden group hover:bg-gray-700 transition-all-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=300&fit=crop" alt="安全可靠" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 mx-auto -mt-12 mb-4 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                            <i class="fa fa-shield text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">安全可靠</h3>
+                        <p class="text-gray-400 text-sm">等保三级认证，多重安全防护机制保障</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-700/50 rounded-2xl overflow-hidden group hover:bg-gray-700 transition-all-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="_files/img/advantages/service.jpg" alt="专业服务" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 mx-auto -mt-12 mb-4 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
+                            <i class="fa fa-headphones text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">专业服务</h3>
+                        <p class="text-gray-400 text-sm">7×24小时技术支持，快速响应客户需求</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA区域 -->
+    <section class="py-20 bg-gradient-to-r from-primary/20 to-secondary/20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">需要定制化解决方案？</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">我们的专家团队将根据您的业务需求，为您量身打造最适合的解决方案</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="appointment.html" class="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/30 transition-all-300">
+                    预约咨询 <i class="fa fa-calendar ml-2"></i>
+                </a>
+                <a href="business-service.html" class="px-8 py-4 rounded-xl border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-all-300">
+                    了解商用服务 <i class="fa fa-briefcase ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <!-- 组件加载脚本 -->
+    <script src="_files/js/components.js"></script>
+</body>
+</html>

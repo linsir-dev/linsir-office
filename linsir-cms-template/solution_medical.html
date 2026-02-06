@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康云大数据解决方案 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        primary: '#6366f1',
+                        secondary: '#a855f7',
+                        security: {
+                            500: '#3b82f6',
+                            600: '#2563eb'
+                        },
+                        medical: {
+                            500: '#10b981',
+                            600: '#059669'
+                        },
+                        transport: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 解决方案导航样式 */
+        .solution-nav-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .solution-nav-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .solution-nav-btn.active {
+            box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.5);
+        }
+        
+        /* 内容卡片样式 */
+        .content-card {
+            transition: all 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 分类标签样式 */
+        .category-tag {
+            position: relative;
+            padding-left: 16px;
+        }
+        
+        .category-tag::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+    </style>
+</head>
+<body class="bg-dark text-white dark">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 relative overflow-hidden">
+        <!-- 背景图片 -->
+        <div class="absolute inset-0">
+            <img src="_files/img/solutions/medical-bg.jpg" alt="健康云大数据" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-medical-500/90 to-emerald-600/90"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center text-white">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm mb-6">
+                    <i class="fa fa-heartbeat text-4xl text-white"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">健康云大数据解决方案</h1>
+                <p class="text-xl text-white/80 mb-6 animate-fade-in" style="animation-delay: 0.1s">赋能智慧医疗数字化转型</p>
+                <p class="text-white/60 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+                    覆盖医院信息系统、医药交易物流、区域医疗养老全产业链，打造医疗健康数字化生态
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解决方案分类导航 -->
+    <section class="py-8 border-b border-gray-800 bg-gray-900/50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center space-x-4 md:space-x-8 overflow-x-auto pb-4">
+                <a href="solutions.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-th-large mr-2"></i>全部方案
+                </a>
+                <a href="solution_security.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-shield mr-2"></i>智慧安全
+                </a>
+                <a href="solution_medical.html" class="solution-nav-btn active whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gradient-to-r from-medical-500 to-medical-600 text-white shadow-lg shadow-medical-500/20 transition-all-300">
+                    <i class="fa fa-heartbeat mr-2"></i>健康云大数据
+                </a>
+                <a href="solution_transport.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-bus mr-2"></i>智慧公共交通
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 医疗方向 -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 flex items-center">
+                    <span class="w-1 h-8 bg-medical-500 rounded-full mr-4"></span>
+                    医疗方向
+                </h2>
+                <p class="text-gray-400 ml-5">智慧医院信息系统全栈解决方案</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="content-card bg-gray-800 rounded-2xl p-6">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-medical-500/20 to-medical-600/20 flex items-center justify-center mb-4">
+                        <i class="fa fa-hospital-o text-2xl text-medical-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">HIS医院信息系统</h3>
+                    <p class="text-gray-400 text-sm">覆盖门诊、住院、药房、收费等全流程管理，提升医院运营效率</p>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-medical-500/20 to-medical-600/20 flex items-center justify-center mb-4">
+                        <i class="fa fa-file-text-o text-2xl text-medical-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">ERM电子病历系统</h3>
+                    <p class="text-gray-400 text-sm">标准化电子病历管理，支持病历质控、科研检索、互联互通</p>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-medical-500/20 to-medical-600/20 flex items-center justify-center mb-4">
+                        <i class="fa fa-flask text-2xl text-medical-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">LIS检验信息系统</h3>
+                    <p class="text-gray-400 text-sm">检验全流程信息化管理，支持仪器联机、质控管理、报告发布</p>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-medical-500/20 to-medical-600/20 flex items-center justify-center mb-4">
+                        <i class="fa fa-picture-o text-2xl text-medical-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">PACS影像归档系统</h3>
+                    <p class="text-gray-400 text-sm">医学影像存储与传输，支持远程阅片、AI辅助诊断</p>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-medical-500/20 to-medical-600/20 flex items-center justify-center mb-4">
+                        <i class="fa fa-stethoscope text-2xl text-medical-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">临床信息系统CIS</h3>
+                    <p class="text-gray-400 text-sm">医嘱管理、护理文书、临床路径，提升医疗质量与安全</p>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-medical-500/20 to-medical-600/20 flex items-center justify-center mb-4">
+                        <i class="fa fa-money text-2xl text-medical-500"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">医保控费系统</h3>
+                    <p class="text-gray-400 text-sm">医保智能审核、费用监控、DRG/DIP支付管理</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 医药方向 -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 flex items-center">
+                    <span class="w-1 h-8 bg-medical-500 rounded-full mr-4"></span>
+                    医药方向
+                </h2>
+                <p class="text-gray-400 ml-5">医药交易与物流数字化平台</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="content-card bg-gray-700 rounded-2xl overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="_files/img/solutions/medical-1.jpg" alt="药械交易系统" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">药械交易系统</h3>
+                        <p class="text-gray-400 mb-4">覆盖药品、医疗器械、耗材的全品类交易平台，支持GPO、带量采购等多种交易模式</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><i class="fa fa-check text-medical-500 mr-2"></i>在线招投标</li>
+                            <li><i class="fa fa-check text-medical-500 mr-2"></i>订单管理</li>
+                            <li><i class="fa fa-check text-medical-500 mr-2"></i>支付结算</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-700 rounded-2xl overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&h=400&fit=crop" alt="医药物流平台" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">医药物流平台</h3>
+                        <p class="text-gray-400 mb-4">冷链物流全程监控，支持GSP合规管理，实现药品追溯与质量管控</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><i class="fa fa-check text-medical-500 mr-2"></i>冷链监控</li>
+                            <li><i class="fa fa-check text-medical-500 mr-2"></i>仓储管理</li>
+                            <li><i class="fa fa-check text-medical-500 mr-2"></i>配送调度</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-700 rounded-2xl overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="_files/img/solutions/medical-3.jpg" alt="医药电商" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">医药电商平台</h3>
+                        <p class="text-gray-400 mb-4">B2B、B2C医药电商平台，支持处方药网售、在线问诊、送药到家</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li><i class="fa fa-check text-medical-500 mr-2"></i>在线商城</li>
+                            <li><i class="fa fa-check text-medical-500 mr-2"></i>电子处方</li>
+                            <li><i class="fa fa-check text-medical-500 mr-2"></i>会员管理</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 区域医疗方向 -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 flex items-center">
+                    <span class="w-1 h-8 bg-medical-500 rounded-full mr-4"></span>
+                    区域医疗方向
+                </h2>
+                <p class="text-gray-400 ml-5">区域医疗资源整合与协同</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-medical-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-cloud text-medical-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">区域健康云平台</h3>
+                        <p class="text-gray-400 text-sm">汇聚区域医疗数据，构建健康档案，实现数据共享与业务协同</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-medical-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-exchange text-medical-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">医联体信息平台</h3>
+                        <p class="text-gray-400 text-sm">支持分级诊疗、双向转诊、远程会诊，促进医疗资源下沉</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-medical-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-bar-chart text-medical-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">区域医疗管理决策平台</h3>
+                        <p class="text-gray-400 text-sm">医疗数据分析与可视化，支撑卫生管理决策</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-medical-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-home text-medical-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">智慧医养结合平台</h3>
+                        <p class="text-gray-400 text-sm">整合医疗与养老资源，实现医养一体化服务</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-medical-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-video-camera text-medical-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">远程医疗平台</h3>
+                        <p class="text-gray-400 text-sm">远程会诊、远程影像、远程心电，打破地域限制</p>
+                    </div>
+                </div>
+                
+                <div class="content-card bg-gray-800 rounded-2xl p-6 flex items-start">
+                    <div class="w-12 h-12 rounded-xl bg-medical-500/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fa fa-mobile text-medical-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">互联网医院</h3>
+                        <p class="text-gray-400 text-sm">在线问诊、复诊开方、药品配送，让就医更便捷</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA区域 -->
+    <section class="py-16 bg-gradient-to-r from-medical-500/20 to-emerald-600/20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">了解更多健康云大数据解决方案</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">我们的专家团队将根据您的实际需求，为您提供专业的解决方案咨询</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="appointment.html" class="px-8 py-4 rounded-xl bg-gradient-to-r from-medical-500 to-medical-600 text-white font-medium hover:shadow-lg hover:shadow-medical-500/30 transition-all-300">
+                    预约咨询 <i class="fa fa-calendar ml-2"></i>
+                </a>
+                <a href="business-service.html" class="px-8 py-4 rounded-xl border-2 border-medical-500 text-medical-500 font-medium hover:bg-medical-500 hover:text-white transition-all-300">
+                    了解商用服务 <i class="fa fa-briefcase ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <!-- 组件加载脚本 -->
+    <script src="_files/js/components.js"></script>
+</body>
+</html>
