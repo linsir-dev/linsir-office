@@ -821,8 +821,9 @@
             const slideCount = indicators.length;
 
             function updateCarousel() {
-                carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-                indicators.forEach((indicator, index) => {
+                // 使用字符串拼接避免模板字符串解析错误
+                carouselContainer.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+                indicators.forEach(function(indicator, index) {
                     indicator.style.opacity = index === currentIndex ? '1' : '0.5';
                 });
             }
