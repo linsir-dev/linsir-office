@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻详情 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        primary: '#6366f1',
+                        secondary: '#a855f7'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-in-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 文章内容样式 */
+        .article-content {
+            line-height: 1.8;
+        }
+        
+        .article-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .article-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: #ffffff;
+        }
+        
+        .article-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+            color: #ffffff;
+        }
+        
+        .article-content ul,
+        .article-content ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-content img {
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        /* 相关新闻卡片样式 */
+        .related-news-card {
+            transition: all 0.3s ease;
+        }
+        
+        .related-news-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* 评论区样式 */
+        .comment-form textarea {
+            resize: none;
+            min-height: 120px;
+        }
+        
+        .comment-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comment-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body class="bg-dark text-white dark">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 新闻详情头部 -->
+    <section class="pt-24 pb-16 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- 面包屑导航 -->
+                <div class="breadcrumb mb-6 flex items-center text-sm text-gray-400">
+                    <a href="index.html" class="hover:text-primary transition-colors-300">首页</a>
+                    <i class="fa fa-angle-right mx-2"></i>
+                    <a href="channel_news.html" class="hover:text-primary transition-colors-300">新闻与媒体</a>
+                    <i class="fa fa-angle-right mx-2"></i>
+                    <span class="text-primary">新闻详情</span>
+                </div>
+                
+                <!-- 新闻标题 -->
+                <h1 class="text-3xl md:text-4xl font-bold mb-6 animate-fade-in">凌越科技与XX市交通局达成智慧公交AI合作，共筑城市智能出行新生态</h1>
+                
+                <!-- 新闻元信息 -->
+                <div class="news-meta flex flex-wrap items-center gap-4 mb-8 text-gray-400">
+                    <span class="flex items-center">
+                        <i class="fa fa-calendar mr-2"></i>
+                        2025-12-25
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fa fa-tag mr-2"></i>
+                        <a href="channel_news_company.html" class="hover:text-primary transition-colors-300">公司动态</a>
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fa fa-eye mr-2"></i>
+                        2,345 阅读
+                    </span>
+                </div>
+                
+                <!-- 新闻封面图 -->
+                <div class="news-cover mb-10 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技与XX市交通局达成合作" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻内容区 -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="article-content text-gray-300 animate-slide-up">
+                    <p>近日，凌越科技与XX市交通局正式签署战略合作协议，双方将围绕智慧公交调度、客流预测、安全预警等核心场景展开深度合作，依托凌越AI核心算法，提升城市公共交通智能化水平，缓解交通拥堵，优化市民出行体验。</p>
+                    
+                    <h2>合作背景</h2>
+                    <p>随着城市化进程的加速，XX市公共交通面临着客流增长、调度效率不高、安全管理压力大等挑战。传统的公交运营模式已难以满足市民日益增长的出行需求，亟需借助人工智能等先进技术实现智能化升级。</p>
+                    
+                    <h2>合作内容</h2>
+                    <p>根据协议，双方将在以下几个方面展开合作：</p>
+                    
+                    <ul>
+                        <li><strong>智慧公交调度系统</strong>：基于AI算法的实时调度系统，根据客流变化自动调整发车间隔，提高运营效率</li>
+                        <li><strong>客流预测分析</strong>：利用大数据和机器学习技术，实现精准的客流预测，为运力规划提供数据支撑</li>
+                        <li><strong>安全预警系统</strong>：通过车载摄像头和AI视觉技术，实时监测驾驶员状态和道路状况，预防安全事故</li>
+                        <li><strong>乘客服务平台</strong>：整合实时公交信息、出行规划、扫码乘车等功能，提升乘客出行体验</li>
+                    </ul>
+                    
+                    <h2>技术优势</h2>
+                    <p>凌越科技作为国内领先的AI技术公司，在计算机视觉、自然语言处理、大数据分析等领域拥有深厚的技术积累。此次合作，凌越科技将投入核心研发团队，为XX市交通局提供定制化的智慧交通解决方案。</p>
+                    
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80" alt="AI赋能智慧交通" class="w-full h-auto object-cover">
+                    
+                    <h2>预期效果</h2>
+                    <p>据介绍，项目实施后，预计将带来以下效益：</p>
+                    
+                    <ol>
+                        <li>公交准点率提升30%以上</li>
+                        <li>高峰期乘客候车时间缩短25%</li>
+                        <li>公交运营成本降低15%</li>
+                        <li>安全事故发生率下降40%</li>
+                    </ol>
+                    
+                    <h2>未来展望</h2>
+                    <p>双方表示，此次合作只是开端，未来将进一步拓展合作领域，包括智慧地铁、智慧停车、自动驾驶等，共同打造XX市智慧城市交通新生态。凌越科技CEO表示："我们将以此次合作为契机，将AI技术深度融入交通领域，为建设更加智能、高效、安全的城市交通系统贡献力量。"</p>
+                    
+                    <p>XX市交通局局长也表示："与凌越科技的合作，将为我市公共交通智能化升级注入新动力，我们期待通过技术创新，为市民创造更加便捷、舒适的出行环境。"</p>
+                </div>
+                
+                <!-- 文章标签 -->
+                <div class="article-tags mt-10 mb-12">
+                    <h3 class="text-lg font-semibold mb-4">相关标签</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#" class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-primary hover:text-white transition-all-300">智慧交通</a>
+                        <a href="#" class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-primary hover:text-white transition-all-300">AI技术</a>
+                        <a href="#" class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-primary hover:text-white transition-all-300">战略合作</a>
+                        <a href="#" class="px-4 py-2 rounded-full bg-gray-800 text-gray-300 hover:bg-primary hover:text-white transition-all-300">公共交通</a>
+                    </div>
+                </div>
+                
+                <!-- 分享按钮 -->
+                <div class="article-share mb-16">
+                    <h3 class="text-lg font-semibold mb-4">分享本文</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all-300">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all-300">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all-300">
+                            <i class="fa fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-all-300">
+                            <i class="fa fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关新闻 -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">相关新闻</h2>
+                <p class="text-gray-400">了解更多相关资讯</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 相关新闻1 -->
+                <div class="related-news-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技发布全新AI算法" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="news-meta mb-3 flex items-center">
+                            <span class="news-tag px-3 py-1 rounded-full text-sm font-medium bg-primary/20 text-primary">公司动态</span>
+                            <span class="news-date text-gray-400 ml-auto">2025-12-05</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 hover:text-primary transition-colors-300">凌越科技发布全新AI算法，在医疗影像识别准确率突破99%</h3>
+                        <a href="article_news.html" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                            阅读更多
+                            <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 相关新闻2 -->
+                <div class="related-news-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&q=80" alt="AI赋能智慧交通" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="news-meta mb-3 flex items-center">
+                            <span class="news-tag px-3 py-1 rounded-full text-sm font-medium bg-secondary/20 text-secondary">行业资讯</span>
+                            <span class="news-date text-gray-400 ml-auto">2025-12-18</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 hover:text-primary transition-colors-300">AI赋能智慧交通进入新阶段，政策推动公交智能化全面升级</h3>
+                        <a href="article_news.html" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                            阅读更多
+                            <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 相关新闻3 -->
+                <div class="related-news-card bg-gray-800 rounded-xl overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="凌越科技完成C轮融资" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="news-meta mb-3 flex items-center">
+                            <span class="news-tag px-3 py-1 rounded-full text-sm font-medium bg-primary/20 text-primary">公司动态</span>
+                            <span class="news-date text-gray-400 ml-auto">2025-11-15</span>
+                        </div>
+                        <h3 class="text-lg font-bold mb-3 hover:text-primary transition-colors-300">凌越科技完成C轮5亿元融资，估值突破50亿元</h3>
+                        <a href="article_news.html" class="read-more flex items-center text-primary hover:text-secondary transition-colors-300">
+                            阅读更多
+                            <i class="fa fa-arrow-right ml-2 transition-transform duration-300 hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 评论区 -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-8">评论区</h2>
+                
+                <!-- 评论表单 -->
+                <div class="comment-form mb-12 bg-gray-800 p-6 rounded-xl">
+                    <h3 class="text-lg font-semibold mb-4">发表评论</h3>
+                    <form>
+                        <div class="mb-4">
+                            <textarea class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white" placeholder="请输入您的评论..."></textarea>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <input type="text" class="px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white" placeholder="您的姓名">
+                            <input type="email" class="px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-white" placeholder="您的邮箱">
+                            <button type="submit" class="px-6 py-3 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 transition-all-300">
+                                提交评论
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- 评论列表 -->
+                <div class="comment-list">
+                    <!-- 评论1 -->
+                    <div class="comment-item py-6">
+                        <div class="flex gap-4">
+                            <div class="comment-avatar w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-user text-xl text-gray-400"></i>
+                            </div>
+                            <div class="comment-content flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h4 class="font-semibold">张先生</h4>
+                                    <span class="text-gray-400 text-sm">2025-12-26</span>
+                                </div>
+                                <p class="text-gray-300">这个合作非常有意义，期待凌越科技的AI技术能够为城市交通带来真正的改变，让我们的出行更加便捷。</p>
+                                <div class="comment-actions mt-3 flex items-center gap-4">
+                                    <button class="text-gray-400 hover:text-primary transition-colors-300 text-sm">
+                                        <i class="fa fa-thumbs-up mr-1"></i> 点赞 (12)
+                                    </button>
+                                    <button class="text-gray-400 hover:text-primary transition-colors-300 text-sm">
+                                        <i class="fa fa-reply mr-1"></i> 回复
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 评论2 -->
+                    <div class="comment-item py-6">
+                        <div class="flex gap-4">
+                            <div class="comment-avatar w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-user text-xl text-gray-400"></i>
+                            </div>
+                            <div class="comment-content flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h4 class="font-semibold">李女士</h4>
+                                    <span class="text-gray-400 text-sm">2025-12-27</span>
+                                </div>
+                                <p class="text-gray-300">凌越科技的技术实力有目共睹，这次与交通局的合作是AI技术落地的很好范例，希望能够尽快看到实际效果。</p>
+                                <div class="comment-actions mt-3 flex items-center gap-4">
+                                    <button class="text-gray-400 hover:text-primary transition-colors-300 text-sm">
+                                        <i class="fa fa-thumbs-up mr-1"></i> 点赞 (8)
+                                    </button>
+                                    <button class="text-gray-400 hover:text-primary transition-colors-300 text-sm">
+                                        <i class="fa fa-reply mr-1"></i> 回复
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 评论3 -->
+                    <div class="comment-item py-6">
+                        <div class="flex gap-4">
+                            <div class="comment-avatar w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-user text-xl text-gray-400"></i>
+                            </div>
+                            <div class="comment-content flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <h4 class="font-semibold">王先生</h4>
+                                    <span class="text-gray-400 text-sm">2025-12-28</span>
+                                </div>
+                                <p class="text-gray-300">作为XX市的市民，非常期待这个项目能够早日实施，相信智慧公交系统会让我们的出行体验得到很大提升。</p>
+                                <div class="comment-actions mt-3 flex items-center gap-4">
+                                    <button class="text-gray-400 hover:text-primary transition-colors-300 text-sm">
+                                        <i class="fa fa-thumbs-up mr-1"></i> 点赞 (15)
+                                    </button>
+                                    <button class="text-gray-400 hover:text-primary transition-colors-300 text-sm">
+                                        <i class="fa fa-reply mr-1"></i> 回复
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 分页 -->
+                <div class="flex justify-center mt-8">
+                    <nav class="flex items-center gap-2">
+                        <button class="px-4 py-2 rounded-lg border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">
+                            <i class="fa fa-angle-left"></i>
+                        </button>
+                        <button class="px-4 py-2 rounded-lg bg-primary text-white">1</button>
+                        <button class="px-4 py-2 rounded-lg border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">2</button>
+                        <button class="px-4 py-2 rounded-lg border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">3</button>
+                        <button class="px-4 py-2 rounded-lg border border-gray-700 text-gray-400 hover:border-primary hover:text-primary transition-all-300">
+                            <i class="fa fa-angle-right"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-all-300 opacity-0 invisible">
+        <i class="fa fa-arrow-up text-xl"></i>
+    </button>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <!-- 脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script src="_files/js/main.js"></script>
+</body>
+</html>

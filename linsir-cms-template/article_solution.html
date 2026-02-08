@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解决方案详情 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        primary: '#6366f1',
+                        secondary: '#a855f7',
+                        security: {
+                            500: '#3b82f6',
+                            600: '#2563eb'
+                        },
+                        medical: {
+                            500: '#10b981',
+                            600: '#059669'
+                        },
+                        transport: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* 解决方案导航样式 */
+        .solution-nav-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .solution-nav-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .solution-nav-btn.active {
+            box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.5);
+        }
+        
+        /* 内容卡片样式 */
+        .content-card {
+            transition: all 0.3s ease;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* 分类标签样式 */
+        .category-tag {
+            position: relative;
+            padding-left: 16px;
+        }
+        
+        .category-tag::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+        }
+    </style>
+</head>
+<body class="bg-dark text-white dark">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 页面标题区 -->
+    <section class="pt-24 pb-16 relative overflow-hidden">
+        <!-- 背景图片 -->
+        <div class="absolute inset-0">
+            <img src="_files/img/solutions/solution-bg.jpg" alt="解决方案" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center text-white">
+                <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm mb-6">
+                    <i class="fa fa-lightbulb-o text-4xl text-white"></i>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">解决方案详情</h1>
+                <p class="text-xl text-white/80 mb-6 animate-fade-in" style="animation-delay: 0.1s">智能化解决方案，助力企业数字化转型</p>
+                <p class="text-white/60 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s">
+                    基于AI技术的全方位解决方案，为不同行业提供定制化的智能服务
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解决方案分类导航 -->
+    <section class="py-8 border-b border-gray-800 bg-gray-900/50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center space-x-4 md:space-x-8 overflow-x-auto pb-4">
+                <a href="channel_solutions.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-th-large mr-2"></i>全部方案
+                </a>
+                <a href="channel_solution_security.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-shield mr-2"></i>智慧安全
+                </a>
+                <a href="channel_solution_medical.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-heartbeat mr-2"></i>健康云大数据
+                </a>
+                <a href="channel_solution_transport.html" class="solution-nav-btn whitespace-nowrap py-3 px-6 text-lg font-medium rounded-xl bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white transition-all-300">
+                    <i class="fa fa-bus mr-2"></i>智慧公共交通
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 解决方案详情 -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 flex items-center">
+                    <span class="w-1 h-8 bg-primary rounded-full mr-4"></span>
+                    方案概述
+                </h2>
+                <p class="text-gray-400 ml-5">针对企业数字化转型的全方位解决方案</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-gray-800 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold mb-4 text-primary">方案特点</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">智能化技术</h4>
+                                <p class="text-gray-400">采用最新AI技术，实现业务流程自动化和智能化</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">定制化服务</h4>
+                                <p class="text-gray-400">根据不同行业特点，提供个性化解决方案</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">全流程覆盖</h4>
+                                <p class="text-gray-400">从需求分析到实施部署，提供端到端服务</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-1">持续优化</h4>
+                                <p class="text-gray-400">建立长效运维机制，确保系统持续高效运行</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800 rounded-2xl overflow-hidden">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=technology%20solution%20dashboard%20with%20data%20visualization%2C%20professional%20setting&image_size=landscape_16_9" alt="解决方案" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-primary">应用场景</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-gray-700 rounded-xl p-4">
+                                <i class="fa fa-building text-xl text-primary mb-2"></i>
+                                <h4 class="font-semibold mb-1">企业管理</h4>
+                                <p class="text-gray-400 text-sm">智能办公、数据分析、流程优化</p>
+                            </div>
+                            <div class="bg-gray-700 rounded-xl p-4">
+                                <i class="fa fa-shopping-cart text-xl text-primary mb-2"></i>
+                                <h4 class="font-semibold mb-1">商业零售</h4>
+                                <p class="text-gray-400 text-sm">智能推荐、库存管理、客户分析</p>
+                            </div>
+                            <div class="bg-gray-700 rounded-xl p-4">
+                                <i class="fa fa-industry text-xl text-primary mb-2"></i>
+                                <h4 class="font-semibold mb-1">工业制造</h4>
+                                <p class="text-gray-400 text-sm">智能生产、设备监控、质量控制</p>
+                            </div>
+                            <div class="bg-gray-700 rounded-xl p-4">
+                                <i class="fa fa-users text-xl text-primary mb-2"></i>
+                                <h4 class="font-semibold mb-1">公共服务</h4>
+                                <p class="text-gray-400 text-sm">智能政务、交通管理、医疗健康</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术架构 -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 flex items-center">
+                    <span class="w-1 h-8 bg-primary rounded-full mr-4"></span>
+                    技术架构
+                </h2>
+                <p class="text-gray-400 ml-5">基于云原生技术的现代化架构</p>
+            </div>
+            
+            <div class="bg-gray-700 rounded-2xl p-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="bg-gray-600 rounded-xl p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-mobile text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">前端层</h3>
+                        <p class="text-gray-400 text-sm">响应式设计，多端适配</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 rounded-xl p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-code text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">应用层</h3>
+                        <p class="text-gray-400 text-sm">微服务架构，灵活扩展</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 rounded-xl p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-database text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">数据层</h3>
+                        <p class="text-gray-400 text-sm">分布式存储，高可靠性</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 rounded-xl p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-cloud text-3xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">基础设施层</h3>
+                        <p class="text-gray-400 text-sm">容器化部署，弹性伸缩</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实施流程 -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4 flex items-center">
+                    <span class="w-1 h-8 bg-primary rounded-full mr-4"></span>
+                    实施流程
+                </h2>
+                <p class="text-gray-400 ml-5">专业的项目实施方法论</p>
+            </div>
+            
+            <div class="relative">
+                <!-- 流程线 -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-700 transform -translate-x-1/2"></div>
+                
+                <div class="space-y-12">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold mb-3 text-primary">需求分析</h3>
+                            <p class="text-gray-400">深入了解客户业务需求，制定详细的解决方案规划</p>
+                        </div>
+                        <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center z-10">
+                            <span class="text-xl font-bold">1</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center z-10">
+                            <span class="text-xl font-bold">2</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold mb-3 text-primary">方案设计</h3>
+                            <p class="text-gray-400">根据需求分析结果，设计技术架构和实施方案</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold mb-3 text-primary">开发实施</h3>
+                            <p class="text-gray-400">按照设计方案进行系统开发和部署</p>
+                        </div>
+                        <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center z-10">
+                            <span class="text-xl font-bold">3</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center z-10">
+                            <span class="text-xl font-bold">4</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold mb-3 text-primary">测试验证</h3>
+                            <p class="text-gray-400">进行全面的系统测试和验证，确保功能正常</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <h3 class="text-xl font-bold mb-3 text-primary">上线运行</h3>
+                            <p class="text-gray-400">系统正式上线运行，提供技术支持和维护</p>
+                        </div>
+                        <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center z-10">
+                            <span class="text-xl font-bold">5</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA区域 -->
+    <section class="py-16 bg-gradient-to-r from-primary/20 to-secondary/20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">了解更多解决方案详情</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">我们的专家团队将根据您的实际需求，为您提供专业的解决方案咨询</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="appointment.html" class="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-medium hover:shadow-lg hover:shadow-primary/30 transition-all-300">
+                    预约咨询 <i class="fa fa-calendar ml-2"></i>
+                </a>
+                <a href="business-service.html" class="px-8 py-4 rounded-xl border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-all-300">
+                    了解商用服务 <i class="fa fa-briefcase ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <!-- 组件加载脚本 -->
+    <script src="_files/js/components.js"></script>
+</body>
+</html>
