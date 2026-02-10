@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签列表 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    <link rel="stylesheet" href="_files/css/news.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        primary: '#6366f1',
+                        secondary: '#a855f7'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white dark">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 栏目标题 -->
+    <section class="pt-32 pb-16 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">标签列表</h1>
+                <p class="text-xl text-gray-400 mb-6">Tag List</p>
+                <p class="text-gray-400 max-w-3xl mx-auto">浏览所有标签及其使用次数，快速找到感兴趣的内容分类</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 标签列表 -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">AI技术</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">12篇</span>
+                    </div>
+                </div>
+
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">智慧交通</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">8篇</span>
+                    </div>
+                </div>
+
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">医疗AI</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">6篇</span>
+                    </div>
+                </div>
+
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">公共安全</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">5篇</span>
+                    </div>
+                </div>
+
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">5G技术</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">9篇</span>
+                    </div>
+                </div>
+
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">智慧城市</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">7篇</span>
+                    </div>
+                </div>
+
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">大数据</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">10篇</span>
+                    </div>
+                </div>
+
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">云计算</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">6篇</span>
+                    </div>
+                </div>
+
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">工业4.0</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">4篇</span>
+                    </div>
+                </div>
+
+                <!-- 标签项 -->
+                <div class="tag-list-item bg-gray-800 rounded-xl p-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-bold">数字化转型</h3>
+                        <span class="tag-count bg-gray-700 rounded-full px-3 py-1 text-sm font-medium">8篇</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <!-- 通用脚本 -->
+    <script src="_files/js/components.js"></script>
+</body>
+</html>

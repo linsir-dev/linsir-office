@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签 - 凌越科技</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="_files/css/style.css">
+    <link rel="stylesheet" href="_files/css/news.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        primary: '#6366f1',
+                        secondary: '#a855f7'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-white dark">
+    <!-- 导航栏容器 -->
+    <div id="header-container"></div>
+
+    <!-- 栏目标题 -->
+    <section class="pt-32 pb-16 border-b border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">标签</h1>
+                <a href="channel_news.html" class="text-xl text-gray-400 mb-6 hover:text-primary transition-colors-300">Tags</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 标签新闻列表区 -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <!-- AI技术标签 -->
+            <div id="ai" class="mb-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- AI技术新闻卡片 1 -->
+                    <a href="article_news.html" class="news-card animate-slide-up block">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&q=80" alt="AI技术突破" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <div class="news-meta mb-3 flex items-center">
+                            <span class="news-tag industry-tag px-3 py-1 rounded-full text-sm font-medium">AI技术</span>
+                            <span class="news-date text-gray-400 ml-auto">2025-12-20</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">新一代AI大模型发布，多模态能力实现重大突破</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-3">国内科技巨头发布新一代AI大模型，在图像、语音、文本等多模态融合能力上实现重大突破，性能达到国际领先水平。</p>
+                    </a>
+
+                    <!-- AI技术新闻卡片 2 -->
+                    <a href="article_news.html" class="news-card animate-slide-up block">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI芯片" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <div class="news-meta mb-3 flex items-center">
+                            <span class="news-tag industry-tag px-3 py-1 rounded-full text-sm font-medium">AI技术</span>
+                            <span class="news-date text-gray-400 ml-auto">2025-11-15</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">国产AI芯片性能突破，算力成本大幅下降</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-3">国内多家AI芯片企业发布新一代产品，性能比肩国际领先水平，价格下降超过50%，将加速AI技术在各行业的普及应用。</p>
+                    </a>
+
+                    <!-- AI技术新闻卡片 3 -->
+                    <a href="article_news.html" class="news-card animate-slide-up block">
+                        <div class="overflow-hidden rounded-lg mb-4">
+                            <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="AI人才" class="w-full h-56 object-cover transition-transform duration-500 hover:scale-105">
+                        </div>
+                        <div class="news-meta mb-3 flex items-center">
+                            <span class="news-tag industry-tag px-3 py-1 rounded-full text-sm font-medium">AI技术</span>
+                            <span class="news-date text-gray-400 ml-auto">2025-10-10</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 hover:text-primary transition-colors-300">AI人才缺口超500万，高校加速布局人工智能专业</h3>
+                        <p class="text-gray-400 mb-4 line-clamp-3">据人社部数据，国内AI人才缺口超过500万，各大高校纷纷增设人工智能相关专业，企业也在加大人才培养投入。</p>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚容器 -->
+    <div id="footer-container"></div>
+
+    <!-- 通用脚本 -->
+    <script src="_files/js/components.js"></script>
+    <script>
+        // 标签按钮点击效果
+        document.querySelectorAll('.tag-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 标签导航高亮
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('.tag-btn').forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-white');
+                btn.classList.add('bg-gray-800', 'text-gray-300');
+                if (btn.getAttribute('href') === `#${current}`) {
+                    btn.classList.remove('bg-gray-800', 'text-gray-300');
+                    btn.classList.add('bg-primary', 'text-white');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
