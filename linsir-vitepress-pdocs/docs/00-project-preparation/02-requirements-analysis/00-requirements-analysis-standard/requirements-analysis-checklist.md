@@ -91,17 +91,17 @@
 | 6 | 用户画像文档 | `06-user-persona/05-user-persona-document.md` | ✅ 已完成 |
 | 7 | 业务流程文档 | `07-business-process-refinement/05-business-process-document.md` | ✅ 已完成 |
 | 8 | 需求优先级矩阵 | `08-requirements-priority/05-requirements-priority-matrix.md` | ✅ 已完成 |
-| 9 | 需求调研报告 | `09-requirements-research-report/XX-requirements-research-report.md` | 待创建 |
+| 9 | 需求调研报告 | `09-requirements-research-report/01-requirements-research-report.md` | ✅ 已完成 |
 
 ## 四、评审检查项
 
-- [ ] 所有干系人已访谈
-- [ ] 需求覆盖完整无遗漏
-- [ ] 用户故事符合INVEST原则
-- [ ] 业务流程图清晰准确
-- [ ] 需求优先级已确认
-- [ ] 技术约束已识别
-- [ ] 风险点已记录
+- [√] 所有干系人已访谈
+- [√] 需求覆盖完整无遗漏
+- [√] 用户故事符合INVEST原则
+- [√] 业务流程图清晰准确
+- [√] 需求优先级已确认
+- [√] 技术约束已识别
+- [√] 风险点已记录
 
 ## 五、完成标准
 

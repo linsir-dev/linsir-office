@@ -13,15 +13,19 @@ export default defineConfig({
     logo: '/images/logo.png',
     nav: [
       { text: '首页', link: '/' },
-      { text: '开始使用', link: '/getting-started' },
+      { text: '项目计划', link: '/PROJECT-PLAN' },
       { text: '实施流程', link: '/project-implementation-flow' },
       { 
         text: '项目准备',
         items: [
-          { text: '项目计划', link: '/PROJECT-PLAN' },
-          { text: '实施流程图', link: '/project-implementation-flow' },
           { text: '系统业务需求', link: '/00-project-preparation/01-system-business-requirements/01-business-requirements-v1.0' },
           { text: '需求分析', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/requirements-analysis-checklist' }
+        ]
+      },
+      { 
+        text: '项目立项',
+        items: [
+          { text: '项目章程', link: '/01-project-initiation/01-project-charter/待开是' }
         ]
       }
     ],
@@ -31,7 +35,6 @@ export default defineConfig({
         {
           text: '项目指南',
           items: [
-            { text: '开始使用', link: '/getting-started' },
             { text: '项目计划', link: '/PROJECT-PLAN' },
             { text: '实施流程图', link: '/project-implementation-flow' }
           ]
@@ -70,18 +73,40 @@ export default defineConfig({
           ]
         },
         {
-          text: '标准规范',
+          text: '流程图',
           collapsed: true,
           items: [
-            { text: '需求分析流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/requirements-analysis-process' },
-            { text: '用户访谈流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/user-interview-process' },
-            { text: '用户访谈技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/user-interview-process-skill' },
-            { text: '现状调研流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/current-situation-research-process' },
-            { text: '竞品分析流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/competitor-analysis-process' },
-            { text: '干系人分析流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/stakeholder-analysis-process' },
-            { text: '用户画像流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/user-persona-process' },
-            { text: '业务流程梳理流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/business-process-refinement-process' },
-            { text: '需求细化流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/requirement-refinement-process' }
+            { text: '需求分析流程图', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/01-process-diagrams/requirements-analysis-process' }
+          ]
+        },
+        {
+          text: '流程标准',
+          collapsed: true,
+          items: [
+            { text: '用户访谈流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/02-process-standards/user-interview-process' },
+            { text: '现状调研流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/02-process-standards/current-situation-research-process' },
+            { text: '竞品分析流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/02-process-standards/competitor-analysis-process' },
+            { text: '干系人分析流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/02-process-standards/stakeholder-analysis-process' },
+            { text: '用户画像流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/02-process-standards/user-persona-process' },
+            { text: '业务流程梳理流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/02-process-standards/business-process-refinement-process' },
+            { text: '需求细化流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/02-process-standards/requirement-refinement-process' },
+            { text: '需求优先级流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/02-process-standards/requirements-priority-process' },
+            { text: '需求调研报告流程', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/02-process-standards/requirements-research-report-process' }
+          ]
+        },
+        {
+          text: '技能文档',
+          collapsed: true,
+          items: [
+            { text: '用户访谈技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/03-skills/user-interview-process-skill' },
+            { text: '现状调研技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/03-skills/current-situation-research-process-skill' },
+            { text: '竞品分析技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/03-skills/competitor-analysis-process-skill' },
+            { text: '干系人分析技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/03-skills/stakeholder-analysis-process-skill' },
+            { text: '用户画像技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/03-skills/user-persona-process-skill' },
+            { text: '业务流程梳理技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/03-skills/business-process-refinement-process-skill' },
+            { text: '需求细化技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/03-skills/requirement-refinement-process-skill' },
+            { text: '需求优先级技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/03-skills/requirements-priority-process-skill' },
+            { text: '需求调研报告技能', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/03-skills/requirements-research-report-process-skill' }
           ]
         },
         {
@@ -185,9 +210,24 @@ export default defineConfig({
             { text: '迭代计划', link: '/00-project-preparation/02-requirements-analysis/08-requirements-priority/04-iteration-plan' },
             { text: '需求优先级矩阵', link: '/00-project-preparation/02-requirements-analysis/08-requirements-priority/05-requirements-priority-matrix' }
           ]
+        },
+        {
+          text: '需求调研报告',
+          collapsed: true,
+          items: [
+            { text: '需求调研报告', link: '/00-project-preparation/02-requirements-analysis/09-requirements-research-report/01-requirements-research-report' }
+          ]
         }
       ]
     },
+    '/01-project-initiation/': [
+      {
+        text: '项目立项',
+        items: [
+          { text: '项目章程', link: '/01-project-initiation/01-project-charter/待开是' }
+        ]
+      }
+    ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
