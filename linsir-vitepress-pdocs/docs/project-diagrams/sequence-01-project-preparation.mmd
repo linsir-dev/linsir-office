@@ -1,0 +1,15 @@
+sequenceDiagram
+    autonumber
+    participant 业务方 as 业务方/客户
+    participant PM as 项目经理
+    participant 架构师 as 架构师
+
+    rect rgb(230, 245, 255)
+        Note over 业务方,架构师: 第一阶段：项目准备（瀑布）
+        业务方->>PM: 1. 提出业务需求
+        PM->>PM: 2. 需求调研与分析
+        PM->>架构师: 3. 发起技术预研
+        架构师->>架构师: 4. 技术选型与POC
+        架构师->>PM: 5. 技术可行性报告
+        PM->>业务方: 6. 初步方案与成本评估
+    end

@@ -1,0 +1,13 @@
+sequenceDiagram
+    autonumber
+    participant 业务方 as 业务方/客户
+    participant 架构师 as 架构师
+    participant 开发团队 as 开发团队
+
+    rect rgb(230, 255, 230)
+        Note over 业务方,开发团队: 第三阶段：系统设计（瀑布）
+        架构师->>架构师: 1. 系统架构设计
+        架构师->>架构师: 2. 数据库设计
+        架构师->>开发团队: 3. 接口规范定义
+        开发团队->>业务方: 4. UI/UX原型确认
+    end

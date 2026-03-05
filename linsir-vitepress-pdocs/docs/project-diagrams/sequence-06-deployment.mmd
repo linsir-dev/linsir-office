@@ -1,0 +1,13 @@
+sequenceDiagram
+    autonumber
+    participant 业务方 as 业务方/客户
+    participant 开发团队 as 开发团队
+    participant 运维团队 as 运维团队
+
+    rect rgb(230, 255, 255)
+        Note over 业务方,运维团队: 第六阶段：部署上线（瀑布）
+        运维团队->>运维团队: 1. 生产环境准备
+        开发团队->>运维团队: 2. 部署包与文档
+        运维团队->>运维团队: 3. 生产部署
+        运维团队->>业务方: 4. 上线验证
+    end

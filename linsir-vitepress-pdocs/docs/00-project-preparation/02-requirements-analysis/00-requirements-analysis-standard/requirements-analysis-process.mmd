@@ -1,0 +1,39 @@
+flowchart TD
+    Start([开始]) --> A[接收业务需求文档]
+    A --> B[制定调研计划]
+    
+    subgraph 调研阶段
+        B --> C[用户访谈]
+        B --> D[现状调研]
+        B --> E[竞品分析]
+        B --> F[干系人识别]
+    end
+    
+    C --> G[整理调研资料]
+    D --> G
+    E --> G
+    F --> G
+    
+    subgraph 分析阶段
+        G --> H[需求细化分析]
+        G --> I[用户画像定义]
+        G --> J[业务流程梳理]
+        G --> K[需求优先级排序]
+    end
+    
+    H --> L[编写需求调研报告]
+    I --> L
+    J --> L
+    K --> L
+    
+    L --> M{评审通过?}
+    M -->|不通过| N[补充调研]
+    N --> C
+    M -->|通过| O[输出分析成果]
+    
+    O --> P[提交技术预研]
+    P --> End([结束])
+    
+    style Start fill:#e1f5e1
+    style End fill:#e1f5e1
+    style M fill:#fff3cd

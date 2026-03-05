@@ -1,0 +1,17 @@
+{
+  "name": "linsir-vitepress-pdocs",
+  "version": "1.0.0",
+  "description": "VitePress Documentation Site",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs --port 8080",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs --port 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}

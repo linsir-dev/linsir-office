@@ -1,0 +1,13 @@
+sequenceDiagram
+    autonumber
+    participant 业务方 as 业务方/客户
+    participant PM as 项目经理
+    participant 开发团队 as 开发团队
+    participant 运维团队 as 运维团队
+
+    rect rgb(245, 230, 255)
+        Note over 业务方,运维团队: 第七阶段：运维维护（敏捷）
+        运维团队->>运维团队: 1. 持续监控运维
+        业务方->>PM: 2. 新需求/优化建议
+        PM->>开发团队: 3. 规划新迭代
+    end

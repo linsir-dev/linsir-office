@@ -1,0 +1,13 @@
+sequenceDiagram
+    autonumber
+    participant 业务方 as 业务方/客户
+    participant 开发团队 as 开发团队
+    participant 测试团队 as 测试团队
+
+    rect rgb(255, 255, 230)
+        Note over 业务方,测试团队: 第五阶段：测试验证（瀑布+敏捷）
+        测试团队->>测试团队: 1. 系统集成测试
+        测试团队->>业务方: 2. UAT用户验收测试
+        业务方->>测试团队: 3. 验收反馈
+        测试团队->>开发团队: 4. Bug修复（如有）
+    end

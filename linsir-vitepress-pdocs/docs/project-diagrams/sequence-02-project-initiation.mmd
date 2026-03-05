@@ -1,0 +1,12 @@
+sequenceDiagram
+    autonumber
+    participant 业务方 as 业务方/客户
+    participant PM as 项目经理
+
+    rect rgb(255, 245, 230)
+        Note over 业务方,PM: 第二阶段：项目立项（瀑布）
+        PM->>PM: 1. 编写项目章程
+        PM->>PM: 2. 商业论证与ROI分析
+        PM->>业务方: 3. 提交立项申请
+        业务方->>PM: 4. 立项审批通过
+    end
