@@ -215,7 +215,9 @@ export default defineConfig({
           text: '需求调研报告',
           collapsed: true,
           items: [
-            { text: '需求调研报告', link: '/00-project-preparation/02-requirements-analysis/09-requirements-research-report/01-requirements-research-report' }
+            { text: '需求调研报告 v1.0', link: '/00-project-preparation/02-requirements-analysis/09-requirements-research-report/01-requirements-research-report' },
+            { text: '需求调研报告 v1.1', link: '/00-project-preparation/02-requirements-analysis/09-requirements-research-report/01-requirements-research-report-v1.1' },
+            { text: '报告评审', link: '/00-project-preparation/02-requirements-analysis/09-requirements-research-report/02-requirements-research-report-review' }
           ]
         }
       ]
