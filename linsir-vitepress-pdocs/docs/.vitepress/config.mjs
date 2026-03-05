@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "项目文档中心",
+  title: "System项目AI文档",
   description: "项目准备与需求分析文档库",
   head: [
     ['link', { rel: 'icon', href: '/images/logo.png' }]
