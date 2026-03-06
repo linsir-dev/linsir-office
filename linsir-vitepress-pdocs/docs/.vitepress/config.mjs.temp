@@ -401,7 +401,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2026 linsir | 鄂ICP备99999999号'
+      copyright: 'Copyright © 2026 linsir | <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备99999999号</a>'
     }
   }
 })
