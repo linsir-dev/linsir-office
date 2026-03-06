@@ -1,0 +1,132 @@
+/* 深色主题 + 浮动卡片列表样式 */
+
+/* 深色背景 */
+:root {
+  --dark-bg: #0d1117;
+  --dark-card-bg: #161b22;
+  --dark-card-hover: #1c2128;
+  --dark-border: #30363d;
+  --dark-text: #c9d1d9;
+  --dark-text-light: #8b949e;
+  --dark-accent: #58a6ff;
+  --dark-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* 首页内容区域背景 - 深色 */
+.tk-home {
+  background-color: var(--dark-bg) !important;
+}
+
+/* 文章列表容器 - 全宽无侧栏 */
+.tk-home-post-list {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}
+
+/* 隐藏侧栏 */
+.tk-home-card-list,
+.tk-home-card {
+  display: none !important;
+}
+
+/* 文章卡片样式 - 浮动效果 */
+.tk-post-card {
+  background: var(--dark-card-bg) !important;
+  border: 1px solid var(--dark-border) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px var(--dark-shadow) !important;
+  transition: all 0.3s ease !important;
+  overflow: hidden !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.tk-post-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5) !important;
+  border-color: var(--dark-accent) !important;
+}
+
+/* 文章封面图 */
+.tk-post-card .tk-post-card__cover {
+  border-radius: 12px 12px 0 0 !important;
+  overflow: hidden !important;
+}
+
+.tk-post-card .tk-post-card__cover img {
+  transition: transform 0.5s ease !important;
+}
+
+.tk-post-card:hover .tk-post-card__cover img {
+  transform: scale(1.05) !important;
+}
+
+/* 文章标题 */
+.tk-post-card .tk-post-card__title {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: var(--dark-text) !important;
+}
+
+.tk-post-card .tk-post-card__title:hover {
+  color: var(--dark-accent) !important;
+}
+
+/* 文章摘要 */
+.tk-post-card .tk-post-card__excerpt {
+  color: var(--dark-text-light) !important;
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+}
+
+/* 文章元信息 */
+.tk-post-card .tk-post-card__meta {
+  color: var(--dark-text-light) !important;
+  font-size: 0.8rem !important;
+}
+
+/* 阅读更多按钮 */
+.tk-post-card__more {
+  color: var(--dark-accent) !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+}
+
+.tk-post-card__more:hover {
+  color: var(--dark-text) !important;
+}
+
+/* 分页样式 */
+.tk-pagination {
+  margin-top: 3rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.tk-pagination .el-pagination button,
+.tk-pagination .el-pager li {
+  background: var(--dark-card-bg) !important;
+  border: 1px solid var(--dark-border) !important;
+  color: var(--dark-text-light) !important;
+  border-radius: 6px !important;
+}
+
+.tk-pagination .el-pager li.active {
+  background: var(--dark-accent) !important;
+  border-color: var(--dark-accent) !important;
+  color: #fff !important;
+}
+
+/* Features 样式适配深色 - 图片无边框 */
+.tk-banner-feature .feature-img {
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.tk-banner-feature .feature-title {
+  color: var(--dark-text) !important;
+}
+
+.tk-banner-feature .feature-details {
+  color: var(--dark-text-light) !important;
+}
