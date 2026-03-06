@@ -1,0 +1,98 @@
+flowchart TD
+    Start([开始]) --> Input[输入：项目章程<br/>资源需求估算]
+    
+    Input --> Step1[步骤1：成本分析]
+    Step1 --> Step1_1[开发成本估算]
+    Step1_1 --> Step1_2[运维成本估算]
+    Step1_2 --> Step1_3[其他成本估算]
+    Step1_3 --> Step1_Review{项目经理审核}
+    Step1_Review -->|通过| Step2[步骤2：收益分析]
+    Step1_Review -->|不通过| Step1_1
+    
+    Step2 --> Step2_1[直接收益分析]
+    Step2_1 --> Step2_2[间接收益分析]
+    Step2_2 --> Step2_3[战略收益分析]
+    Step2_3 --> Step2_Review{业务负责人审核}
+    Step2_Review -->|通过| Step3[步骤3：ROI计算]
+    Step2_Review -->|不通过| Step2_1
+    
+    Step3 --> Step3_1[基础ROI计算]
+    Step3_1 --> Step3_2[投资回收期分析]
+    Step3_2 --> Step3_Review{财务负责人审核}
+    Step3_Review -->|通过| Step4[步骤4：财务指标分析]
+    Step3_Review -->|不通过| Step3_1
+    
+    Step4 --> Step4_1[NPV净现值分析]
+    Step4_1 --> Step4_2[IRR内部收益率分析]
+    Step4_2 --> Step4_Review{财务负责人审核}
+    Step4_Review -->|通过| Step5[步骤5：敏感性分析]
+    Step4_Review -->|不通过| Step4_1
+    
+    Step5 --> Step5_1[关键变量识别]
+    Step5_1 --> Step5_2[情景分析<br/>乐观/基准/悲观]
+    Step5_2 --> Step5_3[风险调整ROI]
+    Step5_3 --> Step5_Review{项目团队评审}
+    Step5_Review -->|通过| Step6[步骤6：商业论证汇总与审批]
+    Step5_Review -->|不通过| Step5_1
+    
+    Step6 --> Step6_1[商业论证汇总]
+    Step6_1 --> Step6_Review1{财务部门审核}
+    Step6_Review1 -->|通过| Step6_Review2{业务部门确认}
+    Step6_Review1 -->|不通过| Step6_1
+    Step6_Review2 -->|通过| Step6_Review3{管理层审批}
+    Step6_Review2 -->|不通过| Step6_1
+    Step6_Review3 -->|批准| End([商业论证报告发布])
+    Step6_Review3 -->|不通过| Step6_1
+    
+    subgraph 成本分析文档
+        Cost1[01-cost-development.md]
+        Cost2[02-cost-operation.md]
+        Cost3[03-cost-other.md]
+    end
+    
+    subgraph 收益分析文档
+        Benefit1[04-benefit-direct.md]
+        Benefit2[05-benefit-indirect.md]
+        Benefit3[06-benefit-strategic.md]
+    end
+    
+    subgraph ROI计算文档
+        ROI1[07-roi-calculation.md]
+        ROI2[08-payback-period.md]
+    end
+    
+    subgraph 财务指标文档
+        Finance1[09-npv-analysis.md]
+        Finance2[10-irr-analysis.md]
+    end
+    
+    subgraph 敏感性分析文档
+        Sensitivity1[11-sensitivity-variables.md]
+        Sensitivity2[12-scenario-analysis.md]
+        Sensitivity3[13-risk-adjusted-roi.md]
+    end
+    
+    subgraph 汇总与审批文档
+        Summary1[00-business-case.md]
+        Summary2[14-business-case-approval.md]
+    end
+    
+    Step1_1 --> Cost1
+    Step1_2 --> Cost2
+    Step1_3 --> Cost3
+    Step2_1 --> Benefit1
+    Step2_2 --> Benefit2
+    Step2_3 --> Benefit3
+    Step3_1 --> ROI1
+    Step3_2 --> ROI2
+    Step4_1 --> Finance1
+    Step4_2 --> Finance2
+    Step5_1 --> Sensitivity1
+    Step5_2 --> Sensitivity2
+    Step5_3 --> Sensitivity3
+    Step6_1 --> Summary1
+    Step6 --> Summary2
+    
+    style Start fill:#90EE90
+    style End fill:#FFB6C1
+    style Step6_Review3 fill:#FFD700

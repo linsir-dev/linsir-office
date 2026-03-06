@@ -1,0 +1,100 @@
+flowchart TD
+    Start([开始]) --> Step1[步骤1：项目基本信息定义]
+    
+    Step1 --> Step1_Review{项目经理审核}
+    Step1_Review -->|通过| Step2[步骤2：项目目标定义]
+    Step1_Review -->|不通过| Step1
+    
+    Step2 --> Step2_Review{业务负责人审核}
+    Step2_Review -->|通过| Step3[步骤3：项目范围界定]
+    Step2_Review -->|不通过| Step2
+    
+    Step3 --> Step3_Review{项目团队评审}
+    Step3_Review -->|通过| Step4[步骤4：干系人识别]
+    Step3_Review -->|不通过| Step3
+    
+    Step4 --> Step4_Review{项目经理审核}
+    Step4_Review -->|通过| Step5[步骤5：项目约束与假设识别]
+    Step4_Review -->|不通过| Step4
+    
+    Step5 --> Step5_Review{各职能负责人审核}
+    Step5_Review -->|通过| Step6[步骤6：项目风险初步识别]
+    Step5_Review -->|不通过| Step5
+    
+    Step6 --> Step6_Review{项目团队评审}
+    Step6_Review -->|通过| Step7[步骤7：项目里程碑定义]
+    Step6_Review -->|不通过| Step6
+    
+    Step7 --> Step7_Review{项目经理审核}
+    Step7_Review -->|通过| Step8[步骤8：项目资源需求估算]
+    Step7_Review -->|不通过| Step7
+    
+    Step8 --> Step8_Review1{技术负责人审核}
+    Step8_Review1 -->|通过| Step8_Review2{财务负责人审核}
+    Step8_Review1 -->|不通过| Step8
+    Step8_Review2 -->|通过| Step9[步骤9：项目章程汇总与审批]
+    Step8_Review2 -->|不通过| Step8
+    
+    Step9 --> Step9_Review1{团队评审}
+    Step9_Review1 -->|通过| Step9_Review2{技术审核}
+    Step9_Review2 -->|通过| Step9_Review3{业务审核}
+    Step9_Review3 -->|通过| Step9_Review4{财务审核}
+    Step9_Review4 -->|通过| Step9_Review5{法务审核}
+    Step9_Review5 -->|通过| Step9_Review6{发起人批准}
+    
+    Step9_Review1 -->|不通过| Step9
+    Step9_Review2 -->|不通过| Step9
+    Step9_Review3 -->|不通过| Step9
+    Step9_Review4 -->|不通过| Step9
+    Step9_Review5 -->|不通过| Step9
+    Step9_Review6 -->|不通过| Step9
+    
+    Step9_Review6 -->|批准| End([项目章程发布])
+    
+    subgraph 输入
+        Input1[初步方案]
+        Input2[业务方审核意见]
+        Input3[技术调研报告]
+        Input4[组织架构图]
+    end
+    
+    subgraph 输出
+        Output1[项目章程汇总]
+        Output2[项目标识信息]
+        Output3[项目授权书]
+        Output4[业务目标]
+        Output5[成功标准]
+        Output6[项目范围说明]
+        Output7[范围边界]
+        Output8[干系人登记册]
+        Output9[约束条件]
+        Output10[假设日志]
+        Output11[风险登记册]
+        Output12[里程碑计划]
+        Output13[资源需求估算]
+        Output14[章程审批记录]
+    end
+    
+    Input1 --> Step1
+    Input2 --> Step2
+    Input3 --> Step5
+    Input4 --> Step4
+    
+    Step9 --> Output1
+    Step1 --> Output2
+    Step1 --> Output3
+    Step2 --> Output4
+    Step2 --> Output5
+    Step3 --> Output6
+    Step3 --> Output7
+    Step4 --> Output8
+    Step5 --> Output9
+    Step5 --> Output10
+    Step6 --> Output11
+    Step7 --> Output12
+    Step8 --> Output13
+    Step9 --> Output14
+    
+    style Start fill:#90EE90
+    style End fill:#FFB6C1
+    style Step9_Review6 fill:#FFD700

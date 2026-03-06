@@ -1,0 +1,79 @@
+%% 项目审批流程图
+%% 文档编号：SYS-PI-PA-PROC-001
+%% 版本：1.0
+%% 日期：2026-03-13
+
+flowchart TD
+    %% 开始节点
+    Start([开始]) --> Input[输入：高层审批通过]
+    
+    %% 步骤1：编制项目批准通知书
+    Input --> Step1[步骤1：编制项目批准通知书]
+    Step1 --> Step1Detail1[项目批准决定]
+    Step1 --> Step1Detail2[投资预算批准]
+    Step1 --> Step1Detail3[项目团队授权]
+    Step1Detail1 --> Step1Check{审核通过?}
+    Step1Detail2 --> Step1Check
+    Step1Detail3 --> Step1Check
+    Step1Check -->|否| Step1Revise[修改完善]
+    Step1Revise --> Step1
+    Step1Check -->|是| Step1Output[输出：项目批准通知书<br/>SYS-PI-PA-013]
+    
+    %% 步骤2：签署项目授权书
+    Step1Output --> Step2[步骤2：签署项目授权书]
+    Step2 --> Step2Detail1[项目发起人授权]
+    Step2 --> Step2Detail2[项目经理任命]
+    Step2 --> Step2Detail3[授权范围和权限]
+    Step2Detail1 --> Step2Check{签署完成?}
+    Step2Detail2 --> Step2Check
+    Step2Detail3 --> Step2Check
+    Step2Check -->|否| Step2Revise[修改完善]
+    Step2Revise --> Step2
+    Step2Check -->|是| Step2Output[输出：项目授权书<br/>SYS-PI-PA-014]
+    
+    %% 步骤3：发布项目启动通知
+    Step2Output --> Step3[步骤3：发布项目启动通知]
+    Step3 --> Step3Detail1[项目启动公告]
+    Step3 --> Step3Detail2[项目组织架构]
+    Step3 --> Step3Detail3[项目关键信息]
+    Step3Detail1 --> Step3Check{审核通过?}
+    Step3Detail2 --> Step3Check
+    Step3Detail3 --> Step3Check
+    Step3Check -->|否| Step3Revise[修改完善]
+    Step3Revise --> Step3
+    Step3Check -->|是| Step3Output[输出：项目启动通知<br/>SYS-PI-PA-015]
+    
+    %% 步骤4：召开项目启动会
+    Step3Output --> Step4[步骤4：召开项目启动会]
+    Step4 --> Step4Detail1[确定会议时间地点]
+    Step4 --> Step4Detail2[邀请参会人员]
+    Step4 --> Step4Detail3[准备会议材料]
+    Step4Detail1 --> Step4Meeting[召开启动会]
+    Step4Detail2 --> Step4Meeting
+    Step4Detail3 --> Step4Meeting
+    Step4Meeting --> Step4Output[输出：项目启动会纪要<br/>SYS-PI-PA-016]
+    
+    %% 步骤5：归档和分发
+    Step4Output --> Step5[步骤5：归档和分发]
+    Step5 --> Step5Detail1[文档归档]
+    Step5 --> Step5Detail2[相关方通知]
+    Step5 --> Step5Detail3[项目启动]
+    Step5Detail1 --> End
+    Step5Detail2 --> End
+    Step5Detail3 --> End
+    
+    %% 结束节点
+    End([结束<br/>项目正式启动])
+    
+    %% 样式定义
+    classDef startEnd fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef process fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef decision fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef output fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    classDef detail fill:#fff9c4,stroke:#f57f17,stroke-width:1px
+    
+    class Start,End startEnd
+    class Step1,Step2,Step3,Step4,Step5 process
+    class Step1Check,Step2Check,Step3Check decision
+    class Step1Output,Step2Output,Step3Output,Step4Output output
+    class Step1Detail1,Step1Detail2,Step1Detail3,Step2Detail1,Step2Detail2,Step2Detail3,Step3Detail1,Step3Detail2,Step3Detail3,Step4Detail1,Step4Detail2,Step4Detail3,Step5Detail1,Step5Detail2,Step5Detail3 detail

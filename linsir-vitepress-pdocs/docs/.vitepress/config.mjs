@@ -28,7 +28,10 @@ export default defineConfig({
       { 
         text: '项目立项',
         items: [
-          { text: '项目章程', link: '/01-project-initiation/01-project-charter/待开是' }
+          { text: '项目章程', link: '/01-project-initiation/01-project-charter/01-charter-documents/00-project-charter' },
+          { text: '商业论证', link: '/01-project-initiation/02-business-case/06-business-case-summary/14-business-case-summary' },
+          { text: '立项申请', link: '/01-project-initiation/03-project-application/01-application-documents/01-project-application-form' },
+          { text: '立项审批', link: '/01-project-initiation/04-project-approval/01-approval-documents/01-project-approval-notice' }
         ]
       }
     ],
@@ -378,11 +381,249 @@ export default defineConfig({
           ]
         }
       ],
-      '/01-project-initiation/': [
+      '/01-project-initiation/01-project-charter/': [
         {
-          text: '项目立项',
+          text: '项目章程',
           items: [
-            { text: '项目章程', link: '/01-project-initiation/01-project-charter/待开是' }
+            { text: '项目章程检查清单', link: '/01-project-initiation/01-project-charter/00-project-charter-standard/project-charter-checklist' }
+          ]
+        },
+        {
+          text: '流程图',
+          collapsed: true,
+          items: [
+            { text: '项目章程流程图', link: '/01-project-initiation/01-project-charter/00-project-charter-standard/01-process-diagrams/project-charter-process-guide' }
+          ]
+        },
+        {
+          text: '流程标准',
+          collapsed: true,
+          items: [
+            { text: '项目章程流程', link: '/01-project-initiation/01-project-charter/00-project-charter-standard/02-process-standards/project-charter-process' }
+          ]
+        },
+        {
+          text: '技能文档',
+          collapsed: true,
+          items: [
+            { text: '项目章程技能', link: '/01-project-initiation/01-project-charter/00-project-charter-standard/03-skills/project-charter-process-skill' }
+          ]
+        },
+        {
+          text: '章程文档',
+          collapsed: true,
+          items: [
+            { text: '项目章程', link: '/01-project-initiation/01-project-charter/01-charter-documents/00-project-charter' },
+            { text: '项目章程评审', link: '/01-project-initiation/01-project-charter/01-charter-documents/00-project-charter-review' },
+            { text: '项目标识', link: '/01-project-initiation/01-project-charter/01-charter-documents/01-project-identity' },
+            { text: '项目授权', link: '/01-project-initiation/01-project-charter/01-charter-documents/02-project-authorization' },
+            { text: '业务目标', link: '/01-project-initiation/01-project-charter/01-charter-documents/03-business-objectives' },
+            { text: '成功标准', link: '/01-project-initiation/01-project-charter/01-charter-documents/04-success-criteria' },
+            { text: '项目范围', link: '/01-project-initiation/01-project-charter/01-charter-documents/05-project-scope' },
+            { text: '范围边界', link: '/01-project-initiation/01-project-charter/01-charter-documents/06-scope-boundaries' },
+            { text: '干系人登记册', link: '/01-project-initiation/01-project-charter/01-charter-documents/07-stakeholder-register' },
+            { text: '项目约束', link: '/01-project-initiation/01-project-charter/01-charter-documents/08-project-constraints' },
+            { text: '假设日志', link: '/01-project-initiation/01-project-charter/01-charter-documents/09-assumption-log' },
+            { text: '风险登记册', link: '/01-project-initiation/01-project-charter/01-charter-documents/10-risk-register' },
+            { text: '里程碑计划', link: '/01-project-initiation/01-project-charter/01-charter-documents/11-milestone-schedule' },
+            { text: '资源需求', link: '/01-project-initiation/01-project-charter/01-charter-documents/12-resource-requirements' },
+            { text: '章程审批', link: '/01-project-initiation/01-project-charter/01-charter-documents/13-charter-approval' }
+          ]
+        }
+      ],
+      '/01-project-initiation/02-business-case/': [
+        {
+          text: '商业论证',
+          items: [
+            { text: '商业论证检查清单', link: '/01-project-initiation/02-business-case/00-business-case-standard/business-case-checklist' }
+          ]
+        },
+        {
+          text: '流程图',
+          collapsed: true,
+          items: [
+            { text: '商业论证流程图', link: '/01-project-initiation/02-business-case/00-business-case-standard/01-process-diagrams/business-case-process' }
+          ]
+        },
+        {
+          text: '流程标准',
+          collapsed: true,
+          items: [
+            { text: '成本分析流程', link: '/01-project-initiation/02-business-case/00-business-case-standard/02-process-standards/cost-analysis-process' },
+            { text: '效益分析流程', link: '/01-project-initiation/02-business-case/00-business-case-standard/02-process-standards/02-benefit-analysis-process' },
+            { text: 'ROI计算流程', link: '/01-project-initiation/02-business-case/00-business-case-standard/02-process-standards/03-roi-calculation-process' },
+            { text: '财务指标流程', link: '/01-project-initiation/02-business-case/00-business-case-standard/02-process-standards/04-financial-indicators-process' },
+            { text: '敏感性分析流程', link: '/01-project-initiation/02-business-case/00-business-case-standard/02-process-standards/05-sensitivity-analysis-process' },
+            { text: '商业论证汇总流程', link: '/01-project-initiation/02-business-case/00-business-case-standard/02-process-standards/06-business-case-summary-process' }
+          ]
+        },
+        {
+          text: '技能文档',
+          collapsed: true,
+          items: [
+            { text: '成本分析技能', link: '/01-project-initiation/02-business-case/00-business-case-standard/03-skills/cost-analysis-skill' },
+            { text: '效益分析技能', link: '/01-project-initiation/02-business-case/00-business-case-standard/03-skills/benefit-analysis-skill' },
+            { text: 'ROI计算技能', link: '/01-project-initiation/02-business-case/00-business-case-standard/03-skills/roi-calculation-skill' },
+            { text: '财务指标技能', link: '/01-project-initiation/02-business-case/00-business-case-standard/03-skills/financial-indicators-skill' },
+            { text: '敏感性分析技能', link: '/01-project-initiation/02-business-case/00-business-case-standard/03-skills/sensitivity-analysis-skill' },
+            { text: '商业论证汇总技能', link: '/01-project-initiation/02-business-case/00-business-case-standard/03-skills/business-case-summary-skill' }
+          ]
+        },
+        {
+          text: '成本分析',
+          collapsed: true,
+          items: [
+            { text: '开发成本', link: '/01-project-initiation/02-business-case/01-cost-analysis/01-cost-development' },
+            { text: '运维成本', link: '/01-project-initiation/02-business-case/01-cost-analysis/02-cost-operation' },
+            { text: '其他成本', link: '/01-project-initiation/02-business-case/01-cost-analysis/03-cost-other' }
+          ]
+        },
+        {
+          text: '效益分析',
+          collapsed: true,
+          items: [
+            { text: '直接效益', link: '/01-project-initiation/02-business-case/02-benefit-analysis/04-benefit-direct' },
+            { text: '间接效益', link: '/01-project-initiation/02-business-case/02-benefit-analysis/05-benefit-indirect' },
+            { text: '战略效益', link: '/01-project-initiation/02-business-case/02-benefit-analysis/06-benefit-strategic' }
+          ]
+        },
+        {
+          text: 'ROI计算',
+          collapsed: true,
+          items: [
+            { text: 'ROI计算', link: '/01-project-initiation/02-business-case/03-roi-calculation/07-roi-calculation' },
+            { text: '投资回收期', link: '/01-project-initiation/02-business-case/03-roi-calculation/08-payback-period' }
+          ]
+        },
+        {
+          text: '财务指标',
+          collapsed: true,
+          items: [
+            { text: 'NPV分析', link: '/01-project-initiation/02-business-case/04-financial-indicators/09-npv-analysis' },
+            { text: 'IRR分析', link: '/01-project-initiation/02-business-case/04-financial-indicators/10-irr-analysis' }
+          ]
+        },
+        {
+          text: '敏感性分析',
+          collapsed: true,
+          items: [
+            { text: '敏感性变量', link: '/01-project-initiation/02-business-case/05-sensitivity-analysis/11-sensitivity-variables' },
+            { text: '情景分析', link: '/01-project-initiation/02-business-case/05-sensitivity-analysis/12-scenario-analysis' },
+            { text: '风险调整ROI', link: '/01-project-initiation/02-business-case/05-sensitivity-analysis/13-risk-adjusted-roi' }
+          ]
+        },
+        {
+          text: '商业论证汇总',
+          collapsed: true,
+          items: [
+            { text: '商业论证汇总 v1.0', link: '/01-project-initiation/02-business-case/06-business-case-summary/14-business-case-summary' },
+            { text: '商业论证汇总 v1.1', link: '/01-project-initiation/02-business-case/06-business-case-summary/14-business-case-summary-v1.1' },
+            { text: '商业论证评审', link: '/01-project-initiation/02-business-case/06-business-case-summary/14-business-case-summary-review' },
+            { text: '商业论证审批', link: '/01-project-initiation/02-business-case/06-business-case-summary/15-business-case-approval' }
+          ]
+        }
+      ],
+      '/01-project-initiation/03-project-application/': [
+        {
+          text: '立项申请',
+          items: [
+            { text: '立项申请检查清单', link: '/01-project-initiation/03-project-application/00-project-application-standard/project-application-checklist' }
+          ]
+        },
+        {
+          text: '流程图',
+          collapsed: true,
+          items: [
+            { text: '立项申请流程图', link: '/01-project-initiation/03-project-application/00-project-application-standard/01-process-diagrams/project-application-process-guide' }
+          ]
+        },
+        {
+          text: '流程标准',
+          collapsed: true,
+          items: [
+            { text: '立项申请文档流程', link: '/01-project-initiation/03-project-application/00-project-application-standard/02-process-standards/project-application-documents-process' },
+            { text: '支撑材料流程', link: '/01-project-initiation/03-project-application/00-project-application-standard/02-process-standards/supporting-materials-process' },
+            { text: '审批流程', link: '/01-project-initiation/03-project-application/00-project-application-standard/02-process-standards/approval-process' }
+          ]
+        },
+        {
+          text: '技能文档',
+          collapsed: true,
+          items: [
+            { text: '立项申请文档技能', link: '/01-project-initiation/03-project-application/00-project-application-standard/03-skills/project-application-documents-skill' },
+            { text: '支撑材料技能', link: '/01-project-initiation/03-project-application/00-project-application-standard/03-skills/supporting-materials-skill' },
+            { text: '审批技能', link: '/01-project-initiation/03-project-application/00-project-application-standard/03-skills/approval-process-skill' }
+          ]
+        },
+        {
+          text: '申请文档',
+          collapsed: true,
+          items: [
+            { text: '立项申请表', link: '/01-project-initiation/03-project-application/01-application-documents/01-project-application-form' },
+            { text: '立项申请报告', link: '/01-project-initiation/03-project-application/01-application-documents/02-project-application-report' },
+            { text: '投资预算明细', link: '/01-project-initiation/03-project-application/01-application-documents/03-investment-budget-detail' }
+          ]
+        },
+        {
+          text: '支撑材料',
+          collapsed: true,
+          items: [
+            { text: '章程摘要', link: '/01-project-initiation/03-project-application/02-supporting-materials/04-charter-summary' },
+            { text: '商业论证摘要', link: '/01-project-initiation/03-project-application/02-supporting-materials/05-business-case-summary' },
+            { text: '技术可行性', link: '/01-project-initiation/03-project-application/02-supporting-materials/06-technical-feasibility' },
+            { text: '部门评审', link: '/01-project-initiation/03-project-application/02-supporting-materials/07-department-review' },
+            { text: '财务评审', link: '/01-project-initiation/03-project-application/02-supporting-materials/08-finance-review' },
+            { text: '技术评审', link: '/01-project-initiation/03-project-application/02-supporting-materials/09-technical-review' },
+            { text: '高层审批', link: '/01-project-initiation/03-project-application/02-supporting-materials/10-executive-approval' },
+            { text: '项目演示', link: '/01-project-initiation/03-project-application/02-supporting-materials/11-project-presentation' },
+            { text: '功能需求', link: '/01-project-initiation/03-project-application/02-supporting-materials/12-functional-requirements' }
+          ]
+        }
+      ],
+      '/01-project-initiation/04-project-approval/': [
+        {
+          text: '立项审批',
+          items: [
+            { text: '立项审批检查清单', link: '/01-project-initiation/04-project-approval/00-project-approval-standard/project-approval-checklist' }
+          ]
+        },
+        {
+          text: '流程图',
+          collapsed: true,
+          items: [
+            { text: '立项审批流程图', link: '/01-project-initiation/04-project-approval/00-project-approval-standard/01-process-diagrams/project-approval-process-guide' }
+          ]
+        },
+        {
+          text: '流程标准',
+          collapsed: true,
+          items: [
+            { text: '立项审批文档流程', link: '/01-project-initiation/04-project-approval/00-project-approval-standard/02-process-standards/project-approval-documents-process' },
+            { text: '项目启动流程', link: '/01-project-initiation/04-project-approval/00-project-approval-standard/02-process-standards/project-launch-process' }
+          ]
+        },
+        {
+          text: '技能文档',
+          collapsed: true,
+          items: [
+            { text: '立项审批文档技能', link: '/01-project-initiation/04-project-approval/00-project-approval-standard/03-skills/project-approval-documents-skill' },
+            { text: '项目启动技能', link: '/01-project-initiation/04-project-approval/00-project-approval-standard/03-skills/project-launch-skill' }
+          ]
+        },
+        {
+          text: '审批文档',
+          collapsed: true,
+          items: [
+            { text: '立项审批通知', link: '/01-project-initiation/04-project-approval/01-approval-documents/01-project-approval-notice' },
+            { text: '项目授权书', link: '/01-project-initiation/04-project-approval/01-approval-documents/02-project-authorization-letter' }
+          ]
+        },
+        {
+          text: '项目启动',
+          collapsed: true,
+          items: [
+            { text: '项目启动通知', link: '/01-project-initiation/04-project-approval/02-project-launch/03-project-launch-notice' },
+            { text: '启动会议纪要', link: '/01-project-initiation/04-project-approval/02-project-launch/04-project-kickoff-minutes' }
           ]
         }
       ]
