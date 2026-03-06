@@ -3,6 +3,7 @@ import { defineTeekConfig } from "vitepress-theme-teek/config";
 import { version } from "vitepress-theme-teek/es/version";
 import { Wallpaper } from "./ConfigHyde/Wallaper"; // 导入Wallaper模块
 import { Cover } from "./ConfigHyde/Cover"; // 导入Wallaper模块
+import { HitokotoDate } from "./ConfigHyde/HitokotoDate"; // 导入HitokotoDate模块
 
 import { CommentData } from "./ConfigHyde/Comment"; //导入评论配置
 import { Nav } from "./ConfigHyde/Nav"; // 导入Nav模块
@@ -397,6 +398,41 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     // logo: "/teek-logo-mini.svg",
     logo: "/favicon.ico",   //网站logo
+    
+    // Teek 主题首页配置
+    teekHome: true,
+    vpHome: false,
+    
+    // 文章列表配置
+    post: {
+      postStyle: "card",
+      coverImgMode: "default",
+      excerptPosition: "top",
+      showMore: true,
+      moreLabel: "阅读全文 →",
+      transition: true,
+    },
+    
+    // 首页侧栏配置
+    homeCardListPosition: "none",
+    
+    // Banner 配置
+    banner: {
+      enabled: true,
+      name: "Linsir's Travel 🌍",
+      bgStyle: "fullImg",
+      imgSrc: Wallpaper,
+      imgInterval: 15000,
+      imgShuffle: true,
+      imgWaves: true,
+      mask: false,
+      textColor: "#ffffff",
+      titleFontSize: "3.2rem",
+      descFontSize: "1.4rem",
+      descStyle: "types",
+      description: HitokotoDate,
+    },
+    
     darkModeSwitchLabel: "主题",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",

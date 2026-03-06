@@ -19,7 +19,9 @@ export default defineConfig({
         text: '项目准备',
         items: [
           { text: '系统业务需求', link: '/00-project-preparation/01-system-business-requirements/01-business-requirements-v1.0' },
-          { text: '需求分析', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/requirements-analysis-checklist' }
+          { text: '需求分析', link: '/00-project-preparation/02-requirements-analysis/00-requirements-analysis-standard/requirements-analysis-checklist' },
+          { text: '技术调研', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/technical-research-checklist' },
+          { text: '项目可行性', link: '/00-project-preparation/04-project-feasibility/00-project-feasibility-standard/project-feasibility-checklist' }
         ]
       },
       { 
@@ -222,6 +224,160 @@ export default defineConfig({
         }
       ]
     },
+    '/00-project-preparation/03-technical-research/': [
+      {
+        text: '技术调研',
+        items: [
+          { text: '调研检查清单', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/technical-research-checklist' }
+        ]
+      },
+      {
+        text: '流程图',
+        collapsed: true,
+        items: [
+          { text: '技术调研流程图', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/01-process-diagrams/technical-research-process' }
+        ]
+      },
+      {
+        text: '流程标准',
+        collapsed: true,
+        items: [
+          { text: '技术选型流程', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/02-process-standards/technology-selection-process' },
+          { text: '架构调研流程', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/02-process-standards/architecture-research-process' },
+          { text: '技术验证流程', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/02-process-standards/technical-validation-process' },
+          { text: '风险评估流程', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/02-process-standards/risk-assessment-process' }
+        ]
+      },
+      {
+        text: '技能文档',
+        collapsed: true,
+        items: [
+          { text: '技术选型技能', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/03-skills/technology-selection-process-skill' },
+          { text: '架构调研技能', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/03-skills/architecture-research-process-skill' },
+          { text: '技术验证技能', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/03-skills/technical-validation-process-skill' },
+          { text: '风险评估技能', link: '/00-project-preparation/03-technical-research/00-technical-research-standard/03-skills/risk-assessment-process-skill' }
+        ]
+      },
+      {
+        text: '技术选型',
+        collapsed: true,
+        items: [
+          { text: '技术选型总览', link: '/00-project-preparation/03-technical-research/01-technology-selection/00-technology-selection-summary' },
+          { text: '前端技术选型', link: '/00-project-preparation/03-technical-research/01-technology-selection/01-frontend-selection' },
+          { text: '后端技术选型', link: '/00-project-preparation/03-technical-research/01-technology-selection/02-backend-selection' },
+          { text: '数据库选型', link: '/00-project-preparation/03-technical-research/01-technology-selection/03-database-selection' },
+          { text: '认证协议选型', link: '/00-project-preparation/03-technical-research/01-technology-selection/04-auth-protocol-selection' },
+          { text: '缓存选型', link: '/00-project-preparation/03-technical-research/01-technology-selection/05-cache-selection' },
+          { text: '部署选型', link: '/00-project-preparation/03-technical-research/01-technology-selection/06-deployment-selection' }
+        ]
+      },
+      {
+        text: '架构调研',
+        collapsed: true,
+        items: [
+          { text: '架构调研总览', link: '/00-project-preparation/03-technical-research/02-architecture-research/00-architecture-research-summary' },
+          { text: '架构模式', link: '/00-project-preparation/03-technical-research/02-architecture-research/01-architecture-pattern' },
+          { text: '前后端分离', link: '/00-project-preparation/03-technical-research/02-architecture-research/02-frontend-backend-separation' },
+          { text: '数据流架构', link: '/00-project-preparation/03-technical-research/02-architecture-research/03-data-flow-architecture' },
+          { text: '安全架构', link: '/00-project-preparation/03-technical-research/02-architecture-research/04-security-architecture' },
+          { text: '部署架构', link: '/00-project-preparation/03-technical-research/02-architecture-research/05-deployment-architecture' }
+        ]
+      },
+      {
+        text: '技术验证',
+        collapsed: true,
+        items: [
+          { text: '技术验证总览', link: '/00-project-preparation/03-technical-research/03-technical-validation/00-technical-validation-summary' },
+          { text: 'SSO POC报告', link: '/00-project-preparation/03-technical-research/03-technical-validation/01-sso-poc-report' },
+          { text: '集成 POC报告', link: '/00-project-preparation/03-technical-research/03-technical-validation/02-integration-poc-report' },
+          { text: '性能 POC报告', link: '/00-project-preparation/03-technical-research/03-technical-validation/03-performance-poc-report' },
+          { text: '安全 POC报告', link: '/00-project-preparation/03-technical-research/03-technical-validation/04-security-poc-report' }
+        ]
+      },
+      {
+        text: '风险评估',
+        collapsed: true,
+        items: [
+          { text: '风险评估总览', link: '/00-project-preparation/03-technical-research/04-risk-assessment/00-risk-assessment-summary' },
+          { text: '技术成熟度风险', link: '/00-project-preparation/03-technical-research/04-risk-assessment/01-technology-maturity-risk' },
+          { text: '团队能力风险', link: '/00-project-preparation/03-technical-research/04-risk-assessment/02-team-capability-risk' },
+          { text: '第三方风险', link: '/00-project-preparation/03-technical-research/04-risk-assessment/03-third-party-risk' }
+        ]
+      },
+      {
+        text: '技术可行性报告',
+        collapsed: true,
+        items: [
+          { text: '技术可行性报告 v1.0', link: '/00-project-preparation/03-technical-research/05-technical-feasibility-report/01-technical-feasibility-report' },
+          { text: '技术可行性报告 v1.1', link: '/00-project-preparation/03-technical-research/05-technical-feasibility-report/01-technical-feasibility-report-v1.1' },
+          { text: '报告评审', link: '/00-project-preparation/03-technical-research/05-technical-feasibility-report/02-technical-feasibility-report-review' }
+        ]
+      }
+    ],
+    '/00-project-preparation/04-project-feasibility/': [
+      {
+        text: '项目可行性',
+        items: [
+          { text: '可行性检查清单', link: '/00-project-preparation/04-project-feasibility/00-project-feasibility-standard/project-feasibility-checklist' }
+        ]
+      },
+      {
+        text: '流程图',
+        collapsed: true,
+        items: [
+          { text: '项目可行性流程图', link: '/00-project-preparation/04-project-feasibility/00-project-feasibility-standard/01-process-diagrams/project-feasibility-process' }
+        ]
+      },
+      {
+        text: '流程标准',
+        collapsed: true,
+        items: [
+          { text: '成本效益分析流程', link: '/00-project-preparation/04-project-feasibility/00-project-feasibility-standard/02-process-standards/cost-benefit-analysis-process' },
+          { text: '项目风险评估流程', link: '/00-project-preparation/04-project-feasibility/00-project-feasibility-standard/02-process-standards/project-risk-assessment-process' },
+          { text: '初步方案流程', link: '/00-project-preparation/04-project-feasibility/00-project-feasibility-standard/02-process-standards/preliminary-proposal-process' }
+        ]
+      },
+      {
+        text: '技能文档',
+        collapsed: true,
+        items: [
+          { text: '成本效益分析技能', link: '/00-project-preparation/04-project-feasibility/00-project-feasibility-standard/03-skills/cost-benefit-analysis-process-skill' },
+          { text: '项目风险评估技能', link: '/00-project-preparation/04-project-feasibility/00-project-feasibility-standard/03-skills/project-risk-assessment-process-skill' },
+          { text: '初步方案技能', link: '/00-project-preparation/04-project-feasibility/00-project-feasibility-standard/03-skills/preliminary-proposal-process-skill' }
+        ]
+      },
+      {
+        text: '成本效益分析',
+        collapsed: true,
+        items: [
+          { text: '成本效益总览', link: '/00-project-preparation/04-project-feasibility/01-cost-benefit-analysis/00-cost-benefit-summary' },
+          { text: '成本估算', link: '/00-project-preparation/04-project-feasibility/01-cost-benefit-analysis/01-cost-estimate' },
+          { text: '效益分析', link: '/00-project-preparation/04-project-feasibility/01-cost-benefit-analysis/02-benefit-analysis' },
+          { text: 'ROI分析', link: '/00-project-preparation/04-project-feasibility/01-cost-benefit-analysis/03-roi-analysis' }
+        ]
+      },
+      {
+        text: '项目风险评估',
+        collapsed: true,
+        items: [
+          { text: '项目风险总览', link: '/00-project-preparation/04-project-feasibility/02-project-risk-assessment/00-project-risk-summary' },
+          { text: '进度风险', link: '/00-project-preparation/04-project-feasibility/02-project-risk-assessment/01-schedule-risk' },
+          { text: '资源风险', link: '/00-project-preparation/04-project-feasibility/02-project-risk-assessment/02-resource-risk' },
+          { text: '业务风险', link: '/00-project-preparation/04-project-feasibility/02-project-risk-assessment/03-business-risk' }
+        ]
+      },
+      {
+        text: '初步方案',
+        collapsed: true,
+        items: [
+          { text: '初步方案文档', link: '/00-project-preparation/04-project-feasibility/03-preliminary-proposal/00-preliminary-proposal' },
+          { text: '项目范围', link: '/00-project-preparation/04-project-feasibility/03-preliminary-proposal/01-project-scope' },
+          { text: '实施计划', link: '/00-project-preparation/04-project-feasibility/03-preliminary-proposal/02-implementation-plan' },
+          { text: '资源需求', link: '/00-project-preparation/04-project-feasibility/03-preliminary-proposal/03-resource-requirements' },
+          { text: '方案评审', link: '/00-project-preparation/04-project-feasibility/03-preliminary-proposal/00-preliminary-proposal-review' }
+        ]
+      }
+    ],
     '/01-project-initiation/': [
       {
         text: '项目立项',

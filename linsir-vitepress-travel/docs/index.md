@@ -9,7 +9,7 @@ blog:
     - 每一次旅行，都是一次心灵的洗礼
     - 在路上，遇见更好的自己
     - 最好的时光在路上
-  pageSize: 6
+  pageSize: 8
 ---
 
 <script setup>
