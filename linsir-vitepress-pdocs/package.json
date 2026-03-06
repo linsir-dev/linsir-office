@@ -13,5 +13,10 @@
   "license": "MIT",
   "devDependencies": {
     "vitepress": "^1.0.0"
+  },
+  "dependencies": {
+    "@mdit-vue/plugin-component": "^3.0.2",
+    "markdown-it-mermaid": "^0.2.5",
+    "mermaid": "^11.12.3"
   }
 }

@@ -5,7 +5,8 @@ export default defineConfig({
   title: "System项目AI文档",
   description: "项目准备与需求分析文档库",
   head: [
-    ['link', { rel: 'icon', href: '/images/logo.png' }]
+    ['link', { rel: 'icon', href: '/images/logo.png' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js' }]
   ],
   ignoreDeadLinks: true,
   themeConfig: {
