@@ -1,0 +1,66 @@
+flowchart TB
+    subgraph Input["输入阶段"]
+        A1["领域模型设计"]
+        A2["业务需求文档"]
+        A3["架构基线文档"]
+    end
+
+    subgraph Standard["规范阶段"]
+        B1["数据库命名规范"]
+        B2["SQL编码规范"]
+        B3["数据库评审规范"]
+        B4["数据字典规范"]
+    end
+
+    subgraph Logical["逻辑设计"]
+        C1["实体识别"]
+        C2["属性定义"]
+        C3["关系建立"]
+        C4["ER图生成"]
+        C5["逻辑模型文档"]
+    end
+
+    subgraph Physical["物理设计"]
+        D1["表结构设计"]
+        D2["约束设计"]
+        D3["索引设计"]
+        D4["分区设计"]
+        D5["备份策略"]
+    end
+
+    subgraph Dictionary["数据字典"]
+        E1["系统数据字典"]
+        E2["业务数据字典"]
+    end
+
+    subgraph SQL["SQL脚本"]
+        F1["DDL脚本"]
+        F2["DML脚本"]
+        F3["DCL脚本"]
+        F4["迁移脚本"]
+    end
+
+    subgraph Review["评审阶段"]
+        G1["评审通知"]
+        G2["评审会议"]
+        G3["评审报告"]
+        G4["基线建立"]
+    end
+
+    Input --> Standard
+    Standard --> Logical
+    C1 --> C2 --> C3 --> C4 --> C5
+    C5 --> Physical
+    D1 --> D2 --> D3 --> D4 --> D5
+    D5 --> Dictionary
+    E1 --> E2 --> SQL
+    F1 --> F2 --> F3 --> F4 --> Review
+    G1 --> G2 --> G3 --> G4
+
+    style Input fill:#e1f5fe
+    style Standard fill:#fff3e0
+    style Logical fill:#e8f5e9
+    style Physical fill:#fce4ec
+    style Dictionary fill:#f3e5f5
+    style SQL fill:#e0f2f1
+    style Review fill:#fff8e1

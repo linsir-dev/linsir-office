@@ -1,0 +1,108 @@
+%% 架构设计总流程图
+%% 阶段：系统设计 - 架构设计
+%% 版本：1.0
+
+flowchart TB
+    %% 开始节点
+    Start([开始架构设计]) --> Input[输入：需求文档<br/>项目章程<br/>技术可行性报告]
+    
+    %% 业务分析阶段
+    Input --> BA[业务分析阶段]
+    BA --> BA1[领域边界划分]
+    BA --> BA2[领域模型设计]
+    BA --> BA3[核心业务流程分析]
+    BA --> BA4[业务规则梳理]
+    BA --> BA5[用户场景分析]
+    BA --> BA6[系统集成场景分析]
+    
+    BA1 & BA2 & BA3 & BA4 & BA5 & BA6 --> BAReview{业务分析<br/>评审通过?}
+    BAReview -->|否| BA
+    BAReview -->|是| AA[架构分析阶段]
+    
+    %% 架构分析阶段
+    AA --> AA1[功能需求映射]
+    AA --> AA2[非功能需求映射]
+    AA --> AA3[现状架构盘点]
+    AA --> AA4[架构差距分析]
+    AA --> AA5[技术选型分析]
+    AA --> AA6[架构风格选型]
+    AA --> AA7[技术约束分析]
+    AA --> AA8[安全合规分析]
+    
+    AA1 & AA2 & AA3 & AA4 & AA5 & AA6 & AA7 & AA8 --> AAReview{架构分析<br/>评审通过?}
+    AAReview -->|否| AA
+    AAReview -->|是| AD[架构设计阶段]
+    
+    %% 架构设计阶段
+    AD --> AD1[总体架构设计]
+    AD --> AD2[技术架构设计]
+    AD --> AD3[部署架构设计]
+    AD --> AD4[安全架构设计]
+    AD --> AD5[服务设计]
+    AD --> AD6[开发组件设计]
+    AD --> AD7[部署组件设计]
+    
+    AD1 & AD2 & AD3 & AD4 & AD5 & AD6 & AD7 --> ADReview{架构设计<br/>评审通过?}
+    ADReview -->|否| AD
+    ADReview -->|是| AC[架构清单阶段]
+    
+    %% 架构清单阶段
+    AC --> AC1[前端技术选型清单]
+    AC --> AC2[后端技术选型清单]
+    AC --> AC3[基础设施选型清单]
+    AC --> AC4[认证安全清单]
+    AC --> AC5[授权安全清单]
+    AC --> AC6[数据安全清单]
+    AC --> AC7[等保三级合规清单]
+    
+    AC1 & AC2 & AC3 & AC4 & AC5 & AC6 & AC7 --> ACReview{架构清单<br/>评审通过?}
+    ACReview -->|否| AC
+    ACReview -->|是| FinalReview[架构基线评审]
+    
+    %% 最终评审和输出
+    FinalReview --> Final{基线评审<br/>通过?}
+    Final -->|否| AD
+    Final -->|是| Output[输出架构基线]
+    
+    Output --> Artifacts[交付物：
+    - 业务分析文档（6个）
+    - 架构分析文档（8个）
+    - 架构设计文档（15个）
+    - 架构清单文档（7个）
+    - 架构基线]
+    
+    Artifacts --> End([结束])
+    
+    %% 并行流程标注
+    subgraph 并行任务["可并行执行"]
+        direction TB
+        BA1 & BA2 & BA3 & BA4 & BA5 & BA6
+    end
+    
+    subgraph 并行任务2["可并行执行"]
+        direction TB
+        AA1 & AA2 & AA3 & AA4 & AA5 & AA6 & AA7 & AA8
+    end
+    
+    subgraph 并行任务3["可并行执行"]
+        direction TB
+        AD1 & AD2 & AD3 & AD4 & AD5 & AD6 & AD7
+    end
+    
+    subgraph 并行任务4["可并行执行"]
+        direction TB
+        AC1 & AC2 & AC3 & AC4 & AC5 & AC6 & AC7
+    end
+    
+    %% 样式定义
+    classDef startEnd fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef process fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef review fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef output fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    classDef artifacts fill:#fff8e1,stroke:#f57f17,stroke-width:2px
+    
+    class Start,End startEnd
+    class BA,AA,AD,AC,BA1,BA2,BA3,BA4,BA5,BA6,AA1,AA2,AA3,AA4,AA5,AA6,AA7,AA8,AD1,AD2,AD3,AD4,AD5,AD6,AD7,AC1,AC2,AC3,AC4,AC5,AC6,AC7 process
+    class BAReview,AAReview,ADReview,ACReview,Final review
+    class Output output
+    class Artifacts artifacts

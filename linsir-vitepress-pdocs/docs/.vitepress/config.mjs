@@ -33,6 +33,46 @@ export default defineConfig({
           { text: '立项申请', link: '/01-project-initiation/03-project-application/01-application-documents/01-project-application-form' },
           { text: '立项审批', link: '/01-project-initiation/04-project-approval/01-approval-documents/01-project-approval-notice' }
         ]
+      },
+      { 
+        text: '系统设计',
+        items: [
+          { text: '架构设计', link: '/02-design/01-architecture/00-architecture-standard/architecture-design-checklist' },
+          { text: '数据库设计', link: '/02-design/02-database/00-database-standard/database-design-checklist' },
+          { text: '接口设计', link: '/02-design/03-interface-design/00-interface-standard/interface-design-checklist' },
+          { text: 'UI/UX设计', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/ui-ux-design-checklist' }
+        ]
+      },
+      { 
+        text: '迭代开发',
+        items: [
+          { text: 'Sprint 1 - 核心功能', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/01-iteration-goal' },
+          { text: 'Sprint 2 - 扩展功能', link: '/03-iterations/02-sprint-2-extension/00-iteration-plan/01-iteration-goal' },
+          { text: 'Sprint 3 - 优化完善', link: '/03-iterations/03-sprint-3-refinement/00-iteration-plan/01-iteration-goal' }
+        ]
+      },
+      { 
+        text: '测试验证',
+        items: [
+          { text: '单元测试', link: '/04-testing/01-unit/unit-testing' },
+          { text: '集成测试', link: '/04-testing/02-integration/integration-testing' },
+          { text: '系统测试', link: '/04-testing/03-system/system-testing' },
+          { text: 'UAT测试', link: '/04-testing/04-uat/uat-testing' }
+        ]
+      },
+      { 
+        text: '部署上线',
+        items: [
+          { text: '环境搭建', link: '/05-deployment/01-environment/environment-setup' },
+          { text: '部署配置', link: '/05-deployment/02-config/deployment-config' }
+        ]
+      },
+      { 
+        text: '运维维护',
+        items: [
+          { text: '监控配置', link: '/06-operations/01-monitoring/monitoring-config' },
+          { text: '维护指南', link: '/06-operations/02-maintenance/maintenance-guide' }
+        ]
       }
     ],
 
@@ -624,6 +664,460 @@ export default defineConfig({
           items: [
             { text: '项目启动通知', link: '/01-project-initiation/04-project-approval/02-project-launch/03-project-launch-notice' },
             { text: '启动会议纪要', link: '/01-project-initiation/04-project-approval/02-project-launch/04-project-kickoff-minutes' }
+          ]
+        }
+      ],
+      '/02-design/01-architecture/': [
+        {
+          text: '架构设计',
+          items: [
+            { text: '架构设计检查清单', link: '/02-design/01-architecture/00-architecture-standard/architecture-design-checklist' }
+          ]
+        },
+        {
+          text: '流程图',
+          collapsed: true,
+          items: [
+            { text: '架构设计流程图', link: '/02-design/01-architecture/00-architecture-standard/01-process-diagrams/architecture-design-process-guide' }
+          ]
+        },
+        {
+          text: '流程标准',
+          collapsed: true,
+          items: [
+            { text: '业务领域分析流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/01-business-domain-analysis-process' },
+            { text: '业务流程分析流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/02-business-process-analysis-process' },
+            { text: '业务场景分析流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/03-business-scenarios-analysis-process' },
+            { text: '需求映射流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/04-requirement-mapping-process' },
+            { text: '现状评估流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/05-current-assessment-process' },
+            { text: '技术选型流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/06-technology-selection-process' },
+            { text: '架构约束流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/07-architecture-constraints-process' },
+            { text: '系统架构设计流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/08-system-architecture-design-process' },
+            { text: '技术架构流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/08-technical-architecture-process' },
+            { text: '部署架构流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/09-deployment-architecture-process' },
+            { text: '安全架构流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/10-security-architecture-process' },
+            { text: '服务设计流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/11-service-design-process' },
+            { text: '开发组件流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/12-development-components-process' },
+            { text: '部署组件流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/13-deployment-components-process' },
+            { text: '架构技术清单流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/14-architecture-technology-list-process' },
+            { text: '安全检查清单流程', link: '/02-design/01-architecture/00-architecture-standard/02-process-standards/15-security-checklist-process' }
+          ]
+        },
+        {
+          text: '技能文档',
+          collapsed: true,
+          items: [
+            { text: '业务领域分析技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/business-domain-analysis-process.skill' },
+            { text: '业务流程分析技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/business-process-analysis-process.skill' },
+            { text: '业务场景分析技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/business-scenarios-analysis-process.skill' },
+            { text: '需求映射技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/requirement-mapping-process.skill' },
+            { text: '现状评估技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/current-assessment-process.skill' },
+            { text: '技术选型技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/technology-selection-process.skill' },
+            { text: '架构约束技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/architecture-constraints-process.skill' },
+            { text: '系统架构设计技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/system-architecture-design-process.skill' },
+            { text: '技术架构技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/technical-architecture-process.skill' },
+            { text: '部署架构技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/deployment-architecture-process.skill' },
+            { text: '安全架构技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/security-architecture-process.skill' },
+            { text: '服务设计技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/service-design-process.skill' },
+            { text: '开发组件技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/development-components-process.skill' },
+            { text: '部署组件技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/deployment-components-process.skill' },
+            { text: '架构技术清单技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/architecture-technology-list-process.skill' },
+            { text: '安全检查清单技能', link: '/02-design/01-architecture/00-architecture-standard/03-skills/security-checklist-process.skill' }
+          ]
+        },
+        {
+          text: '业务分析',
+          collapsed: true,
+          items: [
+            { text: '领域边界', link: '/02-design/01-architecture/01-business-analysis/01-domain-analysis/01-domain-boundaries' },
+            { text: '领域模型', link: '/02-design/01-architecture/01-business-analysis/01-domain-analysis/02-domain-model' },
+            { text: '领域分析评审', link: '/02-design/01-architecture/01-business-analysis/01-domain-analysis/03-domain-analysis-review-record' },
+            { text: '核心流程', link: '/02-design/01-architecture/01-business-analysis/02-business-process/01-core-processes' },
+            { text: '业务规则', link: '/02-design/01-architecture/01-business-analysis/02-business-process/02-business-rules' },
+            { text: '业务流程评审', link: '/02-design/01-architecture/01-business-analysis/02-business-process/03-business-process-review-record' },
+            { text: '用户场景', link: '/02-design/01-architecture/01-business-analysis/03-business-scenarios/01-user-scenarios' },
+            { text: '集成场景', link: '/02-design/01-architecture/01-business-analysis/03-business-scenarios/02-integration-scenarios' },
+            { text: '业务场景评审', link: '/02-design/01-architecture/01-business-analysis/03-business-scenarios/03-business-scenarios-review-record' }
+          ]
+        },
+        {
+          text: '架构分析',
+          collapsed: true,
+          items: [
+            { text: '功能需求映射', link: '/02-design/01-architecture/02-architecture-analysis/01-requirement-mapping/01-functional-requirements-mapping' },
+            { text: '非功能需求映射', link: '/02-design/01-architecture/02-architecture-analysis/01-requirement-mapping/02-non-functional-requirements-mapping' },
+            { text: '需求映射评审', link: '/02-design/01-architecture/02-architecture-analysis/01-requirement-mapping/03-requirement-mapping-review-record' },
+            { text: '现有架构清单', link: '/02-design/01-architecture/02-architecture-analysis/02-current-assessment/01-current-architecture-inventory' },
+            { text: '架构差距分析', link: '/02-design/01-architecture/02-architecture-analysis/02-current-assessment/02-architecture-gap-analysis' },
+            { text: '现状评估评审', link: '/02-design/01-architecture/02-architecture-analysis/02-current-assessment/03-current-assessment-review-record' },
+            { text: '技术选型报告', link: '/02-design/01-architecture/02-architecture-analysis/03-technology-selection/01-technology-selection-report' },
+            { text: '架构风格决策', link: '/02-design/01-architecture/02-architecture-analysis/03-technology-selection/02-architecture-style-adr' },
+            { text: '技术选型评审', link: '/02-design/01-architecture/02-architecture-analysis/03-technology-selection/03-technology-selection-review-record' },
+            { text: '技术约束', link: '/02-design/01-architecture/02-architecture-analysis/04-architecture-constraints/01-technical-constraints' },
+            { text: '安全合规', link: '/02-design/01-architecture/02-architecture-analysis/04-architecture-constraints/02-security-compliance' },
+            { text: '架构约束评审', link: '/02-design/01-architecture/02-architecture-analysis/04-architecture-constraints/03-architecture-constraints-review-record' }
+          ]
+        },
+        {
+          text: '架构设计',
+          collapsed: true,
+          items: [
+            { text: '逻辑架构', link: '/02-design/01-architecture/03-architecture-design/01-system-architecture/01-logical-architecture' },
+            { text: '物理架构', link: '/02-design/01-architecture/03-architecture-design/01-system-architecture/02-physical-architecture' },
+            { text: '系统架构评审', link: '/02-design/01-architecture/03-architecture-design/01-system-architecture/03-system-architecture-review-record' },
+            { text: '前端架构', link: '/02-design/01-architecture/03-architecture-design/02-technical-architecture/01-frontend-architecture' },
+            { text: '后端架构', link: '/02-design/01-architecture/03-architecture-design/02-technical-architecture/02-backend-architecture' },
+            { text: '数据架构', link: '/02-design/01-architecture/03-architecture-design/02-technical-architecture/03-data-architecture' },
+            { text: '技术架构评审', link: '/02-design/01-architecture/03-architecture-design/02-technical-architecture/04-technical-architecture-review-record' },
+            { text: '部署架构', link: '/02-design/01-architecture/03-architecture-design/03-deployment-architecture/01-deployment-architecture' },
+            { text: '高可用架构', link: '/02-design/01-architecture/03-architecture-design/03-deployment-architecture/02-high-availability-architecture' },
+            { text: '部署架构评审', link: '/02-design/01-architecture/03-architecture-design/03-deployment-architecture/03-deployment-architecture-review-record' },
+            { text: '认证授权架构', link: '/02-design/01-architecture/03-architecture-design/04-security-architecture/01-authentication-authorization-architecture' },
+            { text: '数据安全架构', link: '/02-design/01-architecture/03-architecture-design/04-security-architecture/02-data-security-architecture' },
+            { text: '安全架构评审', link: '/02-design/01-architecture/03-architecture-design/04-security-architecture/03-security-architecture-review-record' },
+            { text: '服务划分', link: '/02-design/01-architecture/03-architecture-design/05-service-design/01-service-division' },
+            { text: '服务交互', link: '/02-design/01-architecture/03-architecture-design/05-service-design/02-service-interaction' },
+            { text: '服务设计评审', link: '/02-design/01-architecture/03-architecture-design/05-service-design/03-service-design-review-record' },
+            { text: '前端组件', link: '/02-design/01-architecture/03-architecture-design/06-development-components/01-frontend-components' },
+            { text: '后端组件', link: '/02-design/01-architecture/03-architecture-design/06-development-components/02-backend-components' },
+            { text: '开发组件评审', link: '/02-design/01-architecture/03-architecture-design/06-development-components/03-development-components-review-record' },
+            { text: '容器化', link: '/02-design/01-architecture/03-architecture-design/07-deployment-components/01-containerization' },
+            { text: '运维组件', link: '/02-design/01-architecture/03-architecture-design/07-deployment-components/02-operation-components' },
+            { text: '部署组件评审', link: '/02-design/01-architecture/03-architecture-design/07-deployment-components/03-deployment-components-review-record' }
+          ]
+        },
+        {
+          text: '技术清单',
+          collapsed: true,
+          items: [
+            { text: '前端技术清单', link: '/02-design/01-architecture/04-architecture-technology-list/01-technology-selection-list/01-frontend-technology-list' },
+            { text: '后端技术清单', link: '/02-design/01-architecture/04-architecture-technology-list/01-technology-selection-list/02-backend-technology-list' },
+            { text: '基础设施技术清单', link: '/02-design/01-architecture/04-architecture-technology-list/01-technology-selection-list/03-infrastructure-technology-list' },
+            { text: '技术清单评审', link: '/02-design/01-architecture/04-architecture-technology-list/01-technology-selection-list/04-technology-selection-list-review-record' },
+            { text: '认证安全清单', link: '/02-design/01-architecture/04-architecture-technology-list/02-security-checklist/01-authentication-security-checklist' },
+            { text: '授权安全清单', link: '/02-design/01-architecture/04-architecture-technology-list/02-security-checklist/02-authorization-security-checklist' },
+            { text: '数据安全清单', link: '/02-design/01-architecture/04-architecture-technology-list/02-security-checklist/03-data-security-checklist' },
+            { text: '等保三级清单', link: '/02-design/01-architecture/04-architecture-technology-list/02-security-checklist/04-compliance-level3-checklist' },
+            { text: '安全检查清单评审', link: '/02-design/01-architecture/04-architecture-technology-list/02-security-checklist/05-security-checklist-review-record' }
+          ]
+        },
+        {
+          text: '架构评审',
+          collapsed: true,
+          items: [
+            { text: '架构评审通知', link: '/02-design/01-architecture/05-architecture-review/01-architecture-review-notice' },
+            { text: '架构评审议程', link: '/02-design/01-architecture/05-architecture-review/02-architecture-review-agenda' },
+            { text: '架构评审报告', link: '/02-design/01-architecture/05-architecture-review/03-architecture-review-report' },
+            { text: '架构评审记录', link: '/02-design/01-architecture/05-architecture-review/04-architecture-review-record' },
+            { text: '架构基线', link: '/02-design/01-architecture/05-architecture-review/05-architecture-baseline' }
+          ]
+        }
+      ],
+      '/02-design/02-database/': [
+        {
+          text: '数据库设计',
+          items: [
+            { text: '数据库设计检查清单', link: '/02-design/02-database/00-database-standard/database-design-checklist' }
+          ]
+        },
+        {
+          text: '流程图',
+          collapsed: true,
+          items: [
+            { text: '数据库设计流程图', link: '/02-design/02-database/00-database-standard/01-process-diagrams/database-design-process-guide' }
+          ]
+        },
+        {
+          text: '流程标准',
+          collapsed: true,
+          items: [
+            { text: '数据库设计标准流程', link: '/02-design/02-database/00-database-standard/02-process-standards/01-database-design-standard-process' },
+            { text: '数据库设计流程', link: '/02-design/02-database/00-database-standard/02-process-standards/02-database-design-process' },
+            { text: '数据字典流程', link: '/02-design/02-database/00-database-standard/02-process-standards/03-data-dictionary-process' },
+            { text: 'SQL脚本流程', link: '/02-design/02-database/00-database-standard/02-process-standards/04-sql-scripts-process' }
+          ]
+        },
+        {
+          text: '技能文档',
+          collapsed: true,
+          items: [
+            { text: '数据库设计标准技能', link: '/02-design/02-database/00-database-standard/03-skills/database-design-standard-process.skill' },
+            { text: '数据库设计技能', link: '/02-design/02-database/00-database-standard/03-skills/database-design-process.skill' },
+            { text: '数据字典技能', link: '/02-design/02-database/00-database-standard/03-skills/data-dictionary-process.skill' },
+            { text: 'SQL脚本技能', link: '/02-design/02-database/00-database-standard/03-skills/sql-scripts-process.skill' }
+          ]
+        },
+        {
+          text: '设计标准',
+          collapsed: true,
+          items: [
+            { text: '数据库命名规范', link: '/02-design/02-database/01-database-design-standard/01-database-naming-convention' },
+            { text: 'SQL编码规范', link: '/02-design/02-database/01-database-design-standard/02-sql-coding-standard' },
+            { text: '数据库评审标准', link: '/02-design/02-database/01-database-design-standard/03-database-review-standard' },
+            { text: '数据字典标准', link: '/02-design/02-database/01-database-design-standard/04-data-dictionary-standard' }
+          ]
+        },
+        {
+          text: '数据库设计',
+          collapsed: true,
+          items: [
+            { text: '逻辑数据模型', link: '/02-design/02-database/02-database-design/01-logical-data-model' }
+          ]
+        }
+      ],
+      '/02-design/03-interface-design/': [
+        {
+          text: '接口设计',
+          items: [
+            { text: '接口设计检查清单', link: '/02-design/03-interface-design/00-interface-standard/interface-design-checklist' }
+          ]
+        },
+        {
+          text: '流程图',
+          collapsed: true,
+          items: [
+            { text: '接口设计流程图', link: '/02-design/03-interface-design/00-interface-standard/01-process-diagrams/interface-design-process' }
+          ]
+        },
+        {
+          text: '流程标准',
+          collapsed: true,
+          items: [
+            { text: '接口标准流程', link: '/02-design/03-interface-design/00-interface-standard/02-process-standards/05-interface-standard-process' },
+            { text: 'API接口清单流程', link: '/02-design/03-interface-design/00-interface-standard/02-process-standards/06-api-interface-list-process' }
+          ]
+        },
+        {
+          text: '技能文档',
+          collapsed: true,
+          items: [
+            { text: '接口标准技能', link: '/02-design/03-interface-design/00-interface-standard/03-skills/interface-standard-process.skill' },
+            { text: 'API接口清单技能', link: '/02-design/03-interface-design/00-interface-standard/03-skills/api-interface-list-process.skill' }
+          ]
+        },
+        {
+          text: 'REST API标准',
+          collapsed: true,
+          items: [
+            { text: 'RESTful API标准', link: '/02-design/03-interface-design/01-rest-api-standard/01-restful-api-standard' },
+            { text: '接口安全标准', link: '/02-design/03-interface-design/01-rest-api-standard/02-interface-security-standard' },
+            { text: '接口版本标准', link: '/02-design/03-interface-design/01-rest-api-standard/03-interface-version-standard' }
+          ]
+        },
+        {
+          text: 'API接口规范',
+          collapsed: true,
+          items: [
+            { text: 'API接口清单', link: '/02-design/03-interface-design/02-api-specification/01-api-interface-list' },
+            { text: '用户API规范', link: '/02-design/03-interface-design/02-api-specification/02-user-api-specification' },
+            { text: '角色API规范', link: '/02-design/03-interface-design/02-api-specification/03-role-api-specification' },
+            { text: '组织API规范', link: '/02-design/03-interface-design/02-api-specification/04-org-api-specification' },
+            { text: '系统API规范', link: '/02-design/03-interface-design/02-api-specification/05-system-api-specification' }
+          ]
+        },
+        {
+          text: '接口评审',
+          collapsed: true,
+          items: [
+            { text: '接口评审通知', link: '/02-design/03-interface-design/03-interface-review/01-interface-review-notice' },
+            { text: '接口评审议程', link: '/02-design/03-interface-design/03-interface-review/02-interface-review-agenda' },
+            { text: '接口评审报告', link: '/02-design/03-interface-design/03-interface-review/03-interface-review-report' },
+            { text: '接口评审记录', link: '/02-design/03-interface-design/03-interface-review/04-interface-review-record' },
+            { text: '接口基线', link: '/02-design/03-interface-design/03-interface-review/05-interface-baseline' }
+          ]
+        }
+      ],
+      '/02-design/04-ui-ux-design/': [
+        {
+          text: 'UI/UX设计',
+          items: [
+            { text: 'UI/UX设计检查清单', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/ui-ux-design-checklist' }
+          ]
+        },
+        {
+          text: '流程图',
+          collapsed: true,
+          items: [
+            { text: 'UI/UX整体流程', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/01-process-diagrams/01-ui-ux-overall-process' }
+          ]
+        },
+        {
+          text: '流程标准',
+          collapsed: true,
+          items: [
+            { text: '用户研究流程', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/02-process-standards/01-user-research-process' },
+            { text: '信息架构流程', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/02-process-standards/02-information-architecture-process' },
+            { text: '交互设计流程', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/02-process-standards/03-interaction-design-process' },
+            { text: '视觉设计流程', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/02-process-standards/04-visual-design-process' },
+            { text: '原型设计流程', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/02-process-standards/05-prototype-design-process' },
+            { text: '模块设计流程', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/02-process-standards/06-module-design-process' }
+          ]
+        },
+        {
+          text: '技能文档',
+          collapsed: true,
+          items: [
+            { text: 'UI/UX设计技能', link: '/02-design/04-ui-ux-design/00-ui-ux-design-standards/03-skills/ui-ux-design-process.skill' }
+          ]
+        },
+        {
+          text: '用户研究',
+          collapsed: true,
+          items: [
+            { text: '用户画像设计', link: '/02-design/04-ui-ux-design/01-user-research/01-user-personas-design' },
+            { text: '用户行为模式', link: '/02-design/04-ui-ux-design/01-user-research/02-user-behavior-patterns' },
+            { text: '交互习惯研究', link: '/02-design/04-ui-ux-design/01-user-research/03-interaction-habits-research' },
+            { text: '视觉偏好研究', link: '/02-design/04-ui-ux-design/01-user-research/04-visual-preference-research' },
+            { text: '设计场景', link: '/02-design/04-ui-ux-design/01-user-research/05-design-scenarios' },
+            { text: '设计机会', link: '/02-design/04-ui-ux-design/01-user-research/06-design-opportunities' },
+            { text: '用户研究评审', link: '/02-design/04-ui-ux-design/01-user-research/07-user-research-review-record' }
+          ]
+        },
+        {
+          text: '信息架构',
+          collapsed: true,
+          items: [
+            { text: '站点地图', link: '/02-design/04-ui-ux-design/02-information-architecture/01-site-map' },
+            { text: '导航结构', link: '/02-design/04-ui-ux-design/02-information-architecture/02-navigation-structure' },
+            { text: '内容分类', link: '/02-design/04-ui-ux-design/02-information-architecture/03-content-classification' },
+            { text: '信息架构评审', link: '/02-design/04-ui-ux-design/02-information-architecture/04-information-architecture-review-record' }
+          ]
+        },
+        {
+          text: '交互设计',
+          collapsed: true,
+          items: [
+            { text: '任务流程设计', link: '/02-design/04-ui-ux-design/03-interaction-design/01-task-flows/01-task-flow-design' },
+            { text: '线框图设计', link: '/02-design/04-ui-ux-design/03-interaction-design/01-task-flows/02-wireframe-design' },
+            { text: '交互规范', link: '/02-design/04-ui-ux-design/03-interaction-design/01-task-flows/03-interaction-specification' },
+            { text: '交互设计评审', link: '/02-design/04-ui-ux-design/03-interaction-design/01-task-flows/04-interaction-design-review-record' }
+          ]
+        },
+        {
+          text: '视觉设计稿',
+          collapsed: true,
+          items: [
+            { text: '设计系统', link: '/02-design/04-ui-ux-design/04-visual-design-manuscript/02-wireframes/01-design-system' },
+            { text: '视觉设计', link: '/02-design/04-ui-ux-design/04-visual-design-manuscript/02-wireframes/02-visual-design' },
+            { text: '高保真原型', link: '/02-design/04-ui-ux-design/04-visual-design-manuscript/02-wireframes/03-mockups-design' }
+          ]
+        },
+        {
+          text: '原型设计',
+          collapsed: true,
+          items: [
+            { text: '原型规范', link: '/02-design/04-ui-ux-design/05-prototypes/01-prototype-specification' },
+            { text: '交互原型', link: '/02-design/04-ui-ux-design/05-prototypes/02-interactive-prototype' },
+            { text: '原型评审', link: '/02-design/04-ui-ux-design/05-prototypes/03-prototype-review-record' }
+          ]
+        },
+        {
+          text: '模块设计',
+          collapsed: true,
+          items: [
+            { text: '用户管理模块', link: '/02-design/04-ui-ux-design/06-module-design/01-user-management-module' },
+            { text: '组织模块', link: '/02-design/04-ui-ux-design/06-module-design/02-organization-module' },
+            { text: '权限模块', link: '/02-design/04-ui-ux-design/06-module-design/03-permission-module' },
+            { text: '系统配置模块', link: '/02-design/04-ui-ux-design/06-module-design/04-system-config-module' },
+            { text: '模块设计评审', link: '/02-design/04-ui-ux-design/06-module-design/05-module-design-review-record' }
+          ]
+        }
+      ],
+      '/03-iterations/': [
+        {
+          text: '迭代开发',
+          items: [
+            { text: '迭代标准', link: '/03-iterations/00-sprint-standards/01-process-diagrams/iteration-process-diagrams' }
+          ]
+        },
+        {
+          text: 'Sprint 1 - 核心功能',
+          collapsed: true,
+          items: [
+            { text: '迭代目标', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/01-iteration-goal' },
+            { text: '用户故事', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/02-user-stories' },
+            { text: '任务分解', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/03-task-breakdown' },
+            { text: '工作量估算', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/04-effort-estimation' },
+            { text: '每日站会', link: '/03-iterations/01-sprint-1-core/01-daily-standup/daily-standup-template' },
+            { text: '认证模块开发', link: '/03-iterations/01-sprint-1-core/02-development/01-auth-module/auth-module-development' },
+            { text: '用户模块开发', link: '/03-iterations/01-sprint-1-core/02-development/02-user-module/user-module-development' },
+            { text: '组织模块开发', link: '/03-iterations/01-sprint-1-core/02-development/03-organization-module/organization-module-development' },
+            { text: 'CI/CD记录', link: '/03-iterations/01-sprint-1-core/03-ci-cd/ci-cd-records' },
+            { text: '迭代评审', link: '/03-iterations/01-sprint-1-core/04-iteration-review/iteration-review' },
+            { text: '迭代回顾', link: '/03-iterations/01-sprint-1-core/05-retrospective/iteration-retrospective' }
+          ]
+        },
+        {
+          text: 'Sprint 2 - 扩展功能',
+          collapsed: true,
+          items: [
+            { text: '迭代目标', link: '/03-iterations/02-sprint-2-extension/00-iteration-plan/01-iteration-goal' },
+            { text: '用户故事', link: '/03-iterations/02-sprint-2-extension/00-iteration-plan/02-user-stories' },
+            { text: '任务分解', link: '/03-iterations/02-sprint-2-extension/00-iteration-plan/03-task-breakdown' },
+            { text: '工作量估算', link: '/03-iterations/02-sprint-2-extension/00-iteration-plan/04-effort-estimation' },
+            { text: '每日站会', link: '/03-iterations/02-sprint-2-extension/01-daily-standup/daily-standup-template' },
+            { text: '权限模块开发', link: '/03-iterations/02-sprint-2-extension/02-development/01-permission-module/permission-module-development' },
+            { text: '角色模块开发', link: '/03-iterations/02-sprint-2-extension/02-development/02-role-module/role-module-development' },
+            { text: '系统配置模块开发', link: '/03-iterations/02-sprint-2-extension/02-development/03-system-config-module/system-config-module-development' },
+            { text: 'CI/CD记录', link: '/03-iterations/02-sprint-2-extension/03-ci-cd/ci-cd-records' },
+            { text: '迭代评审', link: '/03-iterations/02-sprint-2-extension/04-iteration-review/iteration-review' },
+            { text: '迭代回顾', link: '/03-iterations/02-sprint-2-extension/05-retrospective/iteration-retrospective' }
+          ]
+        },
+        {
+          text: 'Sprint 3 - 优化完善',
+          collapsed: true,
+          items: [
+            { text: '迭代目标', link: '/03-iterations/03-sprint-3-refinement/00-iteration-plan/01-iteration-goal' },
+            { text: '用户故事', link: '/03-iterations/03-sprint-3-refinement/00-iteration-plan/02-user-stories' },
+            { text: '任务分解', link: '/03-iterations/03-sprint-3-refinement/00-iteration-plan/03-task-breakdown' },
+            { text: '工作量估算', link: '/03-iterations/03-sprint-3-refinement/00-iteration-plan/04-effort-estimation' },
+            { text: '每日站会', link: '/03-iterations/03-sprint-3-refinement/01-daily-standup/daily-standup-template' },
+            { text: '审计日志模块开发', link: '/03-iterations/03-sprint-3-refinement/02-development/01-audit-log-module/audit-log-module-development' },
+            { text: '通知模块开发', link: '/03-iterations/03-sprint-3-refinement/02-development/02-notification-module/notification-module-development' },
+            { text: '性能优化', link: '/03-iterations/03-sprint-3-refinement/02-development/03-performance-optimization/performance-optimization' },
+            { text: 'CI/CD记录', link: '/03-iterations/03-sprint-3-refinement/03-ci-cd/ci-cd-records' },
+            { text: '迭代评审', link: '/03-iterations/03-sprint-3-refinement/04-iteration-review/iteration-review' },
+            { text: '迭代回顾', link: '/03-iterations/03-sprint-3-refinement/05-retrospective/iteration-retrospective' }
+          ]
+        },
+        {
+          text: '迭代汇总',
+          collapsed: true,
+          items: [
+            { text: '迭代总结', link: '/03-iterations/04-sprint-summary/iteration-summary' }
+          ]
+        }
+      ],
+      '/04-testing/': [
+        {
+          text: '测试验证',
+          items: [
+            { text: '单元测试', link: '/04-testing/01-unit/unit-testing' },
+            { text: '集成测试', link: '/04-testing/02-integration/integration-testing' },
+            { text: '系统测试', link: '/04-testing/03-system/system-testing' },
+            { text: 'UAT测试', link: '/04-testing/04-uat/uat-testing' },
+            { text: '测试总结报告', link: '/04-testing/05-testing-reports/testing-summary-report' }
+          ]
+        }
+      ],
+      '/05-deployment/': [
+        {
+          text: '部署上线',
+          items: [
+            { text: '环境搭建', link: '/05-deployment/01-environment/environment-setup' },
+            { text: '部署配置', link: '/05-deployment/02-config/deployment-config' },
+            { text: '部署脚本', link: '/05-deployment/03-scripts/deployment-scripts' }
+          ]
+        }
+      ],
+      '/06-operations/': [
+        {
+          text: '运维维护',
+          items: [
+            { text: '监控配置', link: '/06-operations/01-monitoring/monitoring-config' },
+            { text: '维护指南', link: '/06-operations/02-maintenance/maintenance-guide' },
+            { text: '备份策略', link: '/06-operations/03-backup/backup-strategy' }
           ]
         }
       ]
