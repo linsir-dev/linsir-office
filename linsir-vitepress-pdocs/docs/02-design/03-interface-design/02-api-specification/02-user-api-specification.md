@@ -69,14 +69,13 @@
 
 #### 响应数据
 
-**成功响应** (200 OK):
+**成功响应**:
 
 ```json
 {
-  "code": 200,
-  "message": "success",
+  "code": 0,
   "data": {
-    "list": [
+    "items": [
       {
         "id": 1,
         "username": "zhangsan",
@@ -94,12 +93,10 @@
         "updateTime": "2024-01-01T10:00:00Z"
       }
     ],
-    "total": 100,
-    "page": 1,
-    "size": 10,
-    "pages": 10
+    "total": 100
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -181,12 +178,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 #### 响应数据
 
-**成功响应** (201 Created):
+**成功响应**:
 
 ```json
 {
-  "code": 201,
-  "message": "创建成功",
+  "code": 0,
   "data": {
     "id": 1,
     "username": "zhangsan",
@@ -196,16 +192,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
     "status": 1,
     "createTime": "2024-03-09T10:00:00Z"
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
-**错误响应** (400 Bad Request):
+**错误响应**:
 
 ```json
 {
-  "code": 400,
-  "message": "请求参数错误",
+  "code": -1,
   "data": {
     "errors": [
       {
@@ -214,7 +210,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
       }
     ]
   },
-  "timestamp": 1709827200000
+  "error": "请求参数错误",
+  "message": "请求参数错误"
 }
 ```
 
@@ -241,12 +238,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 #### 响应数据
 
-**成功响应** (200 OK):
+**成功响应**:
 
 ```json
 {
-  "code": 200,
-  "message": "success",
+  "code": 0,
   "data": {
     "id": 1,
     "username": "zhangsan",
@@ -268,7 +264,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
     "createTime": "2024-01-01T10:00:00Z",
     "updateTime": "2024-03-09T10:00:00Z"
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -383,25 +380,25 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 #### 响应数据
 
-**成功响应** (200 OK):
+**成功响应**:
 
 ```json
 {
-  "code": 200,
-  "message": "删除成功",
+  "code": 0,
   "data": null,
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
-**错误响应** (409 Conflict):
+**错误响应**:
 
 ```json
 {
-  "code": 409,
-  "message": "该用户有关联数据，无法删除",
+  "code": -1,
   "data": null,
-  "timestamp": 1709827200000
+  "error": "该用户有关联数据，无法删除",
+  "message": "该用户有关联数据，无法删除"
 }
 ```
 
@@ -461,18 +458,18 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 #### 响应数据
 
-**成功响应** (200 OK):
+**成功响应**:
 
 ```json
 {
-  "code": 200,
-  "message": "启用成功",
+  "code": 0,
   "data": {
     "id": 1,
     "status": 1,
     "statusName": "启用"
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -491,18 +488,18 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 #### 响应数据
 
-**成功响应** (200 OK):
+**成功响应**:
 
 ```json
 {
-  "code": 200,
-  "message": "禁用成功",
+  "code": 0,
   "data": {
     "id": 1,
     "status": 0,
     "statusName": "禁用"
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -535,14 +532,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 #### 响应数据
 
-**成功响应** (200 OK):
+**成功响应**:
 
 ```json
 {
-  "code": 200,
-  "message": "密码重置成功",
+  "code": 0,
   "data": null,
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -576,14 +573,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 #### 响应数据
 
-**错误响应** (400 Bad Request):
+**错误响应**:
 
 ```json
 {
-  "code": 400,
-  "message": "原密码错误",
+  "code": -1,
   "data": null,
-  "timestamp": 1709827200000
+  "error": "原密码错误",
+  "message": "原密码错误"
 }
 ```
 
@@ -604,8 +601,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ```json
 {
-  "code": 200,
-  "message": "success",
+  "code": 0,
   "data": [
     {
       "id": 1,
@@ -620,7 +616,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
       "description": "普通用户权限"
     }
   ],
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -674,8 +671,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ```json
 {
-  "code": 200,
-  "message": "success",
+  "code": 0,
   "data": [
     {
       "id": 1,
@@ -686,7 +682,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
       "isMain": true
     }
   ],
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -820,3 +817,4 @@ Content-Disposition: attachment; filename="users_20240309.xlsx"
 | 版本 | 日期 | 作者 | 变更内容 |
 |-----|------|------|---------|
 | 1.0 | 2026-03-09 | 系统架构师 | 初始版本，定义用户管理模块15个接口 |
+| 1.1 | 2026-03-11 | 系统架构师 | 统一响应格式，与Mock服务保持一致 |

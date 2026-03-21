@@ -861,7 +861,40 @@ export default defineConfig({
           text: '数据库设计',
           collapsed: true,
           items: [
-            { text: '逻辑数据模型', link: '/02-design/02-database/02-database-design/01-logical-data-model' }
+            { text: '逻辑数据模型', link: '/02-design/02-database/02-database-design/01-logical-data-model' },
+            { text: '物理数据模型', link: '/02-design/02-database/02-database-design/02-physical-data-model' },
+            { text: '数据库索引设计', link: '/02-design/02-database/02-database-design/03-database-index-design' },
+            { text: '数据库分区设计', link: '/02-design/02-database/02-database-design/04-database-partition-design' },
+            { text: '数据库备份策略', link: '/02-design/02-database/02-database-design/05-database-backup-strategy' },
+            { text: '数据库设计评审', link: '/02-design/02-database/02-database-design/06-database-design-review-record' }
+          ]
+        },
+        {
+          text: '数据字典',
+          collapsed: true,
+          items: [
+            { text: '系统数据字典', link: '/02-design/02-database/03-data-dictionary/01-system-data-dictionary' },
+            { text: '业务数据字典', link: '/02-design/02-database/03-data-dictionary/02-business-data-dictionary' },
+            { text: '数据字典评审', link: '/02-design/02-database/03-data-dictionary/03-data-dictionary-review-record' }
+          ]
+        },
+        {
+          text: 'SQL脚本',
+          collapsed: true,
+          items: [
+            { text: '迁移脚本说明', link: '/02-design/02-database/04-sql-scripts/04-migration-scripts/README' },
+            { text: 'SQL脚本评审', link: '/02-design/02-database/04-sql-scripts/sql-scripts-review-record' }
+          ]
+        },
+        {
+          text: '数据库评审',
+          collapsed: true,
+          items: [
+            { text: '评审通知', link: '/02-design/02-database/05-database-review/01-database-review-notice' },
+            { text: '评审议程', link: '/02-design/02-database/05-database-review/02-database-review-agenda' },
+            { text: '评审报告', link: '/02-design/02-database/05-database-review/03-database-review-report' },
+            { text: '评审记录', link: '/02-design/02-database/05-database-review/04-database-review-record' },
+            { text: '数据库基线', link: '/02-design/02-database/05-database-review/05-database-baseline' }
           ]
         }
       ],
@@ -994,12 +1027,13 @@ export default defineConfig({
           ]
         },
         {
-          text: '视觉设计稿',
+          text: '线框图设计',
           collapsed: true,
           items: [
-            { text: '设计系统', link: '/02-design/04-ui-ux-design/04-visual-design-manuscript/02-wireframes/01-design-system' },
-            { text: '视觉设计', link: '/02-design/04-ui-ux-design/04-visual-design-manuscript/02-wireframes/02-visual-design' },
-            { text: '高保真原型', link: '/02-design/04-ui-ux-design/04-visual-design-manuscript/02-wireframes/03-mockups-design' }
+            { text: '设计系统', link: '/02-design/04-ui-ux-design/03-interaction-design/02-wireframes/01-design-system' },
+            { text: '视觉设计', link: '/02-design/04-ui-ux-design/03-interaction-design/02-wireframes/02-visual-design' },
+            { text: '高保真原型', link: '/02-design/04-ui-ux-design/03-interaction-design/02-wireframes/03-mockups-design' },
+            { text: '视觉设计评审', link: '/02-design/04-ui-ux-design/03-interaction-design/02-wireframes/04-visual-design-review-record' }
           ]
         },
         {

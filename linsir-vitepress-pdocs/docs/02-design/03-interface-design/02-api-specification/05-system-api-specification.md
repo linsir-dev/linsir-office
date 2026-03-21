@@ -25,9 +25,8 @@
 | 3 | 刷新Token | POST | `/auth/refresh` | 需要认证 |
 | 4 | 查询字典列表 | GET | `/dicts` | dict:read |
 | 5 | 查询字典项 | GET | `/dicts/{code}/items` | dict:read |
-| 6 | 查询参数配置 | GET | `/config/{key}` | config:read |
-| 7 | 文件上传 | POST | `/files/upload` | file:upload |
-| 8 | 查询登录日志 | GET | `/logs/login` | log:read |
+| 6 | 文件上传 | POST | `/files/upload` | file:upload |
+| 7 | 查询登录日志 | GET | `/logs/login` | log:read |
 
 ---
 
@@ -71,12 +70,11 @@ Content-Type: application/json
 
 #### 响应数据
 
-**成功响应** (200 OK):
+**成功响应**:
 
 ```json
 {
-  "code": 200,
-  "message": "登录成功",
+  "code": 0,
   "data": {
     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
@@ -91,7 +89,8 @@ Content-Type: application/json
       "permissions": ["user:create", "user:update"]
     }
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -107,14 +106,14 @@ Content-Type: application/json
 | user.roles | array | 用户角色列表 |
 | user.permissions | array | 用户权限列表 |
 
-**错误响应** (401 Unauthorized):
+**错误响应**:
 
 ```json
 {
-  "code": 401,
-  "message": "用户名或密码错误",
+  "code": -1,
   "data": null,
-  "timestamp": 1709827200000
+  "error": "用户名或密码错误",
+  "message": "用户名或密码错误"
 }
 ```
 
@@ -141,10 +140,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ```json
 {
-  "code": 200,
-  "message": "登出成功",
+  "code": 0,
   "data": null,
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -173,14 +172,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ```json
 {
-  "code": 200,
-  "message": "刷新成功",
+  "code": 0,
   "data": {
     "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
     "expiresIn": 7200
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -212,10 +211,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ```json
 {
-  "code": 200,
-  "message": "success",
+  "code": 0,
   "data": {
-    "list": [
+    "items": [
       {
         "id": 1,
         "code": "user_status",
@@ -227,12 +225,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
         "createTime": "2024-01-01T10:00:00Z"
       }
     ],
-    "total": 20,
-    "page": 1,
-    "size": 10,
-    "pages": 2
+    "total": 20
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -261,8 +257,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ```json
 {
-  "code": 200,
-  "message": "success",
+  "code": 0,
   "data": [
     {
       "id": 1,
@@ -283,7 +278,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
       "remark": "账号正常使用"
     }
   ],
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -291,53 +287,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 ---
 
-### 6. 查询参数配置
-
-#### 基本信息
-
-| 项目 | 内容 |
-|-----|------|
-| 接口名称 | 查询参数配置 |
-| 请求方法 | GET |
-| 接口路径 | `/api/v1/sys/config/{key}` |
-| 权限要求 | config:read |
-
-#### 请求参数
-
-**Path参数**:
-
-| 参数名 | 类型 | 必填 | 说明 | 示例 |
-|-------|------|------|------|------|
-| key | string | 是 | 配置键 | sys.name |
-
-#### 响应数据
-
-```json
-{
-  "code": 200,
-  "message": "success",
-  "data": {
-    "key": "sys.name",
-    "value": "System管理平台",
-    "description": "系统名称"
-  },
-  "timestamp": 1709827200000
-}
-```
-
-**常用配置项**:
-
-| 配置键 | 说明 | 默认值 |
-|-------|------|--------|
-| sys.name | 系统名称 | System管理平台 |
-| sys.logo | 系统Logo | /logo.png |
-| sys.copyright | 版权信息 | © 2024 System |
-| upload.maxSize | 上传文件大小限制 | 10485760 (10MB) |
-| upload.allowedTypes | 允许上传的文件类型 | jpg,png,gif,doc,pdf |
-
----
-
-### 7. 文件上传
+### 6. 文件上传
 
 #### 基本信息
 
@@ -385,8 +335,7 @@ avatar
 
 ```json
 {
-  "code": 200,
-  "message": "上传成功",
+  "code": 0,
   "data": {
     "fileId": "f-123456789",
     "fileName": "avatar.jpg",
@@ -396,7 +345,8 @@ avatar
     "fileType": "image/jpeg",
     "uploadTime": "2024-03-09T10:00:00Z"
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
@@ -413,7 +363,7 @@ avatar
 
 ---
 
-### 8. 查询登录日志
+### 7. 查询登录日志
 
 #### 基本信息
 
@@ -441,10 +391,9 @@ avatar
 
 ```json
 {
-  "code": 200,
-  "message": "success",
+  "code": 0,
   "data": {
-    "list": [
+    "items": [
       {
         "id": 1,
         "username": "zhangsan",
@@ -470,20 +419,302 @@ avatar
         "loginTime": "2024-03-09T09:55:00Z"
       }
     ],
-    "total": 100,
-    "page": 1,
-    "size": 10,
-    "pages": 10
+    "total": 100
   },
-  "timestamp": 1709827200000
+  "error": null,
+  "message": "ok"
 }
 ```
 
 ---
 
-## 三、数据模型
+## 三、租户服务接口
 
-### 3.1 字典对象 (Dict)
+**模块代码**: TENANT  
+**基础路径**: `/api/v1/tenant-service`  
+**服务归属**: 租户服务（独立微服务）
+
+> **说明**: 租户服务为独立微服务，前端直接调用。登录页面和配置模块都通过调用租户服务接口实现租户信息管理。
+
+### 8. 获取租户基础信息
+
+#### 基本信息
+
+| 项目 | 内容 |
+|-----|------|
+| 接口名称 | 获取租户基础信息 |
+| 请求方法 | GET |
+| 接口路径 | `/api/v1/tenant-service/base` |
+| 权限要求 | tenant:read |
+
+#### 响应数据
+
+```json
+{
+  "code": 0,
+  "data": {
+    "id": 106,
+    "tenantCode": "ZHBM-106",
+    "name": "凌越科技",
+    "tel": "400-888-8888",
+    "phone": "13800138002",
+    "fax": "400-888-8889",
+    "address": "北京市海淀区中关村软件园",
+    "enable": 0,
+    "timeExpiration": "2029-12-31 23:59:59",
+    "isDeleted": 0,
+    "description": "专注于企业级软件开发与技术服务。",
+    "createdBy": "admin",
+    "createdTime": "2025-03-02T10:00:00Z",
+    "updatedBy": "admin",
+    "updatedTime": "2025-03-02T10:00:00Z"
+  },
+  "error": null,
+  "message": "ok"
+}
+```
+
+---
+
+### 9. 更新租户基础信息
+
+#### 基本信息
+
+| 项目 | 内容 |
+|-----|------|
+| 接口名称 | 更新租户基础信息 |
+| 请求方法 | PUT |
+| 接口路径 | `/api/v1/tenant-service/base` |
+| 权限要求 | tenant:update |
+
+#### 请求参数
+
+**Body参数**:
+
+| 参数名 | 类型 | 必填 | 说明 |
+|-------|------|------|------|
+| name | string | 是 | 租户名称 |
+| tel | string | 否 | 固定电话 |
+| phone | string | 否 | 手机号码 |
+| fax | string | 否 | 传真 |
+| address | string | 否 | 地址 |
+| description | string | 否 | 描述 |
+
+#### 请求示例
+
+```http
+PUT /api/v1/tenant-service/base
+Content-Type: application/json
+
+{
+  "name": "凌越科技有限公司",
+  "tel": "400-888-8888",
+  "phone": "13800138002",
+  "fax": "400-888-8889",
+  "address": "北京市海淀区中关村软件园",
+  "description": "专注于企业级软件开发与技术服务。"
+}
+```
+
+#### 响应数据
+
+```json
+{
+  "code": 0,
+  "data": null,
+  "error": null,
+  "message": "ok"
+}
+```
+
+---
+
+### 10. 获取Web扩展配置
+
+#### 基本信息
+
+| 项目 | 内容 |
+|-----|------|
+| 接口名称 | 获取Web扩展配置 |
+| 请求方法 | GET |
+| 接口路径 | `/api/v1/tenant-service/web-ext` |
+| 权限要求 | tenant:read |
+
+#### 响应数据
+
+```json
+{
+  "code": 0,
+  "data": {
+    "id": 204,
+    "title": "凌越科技",
+    "slogan": "科技创新，引领未来",
+    "logo": "http://ygde.oss-cn-zhangjiakou.aliyuncs.com/l/linsir.png",
+    "inset": "",
+    "loginBackground": "https://via.placeholder.com/1920x1080/722ed1/ffffff?text=登录背景",
+    "domainName": "localhost",
+    "enableGuidePage": 0,
+    "guidePageBackground": "https://via.placeholder.com/1920x1080/722ed1/ffffff?text=引导页"
+  },
+  "error": null,
+  "message": "ok"
+}
+```
+
+---
+
+### 11. 更新Web扩展配置
+
+#### 基本信息
+
+| 项目 | 内容 |
+|-----|------|
+| 接口名称 | 更新Web扩展配置 |
+| 请求方法 | PUT |
+| 接口路径 | `/api/v1/tenant-config/web-ext` |
+| 权限要求 | tenant:update |
+
+#### 请求参数
+
+**Body参数**:
+
+| 参数名 | 类型 | 必填 | 说明 |
+|-------|------|------|------|
+| title | string | 否 | 系统标题 |
+| slogan | string | 否 | 系统标语 |
+| logo | string | 否 | 系统Logo URL |
+| inset | string | 否 | 插画 URL |
+| loginBackground | string | 否 | 登录背景 URL |
+| domainName | string | 否 | 绑定域名 |
+| enableGuidePage | number | 否 | 启用引导页：0-否，1-是 |
+| guidePageBackground | string | 否 | 引导页背景 URL |
+
+#### 请求示例
+
+```http
+PUT /api/v1/tenant-service/web-ext
+Content-Type: application/json
+
+{
+  "title": "凌越科技",
+  "slogan": "科技创新，引领未来",
+  "logo": "http://ygde.oss-cn-zhangjiakou.aliyuncs.com/l/linsir.png",
+  "loginBackground": "https://via.placeholder.com/1920x1080/722ed1/ffffff?text=登录背景",
+  "domainName": "localhost",
+  "enableGuidePage": 0
+}
+```
+
+#### 响应数据
+
+```json
+{
+  "code": 0,
+  "data": null,
+  "error": null,
+  "message": "ok"
+}
+```
+
+---
+
+### 12. 获取商务扩展配置
+
+#### 基本信息
+
+| 项目 | 内容 |
+|-----|------|
+| 接口名称 | 获取商务扩展配置 |
+| 请求方法 | GET |
+| 接口路径 | `/api/v1/tenant-service/business-ext` |
+| 权限要求 | tenant:read |
+
+#### 响应数据
+
+```json
+{
+  "code": 0,
+  "data": {
+    "id": 301,
+    "firmName": "宜昌公交集团有限责任公司",
+    "creditCode": "9142050017916088XJ",
+    "legalPerson": "王杰",
+    "administrativeDivision": "湖北省宜昌市",
+    "businessArea": "公共交通服务",
+    "businessHead": "张经理",
+    "openBankAccount": "4220012345678901234",
+    "bankAccountPerson": "宜昌公交集团有限责任公司",
+    "openBank": "中国工商银行宜昌分行"
+  },
+  "error": null,
+  "message": "ok"
+}
+```
+
+---
+
+### 13. 更新商务扩展配置
+
+#### 基本信息
+
+| 项目 | 内容 |
+|-----|------|
+| 接口名称 | 更新商务扩展配置 |
+| 请求方法 | PUT |
+| 接口路径 | `/api/v1/tenant-config/business-ext` |
+| 权限要求 | tenant:update |
+
+#### 请求参数
+
+**Body参数**:
+
+| 参数名 | 类型 | 必填 | 说明 |
+|-------|------|------|------|
+| firmName | string | 否 | 企业名称 |
+| creditCode | string | 否 | 统一社会信用代码 |
+| legalPerson | string | 否 | 法人代表 |
+| administrativeDivision | string | 否 | 行政区划 |
+| businessArea | string | 否 | 经营范围 |
+| businessHead | string | 否 | 业务负责人 |
+| openBankAccount | string | 否 | 开户银行账号 |
+| bankAccountPerson | string | 否 | 账户持有人 |
+| openBank | string | 否 | 开户银行 |
+
+#### 请求示例
+
+```http
+PUT /api/v1/tenant-service/business-ext
+Content-Type: application/json
+
+{
+  "firmName": "宜昌公交集团有限责任公司",
+  "creditCode": "9142050017916088XJ",
+  "legalPerson": "王杰",
+  "administrativeDivision": "湖北省宜昌市",
+  "businessArea": "公共交通服务",
+  "businessHead": "张经理",
+  "openBankAccount": "4220012345678901234",
+  "bankAccountPerson": "宜昌公交集团有限责任公司",
+  "openBank": "中国工商银行宜昌分行"
+}
+```
+
+#### 响应数据
+
+```json
+{
+  "code": 0,
+  "data": null,
+  "error": null,
+  "message": "ok"
+}
+```
+
+---
+
+## 四、数据模型
+
+### 4.1 字典对象 (Dict)
 
 | 字段 | 类型 | 必填 | 说明 |
 |-----|------|------|------|
@@ -494,7 +725,7 @@ avatar
 | status | integer | 是 | 状态：0-禁用，1-启用 |
 | createTime | datetime | 是 | 创建时间 |
 
-### 3.2 字典项对象 (DictItem)
+### 4.2 字典项对象 (DictItem)
 
 | 字段 | 类型 | 必填 | 说明 |
 |-----|------|------|------|
@@ -506,16 +737,7 @@ avatar
 | status | integer | 是 | 状态 |
 | remark | string | 否 | 备注 |
 
-### 3.3 系统配置对象 (Config)
-
-| 字段 | 类型 | 必填 | 说明 |
-|-----|------|------|------|
-| id | integer | 是 | 配置ID |
-| key | string | 是 | 配置键，唯一 |
-| value | string | 是 | 配置值 |
-| description | string | 否 | 配置说明 |
-
-### 3.4 文件对象 (File)
+### 4.3 文件对象 (File)
 
 | 字段 | 类型 | 必填 | 说明 |
 |-----|------|------|------|
@@ -528,7 +750,7 @@ avatar
 | module | string | 否 | 业务模块 |
 | uploadTime | datetime | 是 | 上传时间 |
 
-### 3.5 登录日志对象 (LoginLog)
+### 4.4 登录日志对象 (LoginLog)
 
 | 字段 | 类型 | 必填 | 说明 |
 |-----|------|------|------|
@@ -544,7 +766,7 @@ avatar
 
 ---
 
-## 四、错误码
+## 五、错误码
 
 | 错误码 | 错误信息 | 说明 |
 |-------|---------|------|
@@ -558,7 +780,7 @@ avatar
 
 ---
 
-## 五、相关文档
+## 六、相关文档
 
 - [API接口清单](./01-api-interface-list.md)
 - [用户管理模块接口规范](./02-user-api-specification.md)
@@ -568,7 +790,7 @@ avatar
 
 ---
 
-## 六、评审记录
+## 七、评审记录
 
 ### 6.1 评审意见
 
@@ -597,8 +819,11 @@ avatar
 
 ---
 
-## 七、修订记录
+## 八、修订记录
 
 | 版本 | 日期 | 作者 | 变更内容 |
 |-----|------|------|---------|
 | 1.0 | 2026-03-09 | 系统架构师 | 初始版本，定义系统管理模块8个接口 |
+| 1.1 | 2026-03-11 | 系统架构师 | 统一响应格式，与Mock服务保持一致 |
+| 1.2 | 2026-03-11 | 系统架构师 | 新增租户配置模块，删除参数配置接口，调整配置结构为三部分 |
+| 1.3 | 2026-03-11 | 系统架构师 | 租户配置接口归属租户服务，前端直接调用租户服务 |
