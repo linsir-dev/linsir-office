@@ -73,7 +73,8 @@ export default defineConfig({
         text: '运维维护',
         items: [
           { text: '监控配置', link: '/06-operations/01-monitoring/monitoring-config' },
-          { text: '维护指南', link: '/06-operations/02-maintenance/maintenance-guide' }
+          { text: '维护指南', link: '/06-operations/02-maintenance/maintenance-guide' },
+          { text: '备份策略', link: '/06-operations/03-backup/backup-strategy' }
         ]
       }
     ],
