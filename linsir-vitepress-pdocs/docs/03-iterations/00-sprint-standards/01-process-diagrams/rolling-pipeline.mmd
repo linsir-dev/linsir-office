@@ -1,0 +1,28 @@
+flowchart LR
+    subgraph 迭代N-1["迭代N-1"]
+        direction TB
+        N1A[产品评审] --> N1B[开发执行]
+        N1B --> N1C[评审/回顾]
+    end
+
+    subgraph 迭代N["迭代N"]
+        direction TB
+        NA[需求选取] --> NB[原型设计]
+        NB --> NC[产品评审]
+        NC --> ND[开发执行]
+        ND --> NE[评审/回顾]
+    end
+
+    subgraph 迭代N+1["迭代N+1"]
+        direction TB
+        N1A2[需求选取] --> N1B2[原型设计]
+        N1B2 --> N1C2[产品评审]
+        N1C2 --> N1D2[开发执行]
+    end
+
+    迭代N-1 --> 迭代N
+    迭代N --> 迭代N+1
+
+    style 迭代N-1 fill:#e3f2fd
+    style 迭代N fill:#fff8e1
+    style 迭代N+1 fill:#f3e5f5

@@ -1,0 +1,46 @@
+flowchart TB
+    subgraph 产品工作["产品工作（迭代计划会议前置）"]
+        direction TB
+        A1[需求池] --> A2[需求选取会议]
+        A2 --> A3[原型设计]
+        A3 --> A4[产品评审会议]
+        A4 --> A5{评审通过?}
+        A5 -->|否| A3
+        A5 -->|是| A6[迭代计划会议输入]
+    end
+
+    subgraph 迭代计划["迭代计划会议"]
+        direction TB
+        B1[迭代目标确认] --> B2[需求确认]
+        B2 --> B3[用户故事讲解]
+        B3 --> B4[故事点估算]
+        B4 --> B5[任务拆分]
+        B5 --> B6[承诺确认]
+    end
+
+    subgraph 开发执行["开发执行（每日站会跟进）"]
+        direction TB
+        C1[Day 2-9 开发] --> C2[每日站会]
+        C2 --> C3{有阻碍?}
+        C3 -->|是| C4[问题升级]
+        C4 --> C1
+        C3 -->|否| C1
+    end
+
+    subgraph 迭代收尾["迭代收尾"]
+        direction TB
+        D1[迭代评审会议] --> D2{验收通过?}
+        D2 -->|否| D3[缺陷修复]
+        D3 --> D1
+        D2 -->|是| D4[迭代回顾会议]
+        D4 --> D5[下一迭代]
+    end
+
+    A6 --> B1
+    B6 --> C1
+    C1 --> D1
+
+    style 产品工作 fill:#e1f5fe
+    style 迭代计划 fill:#fff3e0
+    style 开发执行 fill:#e8f5e9
+    style 迭代收尾 fill:#fce4ec

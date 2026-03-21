@@ -46,7 +46,7 @@ export default defineConfig({
       { 
         text: '迭代开发',
         items: [
-          { text: 'Sprint 1 - 核心功能', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/01-iteration-goal' },
+          { text: 'Sprint 1 - 核心功能', link: '/03-iterations/01-sprint-1-core/02-iteration-plan/01-iteration-goal' },
           { text: 'Sprint 2 - 扩展功能', link: '/03-iterations/02-sprint-2-extension/00-iteration-plan/01-iteration-goal' },
           { text: 'Sprint 3 - 优化完善', link: '/03-iterations/03-sprint-3-refinement/00-iteration-plan/01-iteration-goal' }
         ]
@@ -57,14 +57,16 @@ export default defineConfig({
           { text: '单元测试', link: '/04-testing/01-unit/unit-testing' },
           { text: '集成测试', link: '/04-testing/02-integration/integration-testing' },
           { text: '系统测试', link: '/04-testing/03-system/system-testing' },
-          { text: 'UAT测试', link: '/04-testing/04-uat/uat-testing' }
+          { text: 'UAT测试', link: '/04-testing/04-uat/uat-testing' },
+          { text: '测试报告', link: '/04-testing/05-testing-reports/testing-summary-report' }
         ]
       },
       { 
         text: '部署上线',
         items: [
           { text: '环境搭建', link: '/05-deployment/01-environment/environment-setup' },
-          { text: '部署配置', link: '/05-deployment/02-config/deployment-config' }
+          { text: '部署配置', link: '/05-deployment/02-config/deployment-config' },
+          { text: '部署脚本', link: '/05-deployment/03-scripts/deployment-scripts' }
         ]
       },
       { 
@@ -1061,24 +1063,36 @@ export default defineConfig({
         {
           text: '迭代开发',
           items: [
-            { text: '迭代标准', link: '/03-iterations/00-sprint-standards/01-process-diagrams/iteration-process-diagrams' }
+            { text: '迭代检查清单', link: '/03-iterations/00-sprint-standards/iteration-checklist' }
+          ]
+        },
+        {
+          text: '迭代标准',
+          collapsed: true,
+          items: [
+            { text: '流程图', link: '/03-iterations/00-sprint-standards/01-process-diagrams/iteration-process-diagrams' },
+            { text: '流程标准', link: '/03-iterations/00-sprint-standards/02-process-standards/iteration-process-standards' },
+            { text: '技能文档', link: '/03-iterations/00-sprint-standards/03-skills/iteration-process-skill' }
           ]
         },
         {
           text: 'Sprint 1 - 核心功能',
           collapsed: true,
           items: [
-            { text: '迭代目标', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/01-iteration-goal' },
-            { text: '用户故事', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/02-user-stories' },
-            { text: '任务分解', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/03-task-breakdown' },
-            { text: '工作量估算', link: '/03-iterations/01-sprint-1-core/00-iteration-plan/04-effort-estimation' },
-            { text: '每日站会', link: '/03-iterations/01-sprint-1-core/01-daily-standup/daily-standup-template' },
-            { text: '认证模块开发', link: '/03-iterations/01-sprint-1-core/02-development/01-auth-module/auth-module-development' },
-            { text: '用户模块开发', link: '/03-iterations/01-sprint-1-core/02-development/02-user-module/user-module-development' },
-            { text: '组织模块开发', link: '/03-iterations/01-sprint-1-core/02-development/03-organization-module/organization-module-development' },
-            { text: 'CI/CD记录', link: '/03-iterations/01-sprint-1-core/03-ci-cd/ci-cd-records' },
-            { text: '迭代评审', link: '/03-iterations/01-sprint-1-core/04-iteration-review/iteration-review' },
-            { text: '迭代回顾', link: '/03-iterations/01-sprint-1-core/05-retrospective/iteration-retrospective' }
+            { text: '产品工作', link: '/03-iterations/01-sprint-1-core/01-product-work/01-requirement-selection/requirement-selection-record' },
+            { text: '原型设计', link: '/03-iterations/01-sprint-1-core/01-product-work/02-prototype-design/prototype-design' },
+            { text: '产品评审', link: '/03-iterations/01-sprint-1-core/01-product-work/03-product-review/product-review-record' },
+            { text: '迭代目标', link: '/03-iterations/01-sprint-1-core/02-iteration-plan/01-iteration-goal' },
+            { text: '用户故事', link: '/03-iterations/01-sprint-1-core/02-iteration-plan/02-user-stories' },
+            { text: '任务分解', link: '/03-iterations/01-sprint-1-core/02-iteration-plan/03-task-breakdown' },
+            { text: '工作量估算', link: '/03-iterations/01-sprint-1-core/02-iteration-plan/04-effort-estimation' },
+            { text: '每日站会模板', link: '/03-iterations/01-sprint-1-core/03-daily-standup/daily-standup-template' },
+            { text: '认证模块开发', link: '/03-iterations/01-sprint-1-core/04-development/01-auth-module/auth-module-development' },
+            { text: '用户模块开发', link: '/03-iterations/01-sprint-1-core/04-development/02-user-module/user-module-development' },
+            { text: '组织模块开发', link: '/03-iterations/01-sprint-1-core/04-development/03-organization-module/organization-module-development' },
+            { text: 'CI/CD记录', link: '/03-iterations/01-sprint-1-core/05-ci-cd/ci-cd-records' },
+            { text: '迭代评审', link: '/03-iterations/01-sprint-1-core/06-iteration-review/iteration-review' },
+            { text: '迭代回顾', link: '/03-iterations/01-sprint-1-core/07-retrospective/iteration-retrospective' }
           ]
         },
         {
@@ -1089,7 +1103,7 @@ export default defineConfig({
             { text: '用户故事', link: '/03-iterations/02-sprint-2-extension/00-iteration-plan/02-user-stories' },
             { text: '任务分解', link: '/03-iterations/02-sprint-2-extension/00-iteration-plan/03-task-breakdown' },
             { text: '工作量估算', link: '/03-iterations/02-sprint-2-extension/00-iteration-plan/04-effort-estimation' },
-            { text: '每日站会', link: '/03-iterations/02-sprint-2-extension/01-daily-standup/daily-standup-template' },
+            { text: '每日站会模板', link: '/03-iterations/02-sprint-2-extension/01-daily-standup/daily-standup-template' },
             { text: '权限模块开发', link: '/03-iterations/02-sprint-2-extension/02-development/01-permission-module/permission-module-development' },
             { text: '角色模块开发', link: '/03-iterations/02-sprint-2-extension/02-development/02-role-module/role-module-development' },
             { text: '系统配置模块开发', link: '/03-iterations/02-sprint-2-extension/02-development/03-system-config-module/system-config-module-development' },
@@ -1106,7 +1120,7 @@ export default defineConfig({
             { text: '用户故事', link: '/03-iterations/03-sprint-3-refinement/00-iteration-plan/02-user-stories' },
             { text: '任务分解', link: '/03-iterations/03-sprint-3-refinement/00-iteration-plan/03-task-breakdown' },
             { text: '工作量估算', link: '/03-iterations/03-sprint-3-refinement/00-iteration-plan/04-effort-estimation' },
-            { text: '每日站会', link: '/03-iterations/03-sprint-3-refinement/01-daily-standup/daily-standup-template' },
+            { text: '每日站会模板', link: '/03-iterations/03-sprint-3-refinement/01-daily-standup/daily-standup-template' },
             { text: '审计日志模块开发', link: '/03-iterations/03-sprint-3-refinement/02-development/01-audit-log-module/audit-log-module-development' },
             { text: '通知模块开发', link: '/03-iterations/03-sprint-3-refinement/02-development/02-notification-module/notification-module-development' },
             { text: '性能优化', link: '/03-iterations/03-sprint-3-refinement/02-development/03-performance-optimization/performance-optimization' },
